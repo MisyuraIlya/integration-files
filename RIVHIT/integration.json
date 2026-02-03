@@ -786,6 +786,25 @@
     "strict_variables": true
   },
   {
+      "id": null,
+      "key": "rivhit_warehouses",
+      "name": "rivhit warehouses fetcher",
+      "connectionId": null,
+      "method": "POST",
+      "path": "Item.StorageList",
+      "headers": null,
+      "query": null,
+      "bodyTemplate": "{\n    \"api_token\" : \"F0E84E05-6D60-43B4-8DA6-432D78827644\"\n}",
+      "bodyType": "json",
+      "responseParser": "json",
+      "outputRoot": null,
+      "variables": [],
+      "strictVariables": true,
+      "isActive": true,
+      "createdAt": null,
+      "updatedAt": null
+  },
+  {
     "id": null,
     "key": "rivhit_projects",
     "name": "rivhit projects",

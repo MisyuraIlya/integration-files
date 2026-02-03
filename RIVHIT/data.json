@@ -82,10 +82,7 @@
                 "isVatEnabled": {},
                 "refreshToken": {},
                 "salesCurrency": {},
-<<<<<<< HEAD
                 "discount": {},
-=======
->>>>>>> main
                 "deliveryPriceUser": {},
                 "minimumPriceUser": {},
                 "isAllowAllClients": {},
@@ -180,10 +177,6 @@
                 "isVatEnabled": {},
                 "refreshToken": {},
                 "salesCurrency": {},
-<<<<<<< HEAD
-                "discount": {},
-=======
->>>>>>> main
                 "deliveryPriceUser": {},
                 "minimumPriceUser": {},
                 "isAllowAllClients": {},
@@ -567,6 +560,50 @@
       "linkedName": null,
       "linkedPdf": null,
       "dataSources": [],
+      "isAgentRequest": false
+    },
+    {
+      "id": null,
+      "key": "warehouse_rivhit",
+      "name": "rivhit warehouses fetcher",
+      "mapperType": "simple",
+      "table": "Warehouse",
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description":  "rivhit warehouses fetcher",
+      "linkedName": null,
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "rivhit_warehouses",
+          "name": "rivhit warehouses fetcher",
+          "description": "rivhit warehouses fetcher",
+          "template": null,
+          "config": {
+              "simple": {
+                  "mappings": {
+                      "code": {
+                          "sourceField": "data.storage_list.storage_id"
+                      },
+                      "name": {
+                          "sourceField": "data.storage_list.storage_name"
+                      },
+                      "isValid": {},
+                      "createdAt": {},
+                      "updatedAt": {},
+                      "description": {}
+                  }
+              }
+          },
+          "isCanChange": true,
+          "createdAt": "2026-02-03T15:00:02.332Z",
+          "updatedAt": "2026-02-03T15:05:06.096Z"
+        }
+      ],
       "isAgentRequest": false
     },
 

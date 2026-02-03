@@ -1,0 +1,1849 @@
+{
+  "mode": "upsert",
+  "dryRun": false,
+  "dataTypes": [
+    {
+      "id": null,
+      "key": "users",
+      "name": "users",
+      "mapperType": "simple",
+      "table": "User",
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "Sync customers",
+      "linkedName": null,
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "rivhit_users",
+          "name": "Revhit users",
+          "description": "Rivhit Users",
+          "templateKey": "rivhit_users",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "simple": {
+              "mappings": {
+                "hp": {
+                  "sourceField": "data.customer_list.id_number"
+                },
+                "city": {
+                  "sourceField": "data.customer_list.city"
+                },
+                "name": {
+                  "sourceField": "data.customer_list.first_name + data.customer_list.last_name"
+                },
+                "role": {},
+                "type": {},
+                "agent": {
+                  "sourceField": "data.customer_list.agent_id"
+                },
+                "email": {
+                  "sourceField": "data.customer_list.email"
+                },
+                "extId": {
+                  "sourceField": "data.customer_list.customer_id"
+                },
+                "phone": {
+                  "sourceField": "data.customer_list.phone"
+                },
+                "PayDes": {},
+                "parent": {},
+                "search": {
+                  "sourceField": "data.customer_list.first_name + data.customer_list.last_name + data.customer_list.customer_id"
+                },
+                "address": {
+                  "sourceField": "data.customer_list.street"
+                },
+                "company": {
+                  "sourceField": "data.customer_list.last_name"
+                },
+                "isAgent": {},
+                "payCode": {},
+                "taxCode": {},
+                "password": {},
+                "recovery": {},
+                "username": {},
+                "createdAt": {},
+                "isBlocked": {},
+                "maxCredit": {},
+                "maxObligo": {
+                  "sourceField": "data.customer_list.balance"
+                },
+                "updatedAt": {},
+                "isPublished": {},
+                "masterExtId": {},
+                "isAllowOrder": {},
+                "isRegistered": {},
+                "isVatEnabled": {},
+                "refreshToken": {},
+                "salesCurrency": {},
+<<<<<<< HEAD
+                "discount": {},
+=======
+>>>>>>> main
+                "deliveryPriceUser": {},
+                "minimumPriceUser": {},
+                "isAllowAllClients": {},
+                "isAllowPriceOffer": {}
+              }
+            }
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": false
+    },
+    {
+      "id": null,
+      "key": "agents",
+      "name": "agents",
+      "mapperType": "simple",
+      "table": "Agent",
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "Sync agents from rivhit ERP AGENTS endpoint",
+      "linkedName": null,
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "rivhit_agents",
+          "name": "Revhit Agents",
+          "description": "Rivhit Agents",
+          "templateKey": "rivhit_agents",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "simple": {
+              "mappings": {
+                "hp": {
+                  "sourceField": "data.customer_list.id_number"
+                },
+                "city": {
+                  "sourceField": "data.customer_list.city"
+                },
+                "name": {
+                  "sourceField": "data.customer_list.first_name + data.customer_list.last_name"
+                },
+                "role": {},
+                "type": {},
+                "agent": {
+                  "sourceField": "data.customer_list.agent_id"
+                },
+                "email": {
+                  "sourceField": "data.customer_list.email"
+                },
+                "extId": {
+                  "sourceField": "data.customer_list.customer_id"
+                },
+                "phone": {
+                  "sourceField": "data.customer_list.phone"
+                },
+                "PayDes": {},
+                "parent": {},
+                "search": {
+                  "sourceField": "data.customer_list.first_name + data.customer_list.last_name + data.customer_list.customer_id"
+                },
+                "address": {
+                  "sourceField": "data.customer_list.street"
+                },
+                "company": {
+                  "sourceField": "data.customer_list.last_name"
+                },
+                "isAgent": {},
+                "payCode": {},
+                "taxCode": {},
+                "password": {},
+                "recovery": {},
+                "username": {},
+                "createdAt": {},
+                "isBlocked": {},
+                "maxCredit": {},
+                "maxObligo": {
+                  "sourceField": "data.customer_list.balance"
+                },
+                "updatedAt": {},
+                "isPublished": {},
+                "masterExtId": {},
+                "isAllowOrder": {},
+                "isRegistered": {},
+                "isVatEnabled": {},
+                "refreshToken": {},
+                "salesCurrency": {},
+<<<<<<< HEAD
+                "discount": {},
+=======
+>>>>>>> main
+                "deliveryPriceUser": {},
+                "minimumPriceUser": {},
+                "isAllowAllClients": {},
+                "isAllowPriceOffer": {}
+              }
+            }
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": false
+    },
+    {
+      "id": null,
+      "key": "products",
+      "name": "products",
+      "mapperType": "simple",
+      "table": "Product",
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "Sync products",
+      "linkedName": null,
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "rivhit_items",
+          "name": "rivhit_items",
+          "description": null,
+          "templateKey": "rivhit_items",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "simple": {
+              "mappings": {
+                "sku": {
+                  "sourceField": "data.item_list.item_id"
+                },
+                "name": {
+                  "sourceField": "data.item_list.item_name"
+                },
+                "type": {},
+                "group": {},
+                "isNew": {},
+                "orden": {},
+                "stock": {},
+                "title": {
+                  "sourceField": "data.item_list.item_name"
+                },
+                "search": {
+                  "sourceField": "data.item_list.item_id + data.item_list.item_name"
+                },
+                "barcode": {
+                  "sourceField": "data.item_list.barcode"
+                },
+                "category": {
+                  "sourceField": "data.item_list.item_group_id"
+                },
+                "discount": {},
+                "basePrice": {},
+                "createdAt": {},
+                "isSpecial": {},
+                "isTaxable": {},
+                "updatedAt": {},
+                "finalPrice": {},
+                "taxPrecent": {},
+                "description": {},
+                "isPublished": {},
+                "packageType": {},
+                "productType": {},
+                "minimumPrice": {},
+                "packQuantity": {},
+                "titleEnglish": {},
+                "multiCategory": {},
+                "purchasePrice": {
+                  "sourceField": "data.item_list.cost_nis"
+                },
+                "defaultImagePath": {},
+                "remoteDefaultImagePath": {
+                    "sourceField": "data.item_list.picture_link"
+                }
+              }
+            }
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": false
+    },
+    {
+      "id": null,
+      "key": "rivhit_images",
+      "name": "rivhit images",
+      "mapperType": "simple",
+      "table": "MediaObject",
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "Images for products",
+      "linkedName": null,
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "rivhit_items_images",
+          "name": "rivhit images (Items)",
+          "description": "Image handler from api",
+          "templateKey": "rivhit_items_images",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+              "simple": {
+                  "mappings": {
+                      "hash": {
+                          "sourceField": "data.item_list.picture_link"
+                      },
+                      "source": {
+                          "sourceField": "data.item_list.item_id"
+                      },
+                      "erp_file": {},
+                      "filePath": {},
+                      "mimeType": {},
+                      "createdAt": {},
+                      "updatedAt": {},
+                      "contentUrl": {}
+                  }
+              }
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": false
+    },
+    {
+      "id": null,
+      "key": "category",
+      "name": "Category fetcher",
+      "mapperType": "hierarchy",
+      "table": "Category",
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "categories",
+      "linkedName": null,
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "rivhit_item_groups",
+          "name": "rivhit_item_groups",
+          "description": "rivhit_item_groups",
+          "templateKey": "rivhit_item_groups",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "hierarchy": {
+              "levels": [
+                {
+                  "level": 1,
+                  "mappings": {
+                    "extId": {
+                      "type": "string",
+                      "sourceField": "data.item_group_list.item_group_id"
+                    },
+                    "title": {
+                      "type": "string",
+                      "sourceField": "data.item_group_list.item_group_name"
+                    },
+                    "parentExtId": {
+                      "type": "string",
+                      "sourceField": null
+                    }
+                  },
+                  "templateId": null
+                }
+              ]
+            }
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": false
+    },
+    {
+      "id": null,
+      "key": "price_lists",
+      "name": "price lists",
+      "mapperType": "simple",
+      "table": "PriceList",
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "price lists",
+      "linkedName": null,
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "rivhit_price_lists",
+          "name": "rivhit_price_lists",
+          "description": "rivhit_price_lists",
+          "templateKey": "rivhit_price_lists",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "simple": {
+              "mappings": {
+                "extId": {
+                  "sourceField": "data.price_list_list.price_list_id"
+                },
+                "title": {
+                  "sourceField": "data.price_list_list.price_list_name"
+                },
+                "discount": {}
+              }
+            }
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": false
+    },
+    {
+      "id": null,
+      "key": "price_list_users",
+      "name": "price list users",
+      "mapperType": "simple",
+      "table": "PriceListUser",
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "price list users",
+      "linkedName": null,
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "rivhit_price_list_users",
+          "name": "rivhit_price_list_users",
+          "description": "rivhit_price_list_users",
+          "templateKey": "rivhit_users",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "simple": {
+              "mappings": {
+                "user": {
+                  "sourceField": "data.customer_list.customer_id"
+                },
+                "priceList": {
+                  "sourceField": "data.customer_list.price_list_id"
+                }
+              }
+            }
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": false
+    },
+    {
+      "id": null,
+      "key": "similar_products",
+      "name": "similar products",
+      "mapperType": "simple",
+      "table": "SimilarProduct",
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": null,
+      "linkedName": null,
+      "linkedPdf": null,
+      "dataSources": [],
+      "isAgentRequest": false
+    },
+    {
+      "id": null,
+      "key": "attributes_main",
+      "name": "attributes main",
+      "mapperType": "simple",
+      "table": "AttributeMain",
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": null,
+      "linkedName": null,
+      "linkedPdf": null,
+      "dataSources": [],
+      "isAgentRequest": false
+    },
+    {
+      "id": null,
+      "key": "attributes_sub",
+      "name": "attributes sub",
+      "mapperType": "simple",
+      "table": "AttributeSub",
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": null,
+      "linkedName": null,
+      "linkedPdf": null,
+      "dataSources": [],
+      "isAgentRequest": false
+    },
+    {
+      "id": null,
+      "key": "attribute_products",
+      "name": "attribute products",
+      "mapperType": "simple",
+      "table": "ProductAttribute",
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": null,
+      "linkedName": null,
+      "linkedPdf": null,
+      "dataSources": [],
+      "isAgentRequest": false
+    },
+    {
+      "id": null,
+      "key": "tree_products",
+      "name": "tree products",
+      "mapperType": "simple",
+      "table": "TreeProduct",
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": null,
+      "linkedName": null,
+      "linkedPdf": null,
+      "dataSources": [],
+      "isAgentRequest": false
+    },
+    {
+      "id": null,
+      "key": "images",
+      "name": "images",
+      "mapperType": "simple",
+      "table": "MediaObject",
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "Images for products (MediaObject via LOGPART/EXTFILENAME)",
+      "linkedName": null,
+      "linkedPdf": null,
+      "dataSources": [],
+      "isAgentRequest": false
+    },
+
+
+    {
+      "id": null,
+      "key": "order_items",
+      "name": "order items",
+      "mapperType": "documentLines",
+      "table": null,
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": false,
+      "isActive": true,
+      "description":"תעודות חשבונית מס",
+      "linkedName": null,
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "rivhit_document_items_1",
+          "name": "rivhit_document_items_1",
+          "description": "rivhit_document_items_1",
+          "templateKey": "rivhit_document_items_1",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "itemsPath": "data",
+            "documents": {
+              "linesPath": "data.items",
+              "headFields": [
+                {
+                  "type": "string",
+                  "label": "מספר מסמך",
+                  "sourceField": "data.document_number",
+                  "targetField": "documentNumber"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך",
+                  "sourceField": "data.document_date",
+                  "targetField": "date"
+                },
+                {
+                  "type": "string",
+                  "label": "לקוח",
+                  "sourceField": "data.customer_id",
+                  "targetField": "userExtId"
+                },
+
+                {
+                  "type": "number",
+                  "label": "מע״מ",
+                  "sourceField": "data.total_vat",
+                  "targetField": "totalTax"
+                },
+                {
+                  "type": "number",
+                  "label": "סה״כ",
+                  "sourceField": "data.total_without_vat",
+                  "targetField": "totalBeforeDiscount"
+                },
+                {
+                  "type": "number",
+                  "label": "סה״כ כולל מע״מ",
+                  "sourceField": "data.document_total",
+                  "targetField": "totalPriceAfterTax"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך יעד",
+                  "sourceField": "data.document_due_date",
+                  "targetField": "dueDate"
+                },
+                {
+                  "type": "string",
+                  "label": "הערות",
+                  "sourceField": "data.comments",
+                  "targetField": "comment"
+                }
+              ],
+              "lineColumns": [
+                {
+                  "label": "תמונה",
+                  "cellType": "image",
+                  "columnKey": "image",
+                  "sourceField": null
+                },
+                {
+                  "label": "מק״ט",
+                  "cellType": "sku",
+                  "columnKey": "sku",
+                  "sourceField": "data.items.item_id"
+                },
+                {
+                  "label": "תיאור פריט",
+                  "cellType": "text",
+                  "columnKey": "title",
+                  "sourceField": "data.items.description"
+                },
+                {
+                  "label": "כמות",
+                  "cellType": "quantity",
+                  "columnKey": "quantity",
+                  "sourceField": "data.items.quantity"
+                },
+                {
+                  "label": "מחיר",
+                  "cellType": "money",
+                  "columnKey": "money",
+                  "sourceField": "data.items.price_nis"
+                },
+                {
+                  "label": "סה״כ שורה",
+                  "cellType": "money",
+                  "columnKey": "money",
+                  "sourceField": "data.items.total_line"
+                },
+                {
+                  "label": "% הנחה",
+                  "cellType": "discount",
+                  "columnKey": "discount",
+                  "sourceField": "data.items.discount"
+                }
+              ]
+            }
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": false
+    },
+    {
+      "id": null,
+      "key": "order_items_2",
+      "name": "order items 2",
+      "mapperType": "documentLines",
+      "table": null,
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": false,
+      "isActive": true,
+      "description": "מסמך חשבונית מס קבלה",
+      "linkedName": null,
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "rivhit_document_items_2",
+          "name": "rivhit_document_items_2",
+          "description": "rivhit_document_items_2",
+          "templateKey": "rivhit_document_items_2",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "itemsPath": "data",
+            "documents": {
+              "linesPath": "data.items",
+              "headFields": [
+                { "type": "string", "label": "מספר מסמך", "sourceField": "data.document_number", "targetField": "documentNumber" },
+                { "type": "date", "label": "תאריך", "sourceField": "data.document_date", "targetField": "date" },
+                { "type": "string", "label": "לקוח", "sourceField": "data.customer_id", "targetField": "userExtId" },
+                { "type": "number", "label": "מע״מ", "sourceField": "data.total_vat", "targetField": "totalTax" },
+                { "type": "number", "label": "סה״כ", "sourceField": "data.total_without_vat", "targetField": "totalBeforeDiscount" },
+                { "type": "number", "label": "סה״כ כולל מע״מ", "sourceField": "data.document_total", "targetField": "totalPriceAfterTax" },
+                { "type": "date", "label": "תאריך יעד", "sourceField": "data.document_due_date", "targetField": "dueDate" },
+                { "type": "string", "label": "הערות", "sourceField": "data.comments", "targetField": "comment" }
+              ],
+              "lineColumns": [
+                { "label": "תמונה", "cellType": "image", "columnKey": "image", "sourceField": null },
+                { "label": "מק״ט", "cellType": "sku", "columnKey": "sku", "sourceField": "data.items.item_id" },
+                { "label": "תיאור פריט", "cellType": "text", "columnKey": "title", "sourceField": "data.items.description" },
+                { "label": "כמות", "cellType": "quantity", "columnKey": "quantity", "sourceField": "data.items.quantity" },
+                { "label": "מחיר", "cellType": "money", "columnKey": "money", "sourceField": "data.items.price_nis" },
+                { "label": "סה״כ שורה", "cellType": "money", "columnKey": "money", "sourceField": "data.items.total_line" },
+                { "label": "% הנחה", "cellType": "discount", "columnKey": "discount", "sourceField": "data.items.discount" }
+              ]
+            }
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": false
+    },
+    {
+      "id": null,
+      "key": "order_items_3",
+      "name": "order items 3",
+      "mapperType": "documentLines",
+      "table": null,
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": false,
+      "isActive": true,
+      "description": "מסמך חשבונית מס זיכוי",
+      "linkedName": null,
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "rivhit_document_items_3",
+          "name": "rivhit_document_items_3",
+          "description": "rivhit_document_items_3",
+          "templateKey": "rivhit_document_items_3",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "itemsPath": "data",
+            "documents": {
+              "linesPath": "data.items",
+              "headFields": [
+                { "type": "string", "label": "מספר מסמך", "sourceField": "data.document_number", "targetField": "documentNumber" },
+                { "type": "date", "label": "תאריך", "sourceField": "data.document_date", "targetField": "date" },
+                { "type": "string", "label": "לקוח", "sourceField": "data.customer_id", "targetField": "userExtId" },
+                { "type": "number", "label": "מע״מ", "sourceField": "data.total_vat", "targetField": "totalTax" },
+                { "type": "number", "label": "סה״כ", "sourceField": "data.total_without_vat", "targetField": "totalBeforeDiscount" },
+                { "type": "number", "label": "סה״כ כולל מע״מ", "sourceField": "data.document_total", "targetField": "totalPriceAfterTax" },
+                { "type": "date", "label": "תאריך יעד", "sourceField": "data.document_due_date", "targetField": "dueDate" },
+                { "type": "string", "label": "הערות", "sourceField": "data.comments", "targetField": "comment" }
+              ],
+              "lineColumns": [
+                { "label": "תמונה", "cellType": "image", "columnKey": "image", "sourceField": null },
+                { "label": "מק״ט", "cellType": "sku", "columnKey": "sku", "sourceField": "data.items.item_id" },
+                { "label": "תיאור פריט", "cellType": "text", "columnKey": "title", "sourceField": "data.items.description" },
+                { "label": "כמות", "cellType": "quantity", "columnKey": "quantity", "sourceField": "data.items.quantity" },
+                { "label": "מחיר", "cellType": "money", "columnKey": "money", "sourceField": "data.items.price_nis" },
+                { "label": "סה״כ שורה", "cellType": "money", "columnKey": "money", "sourceField": "data.items.total_line" },
+                { "label": "% הנחה", "cellType": "discount", "columnKey": "discount", "sourceField": "data.items.discount" }
+              ]
+            }
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": false
+    },
+    {
+      "id": null,
+      "key": "order_items_4",
+      "name": "order items 4",
+      "mapperType": "documentLines",
+      "table": null,
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": false,
+      "isActive": true,
+      "description": "מסמך תעודת משלוח",
+      "linkedName": null,
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "rivhit_document_items_4",
+          "name": "rivhit_document_items_4",
+          "description": "rivhit_document_items_4",
+          "templateKey": "rivhit_document_items_4",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "itemsPath": "data",
+            "documents": {
+              "linesPath": "data.items",
+              "headFields": [
+                { "type": "string", "label": "מספר מסמך", "sourceField": "data.document_number", "targetField": "documentNumber" },
+                { "type": "date", "label": "תאריך", "sourceField": "data.document_date", "targetField": "date" },
+                { "type": "string", "label": "לקוח", "sourceField": "data.customer_id", "targetField": "userExtId" },
+                { "type": "number", "label": "מע״מ", "sourceField": "data.total_vat", "targetField": "totalTax" },
+                { "type": "number", "label": "סה״כ", "sourceField": "data.total_without_vat", "targetField": "totalBeforeDiscount" },
+                { "type": "number", "label": "סה״כ כולל מע״מ", "sourceField": "data.document_total", "targetField": "totalPriceAfterTax" },
+                { "type": "date", "label": "תאריך יעד", "sourceField": "data.document_due_date", "targetField": "dueDate" },
+                { "type": "string", "label": "הערות", "sourceField": "data.comments", "targetField": "comment" }
+              ],
+              "lineColumns": [
+                { "label": "תמונה", "cellType": "image", "columnKey": "image", "sourceField": null },
+                { "label": "מק״ט", "cellType": "sku", "columnKey": "sku", "sourceField": "data.items.item_id" },
+                { "label": "תיאור פריט", "cellType": "text", "columnKey": "title", "sourceField": "data.items.description" },
+                { "label": "כמות", "cellType": "quantity", "columnKey": "quantity", "sourceField": "data.items.quantity" },
+                { "label": "מחיר", "cellType": "money", "columnKey": "money", "sourceField": "data.items.price_nis" },
+                { "label": "סה״כ שורה", "cellType": "money", "columnKey": "money", "sourceField": "data.items.total_line" },
+                { "label": "% הנחה", "cellType": "discount", "columnKey": "discount", "sourceField": "data.items.discount" }
+              ]
+            }
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": false
+    },
+    {
+      "id": null,
+      "key": "order_items_5",
+      "name": "order items 5",
+      "mapperType": "documentLines",
+      "table": null,
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": false,
+      "isActive": true,
+      "description": "מסמך תעודת החזרה",
+      "linkedName": null,
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "rivhit_document_items_5",
+          "name": "rivhit_document_items_5",
+          "description": "rivhit_document_items_5",
+          "templateKey": "rivhit_document_items_5",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "itemsPath": "data",
+            "documents": {
+              "linesPath": "data.items",
+              "headFields": [
+                { "type": "string", "label": "מספר מסמך", "sourceField": "data.document_number", "targetField": "documentNumber" },
+                { "type": "date", "label": "תאריך", "sourceField": "data.document_date", "targetField": "date" },
+                { "type": "string", "label": "לקוח", "sourceField": "data.customer_id", "targetField": "userExtId" },
+                { "type": "number", "label": "מע״מ", "sourceField": "data.total_vat", "targetField": "totalTax" },
+                { "type": "number", "label": "סה״כ", "sourceField": "data.total_without_vat", "targetField": "totalBeforeDiscount" },
+                { "type": "number", "label": "סה״כ כולל מע״מ", "sourceField": "data.document_total", "targetField": "totalPriceAfterTax" },
+                { "type": "date", "label": "תאריך יעד", "sourceField": "data.document_due_date", "targetField": "dueDate" },
+                { "type": "string", "label": "הערות", "sourceField": "data.comments", "targetField": "comment" }
+              ],
+              "lineColumns": [
+                { "label": "תמונה", "cellType": "image", "columnKey": "image", "sourceField": null },
+                { "label": "מק״ט", "cellType": "sku", "columnKey": "sku", "sourceField": "data.items.item_id" },
+                { "label": "תיאור פריט", "cellType": "text", "columnKey": "title", "sourceField": "data.items.description" },
+                { "label": "כמות", "cellType": "quantity", "columnKey": "quantity", "sourceField": "data.items.quantity" },
+                { "label": "מחיר", "cellType": "money", "columnKey": "money", "sourceField": "data.items.price_nis" },
+                { "label": "סה״כ שורה", "cellType": "money", "columnKey": "money", "sourceField": "data.items.total_line" },
+                { "label": "% הנחה", "cellType": "discount", "columnKey": "discount", "sourceField": "data.items.discount" }
+              ]
+            }
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": false
+    },
+    {
+      "id": null,
+      "key": "order_items_6",
+      "name": "order items 6",
+      "mapperType": "documentLines",
+      "table": null,
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": false,
+      "isActive": true,
+      "description": "מסמך קריאת שירות",
+      "linkedName": null,
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "rivhit_document_items_6",
+          "name": "rivhit_document_items_6",
+          "description": "rivhit_document_items_6",
+          "templateKey": "rivhit_document_items_6",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "itemsPath": "data",
+            "documents": {
+              "linesPath": "data.items",
+              "headFields": [
+                { "type": "string", "label": "מספר מסמך", "sourceField": "data.document_number", "targetField": "documentNumber" },
+                { "type": "date", "label": "תאריך", "sourceField": "data.document_date", "targetField": "date" },
+                { "type": "string", "label": "לקוח", "sourceField": "data.customer_id", "targetField": "userExtId" },
+                { "type": "number", "label": "מע״מ", "sourceField": "data.total_vat", "targetField": "totalTax" },
+                { "type": "number", "label": "סה״כ", "sourceField": "data.total_without_vat", "targetField": "totalBeforeDiscount" },
+                { "type": "number", "label": "סה״כ כולל מע״מ", "sourceField": "data.document_total", "targetField": "totalPriceAfterTax" },
+                { "type": "date", "label": "תאריך יעד", "sourceField": "data.document_due_date", "targetField": "dueDate" },
+                { "type": "string", "label": "הערות", "sourceField": "data.comments", "targetField": "comment" }
+              ],
+              "lineColumns": [
+                { "label": "תמונה", "cellType": "image", "columnKey": "image", "sourceField": null },
+                { "label": "מק״ט", "cellType": "sku", "columnKey": "sku", "sourceField": "data.items.item_id" },
+                { "label": "תיאור פריט", "cellType": "text", "columnKey": "title", "sourceField": "data.items.description" },
+                { "label": "כמות", "cellType": "quantity", "columnKey": "quantity", "sourceField": "data.items.quantity" },
+                { "label": "מחיר", "cellType": "money", "columnKey": "money", "sourceField": "data.items.price_nis" },
+                { "label": "סה״כ שורה", "cellType": "money", "columnKey": "money", "sourceField": "data.items.total_line" },
+                { "label": "% הנחה", "cellType": "discount", "columnKey": "discount", "sourceField": "data.items.discount" }
+              ]
+            }
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": false
+    },
+    {
+      "id": null,
+      "key": "order_items_7",
+      "name": "order items 7",
+      "mapperType": "documentLines",
+      "table": null,
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": false,
+      "isActive": true,
+      "description": "מסמך הזמנה",
+      "linkedName": null,
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "rivhit_document_items_7",
+          "name": "rivhit_document_items_7",
+          "description": "rivhit_document_items_7",
+          "templateKey": "rivhit_document_items_7",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "itemsPath": "data",
+            "documents": {
+              "linesPath": "data.items",
+              "headFields": [
+                { "type": "string", "label": "מספר מסמך", "sourceField": "data.document_number", "targetField": "documentNumber" },
+                { "type": "date", "label": "תאריך", "sourceField": "data.document_date", "targetField": "date" },
+                { "type": "string", "label": "לקוח", "sourceField": "data.customer_id", "targetField": "userExtId" },
+                { "type": "number", "label": "מע״מ", "sourceField": "data.total_vat", "targetField": "totalTax" },
+                { "type": "number", "label": "סה״כ", "sourceField": "data.total_without_vat", "targetField": "totalBeforeDiscount" },
+                { "type": "number", "label": "סה״כ כולל מע״מ", "sourceField": "data.document_total", "targetField": "totalPriceAfterTax" },
+                { "type": "date", "label": "תאריך יעד", "sourceField": "data.document_due_date", "targetField": "dueDate" },
+                { "type": "string", "label": "הערות", "sourceField": "data.comments", "targetField": "comment" }
+              ],
+              "lineColumns": [
+                { "label": "תמונה", "cellType": "image", "columnKey": "image", "sourceField": null },
+                { "label": "מק״ט", "cellType": "sku", "columnKey": "sku", "sourceField": "data.items.item_id" },
+                { "label": "תיאור פריט", "cellType": "text", "columnKey": "title", "sourceField": "data.items.description" },
+                { "label": "כמות", "cellType": "quantity", "columnKey": "quantity", "sourceField": "data.items.quantity" },
+                { "label": "מחיר", "cellType": "money", "columnKey": "money", "sourceField": "data.items.price_nis" },
+                { "label": "סה״כ שורה", "cellType": "money", "columnKey": "money", "sourceField": "data.items.total_line" },
+                { "label": "% הנחה", "cellType": "discount", "columnKey": "discount", "sourceField": "data.items.discount" }
+              ]
+            }
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": false
+    },
+
+    
+    {
+      "id": null,
+      "key": "orders",
+      "name": "Orders",
+      "mapperType": "documentLines",
+      "table": null,
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "תעודות חשבונית מס",
+      "linkedName": "order_items",
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "rivhit_user_documents_1",
+          "name": "rivhit_user_documents_1",
+          "description": "rivhit_user_documents_1",
+          "templateKey": "rivhit_user_documents_1",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "documents": {
+              "headFields": [
+                {
+                  "type": "string",
+                  "label": "מספר מסמך",
+                  "sourceField": "data.document_list.document_number",
+                  "targetField": "documentNumber"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך",
+                  "sourceField": "data.document_list.document_date",
+                  "targetField": "date"
+                },
+                {
+                  "type": "money",
+                  "label": "סה״כ",
+                  "sourceField": "data.document_list.amount",
+                  "targetField": "totalAfterDiscount"
+                },
+                {
+                  "type": "money",
+                  "label": "מע״מ",
+                  "sourceField": "data.document_list.total_vat",
+                  "targetField": "vat"
+                },
+                {
+                  "type": "link",
+                  "label": "מסמך",
+                  "sourceField": "data.document_list.total_vat",
+                  "targetField": "link"
+                }
+              ],
+              "lineColumns": []
+            }
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": false
+    },
+    {
+      "id": null,
+      "key": "orders_2",
+      "name": "Orders 2",
+      "mapperType": "documentLines",
+      "table": null,
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "מסמך חשבונית מס קבלה",
+      "linkedName": "order_items_2",
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "rivhit_user_documents_2",
+          "name": "rivhit_user_documents_2",
+          "description": "rivhit_user_documents_2",
+          "templateKey": "rivhit_user_documents_2",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "documents": {
+              "headFields": [
+                { "type": "string", "label": "מספר מסמך", "sourceField": "data.document_list.document_number", "targetField": "documentNumber" },
+                { "type": "date", "label": "תאריך", "sourceField": "data.document_list.document_date", "targetField": "date" },
+                { "type": "money", "label": "סה״כ", "sourceField": "data.document_list.amount", "targetField": "totalAfterDiscount" },
+                { "type": "money", "label": "מע״מ", "sourceField": "data.document_list.total_vat", "targetField": "vat" },
+                { "type": "link", "label": "מסמך", "sourceField": "data.document_list.total_vat", "targetField": "link" }
+              ],
+              "lineColumns": []
+            }
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": false
+    },
+    {
+      "id": null,
+      "key": "orders_3",
+      "name": "Orders 3",
+      "mapperType": "documentLines",
+      "table": null,
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "מסמך חשבונית מס זיכוי",
+      "linkedName": "order_items_3",
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "rivhit_user_documents_3",
+          "name": "rivhit_user_documents_3",
+          "description": "rivhit_user_documents_3",
+          "templateKey": "rivhit_user_documents_3",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "documents": {
+              "headFields": [
+                { "type": "string", "label": "מספר מסמך", "sourceField": "data.document_list.document_number", "targetField": "documentNumber" },
+                { "type": "date", "label": "תאריך", "sourceField": "data.document_list.document_date", "targetField": "date" },
+                { "type": "money", "label": "סה״כ", "sourceField": "data.document_list.amount", "targetField": "totalAfterDiscount" },
+                { "type": "money", "label": "מע״מ", "sourceField": "data.document_list.total_vat", "targetField": "vat" },
+                { "type": "link", "label": "מסמך", "sourceField": "data.document_list.total_vat", "targetField": "link" }
+              ],
+              "lineColumns": []
+            }
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": false
+    },
+    {
+      "id": null,
+      "key": "orders_4",
+      "name": "Orders 4",
+      "mapperType": "documentLines",
+      "table": null,
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "מסמך תעודת משלוח",
+      "linkedName": "order_items_4",
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "rivhit_user_documents_4",
+          "name": "rivhit_user_documents_4",
+          "description": "rivhit_user_documents_4",
+          "templateKey": "rivhit_user_documents_4",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "documents": {
+              "headFields": [
+                { "type": "string", "label": "מספר מסמך", "sourceField": "data.document_list.document_number", "targetField": "documentNumber" },
+                { "type": "date", "label": "תאריך", "sourceField": "data.document_list.document_date", "targetField": "date" },
+                { "type": "money", "label": "סה״כ", "sourceField": "data.document_list.amount", "targetField": "totalAfterDiscount" },
+                { "type": "money", "label": "מע״מ", "sourceField": "data.document_list.total_vat", "targetField": "vat" },
+                { "type": "link", "label": "מסמך", "sourceField": "data.document_list.total_vat", "targetField": "link" }
+              ],
+              "lineColumns": []
+            }
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": false
+    },
+    {
+      "id": null,
+      "key": "orders_5",
+      "name": "Orders 5",
+      "mapperType": "documentLines",
+      "table": null,
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "מסמך תעודת החזרה",
+      "linkedName": "order_items_5",
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "rivhit_user_documents_5",
+          "name": "rivhit_user_documents_5",
+          "description": "rivhit_user_documents_5",
+          "templateKey": "rivhit_user_documents_5",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "documents": {
+              "headFields": [
+                { "type": "string", "label": "מספר מסמך", "sourceField": "data.document_list.document_number", "targetField": "documentNumber" },
+                { "type": "date", "label": "תאריך", "sourceField": "data.document_list.document_date", "targetField": "date" },
+                { "type": "money", "label": "סה״כ", "sourceField": "data.document_list.amount", "targetField": "totalAfterDiscount" },
+                { "type": "money", "label": "מע״מ", "sourceField": "data.document_list.total_vat", "targetField": "vat" },
+                { "type": "link", "label": "מסמך", "sourceField": "data.document_list.total_vat", "targetField": "link" }
+              ],
+              "lineColumns": []
+            }
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": false
+    },
+    {
+      "id": null,
+      "key": "orders_6",
+      "name": "Orders 6",
+      "mapperType": "documentLines",
+      "table": null,
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "מסמך קריאת שירות",
+      "linkedName": "order_items_6",
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "rivhit_user_documents_6",
+          "name": "rivhit_user_documents_6",
+          "description": "rivhit_user_documents_6",
+          "templateKey": "rivhit_user_documents_6",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "documents": {
+              "headFields": [
+                { "type": "string", "label": "מספר מסמך", "sourceField": "data.document_list.document_number", "targetField": "documentNumber" },
+                { "type": "date", "label": "תאריך", "sourceField": "data.document_list.document_date", "targetField": "date" },
+                { "type": "money", "label": "סה״כ", "sourceField": "data.document_list.amount", "targetField": "totalAfterDiscount" },
+                { "type": "money", "label": "מע״מ", "sourceField": "data.document_list.total_vat", "targetField": "vat" },
+                { "type": "link", "label": "מסמך", "sourceField": "data.document_list.total_vat", "targetField": "link" }
+              ],
+              "lineColumns": []
+            }
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": false
+    },
+    {
+      "id": null,
+      "key": "orders_7",
+      "name": "Orders 7",
+      "mapperType": "documentLines",
+      "table": null,
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "מסמך הזמנה",
+      "linkedName": "order_items_7",
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "rivhit_user_documents_7",
+          "name": "rivhit_user_documents_7",
+          "description": "rivhit_user_documents_7",
+          "templateKey": "rivhit_user_documents_7",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "documents": {
+              "headFields": [
+                { "type": "string", "label": "מספר מסמך", "sourceField": "data.document_list.document_number", "targetField": "documentNumber" },
+                { "type": "date", "label": "תאריך", "sourceField": "data.document_list.document_date", "targetField": "date" },
+                { "type": "money", "label": "סה״כ", "sourceField": "data.document_list.amount", "targetField": "totalAfterDiscount" },
+                { "type": "money", "label": "מע״מ", "sourceField": "data.document_list.total_vat", "targetField": "vat" },
+                { "type": "link", "label": "מסמך", "sourceField": "data.document_list.total_vat", "targetField": "link" }
+              ],
+              "lineColumns": []
+            }
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": false
+    },
+
+
+    {
+      "id": null,
+      "key": "orders_agent",
+      "name": "rivhit Orders for agent",
+      "mapperType": "documentLines",
+      "table": null,
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "תעודות חשבונית מס",
+      "linkedName": "order_items",
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "rivhit_user_documents_1_agent",
+          "name": "rivhit_user_documents_1_agent",
+          "description": "rivhit_user_documents_1_agent",
+          "templateKey": "rivhit_user_documents_1_agent",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+              "documents": {
+                "headFields": [
+                  {
+                    "type": "string",
+                    "label": "מספר מסמך",
+                    "sourceField": "data.document_list.document_number",
+                    "targetField": "documentNumber"
+                  },
+                  {
+                    "type": "string",
+                    "label": "מספר לקוח",
+                    "sourceField": "data.document_list.customer_id",
+                    "targetField": "userExtId"
+                  },
+                  {
+                    "type": "string",
+                    "label": "שם לקוח",
+                    "sourceField": "data.document_list.customer_name",
+                    "targetField": "text_1"
+                  },
+                  {
+                    "type": "date",
+                    "label": "תאריך",
+                    "sourceField": "data.document_list.document_date",
+                    "targetField": "date"
+                  },
+                  {
+                    "type": "money",
+                    "label": "סה״כ",
+                    "sourceField": "data.document_list.amount",
+                    "targetField": "totalAfterDiscount"
+                  },
+                  {
+                    "type": "money",
+                    "label": "מע״מ",
+                    "sourceField": "data.document_list.total_vat",
+                    "targetField": "vat"
+                  },
+                  {
+                    "type": "link",
+                    "label": "מסמך",
+                    "sourceField": "data.document_list.total_vat",
+                    "targetField": "link"
+                  }
+                ],
+                "lineColumns": []
+              }
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": true
+    },
+    {
+      "id": null,
+      "key": "orders_agent_2",
+      "name": "rivhit Orders for agent 2",
+      "mapperType": "documentLines",
+      "table": null,
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "מסמך חשבונית מס קבלה",
+      "linkedName": "order_items_2",
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "rivhit_user_documents_2_agent",
+          "name": "rivhit_user_documents_2_agent",
+          "description": "rivhit_user_documents_2_agent",
+          "templateKey": "rivhit_user_documents_2_agent",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "documents": {
+              "headFields": [
+                { "type": "string", "label": "מספר מסמך", "sourceField": "data.document_list.document_number", "targetField": "documentNumber" },
+                { "type": "string", "label": "מספר לקוח", "sourceField": "data.document_list.customer_id", "targetField": "userExtId" },
+                { "type": "string", "label": "שם לקוח", "sourceField": "data.document_list.customer_name", "targetField": "text_1" },
+                { "type": "date", "label": "תאריך", "sourceField": "data.document_list.document_date", "targetField": "date" },
+                { "type": "money", "label": "סה״כ", "sourceField": "data.document_list.amount", "targetField": "totalAfterDiscount" },
+                { "type": "money", "label": "מע״מ", "sourceField": "data.document_list.total_vat", "targetField": "vat" },
+                { "type": "link", "label": "מסמך", "sourceField": "data.document_list.total_vat", "targetField": "link" }
+              ],
+              "lineColumns": []
+            }
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": true
+    },
+    {
+      "id": null,
+      "key": "orders_agent_3",
+      "name": "rivhit Orders for agent 3",
+      "mapperType": "documentLines",
+      "table": null,
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "מסמך חשבונית מס זיכוי",
+      "linkedName": "order_items_3",
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "rivhit_user_documents_3_agent",
+          "name": "rivhit_user_documents_3_agent",
+          "description": "rivhit_user_documents_3_agent",
+          "templateKey": "rivhit_user_documents_3_agent",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "documents": {
+              "headFields": [
+                { "type": "string", "label": "מספר מסמך", "sourceField": "data.document_list.document_number", "targetField": "documentNumber" },
+                { "type": "string", "label": "מספר לקוח", "sourceField": "data.document_list.customer_id", "targetField": "userExtId" },
+                { "type": "string", "label": "שם לקוח", "sourceField": "data.document_list.customer_name", "targetField": "text_1" },
+                { "type": "date", "label": "תאריך", "sourceField": "data.document_list.document_date", "targetField": "date" },
+                { "type": "money", "label": "סה״כ", "sourceField": "data.document_list.amount", "targetField": "totalAfterDiscount" },
+                { "type": "money", "label": "מע״מ", "sourceField": "data.document_list.total_vat", "targetField": "vat" },
+                { "type": "link", "label": "מסמך", "sourceField": "data.document_list.total_vat", "targetField": "link" }
+              ],
+              "lineColumns": []
+            }
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": true
+    },
+    {
+      "id": null,
+      "key": "orders_agent_4",
+      "name": "rivhit Orders for agent 4",
+      "mapperType": "documentLines",
+      "table": null,
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "מסמך תעודת משלוח",
+      "linkedName": "order_items_4",
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "rivhit_user_documents_4_agent",
+          "name": "rivhit_user_documents_4_agent",
+          "description": "rivhit_user_documents_4_agent",
+          "templateKey": "rivhit_user_documents_4_agent",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "documents": {
+              "headFields": [
+                { "type": "string", "label": "מספר מסמך", "sourceField": "data.document_list.document_number", "targetField": "documentNumber" },
+                { "type": "string", "label": "מספר לקוח", "sourceField": "data.document_list.customer_id", "targetField": "userExtId" },
+                { "type": "string", "label": "שם לקוח", "sourceField": "data.document_list.customer_name", "targetField": "text_1" },
+                { "type": "date", "label": "תאריך", "sourceField": "data.document_list.document_date", "targetField": "date" },
+                { "type": "money", "label": "סה״כ", "sourceField": "data.document_list.amount", "targetField": "totalAfterDiscount" },
+                { "type": "money", "label": "מע״מ", "sourceField": "data.document_list.total_vat", "targetField": "vat" },
+                { "type": "link", "label": "מסמך", "sourceField": "data.document_list.total_vat", "targetField": "link" }
+              ],
+              "lineColumns": []
+            }
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": true
+    },
+    {
+      "id": null,
+      "key": "orders_agent_5",
+      "name": "rivhit Orders for agent 5",
+      "mapperType": "documentLines",
+      "table": null,
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "מסמך תעודת החזרה",
+      "linkedName": "order_items_5",
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "rivhit_user_documents_5_agent",
+          "name": "rivhit_user_documents_5_agent",
+          "description": "rivhit_user_documents_5_agent",
+          "templateKey": "rivhit_user_documents_5_agent",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "documents": {
+              "headFields": [
+                { "type": "string", "label": "מספר מסמך", "sourceField": "data.document_list.document_number", "targetField": "documentNumber" },
+                { "type": "string", "label": "מספר לקוח", "sourceField": "data.document_list.customer_id", "targetField": "userExtId" },
+                { "type": "string", "label": "שם לקוח", "sourceField": "data.document_list.customer_name", "targetField": "text_1" },
+                { "type": "date", "label": "תאריך", "sourceField": "data.document_list.document_date", "targetField": "date" },
+                { "type": "money", "label": "סה״כ", "sourceField": "data.document_list.amount", "targetField": "totalAfterDiscount" },
+                { "type": "money", "label": "מע״מ", "sourceField": "data.document_list.total_vat", "targetField": "vat" },
+                { "type": "link", "label": "מסמך", "sourceField": "data.document_list.total_vat", "targetField": "link" }
+              ],
+              "lineColumns": []
+            }
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": true
+    },
+    {
+      "id": null,
+      "key": "orders_agent_6",
+      "name": "rivhit Orders for agent 6",
+      "mapperType": "documentLines",
+      "table": null,
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "מסמך קריאת שירות",
+      "linkedName": "order_items_6",
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "rivhit_user_documents_6_agent",
+          "name": "rivhit_user_documents_6_agent",
+          "description": "rivhit_user_documents_6_agent",
+          "templateKey": "rivhit_user_documents_6_agent",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "documents": {
+              "headFields": [
+                { "type": "string", "label": "מספר מסמך", "sourceField": "data.document_list.document_number", "targetField": "documentNumber" },
+                { "type": "string", "label": "מספר לקוח", "sourceField": "data.document_list.customer_id", "targetField": "userExtId" },
+                { "type": "string", "label": "שם לקוח", "sourceField": "data.document_list.customer_name", "targetField": "text_1" },
+                { "type": "date", "label": "תאריך", "sourceField": "data.document_list.document_date", "targetField": "date" },
+                { "type": "money", "label": "סה״כ", "sourceField": "data.document_list.amount", "targetField": "totalAfterDiscount" },
+                { "type": "money", "label": "מע״מ", "sourceField": "data.document_list.total_vat", "targetField": "vat" },
+                { "type": "link", "label": "מסמך", "sourceField": "data.document_list.total_vat", "targetField": "link" }
+              ],
+              "lineColumns": []
+            }
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": true
+    },
+    {
+      "id": null,
+      "key": "orders_agent_7",
+      "name": "rivhit Orders for agent 7",
+      "mapperType": "documentLines",
+      "table": null,
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "מסמך הזמנה",
+      "linkedName": "order_items_7",
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "rivhit_user_documents_7_agent",
+          "name": "rivhit_user_documents_7_agent",
+          "description": "rivhit_user_documents_7_agent",
+          "templateKey": "rivhit_user_documents_7_agent",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "documents": {
+              "headFields": [
+                { "type": "string", "label": "מספר מסמך", "sourceField": "data.document_list.document_number", "targetField": "documentNumber" },
+                { "type": "string", "label": "מספר לקוח", "sourceField": "data.document_list.customer_id", "targetField": "userExtId" },
+                { "type": "string", "label": "שם לקוח", "sourceField": "data.document_list.customer_name", "targetField": "text_1" },
+                { "type": "date", "label": "תאריך", "sourceField": "data.document_list.document_date", "targetField": "date" },
+                { "type": "money", "label": "סה״כ", "sourceField": "data.document_list.amount", "targetField": "totalAfterDiscount" },
+                { "type": "money", "label": "מע״מ", "sourceField": "data.document_list.total_vat", "targetField": "vat" },
+                { "type": "link", "label": "מסמך", "sourceField": "data.document_list.total_vat", "targetField": "link" }
+              ],
+              "lineColumns": []
+            }
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": true
+    },
+
+
+    {
+      "id": null,
+      "key": "USER_PROFILE",
+      "name": "user profile",
+      "mapperType": "dynamic",
+      "table": null,
+      "dynamicType": "USER_PROFILE",
+      "manualHandle": true,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": null,
+      "linkedName": null,
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "rivhit_user_profile_obligo",
+          "name": "rivhit_user_profile_obligo",
+          "description": "rivhit_user_profile_obligo",
+          "templateKey": "rivhit_user_profile_obligo",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "dynamic": {
+              "columns": [
+                {
+                    "key": "balance",
+                    "type": "text",
+                    "label": "יתרה",
+                    "sourceField": "data.balance"
+                },
+                {
+                    "key": "future_checks",
+                    "type": "text",
+                    "label": "שיקים עתידיים",
+                    "sourceField": "data.future_checks"
+                },
+                {
+                    "key": "obligo",
+                    "type": "text",
+                    "label": "אובליגו",
+                    "sourceField": "data.obligo"
+                },
+                {
+                    "key": "obligo_value",
+                    "type": "text",
+                    "label": "שווי אובליגו",
+                    "sourceField": "data.obligo_value"
+                }
+              ]
+            }
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": false
+    },
+    {
+      "id": null,
+      "key": "CARTESSET",
+      "name": "CARTESSET",
+      "mapperType": "dynamic",
+      "table": null,
+      "dynamicType": "CARTESSET",
+      "manualHandle": false,
+      "isCanChange": false,
+      "isShow": true,
+      "isActive": true,
+      "description": null,
+      "linkedName": null,
+      "linkedPdf": null,
+      "dataSources": [],
+      "isAgentRequest": false
+    },
+    {
+      "id": null,
+      "key": "AGENT_STATISTIC",
+      "name": "AGENT_STATISTIC",
+      "mapperType": "dynamic",
+      "table": null,
+      "dynamicType": "AGENT_STATISTIC",
+      "manualHandle": true,
+      "isCanChange": false,
+      "isShow": false,
+      "isActive": true,
+      "description": null,
+      "linkedName": null,
+      "linkedPdf": null,
+      "dataSources": [],
+      "isAgentRequest": false
+    },
+    {
+      "id": null,
+      "key": "KEEP_ALERT",
+      "name": "KEEP_ALERT",
+      "mapperType": "dynamic",
+      "table": null,
+      "dynamicType": "KEEP_ALERT",
+      "manualHandle": false,
+      "isCanChange": false,
+      "isShow": true,
+      "isActive": true,
+      "description": null,
+      "linkedName": null,
+      "linkedPdf": null,
+      "dataSources": [],
+      "isAgentRequest": false
+    },
+    {
+      "id": null,
+      "key": "QUANTITY_ALERT",
+      "name": "QUANTITY_ALERT",
+      "mapperType": "dynamic",
+      "table": null,
+      "dynamicType": "QUANTITY_ALERT",
+      "manualHandle": false,
+      "isCanChange": false,
+      "isShow": true,
+      "isActive": true,
+      "description": null,
+      "linkedName": null,
+      "linkedPdf": null,
+      "dataSources": [],
+      "isAgentRequest": false
+    },
+    {
+      "id": null,
+      "key": "USER_PURCHASE_HISTORY_SKU",
+      "name": "USER_PURCHASE_HISTORY_SKU",
+      "mapperType": "dynamic",
+      "table": null,
+      "dynamicType": "USER_PURCHASE_HISTORY_SKU",
+      "manualHandle": false,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": null,
+      "linkedName": null,
+      "linkedPdf": null,
+      "dataSources": [],
+      "isAgentRequest": false
+    }
+  ]
+}

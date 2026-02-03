@@ -1,0 +1,1239 @@
+[
+  {
+    "key": "users_hasav",
+    "name": "users hasav",
+    "connection_id": null,
+    "method": "POST",
+    "path": "/sql/execute",
+    "headers": null,
+    "query": null,
+    "body_template": {
+      "dbName": "EMANUEL",
+      "db": {
+        "server": "localhost",
+        "database": "EMANUEL",
+        "user": "sa",
+        "password": "<REDACTED>"
+      },
+      "query": "SELECT COUNT(1) OVER() AS TotalRows, * FROM dbo.Accounts ORDER BY AccountKey ASC OFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY",
+      "params": {
+        "offset": "{offset}",
+        "pageSize": "{limit}"
+      }
+    },
+    "body_type": "json",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2025-12-20T14: 41: 22.717254",
+    "updated_at": "2025-12-20T14: 41: 55.243303",
+    "variables": [
+      {
+        "name": "offset",
+        "type": "number",
+        "default": 0,
+        "required": false,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "limit",
+        "type": "number",
+        "default": 10,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      }
+    ],
+    "strict_variables": true
+  },
+  {
+    "key": "hasav_sql_agents",
+    "name": "hasav_sql_agents (getAgentsData)",
+    "connection_id": null,
+    "method": "POST",
+    "path": "/sql/execute",
+    "headers": null,
+    "query": null,
+    "body_template": {
+      "dbName": "{dbName}",
+      "db": {
+        "server": "localhost",
+        "database": "{dbName}",
+        "user": "sa",
+        "password": "<REDACTED>"
+      },
+      "query": "WITH base AS (\n  SELECT DISTINCT\n    s.agent AS agentCode,\n    a.SortCodeName AS agentName\n  FROM dbo.Stock s\n  INNER JOIN dbo.AccSortNames a\n    ON s.agent = a.AccSortCode\n  WHERE s.agent IS NOT NULL\n)\nSELECT\n  COUNT(1) OVER() AS TotalRows,\n  *\nFROM base\nORDER BY agentCode ASC\nOFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY;",
+      "params": {
+        "offset": "{offset}",
+        "pageSize": "{limit}"
+      }
+    },
+    "body_type": "json",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "variables": [
+      {
+        "name": "dbName",
+        "type": "string",
+        "default": "EMANUEL",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "offset",
+        "type": "number",
+        "default": 0,
+        "required": false,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "limit",
+        "type": "number",
+        "default": 10,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      }
+    ],
+    "strict_variables": true
+  },
+  {
+    "key": "hasav_sql_products",
+    "name": "hasav_sql_products",
+    "connection_id": null,
+    "method": "POST",
+    "path": "/sql/execute",
+    "headers": null,
+    "query": null,
+    "body_template": {
+      "dbName": "{dbName}",
+      "db": {
+        "server": "localhost",
+        "database": "{dbName}",
+        "user": "sa",
+        "password": "<REDACTED>"
+      },
+      "query": "-- Recordset #1: products\nWITH\n  sortGroups AS (\n    SELECT LTRIM(RTRIM(value)) AS v\n    FROM STRING_SPLIT(COALESCE(NULLIF(@sortGroupsCsv,''),''), ',')\n    WHERE LTRIM(RTRIM(value)) <> ''\n  ),\n  noteIds AS (\n    SELECT LTRIM(RTRIM(value)) AS v\n    FROM STRING_SPLIT(COALESCE(NULLIF(@noteIdsCsv,''),''), ',')\n    WHERE LTRIM(RTRIM(value)) <> ''\n  ),\n  categoryNoteIds AS (\n    SELECT TRY_CONVERT(int, LTRIM(RTRIM(value))) AS v\n    FROM STRING_SPLIT(COALESCE(NULLIF(@categoryNoteIdsCsv,''),''), ',')\n    WHERE LTRIM(RTRIM(value)) <> ''\n  ),\n  base AS (\n    SELECT\n      items.[ID],\n      items.[ItemKey],\n      items.[ItemName],\n      items.[ForignName],\n      items.[CostCode],\n      items.[Filter],\n      items.[SortGroup],\n      items.[SalesUnit],\n      items.[Price],\n      items.[DiscountCode],\n      items.[VatExampt],\n      items.[SuF4],\n      items.[LOCALIZATION],\n      items.[BarCode],\n      items.[BDate],\n      items.[Dumi],\n      items.[StockPerUnit],\n      items.[DiscountPrc],\n      items.[ExPic],\n      items.[Weight],\n      items.[PurchPrice],\n      extN.[Note],\n      extNN.[NoteName]\n    FROM dbo.Items AS items\n    LEFT JOIN dbo.ExtraNotes AS extN\n      ON items.ItemKey = extN.KeF\n    LEFT JOIN dbo.ExtraNoteNames AS extNN\n      ON extN.NoteID = extNN.NoteID\n    WHERE\n      items.Dumi = '0'\n      AND (NOT EXISTS(SELECT 1 FROM sortGroups) OR items.SortGroup IN (SELECT v FROM sortGroups))\n      AND (NOT EXISTS(SELECT 1 FROM categoryNoteIds) OR extN.NoteID IN (SELECT v FROM categoryNoteIds WHERE v IS NOT NULL))\n  )\nSELECT\n  COUNT(1) OVER() AS TotalRows,\n  *\nFROM base\nORDER BY ID\nOFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY;\n\n-- Recordset #2: sort codes\nSELECT [ItemSortCode], [SortCodeName]\nFROM dbo.ItemSortNames;\n\n-- Recordset #3: extra sums\nSELECT *\nFROM dbo.ExtraSums\nWHERE Dumi = '0' AND SuFID = '5';\n\n-- Recordset #4: raw ExtraNotes (filtered by noteIdsCsv)\nWITH noteIds2 AS (\n  SELECT LTRIM(RTRIM(value)) AS v\n  FROM STRING_SPLIT(COALESCE(NULLIF(@noteIdsCsv,''),''), ',')\n  WHERE LTRIM(RTRIM(value)) <> ''\n)\nSELECT *\nFROM dbo.ExtraNotes\nWHERE Dumi = '0'\n  AND (NOT EXISTS(SELECT 1 FROM noteIds2) OR NoteID IN (SELECT v FROM noteIds2));\n\n-- Recordset #5: total count (unique products)\nWITH\n  sortGroups2 AS (\n    SELECT LTRIM(RTRIM(value)) AS v\n    FROM STRING_SPLIT(COALESCE(NULLIF(@sortGroupsCsv,''),''), ',')\n    WHERE LTRIM(RTRIM(value)) <> ''\n  ),\n  categoryNoteIds2 AS (\n    SELECT TRY_CONVERT(int, LTRIM(RTRIM(value))) AS v\n    FROM STRING_SPLIT(COALESCE(NULLIF(@categoryNoteIdsCsv,''),''), ',')\n    WHERE LTRIM(RTRIM(value)) <> ''\n  )\nSELECT COUNT(DISTINCT items.ID) AS total\nFROM dbo.Items AS items\nLEFT JOIN dbo.ExtraNotes AS extN\n  ON items.ItemKey = extN.KeF\nWHERE\n  items.Dumi = '0'\n  AND (NOT EXISTS(SELECT 1 FROM sortGroups2) OR items.SortGroup IN (SELECT v FROM sortGroups2))\n  AND (NOT EXISTS(SELECT 1 FROM categoryNoteIds2) OR extN.NoteID IN (SELECT v FROM categoryNoteIds2 WHERE v IS NOT NULL));",
+      "params": {
+        "sortGroupsCsv": "{sortGroupsCsv}",
+        "noteIdsCsv": "{noteIdsCsv}",
+        "categoryNoteIdsCsv": "{categoryNoteIdsCsv}",
+        "offset": "{offset}",
+        "pageSize": "{limit}"
+      }
+    },
+    "body_type": "json",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "variables": [
+      {
+        "name": "dbName",
+        "type": "string",
+        "default": "EMANUEL",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "sortGroupsCsv",
+        "type": "string",
+        "default": "",
+        "required": false,
+        "enumValues": null,
+        "description": "CSV list (optional)"
+      },
+      {
+        "name": "noteIdsCsv",
+        "type": "string",
+        "default": "",
+        "required": false,
+        "enumValues": null,
+        "description": "CSV list (optional)"
+      },
+      {
+        "name": "categoryNoteIdsCsv",
+        "type": "string",
+        "default": "17",
+        "required": true,
+        "enumValues": null,
+        "description": "CSV list of category NoteIDs"
+      },
+      {
+        "name": "offset",
+        "type": "number",
+        "default": 0,
+        "required": false,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "limit",
+        "type": "number",
+        "default": 20,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      }
+    ],
+    "strict_variables": true
+  },
+  {
+    "key": "hasav_sql_category",
+    "name": "hasav_sql_category",
+    "connection_id": null,
+    "method": "POST",
+    "path": "/sql/execute",
+    "headers": null,
+    "query": null,
+    "body_template": {
+      "dbName": "{dbName}",
+      "db": {
+        "server": "localhost",
+        "database": "{dbName}",
+        "user": "sa",
+        "password": "<REDACTED>"
+      },
+      "query": "WITH noteIds AS (\n  SELECT LTRIM(RTRIM(value)) AS NoteID\n  FROM STRING_SPLIT(COALESCE(NULLIF(@noteIdsCsv,''),''), ',')\n  WHERE LTRIM(RTRIM(value)) <> ''\n), base AS (\n  SELECT DISTINCT\n    en.Note\n  FROM dbo.ExtraNotes AS en\n  LEFT JOIN dbo.Items AS it\n    ON en.KeF = it.ItemKey\n  WHERE\n    en.Dumi = '0'\n    AND (NOT EXISTS(SELECT 1 FROM noteIds) OR en.NoteID IN (SELECT NoteID FROM noteIds))\n    AND (it.CostCode <> 9999 OR it.CostCode IS NULL)\n)\nSELECT\n  COUNT(1) OVER() AS TotalRows,\n  *\nFROM base\nORDER BY Note ASC\nOFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY;",
+      "params": {
+        "noteIdsCsv": "{noteIdsCsv}",
+        "offset": "{offset}",
+        "pageSize": "{limit}"
+      }
+    },
+    "body_type": "json",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "variables": [
+      {
+        "name": "dbName",
+        "type": "string",
+        "default": "EMANUEL",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "noteIdsCsv",
+        "type": "string",
+        "default": "17",
+        "required": false,
+        "enumValues": null,
+        "description": "CSV NoteIDs (optional)"
+      },
+      {
+        "name": "offset",
+        "type": "number",
+        "default": 0,
+        "required": false,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "limit",
+        "type": "number",
+        "default": 50,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      }
+    ],
+    "strict_variables": true
+  },
+
+  {
+    "key": "hasavh_users_documents_list_1",
+    "name": "חשבונית מס",
+    "connection_id": null,
+    "method": "POST",
+    "path": "/sql/execute",
+    "headers": null,
+    "query": null,
+    "body_template": {
+      "dbName": "EMANUEL",
+      "db": {
+        "server": "localhost",
+        "database": "EMANUEL",
+        "user": "sa",
+        "password": "<REDACTED>"
+      },
+      "query": "DECLARE @searchLike NVARCHAR(200) = CASE WHEN @search IS NULL OR LTRIM(RTRIM(@search)) = '' THEN NULL ELSE CONCAT('%', @search, '%') END;\n\nSELECT\n  COUNT(1) OVER() AS TotalRows,\n  *\nFROM dbo.Stock\nWHERE\n  ValueDate >= TRY_CONVERT(date, @dateFrom)\n  AND ValueDate <= TRY_CONVERT(date, @dateTo)\n  AND DocumentID = @documentType\n  AND (@userExtId IS NULL OR AccountKey = @userExtId)\n  AND (\n    @searchLike IS NULL\n    OR DocNumber LIKE @searchLike\n    OR AccountKey LIKE @searchLike\n    OR AccountName LIKE @searchLike\n  )\nORDER BY ValueDate ASC\nOFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY;",
+      "params": {
+        "dateFrom": "{dateFrom}",
+        "dateTo": "{dateTo}",
+        "offset": "{offset}",
+        "pageSize": "{limit}",
+        "documentType": 1,
+        "userExtId": "{userExtId}",
+        "search": "{search}"
+      }
+    },
+    "body_type": "json",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "variables": [
+      { "name": "userExtId", "type": "string", "default": "50017", "required": false, "enumValues": null, "description": null },
+      { "name": "dateFrom", "type": "string", "default": "2025-12-01", "required": true, "enumValues": null, "description": null },
+      { "name": "dateTo", "type": "string", "default": "2025-12-18", "required": true, "enumValues": null, "description": null },
+      { "name": "offset", "type": "number", "default": 0, "required": false, "enumValues": null, "description": null },
+      { "name": "limit", "type": "number", "default": 10, "required": true, "enumValues": null, "description": null },
+      { "name": "search", "type": "string", "default": "", "required": false, "enumValues": null, "description": "search term (optional)" }
+    ],
+    "strict_variables": true
+  },
+  {
+    "key": "hasavh_users_documents_list_2",
+    "name": "חשבונית מס/קבלה",
+    "connection_id": null,
+    "method": "POST",
+    "path": "/sql/execute",
+    "headers": null,
+    "query": null,
+    "body_template": {
+      "dbName": "EMANUEL",
+      "db": {
+        "server": "localhost",
+        "database": "EMANUEL",
+        "user": "sa",
+        "password": "<REDACTED>"
+      },
+      "query": "DECLARE @searchLike NVARCHAR(200) = CASE WHEN @search IS NULL OR LTRIM(RTRIM(@search)) = '' THEN NULL ELSE CONCAT('%', @search, '%') END;\n\nSELECT\n  COUNT(1) OVER() AS TotalRows,\n  *\nFROM dbo.Stock\nWHERE\n  ValueDate >= TRY_CONVERT(date, @dateFrom)\n  AND ValueDate <= TRY_CONVERT(date, @dateTo)\n  AND DocumentID = @documentType\n  AND (@userExtId IS NULL OR AccountKey = @userExtId)\n  AND (\n    @searchLike IS NULL\n    OR DocNumber LIKE @searchLike\n    OR AccountKey LIKE @searchLike\n    OR AccountName LIKE @searchLike\n  )\nORDER BY ValueDate ASC\nOFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY;",
+      "params": {
+        "dateFrom": "{dateFrom}",
+        "dateTo": "{dateTo}",
+        "offset": "{offset}",
+        "pageSize": "{limit}",
+        "documentType": 2,
+        "userExtId": "{userExtId}",
+        "search": "{search}"
+      }
+    },
+    "body_type": "json",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "variables": [
+      { "name": "userExtId", "type": "string", "default": "50017", "required": false, "enumValues": null, "description": null },
+      { "name": "dateFrom", "type": "string", "default": "2025-12-01", "required": true, "enumValues": null, "description": null },
+      { "name": "dateTo", "type": "string", "default": "2025-12-18", "required": true, "enumValues": null, "description": null },
+      { "name": "offset", "type": "number", "default": 0, "required": false, "enumValues": null, "description": null },
+      { "name": "limit", "type": "number", "default": 10, "required": true, "enumValues": null, "description": null },
+      { "name": "search", "type": "string", "default": "", "required": false, "enumValues": null, "description": "search term (optional)" }
+    ],
+    "strict_variables": true
+  },
+  {
+    "key": "hasavh_users_documents_list_4",
+    "name": "תעודת משלוח",
+    "connection_id": null,
+    "method": "POST",
+    "path": "/sql/execute",
+    "headers": null,
+    "query": null,
+    "body_template": {
+      "dbName": "EMANUEL",
+      "db": {
+        "server": "localhost",
+        "database": "EMANUEL",
+        "user": "sa",
+        "password": "<REDACTED>"
+      },
+      "query": "DECLARE @searchLike NVARCHAR(200) = CASE WHEN @search IS NULL OR LTRIM(RTRIM(@search)) = '' THEN NULL ELSE CONCAT('%', @search, '%') END;\n\nSELECT\n  COUNT(1) OVER() AS TotalRows,\n  *\nFROM dbo.Stock\nWHERE\n  ValueDate >= TRY_CONVERT(date, @dateFrom)\n  AND ValueDate <= TRY_CONVERT(date, @dateTo)\n  AND DocumentID = @documentType\n  AND (@userExtId IS NULL OR AccountKey = @userExtId)\n  AND (\n    @searchLike IS NULL\n    OR DocNumber LIKE @searchLike\n    OR AccountKey LIKE @searchLike\n    OR AccountName LIKE @searchLike\n  )\nORDER BY ValueDate ASC\nOFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY;",
+      "params": {
+        "dateFrom": "{dateFrom}",
+        "dateTo": "{dateTo}",
+        "offset": "{offset}",
+        "pageSize": "{limit}",
+        "documentType": 4,
+        "userExtId": "{userExtId}",
+        "search": "{search}"
+      }
+    },
+    "body_type": "json",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "variables": [
+      { "name": "userExtId", "type": "string", "default": "50017", "required": false, "enumValues": null, "description": null },
+      { "name": "dateFrom", "type": "string", "default": "2025-12-01", "required": true, "enumValues": null, "description": null },
+      { "name": "dateTo", "type": "string", "default": "2025-12-18", "required": true, "enumValues": null, "description": null },
+      { "name": "offset", "type": "number", "default": 0, "required": false, "enumValues": null, "description": null },
+      { "name": "limit", "type": "number", "default": 10, "required": true, "enumValues": null, "description": null },
+      { "name": "search", "type": "string", "default": "", "required": false, "enumValues": null, "description": "search term (optional)" }
+    ],
+    "strict_variables": true
+  },
+  {
+    "key": "hasavh_users_documents_list_5",
+    "name": "החזרה",
+    "connection_id": null,
+    "method": "POST",
+    "path": "/sql/execute",
+    "headers": null,
+    "query": null,
+    "body_template": {
+      "dbName": "EMANUEL",
+      "db": {
+        "server": "localhost",
+        "database": "EMANUEL",
+        "user": "sa",
+        "password": "<REDACTED>"
+      },
+      "query": "DECLARE @searchLike NVARCHAR(200) = CASE WHEN @search IS NULL OR LTRIM(RTRIM(@search)) = '' THEN NULL ELSE CONCAT('%', @search, '%') END;\n\nSELECT\n  COUNT(1) OVER() AS TotalRows,\n  *\nFROM dbo.Stock\nWHERE\n  ValueDate >= TRY_CONVERT(date, @dateFrom)\n  AND ValueDate <= TRY_CONVERT(date, @dateTo)\n  AND DocumentID = @documentType\n  AND (@userExtId IS NULL OR AccountKey = @userExtId)\n  AND (\n    @searchLike IS NULL\n    OR DocNumber LIKE @searchLike\n    OR AccountKey LIKE @searchLike\n    OR AccountName LIKE @searchLike\n  )\nORDER BY ValueDate ASC\nOFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY;",
+      "params": {
+        "dateFrom": "{dateFrom}",
+        "dateTo": "{dateTo}",
+        "offset": "{offset}",
+        "pageSize": "{limit}",
+        "documentType": 5,
+        "userExtId": "{userExtId}",
+        "search": "{search}"
+      }
+    },
+    "body_type": "json",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "variables": [
+      { "name": "userExtId", "type": "string", "default": "50017", "required": false, "enumValues": null, "description": null },
+      { "name": "dateFrom", "type": "string", "default": "2025-12-01", "required": true, "enumValues": null, "description": null },
+      { "name": "dateTo", "type": "string", "default": "2025-12-18", "required": true, "enumValues": null, "description": null },
+      { "name": "offset", "type": "number", "default": 0, "required": false, "enumValues": null, "description": null },
+      { "name": "limit", "type": "number", "default": 10, "required": true, "enumValues": null, "description": null },
+      { "name": "search", "type": "string", "default": "", "required": false, "enumValues": null, "description": "search term (optional)" }
+    ],
+    "strict_variables": true
+  },
+  {
+    "key": "hasavh_users_documents_list_6",
+    "name": "הזמנה",
+    "connection_id": null,
+    "method": "POST",
+    "path": "/sql/execute",
+    "headers": null,
+    "query": null,
+    "body_template": {
+      "dbName": "EMANUEL",
+      "db": {
+        "server": "localhost",
+        "database": "EMANUEL",
+        "user": "sa",
+        "password": "<REDACTED>"
+      },
+      "query": "DECLARE @searchLike NVARCHAR(200) = CASE WHEN @search IS NULL OR LTRIM(RTRIM(@search)) = '' THEN NULL ELSE CONCAT('%', @search, '%') END;\n\nSELECT\n  COUNT(1) OVER() AS TotalRows,\n  *\nFROM dbo.Stock\nWHERE\n  ValueDate >= TRY_CONVERT(date, @dateFrom)\n  AND ValueDate <= TRY_CONVERT(date, @dateTo)\n  AND DocumentID = @documentType\n  AND (@userExtId IS NULL OR AccountKey = @userExtId)\n  AND (\n    @searchLike IS NULL\n    OR DocNumber LIKE @searchLike\n    OR AccountKey LIKE @searchLike\n    OR AccountName LIKE @searchLike\n  )\nORDER BY ValueDate ASC\nOFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY;",
+      "params": {
+        "dateFrom": "{dateFrom}",
+        "dateTo": "{dateTo}",
+        "offset": "{offset}",
+        "pageSize": "{limit}",
+        "documentType": 6,
+        "userExtId": "{userExtId}",
+        "search": "{search}"
+      }
+    },
+    "body_type": "json",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "variables": [
+      { "name": "userExtId", "type": "string", "default": "50017", "required": false, "enumValues": null, "description": null },
+      { "name": "dateFrom", "type": "string", "default": "2025-12-01", "required": true, "enumValues": null, "description": null },
+      { "name": "dateTo", "type": "string", "default": "2025-12-18", "required": true, "enumValues": null, "description": null },
+      { "name": "offset", "type": "number", "default": 0, "required": false, "enumValues": null, "description": null },
+      { "name": "limit", "type": "number", "default": 10, "required": true, "enumValues": null, "description": null },
+      { "name": "search", "type": "string", "default": "", "required": false, "enumValues": null, "description": "search term (optional)" }
+    ],
+    "strict_variables": true
+  },
+  {
+    "key": "hasavh_users_documents_list_7",
+    "name": "הצעת מחיר",
+    "connection_id": null,
+    "method": "POST",
+    "path": "/sql/execute",
+    "headers": null,
+    "query": null,
+    "body_template": {
+      "dbName": "EMANUEL",
+      "db": {
+        "server": "localhost",
+        "database": "EMANUEL",
+        "user": "sa",
+        "password": "<REDACTED>"
+      },
+      "query": "DECLARE @searchLike NVARCHAR(200) = CASE WHEN @search IS NULL OR LTRIM(RTRIM(@search)) = '' THEN NULL ELSE CONCAT('%', @search, '%') END;\n\nSELECT\n  COUNT(1) OVER() AS TotalRows,\n  *\nFROM dbo.Stock\nWHERE\n  ValueDate >= TRY_CONVERT(date, @dateFrom)\n  AND ValueDate <= TRY_CONVERT(date, @dateTo)\n  AND DocumentID = @documentType\n  AND (@userExtId IS NULL OR AccountKey = @userExtId)\n  AND (\n    @searchLike IS NULL\n    OR DocNumber LIKE @searchLike\n    OR AccountKey LIKE @searchLike\n    OR AccountName LIKE @searchLike\n  )\nORDER BY ValueDate ASC\nOFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY;",
+      "params": {
+        "dateFrom": "{dateFrom}",
+        "dateTo": "{dateTo}",
+        "offset": "{offset}",
+        "pageSize": "{limit}",
+        "documentType": 7,
+        "userExtId": "{userExtId}",
+        "search": "{search}"
+      }
+    },
+    "body_type": "json",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "variables": [
+      { "name": "userExtId", "type": "string", "default": "50017", "required": false, "enumValues": null, "description": null },
+      { "name": "dateFrom", "type": "string", "default": "2025-12-01", "required": true, "enumValues": null, "description": null },
+      { "name": "dateTo", "type": "string", "default": "2025-12-18", "required": true, "enumValues": null, "description": null },
+      { "name": "offset", "type": "number", "default": 0, "required": false, "enumValues": null, "description": null },
+      { "name": "limit", "type": "number", "default": 10, "required": true, "enumValues": null, "description": null },
+      { "name": "search", "type": "string", "default": "", "required": false, "enumValues": null, "description": "search term (optional)" }
+    ],
+    "strict_variables": true
+  },
+  {
+    "key": "hasavh_users_documents_list_11",
+    "name": "הזמנת סוכן",
+    "connection_id": null,
+    "method": "POST",
+    "path": "/sql/execute",
+    "headers": null,
+    "query": null,
+    "body_template": {
+      "dbName": "EMANUEL",
+      "db": {
+        "server": "localhost",
+        "database": "EMANUEL",
+        "user": "sa",
+        "password": "<REDACTED>"
+      },
+      "query": "DECLARE @searchLike NVARCHAR(200) = CASE WHEN @search IS NULL OR LTRIM(RTRIM(@search)) = '' THEN NULL ELSE CONCAT('%', @search, '%') END;\n\nSELECT\n  COUNT(1) OVER() AS TotalRows,\n  *\nFROM dbo.Stock\nWHERE\n  ValueDate >= TRY_CONVERT(date, @dateFrom)\n  AND ValueDate <= TRY_CONVERT(date, @dateTo)\n  AND DocumentID = @documentType\n  AND (@userExtId IS NULL OR AccountKey = @userExtId)\n  AND (\n    @searchLike IS NULL\n    OR DocNumber LIKE @searchLike\n    OR AccountKey LIKE @searchLike\n    OR AccountName LIKE @searchLike\n  )\nORDER BY ValueDate ASC\nOFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY;",
+      "params": {
+        "dateFrom": "{dateFrom}",
+        "dateTo": "{dateTo}",
+        "offset": "{offset}",
+        "pageSize": "{limit}",
+        "documentType": 11,
+        "userExtId": "{userExtId}",
+        "search": "{search}"
+      }
+    },
+    "body_type": "json",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "variables": [
+      { "name": "userExtId", "type": "string", "default": "50017", "required": false, "enumValues": null, "description": null },
+      { "name": "dateFrom", "type": "string", "default": "2025-12-01", "required": true, "enumValues": null, "description": null },
+      { "name": "dateTo", "type": "string", "default": "2025-12-18", "required": true, "enumValues": null, "description": null },
+      { "name": "offset", "type": "number", "default": 0, "required": false, "enumValues": null, "description": null },
+      { "name": "limit", "type": "number", "default": 10, "required": true, "enumValues": null, "description": null },
+      { "name": "search", "type": "string", "default": "", "required": false, "enumValues": null, "description": "search term (optional)" }
+    ],
+    "strict_variables": true
+  },
+  {
+    "key": "hasavh_users_documents_list_31",
+    "name": "קבלה",
+    "connection_id": null,
+    "method": "POST",
+    "path": "/sql/execute",
+    "headers": null,
+    "query": null,
+    "body_template": {
+      "dbName": "EMANUEL",
+      "db": {
+        "server": "localhost",
+        "database": "EMANUEL",
+        "user": "sa",
+        "password": "<REDACTED>"
+      },
+      "query": "DECLARE @searchLike NVARCHAR(200) = CASE WHEN @search IS NULL OR LTRIM(RTRIM(@search)) = '' THEN NULL ELSE CONCAT('%', @search, '%') END;\n\nSELECT\n  COUNT(1) OVER() AS TotalRows,\n  *\nFROM dbo.Stock\nWHERE\n  ValueDate >= TRY_CONVERT(date, @dateFrom)\n  AND ValueDate <= TRY_CONVERT(date, @dateTo)\n  AND DocumentID = @documentType\n  AND (@userExtId IS NULL OR AccountKey = @userExtId)\n  AND (\n    @searchLike IS NULL\n    OR DocNumber LIKE @searchLike\n    OR AccountKey LIKE @searchLike\n    OR AccountName LIKE @searchLike\n  )\nORDER BY ValueDate ASC\nOFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY;",
+      "params": {
+        "dateFrom": "{dateFrom}",
+        "dateTo": "{dateTo}",
+        "offset": "{offset}",
+        "pageSize": "{limit}",
+        "documentType": 31,
+        "userExtId": "{userExtId}",
+        "search": "{search}"
+      }
+    },
+    "body_type": "json",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "variables": [
+      { "name": "userExtId", "type": "string", "default": "50017", "required": false, "enumValues": null, "description": null },
+      { "name": "dateFrom", "type": "string", "default": "2025-12-01", "required": true, "enumValues": null, "description": null },
+      { "name": "dateTo", "type": "string", "default": "2025-12-18", "required": true, "enumValues": null, "description": null },
+      { "name": "offset", "type": "number", "default": 0, "required": false, "enumValues": null, "description": null },
+      { "name": "limit", "type": "number", "default": 10, "required": true, "enumValues": null, "description": null },
+      { "name": "search", "type": "string", "default": "", "required": false, "enumValues": null, "description": "search term (optional)" }
+    ],
+    "strict_variables": true
+  },
+  {
+    "key": "hasavh_users_documents_list_37",
+    "name": "חשבונית מס ריכוז",
+    "connection_id": null,
+    "method": "POST",
+    "path": "/sql/execute",
+    "headers": null,
+    "query": null,
+    "body_template": {
+      "dbName": "EMANUEL",
+      "db": {
+        "server": "localhost",
+        "database": "EMANUEL",
+        "user": "sa",
+        "password": "<REDACTED>"
+      },
+      "query": "DECLARE @searchLike NVARCHAR(200) = CASE WHEN @search IS NULL OR LTRIM(RTRIM(@search)) = '' THEN NULL ELSE CONCAT('%', @search, '%') END;\n\nSELECT\n  COUNT(1) OVER() AS TotalRows,\n  *\nFROM dbo.Stock\nWHERE\n  ValueDate >= TRY_CONVERT(date, @dateFrom)\n  AND ValueDate <= TRY_CONVERT(date, @dateTo)\n  AND DocumentID = @documentType\n  AND (@userExtId IS NULL OR AccountKey = @userExtId)\n  AND (\n    @searchLike IS NULL\n    OR DocNumber LIKE @searchLike\n    OR AccountKey LIKE @searchLike\n    OR AccountName LIKE @searchLike\n  )\nORDER BY ValueDate ASC\nOFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY;",
+      "params": {
+        "dateFrom": "{dateFrom}",
+        "dateTo": "{dateTo}",
+        "offset": "{offset}",
+        "pageSize": "{limit}",
+        "documentType": 37,
+        "userExtId": "{userExtId}",
+        "search": "{search}"
+      }
+    },
+    "body_type": "json",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "variables": [
+      { "name": "userExtId", "type": "string", "default": "50017", "required": false, "enumValues": null, "description": null },
+      { "name": "dateFrom", "type": "string", "default": "2025-12-01", "required": true, "enumValues": null, "description": null },
+      { "name": "dateTo", "type": "string", "default": "2025-12-18", "required": true, "enumValues": null, "description": null },
+      { "name": "offset", "type": "number", "default": 0, "required": false, "enumValues": null, "description": null },
+      { "name": "limit", "type": "number", "default": 10, "required": true, "enumValues": null, "description": null },
+      { "name": "search", "type": "string", "default": "", "required": false, "enumValues": null, "description": "search term (optional)" }
+    ],
+    "strict_variables": true
+  },
+
+  {
+    "key": "hasav_sql_document_items",
+    "name": "hasav_sql_document_items",
+    "connection_id": null,
+    "method": "POST",
+    "path": "/sql/execute",
+    "headers": null,
+    "query": null,
+    "body_template": {
+      "dbName": "EMANUEL",
+      "db": {
+        "server": "localhost",
+        "database": "EMANUEL",
+        "user": "sa",
+        "password": "<REDACTED>"
+      },
+      "query": "WITH doc AS (SELECT TOP (1) * FROM dbo.Stock WHERE DocNumber = @documentId AND DocumentID = @documentType) SELECT doc.*, sm.* FROM doc LEFT JOIN dbo.StockMoves sm ON sm.StockId = doc.ID AND sm.DocumentID = @documentType ORDER BY sm.ID ASC",
+      "params": {
+        "documentId": "{documentNumber}",
+        "documentType": 3
+      }
+    },
+    "body_type": "json",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2025-12-20T15: 18: 24.967078",
+    "updated_at": "2025-12-20T15: 18: 24.967078",
+    "variables": [
+      {
+        "name": "documentNumber",
+        "type": "string",
+        "default": 506375,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      }
+    ],
+    "strict_variables": true
+  },
+
+  {
+    "key": "hasav_sql_purchase_history",
+    "name": "hasav_sql_purchase_history (getPurchaseHistoryData)",
+    "connection_id": null,
+    "method": "POST",
+    "path": "/sql/execute",
+    "headers": null,
+    "query": null,
+    "body_template": {
+      "dbName": "{dbName}",
+      "db": {
+        "server": "localhost",
+        "database": "{dbName}",
+        "user": "sa",
+        "password": "<REDACTED>"
+      },
+      "query": "SELECT\n  sm.Quantity,\n  sm.Price,\n  sm.SupplyQuantity,\n  sm.DiscountPrc,\n  sm.TFtal,\n  s1.DocNumber,\n  s1.ValueDate,\n  s1.DocumentID,\n  s1.Status\nFROM dbo.Stock AS s1\nLEFT JOIN dbo.Stock AS s2\n  ON s1.DocNumber = s2.Reference AND s1.AccountKey = s2.AccountKey\nJOIN dbo.StockMoves AS sm\n  ON sm.StockId = s1.ID\nWHERE\n  (s1.DocumentID IN (2,4,1))\n  AND s1.AccountKey = @userExtId\n  AND sm.ItemKey = @sku\n  AND s1.ValueDate >= DATEADD(MONTH, -6, GETDATE())\nORDER BY s1.ValueDate DESC;",
+      "params": {
+        "userExtId": "{userExtId}",
+        "sku": "{sku}"
+      }
+    },
+    "body_type": "json",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "variables": [
+      {
+        "name": "dbName",
+        "type": "string",
+        "default": "EMANUEL",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "userExtId",
+        "type": "string",
+        "default": "50017",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "sku",
+        "type": "string",
+        "default": "SKU001",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      }
+    ],
+    "strict_variables": true
+  },
+  {
+    "key": "hasav_sql_products_im_buy",
+    "name": "hasav_sql_products_im_buy (getProductsImBuyData)",
+    "connection_id": null,
+    "method": "POST",
+    "path": "/sql/execute",
+    "headers": null,
+    "query": null,
+    "body_template": {
+      "dbName": "{dbName}",
+      "db": {
+        "server": "localhost",
+        "database": "{dbName}",
+        "user": "sa",
+        "password": "<REDACTED>"
+      },
+      "query": "SELECT\n  sm.Quantity,\n  sm.Price,\n  sm.DiscountPrc,\n  sm.TFtal,\n  sm.ItemKey,\n  s1.DocNumber,\n  s1.ValueDate,\n  s1.DocumentID\nFROM dbo.Stock AS s1\nLEFT JOIN dbo.Stock AS s2\n  ON s1.DocNumber = s2.Reference AND s1.AccountKey = s2.AccountKey\nJOIN dbo.StockMoves AS sm\n  ON sm.StockId = s1.ID\nWHERE\n  (s1.DocumentID IN (2,4,1))\n  AND s1.AccountKey = @userExtId\n  AND s1.ValueDate >= DATEADD(MONTH, -6, GETDATE())\nORDER BY s1.ValueDate DESC;",
+      "params": {
+        "userExtId": "{userExtId}"
+      }
+    },
+    "body_type": "json",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "variables": [
+      {
+        "name": "dbName",
+        "type": "string",
+        "default": "EMANUEL",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "userExtId",
+        "type": "string",
+        "default": "50017",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      }
+    ],
+    "strict_variables": true
+  },
+  {
+    "key": "hasav_sql_purchases_by_sku_warehouses",
+    "name": "hasav_sql_purchases_by_sku_warehouses (getPurchasesData)",
+    "connection_id": null,
+    "method": "POST",
+    "path": "/sql/execute",
+    "headers": null,
+    "query": null,
+    "body_template": {
+      "dbName": "{dbName}",
+      "db": {
+        "server": "localhost",
+        "database": "{dbName}",
+        "user": "sa",
+        "password": "<REDACTED>"
+      },
+      "query": "WITH wh AS (\n  SELECT LTRIM(RTRIM(value)) AS w\n  FROM STRING_SPLIT(COALESCE(NULLIF(@warehousesCsv,''),''), ',')\n  WHERE LTRIM(RTRIM(value)) <> ''\n)\nSELECT\n  s1.WareHouse,\n  stockData.ITEMWARHBAL AS stock,\n  SUM(CASE WHEN sm.Status = 2 THEN sm.SupplyQuantity ELSE 0 END) AS committed,\n  SUM(CASE WHEN sm.Status = 0 THEN sm.SupplyQuantity ELSE 0 END) AS ordered\nFROM dbo.Stock AS s1\nJOIN dbo.StockMoves AS sm\n  ON sm.StockId = s1.ID\nLEFT JOIN (\n  SELECT ITEMKEY, SUM(ITEMWARHBAL) AS ITEMWARHBAL\n  FROM dbo.vBalItemWarehouse\n  WHERE ITEMKEY = @sku AND WAREHOUSE = '10'\n  GROUP BY ITEMKEY\n) AS stockData\n  ON stockData.ITEMKEY = sm.ItemKey\nWHERE\n  sm.ItemKey = @sku\n  AND sm.SupplyQuantity != 0\n  AND (NOT EXISTS(SELECT 1 FROM wh) OR s1.WareHouse IN (SELECT w FROM wh))\nGROUP BY\n  s1.WareHouse,\n  stockData.ITEMWARHBAL;",
+      "params": {
+        "sku": "{sku}",
+        "warehousesCsv": "{warehousesCsv}"
+      }
+    },
+    "body_type": "json",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "variables": [
+      {
+        "name": "dbName",
+        "type": "string",
+        "default": "EMANUEL",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "sku",
+        "type": "string",
+        "default": "SKU001",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "warehousesCsv",
+        "type": "string",
+        "default": "",
+        "required": false,
+        "enumValues": null,
+        "description": "CSV list of warehouses (optional)"
+      }
+    ],
+    "strict_variables": true
+  },
+  {
+    "key": "hasav_sql_purchase_delivery",
+    "name": "hasav_sql_purchase_delivery (getPurchaseDeliveryData)",
+    "connection_id": null,
+    "method": "POST",
+    "path": "/sql/execute",
+    "headers": null,
+    "query": null,
+    "body_template": {
+      "dbName": "{dbName}",
+      "db": {
+        "server": "localhost",
+        "database": "{dbName}",
+        "user": "sa",
+        "password": "<REDACTED>"
+      },
+      "query": "SELECT\n  SM.ItemKey,\n  S1.DocNumber,\n  SUM(SM.Quantity) AS Quantity,\n  S1.DueDate,\n  SM.Warehouse,\n  SM.Status\nFROM dbo.Stock AS S1\nLEFT JOIN dbo.Stock AS S2\n  ON S1.DocNumber = S2.Reference AND S1.AccountKey = S2.AccountKey\nJOIN dbo.StockMoves SM\n  ON S1.ID = SM.StockID\nWHERE\n  SM.ItemKey = @sku\n  AND S1.DocumentID IN (17,38)\n  AND SM.SupplyQuantity != 0\n  AND SM.Status != '2'\nGROUP BY\n  S1.DocNumber, S1.DueDate, SM.ItemKey, SM.Warehouse, SM.Status\nORDER BY S1.DueDate DESC;",
+      "params": {
+        "sku": "{sku}"
+      }
+    },
+    "body_type": "json",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "variables": [
+      {
+        "name": "dbName",
+        "type": "string",
+        "default": "EMANUEL",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "sku",
+        "type": "string",
+        "default": "SKU001",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      }
+    ],
+    "strict_variables": true
+  },
+
+  {
+    "key": "hasav_sql_debits",
+    "name": "hasav_sql_debits (getDebitsData)",
+    "connection_id": null,
+    "method": "POST",
+    "path": "/sql/execute",
+    "headers": null,
+    "query": null,
+    "body_template": {
+      "dbName": "{dbName}",
+      "db": {
+        "server": "localhost",
+        "database": "{dbName}",
+        "user": "sa",
+        "password": "<REDACTED>"
+      },
+      "query": "SELECT\n  j.Referance, j.TransType, j.ValueDate, j.IssueDate, j.DocumentID, j.SuF,\n  m.AccountKey, m.DebitCredit, m.FullMatch,\n  A.Balance, A.FullName\nFROM dbo.JurnalTrans AS j\nJOIN dbo.JurnalTransMoves AS m\n  ON j.TransId = m.TransID\nJOIN dbo.Accounts AS A\n  ON A.AccountKey = m.AccountKey\nWHERE\n  m.AccountKey = @userExtId\n  AND A.Balance != 0\n  AND j.Referance != ''\n  AND j.ValueDate >= TRY_CONVERT(date, @dateFrom)\n  AND j.ValueDate <= TRY_CONVERT(date, @dateTo)\nORDER BY j.ValueDate ASC;",
+      "params": {
+        "dateFrom": "{dateFrom}",
+        "dateTo": "{dateTo}",
+        "userExtId": "{userExtId}"
+      }
+    },
+    "body_type": "json",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "variables": [
+      {
+        "name": "dbName",
+        "type": "string",
+        "default": "EMANUEL",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "dateFrom",
+        "type": "string",
+        "default": "2025-01-01",
+        "required": true,
+        "enumValues": null,
+        "description": "ISO date"
+      },
+      {
+        "name": "dateTo",
+        "type": "string",
+        "default": "2025-12-20",
+        "required": true,
+        "enumValues": null,
+        "description": "ISO date"
+      },
+      {
+        "name": "userExtId",
+        "type": "string",
+        "default": "50017",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      }
+    ],
+    "strict_variables": true
+  },
+  {
+    "key": "hasav_sql_cartesset_lines",
+    "name": "hasav_sql_cartesset_lines (getCartessetData) - running balance in SQL",
+    "connection_id": null,
+    "method": "POST",
+    "path": "/sql/execute",
+    "headers": null,
+    "query": null,
+    "body_template": {
+      "dbName": "{dbName}",
+      "db": {
+        "server": "localhost",
+        "database": "{dbName}",
+        "user": "sa",
+        "password": "<REDACTED>"
+      },
+      "query": "DECLARE @fromDate DATE = TRY_CONVERT(date, NULLIF(@dateFrom112,''), 112);\nDECLARE @toDate   DATE = TRY_CONVERT(date, NULLIF(@dateTo112,''), 112);\n\nWITH base AS (\n  SELECT\n    JT.TransID,\n    JT.BatchNo,\n    JT.TransType,\n    JT.TransCredID,\n    CAST(JT.ValueDate AS date) AS ValueDate,\n    CAST(JT.DueDate  AS date) AS DueDate,\n    JT.Referance,\n    JT.Ref2,\n    JT.Description,\n    JTM.ID,\n    JTM.DebitCredit,\n    CAST(JTM.suF AS float) AS suF,\n    CASE WHEN CAST(JTM.DebitCredit AS varchar(10)) = '1' THEN -CAST(JTM.suF AS float) ELSE CAST(JTM.suF AS float) END AS adjSuF\n  FROM dbo.JurnalTrans AS JT\n  JOIN dbo.JurnalTransMoves AS JTM\n    ON JT.TransID = JTM.TransID\n  WHERE\n    JTM.AccountKey = @userExtId\n    AND JT.Status = '1'\n    AND (@fromDate IS NULL OR CAST(JT.ValueDate AS date) >= @fromDate)\n    AND (@toDate   IS NULL OR CAST(JT.ValueDate AS date) <= @toDate)\n)\nSELECT\n  *,\n  SUM(CASE WHEN CAST(DebitCredit AS varchar(10)) = '1' THEN suF ELSE 0 END) OVER() AS glbDeptTtL,\n  SUM(CASE WHEN CAST(DebitCredit AS varchar(10)) <> '1' THEN suF ELSE 0 END) OVER() AS glbCredTtl,\n  SUM(adjSuF) OVER(ORDER BY ValueDate, TransID, ID ROWS UNBOUNDED PRECEDING) AS Balance\nFROM base\nORDER BY ValueDate, TransID, ID;",
+      "params": {
+        "userExtId": "{userExtId}",
+        "dateFrom112": "{dateFrom112}",
+        "dateTo112": "{dateTo112}"
+      }
+    },
+    "body_type": "json",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "variables": [
+      {
+        "name": "dbName",
+        "type": "string",
+        "default": "EMANUEL",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "userExtId",
+        "type": "string",
+        "default": "50017",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "dateFrom112",
+        "type": "string",
+        "default": "",
+        "required": false,
+        "enumValues": null,
+        "description": "YYYYMMDD (optional)"
+      },
+      {
+        "name": "dateTo112",
+        "type": "string",
+        "default": "",
+        "required": false,
+        "enumValues": null,
+        "description": "YYYYMMDD (optional)"
+      }
+    ],
+    "strict_variables": true
+  },
+
+  {
+    "key": "hasav_sql_agent_profile_bundle",
+    "name": "hasav_sql_agent_profile_bundle (getAgentProfileData) - multi recordsets",
+    "connection_id": null,
+    "method": "POST",
+    "path": "/sql/execute",
+    "headers": null,
+    "query": null,
+    "body_template": {
+      "dbName": "{dbName}",
+      "db": {
+        "server": "localhost",
+        "database": "{dbName}",
+        "user": "sa",
+        "password": "<REDACTED>"
+      },
+      "query": "DECLARE @startOfToday DATETIME = CONVERT(date, GETDATE());\nDECLARE @endOfToday   DATETIME = DATEADD(ms, -3, DATEADD(day, 1, @startOfToday));\nDECLARE @startOfMonth DATETIME = DATEFROMPARTS(YEAR(GETDATE()), MONTH(GETDATE()), 1);\nDECLARE @endOfMonth   DATETIME = DATEADD(ms, -3, DATEADD(month, 1, @startOfMonth));\n\n-- Recordset #1: monthlyTotals\nSELECT\n  SUM(TFtalVat) AS total,\n  MONTH(ValueDate) AS month,\n  YEAR(ValueDate) AS year\nFROM dbo.Stock\nWHERE\n  Agent = @agentId\n  AND DocumentID IN (6,11)\n  AND Status = '1'\n  AND ValueDate BETWEEN TRY_CONVERT(datetime, @dateFrom) AND TRY_CONVERT(datetime, @dateTo)\nGROUP BY MONTH(ValueDate), YEAR(ValueDate)\nORDER BY YEAR(ValueDate), MONTH(ValueDate);\n\n-- Recordset #2: totalsChosenPeriod\nSELECT\n  SUM(TFtalVat) AS total,\n  COUNT(*) AS totalOrders,\n  AVG(TFtalVat) AS averageBasket\nFROM dbo.Stock\nWHERE\n  Agent = @agentId\n  AND DocumentID IN (6,11)\n  AND Status = '1'\n  AND ValueDate BETWEEN TRY_CONVERT(datetime, @dateFrom) AND TRY_CONVERT(datetime, @dateTo);\n\n-- Recordset #3: totalsToday\nSELECT\n  SUM(TFtalVat) AS totalToday,\n  COUNT(*) AS countToday\nFROM dbo.Stock\nWHERE\n  Agent = @agentId\n  AND DocumentID IN (6,11)\n  AND Status = '1'\n  AND ValueDate BETWEEN @startOfToday AND @endOfToday;\n\n-- Recordset #4: totalsMonth\nSELECT\n  SUM(TFtalVat) AS totalMonth,\n  COUNT(*) AS countMonth\nFROM dbo.Stock\nWHERE\n  Agent = @agentId\n  AND DocumentID IN (6,11)\n  AND Status = '1'\n  AND ValueDate BETWEEN @startOfMonth AND @endOfMonth;",
+      "params": {
+        "agentId": "{agentId}",
+        "dateFrom": "{dateFrom}",
+        "dateTo": "{dateTo}"
+      }
+    },
+    "body_type": "json",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "variables": [
+      {
+        "name": "dbName",
+        "type": "string",
+        "default": "EMANUEL",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "agentId",
+        "type": "string",
+        "default": "1",
+        "required": true,
+        "enumValues": null,
+        "description": "Agent code"
+      },
+      {
+        "name": "dateFrom",
+        "type": "string",
+        "default": "2025-01-01",
+        "required": true,
+        "enumValues": null,
+        "description": "ISO date/datetime"
+      },
+      {
+        "name": "dateTo",
+        "type": "string",
+        "default": "2025-12-20",
+        "required": true,
+        "enumValues": null,
+        "description": "ISO date/datetime"
+      }
+    ],
+    "strict_variables": true
+  },
+  {
+    "key": "hasav_sql_sales_cycles",
+    "name": "hasav_sql_sales_cycles (getSalesCyclesData) - computed from GETDATE()",
+    "connection_id": null,
+    "method": "POST",
+    "path": "/sql/execute",
+    "headers": null,
+    "query": null,
+    "body_template": {
+      "dbName": "{dbName}",
+      "db": {
+        "server": "localhost",
+        "database": "{dbName}",
+        "user": "sa",
+        "password": "<REDACTED>"
+      },
+      "query": "DECLARE @baseDate date = CAST(GETDATE() AS date);\nDECLARE @prev1 date = DATEADD(month, -1, @baseDate);\nDECLARE @prev2 date = DATEADD(month, -2, @baseDate);\nDECLARE @prev3 date = DATEADD(month, -3, @baseDate);\n\nDECLARE @m1 int = MONTH(@prev1), @y1 int = YEAR(@prev1);\nDECLARE @m2 int = MONTH(@prev2), @y2 int = YEAR(@prev2);\nDECLARE @m3 int = MONTH(@prev3), @y3 int = YEAR(@prev3);\n\n-- previous month, previous year\nDECLARE @y1prev int = @y1 - 1;\n\nSELECT\n  SUM(CASE WHEN MONTH(S.ValueDate) = @m1 AND YEAR(S.ValueDate) = @y1 THEN S.TFtal ELSE 0 END) AS sumPreviousMonthCurrentYear,\n  SUM(CASE WHEN MONTH(S.ValueDate) = @m1 AND YEAR(S.ValueDate) = @y1prev THEN S.TFtal ELSE 0 END) AS sumPreviousMonthPreviousYear,\n  (\n    SUM(CASE WHEN MONTH(S.ValueDate) = @m3 AND YEAR(S.ValueDate) = @y3 THEN S.TFtal ELSE 0 END) +\n    SUM(CASE WHEN MONTH(S.ValueDate) = @m2 AND YEAR(S.ValueDate) = @y2 THEN S.TFtal ELSE 0 END) +\n    SUM(CASE WHEN MONTH(S.ValueDate) = @m1 AND YEAR(S.ValueDate) = @y1 THEN S.TFtal ELSE 0 END)\n  ) / 3.0 AS averageLastThreeMonths\nFROM dbo.Stock S\nWHERE\n  S.AccountKey = @userExtId\n  AND S.DocumentID IN (6,11)\n  AND S.TFtal IS NOT NULL\n  AND (\n    (YEAR(S.ValueDate) = @y1 AND MONTH(S.ValueDate) IN (@m1, @m2, @m3))\n    OR (YEAR(S.ValueDate) = @y1prev AND MONTH(S.ValueDate) = @m1)\n  );",
+      "params": {
+        "userExtId": "{userExtId}"
+      }
+    },
+    "body_type": "json",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "variables": [
+      {
+        "name": "dbName",
+        "type": "string",
+        "default": "EMANUEL",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "userExtId",
+        "type": "string",
+        "default": "50017",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      }
+    ],
+    "strict_variables": true
+  },
+  {
+    "key": "hasav_sql_items_sales_cycles",
+    "name": "hasav_sql_items_sales_cycles (getItemsSalesCyclesData) - computed from GETDATE()",
+    "connection_id": null,
+    "method": "POST",
+    "path": "/sql/execute",
+    "headers": null,
+    "query": null,
+    "body_template": {
+      "dbName": "{dbName}",
+      "db": {
+        "server": "localhost",
+        "database": "{dbName}",
+        "user": "sa",
+        "password": "<REDACTED>"
+      },
+      "query": "DECLARE @baseDate date = CAST(GETDATE() AS date);\nDECLARE @prev1 date = DATEADD(month, -1, @baseDate);\nDECLARE @prev2 date = DATEADD(month, -2, @baseDate);\nDECLARE @prev3 date = DATEADD(month, -3, @baseDate);\n\nDECLARE @m1 int = MONTH(@prev1), @y1 int = YEAR(@prev1);\nDECLARE @m2 int = MONTH(@prev2), @y2 int = YEAR(@prev2);\nDECLARE @m3 int = MONTH(@prev3), @y3 int = YEAR(@prev3);\nDECLARE @yPrev int = @y1 - 1;\n\nSELECT\n  SM.ItemKey,\n  SM.ItemName,\n  SUM(CASE WHEN MONTH(S.ValueDate) = @m1 AND YEAR(S.ValueDate) = @y1 THEN SM.Quantity ELSE 0 END) AS sumPreviousMonthCurrentYear,\n  SUM(CASE WHEN MONTH(S.ValueDate) = @m1 AND YEAR(S.ValueDate) = @yPrev THEN SM.Quantity ELSE 0 END) AS sumPreviousMonthPreviousYear,\n  (\n    SUM(CASE WHEN MONTH(S.ValueDate) = @m3 AND YEAR(S.ValueDate) = @y3 THEN SM.Quantity ELSE 0 END) +\n    SUM(CASE WHEN MONTH(S.ValueDate) = @m2 AND YEAR(S.ValueDate) = @y2 THEN SM.Quantity ELSE 0 END) +\n    SUM(CASE WHEN MONTH(S.ValueDate) = @m1 AND YEAR(S.ValueDate) = @y1 THEN SM.Quantity ELSE 0 END)\n  ) / 3.0 AS averageLastThreeMonths\nFROM dbo.Stock S\nJOIN dbo.StockMoves SM\n  ON S.ID = SM.StockID\nWHERE\n  S.AccountKey = @userExtId\n  AND S.DocumentID IN (6,11)\n  AND S.Status = 1\n  AND (\n    (YEAR(S.ValueDate) = @y1 AND MONTH(S.ValueDate) IN (@m1, @m2, @m3))\n    OR (YEAR(S.ValueDate) = @yPrev AND MONTH(S.ValueDate) = @m1)\n  )\nGROUP BY SM.ItemKey, SM.ItemName;",
+      "params": {
+        "userExtId": "{userExtId}"
+      }
+    },
+    "body_type": "json",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "variables": [
+      {
+        "name": "dbName",
+        "type": "string",
+        "default": "EMANUEL",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "userExtId",
+        "type": "string",
+        "default": "50017",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      }
+    ],
+    "strict_variables": true
+  },
+  
+  {
+    "key": "hasav_sql_extra_notes_by_note_ids",
+    "name": "hasav_sql_extra_notes_by_note_ids (getExtraNotesByNoteId)",
+    "connection_id": null,
+    "method": "POST",
+    "path": "/sql/execute",
+    "headers": null,
+    "query": null,
+    "body_template": {
+      "dbName": "{dbName}",
+      "db": {
+        "server": "localhost",
+        "database": "{dbName}",
+        "user": "sa",
+        "password": "<REDACTED>"
+      },
+      "query": "WITH ids AS (\n  SELECT TRY_CONVERT(int, LTRIM(RTRIM(value))) AS NoteID\n  FROM STRING_SPLIT(@noteIdsCsv, ',')\n  WHERE LTRIM(RTRIM(value)) <> ''\n)\nSELECT TOP (1000)\n  [ID], [KeF], [Note], [ItemFlag], [NoteID], [Dumi]\nFROM dbo.ExtraNotes\nWHERE [NoteID] IN (SELECT NoteID FROM ids WHERE NoteID IS NOT NULL);",
+      "params": {
+        "noteIdsCsv": "{noteIdsCsv}"
+      }
+    },
+    "body_type": "json",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "variables": [
+      {
+        "name": "dbName",
+        "type": "string",
+        "default": "EMANUEL",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "noteIdsCsv",
+        "type": "string",
+        "default": "17",
+        "required": true,
+        "enumValues": null,
+        "description": "CSV list of note IDs"
+      }
+    ],
+    "strict_variables": true
+  },
+  {
+    "key": "hasav_sql_note_by_noteid_kef",
+    "name": "hasav_sql_note_by_noteid_kef (getNoteByNoteIdAndKef)",
+    "connection_id": null,
+    "method": "POST",
+    "path": "/sql/execute",
+    "headers": null,
+    "query": null,
+    "body_template": {
+      "dbName": "{dbName}",
+      "db": {
+        "server": "localhost",
+        "database": "{dbName}",
+        "user": "sa",
+        "password": "<REDACTED>"
+      },
+      "query": "SELECT [Note]\nFROM dbo.ExtraNotes\nWHERE NoteID = @NoteId AND KeF = @Kef;",
+      "params": {
+        "NoteId": "{NoteId}",
+        "Kef": "{Kef}"
+      }
+    },
+    "body_type": "json",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "variables": [
+      {
+        "name": "dbName",
+        "type": "string",
+        "default": "EMANUEL",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "NoteId",
+        "type": "string",
+        "default": "17",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "Kef",
+        "type": "string",
+        "default": "SKU001",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      }
+    ],
+    "strict_variables": true
+  }
+]

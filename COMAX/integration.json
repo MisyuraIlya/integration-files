@@ -1,0 +1,417 @@
+[
+  {
+    "key": "comax_users",
+    "name": "comax users",
+    "connection_id": null,
+    "method": "POST",
+    "path": "Customers_Service.asmx",
+    "headers": {
+      "Content-Type": "text/xml; charset=utf-8"
+    },
+    "query": null,
+    "body_template": "<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <Get_CustomerDetails_Simple xmlns=\"http://ws.comax.co.il/Comax_WebServices/\">\n      <CustomerID>{customerId}</CustomerID>\n      <LoginID>{loginId}</LoginID>\n      <LoginPassword>{loginPassword}</LoginPassword>\n    </Get_CustomerDetails_Simple>\n  </soap:Body>\n</soap:Envelope>",
+    "body_type": "xml",
+    "response_parser": "xml",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2025-12-21T00:00:00.000000",
+    "updated_at": "2025-12-21T00:00:00.000000",
+    "variables": [
+      {
+        "name": "customerId",
+        "type": "string",
+        "default": "600023",
+        "required": true,
+        "enumValues": null,
+        "description": "Comax customer ID"
+      },
+      {
+        "name": "loginId",
+        "type": "string",
+        "default": "",
+        "required": true,
+        "enumValues": null,
+        "description": "Comax login ID"
+      },
+      {
+        "name": "loginPassword",
+        "type": "string",
+        "default": "",
+        "required": true,
+        "enumValues": null,
+        "description": "Comax login password"
+      }
+    ],
+    "strict_variables": true
+  },
+
+  {
+    "key": "comax_products_all_stores",
+    "name": "comax products (all stores)",
+    "connection_id": null,
+    "method": "POST",
+    "path": "Items_Service.asmx",
+    "headers": {
+      "Content-Type": "application/soap+xml; charset=utf-8"
+    },
+    "query": null,
+    "body_template": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap12:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n                 xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"\n                 xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\">\n  <soap12:Body>\n    <GetAllItemsDetailsAllStores xmlns=\"http://ws.comax.co.il/Comax_WebServices/\">\n      <LoginID>{loginId}</LoginID>\n      <LoginPassword>{loginPassword}</LoginPassword>\n    </GetAllItemsDetailsAllStores>\n  </soap12:Body>\n</soap12:Envelope>",
+    "body_type": "xml",
+    "response_parser": "xml",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2025-12-21T00:00:00.000000",
+    "updated_at": "2025-12-21T00:00:00.000000",
+    "variables": [
+      {
+        "name": "loginId",
+        "type": "string",
+        "default": "",
+        "required": true,
+        "enumValues": null,
+        "description": "Comax login ID"
+      },
+      {
+        "name": "loginPassword",
+        "type": "string",
+        "default": "",
+        "required": true,
+        "enumValues": null,
+        "description": "Comax login password"
+      }
+    ],
+    "strict_variables": true
+  },
+
+  {
+    "key": "comax_items_details",
+    "name": "comax items details (all)",
+    "connection_id": null,
+    "method": "POST",
+    "path": "Items_Service.asmx",
+    "headers": {
+      "Content-Type": "application/soap+xml; charset=utf-8"
+    },
+    "query": null,
+    "body_template": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap12:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n                 xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"\n                 xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\">\n  <soap12:Body>\n    <GetAllItemsDetails xmlns=\"http://ws.comax.co.il/Comax_WebServices/\">\n      <LoginID>{loginId}</LoginID>\n      <LoginPassword>{loginPassword}</LoginPassword>\n    </GetAllItemsDetails>\n  </soap12:Body>\n</soap12:Envelope>",
+    "body_type": "xml",
+    "response_parser": "xml",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2025-12-21T00:00:00.000000",
+    "updated_at": "2025-12-21T00:00:00.000000",
+    "variables": [
+      {
+        "name": "loginId",
+        "type": "string",
+        "default": "",
+        "required": true,
+        "enumValues": null,
+        "description": "Comax login ID"
+      },
+      {
+        "name": "loginPassword",
+        "type": "string",
+        "default": "",
+        "required": true,
+        "enumValues": null,
+        "description": "Comax login password"
+      }
+    ],
+    "strict_variables": true
+  },
+
+  {
+    "key": "comax_customer_transactions",
+    "name": "comax cartesset (customer transactions)",
+    "connection_id": null,
+    "method": "POST",
+    "path": "/WS_WRK/Work_Comax_WS/CustomerTransactions_Service.asmx",
+    "headers": {
+      "Content-Type": "application/soap+xml; charset=utf-8"
+    },
+    "query": null,
+    "body_template": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap12:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n                 xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"\n                 xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\">\n  <soap12:Body>\n    <Get_CustomerTransactions xmlns=\"http://tempuri.org/\">\n      <FromDateDoc>{dateFrom}</FromDateDoc>\n      <ToDateDoc>{dateTo}</ToDateDoc>\n      <FromDateRishum></FromDateRishum>\n      <ToDateRishum></ToDateRishum>\n      <FromCustomer>{customerId}</FromCustomer>\n      <ToCustomer>{customerId}</ToCustomer>\n      <CustomerGrp></CustomerGrp>\n      <SwByDatePeraon></SwByDatePeraon>\n      <LoginID>{loginId}</LoginID>\n      <LoginPassword>{loginPassword}</LoginPassword>\n    </Get_CustomerTransactions>\n  </soap12:Body>\n</soap12:Envelope>",
+    "body_type": "xml",
+    "response_parser": "xml",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2025-12-21T00:00:00.000000",
+    "updated_at": "2025-12-21T00:00:00.000000",
+    "variables": [
+      {
+        "name": "customerId",
+        "type": "string",
+        "default": "600023",
+        "required": true,
+        "enumValues": null,
+        "description": "Comax customer ID"
+      },
+      {
+        "name": "dateFrom",
+        "type": "string",
+        "default": "2025-01-01",
+        "required": true,
+        "enumValues": null,
+        "description": "FromDateDoc (YYYY-MM-DD)"
+      },
+      {
+        "name": "dateTo",
+        "type": "string",
+        "default": "2025-07-15",
+        "required": true,
+        "enumValues": null,
+        "description": "ToDateDoc (YYYY-MM-DD)"
+      },
+      {
+        "name": "loginId",
+        "type": "string",
+        "default": "",
+        "required": true,
+        "enumValues": null,
+        "description": "Comax login ID"
+      },
+      {
+        "name": "loginPassword",
+        "type": "string",
+        "default": "",
+        "required": true,
+        "enumValues": null,
+        "description": "Comax login password"
+      }
+    ],
+    "strict_variables": true
+  },
+
+  {
+    "key": "comax_user_orders_list",
+    "name": "comax orders by user",
+    "connection_id": null,
+    "method": "POST",
+    "path": "CustomersOrders_Service.asmx",
+    "headers": {
+      "Content-Type": "text/xml; charset=utf-8"
+    },
+    "query": null,
+    "body_template": "<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <GetCustomersOrders xmlns=\"http://ws.comax.co.il/Comax_WebServices/\">\n      <GetCustomersOrdersIn>\n        <FromDate>{dateFrom}</FromDate>\n        <ToDate>{dateTo}</ToDate>\n        <Attribute1Code></Attribute1Code>\n        <Attribute2Code></Attribute2Code>\n        <Attribute3Code></Attribute3Code>\n        <CustomerID>{customerId}</CustomerID>\n        <ReturnObjJson>true</ReturnObjJson>\n      </GetCustomersOrdersIn>\n      <LoginID>{loginId}</LoginID>\n      <LoginPassword>{loginPassword}</LoginPassword>\n    </GetCustomersOrders>\n  </soap:Body>\n</soap:Envelope>",
+    "body_type": "xml",
+    "response_parser": "xml",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2025-12-21T00:00:00.000000",
+    "updated_at": "2025-12-21T00:00:00.000000",
+    "variables": [
+      {
+        "name": "customerId",
+        "type": "string",
+        "default": "205005",
+        "required": true,
+        "enumValues": null,
+        "description": "Comax customer ID"
+      },
+      {
+        "name": "dateFrom",
+        "type": "string",
+        "default": "01/01/2025",
+        "required": true,
+        "enumValues": null,
+        "description": "FromDate (usually DD/MM/YYYY)"
+      },
+      {
+        "name": "dateTo",
+        "type": "string",
+        "default": "15/07/2025",
+        "required": true,
+        "enumValues": null,
+        "description": "ToDate (usually DD/MM/YYYY)"
+      },
+      {
+        "name": "loginId",
+        "type": "string",
+        "default": "",
+        "required": true,
+        "enumValues": null,
+        "description": "Comax login ID"
+      },
+      {
+        "name": "loginPassword",
+        "type": "string",
+        "default": "",
+        "required": true,
+        "enumValues": null,
+        "description": "Comax login password"
+      }
+    ],
+    "strict_variables": true
+  },
+
+  {
+    "key": "comax_delivery_documents_by_user",
+    "name": "comax delivery documents by user",
+    "connection_id": null,
+    "method": "POST",
+    "path": "DeliveryDocuments.asmx",
+    "headers": {
+      "Content-Type": "text/xml; charset=utf-8"
+    },
+    "query": null,
+    "body_template": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n               xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"\n               xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <Get_DeliveryDocument_All xmlns=\"http://ws.comax.co.il/Comax_WebServices/\">\n      <Param>\n        <CustomerID>{customerId}</CustomerID>\n        <DocNumber>{docNumber}</DocNumber>\n      </Param>\n      <LoginID>{loginId}</LoginID>\n      <LoginPassword>{loginPassword}</LoginPassword>\n    </Get_DeliveryDocument_All>\n  </soap:Body>\n</soap:Envelope>",
+    "body_type": "xml",
+    "response_parser": "xml",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2025-12-21T00:00:00.000000",
+    "updated_at": "2025-12-21T00:00:00.000000",
+    "variables": [
+      {
+        "name": "customerId",
+        "type": "string",
+        "default": "600023",
+        "required": true,
+        "enumValues": null,
+        "description": "Comax customer ID"
+      },
+      {
+        "name": "docNumber",
+        "type": "string",
+        "default": "",
+        "required": false,
+        "enumValues": null,
+        "description": "Optional delivery document number (leave empty to rely on server behavior, if supported)"
+      },
+      {
+        "name": "loginId",
+        "type": "string",
+        "default": "",
+        "required": true,
+        "enumValues": null,
+        "description": "Comax login ID"
+      },
+      {
+        "name": "loginPassword",
+        "type": "string",
+        "default": "",
+        "required": true,
+        "enumValues": null,
+        "description": "Comax login password"
+      }
+    ],
+    "strict_variables": true
+  },
+
+  {
+    "key": "comax_return_documents_by_user",
+    "name": "comax return documents by user",
+    "connection_id": null,
+    "method": "POST",
+    "path": "ReturnCreditMemo_Service.asmx",
+    "headers": {
+      "Content-Type": "application/soap+xml; charset=utf-8"
+    },
+    "query": null,
+    "body_template": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap12:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n                 xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"\n                 xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\">\n  <soap12:Body>\n    <Get_ReturnCreditMemoDocument xmlns=\"http://ws.comax.co.il/Comax_WebServices/\">\n      <FromDate>{dateFrom}</FromDate>\n      <ToDate>{dateTo}</ToDate>\n      <CustomerID>{customerId}</CustomerID>\n      <LoginID>{loginId}</LoginID>\n      <LoginPassword>{loginPassword}</LoginPassword>\n    </Get_ReturnCreditMemoDocument>\n  </soap12:Body>\n</soap12:Envelope>",
+    "body_type": "xml",
+    "response_parser": "xml",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2025-12-21T00:00:00.000000",
+    "updated_at": "2025-12-21T00:00:00.000000",
+    "variables": [
+      {
+        "name": "customerId",
+        "type": "string",
+        "default": "600023",
+        "required": true,
+        "enumValues": null,
+        "description": "Comax customer ID"
+      },
+      {
+        "name": "dateFrom",
+        "type": "string",
+        "default": "2025-01-01",
+        "required": true,
+        "enumValues": null,
+        "description": "FromDate (YYYY-MM-DD)"
+      },
+      {
+        "name": "dateTo",
+        "type": "string",
+        "default": "2025-07-15",
+        "required": true,
+        "enumValues": null,
+        "description": "ToDate (YYYY-MM-DD)"
+      },
+      {
+        "name": "loginId",
+        "type": "string",
+        "default": "",
+        "required": true,
+        "enumValues": null,
+        "description": "Comax login ID"
+      },
+      {
+        "name": "loginPassword",
+        "type": "string",
+        "default": "",
+        "required": true,
+        "enumValues": null,
+        "description": "Comax login password"
+      }
+    ],
+    "strict_variables": true
+  },
+
+  {
+    "key": "comax_promotions",
+    "name": "comax promotions",
+    "connection_id": null,
+    "method": "POST",
+    "path": "Promotions_Service.asmx",
+    "headers": {
+      "Content-Type": "application/soap+xml; charset=utf-8"
+    },
+    "query": null,
+    "body_template": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap12:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n                 xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"\n                 xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\">\n  <soap12:Body>\n    <GetPromotions xmlns=\"http://ws.comax.co.il/Comax_WebServices/\">\n      <JustActive>{justActive}</JustActive>\n      <LastUpdatedDate>{lastUpdatedDate}</LastUpdatedDate>\n      <LoginID>{loginId}</LoginID>\n      <LoginPassword>{loginPassword}</LoginPassword>\n    </GetPromotions>\n  </soap12:Body>\n</soap12:Envelope>",
+    "body_type": "xml",
+    "response_parser": "xml",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2025-12-21T00:00:00.000000",
+    "updated_at": "2025-12-21T00:00:00.000000",
+    "variables": [
+      {
+        "name": "justActive",
+        "type": "boolean",
+        "default": true,
+        "required": true,
+        "enumValues": null,
+        "description": "Return only active promotions"
+      },
+      {
+        "name": "lastUpdatedDate",
+        "type": "string",
+        "default": "2025-07-15",
+        "required": true,
+        "enumValues": null,
+        "description": "LastUpdatedDate (YYYY-MM-DD)"
+      },
+      {
+        "name": "loginId",
+        "type": "string",
+        "default": "",
+        "required": true,
+        "enumValues": null,
+        "description": "Comax login ID"
+      },
+      {
+        "name": "loginPassword",
+        "type": "string",
+        "default": "",
+        "required": true,
+        "enumValues": null,
+        "description": "Comax login password"
+      }
+    ],
+    "strict_variables": true
+  }
+]

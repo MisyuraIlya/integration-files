@@ -1,0 +1,1341 @@
+[
+  {
+    "key": "priority_users",
+    "name": "priority users",
+    "connection_id": null,
+    "method": "GET",
+    "path": "CUSTOMERS",
+    "headers": null,
+    "query": {
+      "$top": "{limit}",
+      "$skip": "{offset}"
+    },
+    "body_template": null,
+    "body_type": "none",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2025-12-20T14:35:49.294603",
+    "updated_at": "2025-12-20T14:35:49.294603",
+    "variables": [
+      {
+        "name": "limit",
+        "type": "number",
+        "default": 100,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "offset",
+        "type": "number",
+        "default": 0,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      }
+    ],
+    "strict_variables": true
+  },
+  {
+    "key": "priority_agents",
+    "name": "priority agents",
+    "connection_id": null,
+    "method": "GET",
+    "path": "AGENTS",
+    "headers": null,
+    "query": {
+      "$top": "{limit}",
+      "$skip": "{offset}"
+    },
+    "body_template": null,
+    "body_type": "none",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2025-12-20T14:35:49.294603",
+    "updated_at": "2025-12-20T14:35:49.294603",
+    "variables": [
+      {
+        "name": "limit",
+        "type": "number",
+        "default": 100,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "offset",
+        "type": "number",
+        "default": 0,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      }
+    ],
+    "strict_variables": true
+  },
+  {
+    "key": "priority_phone_book",
+    "name": "priority phone book",
+    "connection_id": null,
+    "method": "GET",
+    "path": "CUSTOMERS",
+    "headers": null,
+    "query": {
+      "$top": "{limit}",
+      "$skip": "{offset}",
+      "$expand": "CUSTPERSONNEL_SUBFORM"
+    },
+    "body_template": null,
+    "body_type": "none",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2025-12-20T14:35:49.294603",
+    "updated_at": "2025-12-20T14:35:49.294603",
+    "variables": [
+      {
+        "name": "limit",
+        "type": "number",
+        "default": 100,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "offset",
+        "type": "number",
+        "default": 0,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      }
+    ],
+    "strict_variables": true
+  },
+  {
+    "key": "priority_products",
+    "name": "priority products",
+    "connection_id": null,
+    "method": "GET",
+    "path": "LOGPART",
+    "headers": null,
+    "query": {
+      "$top": "{limit}",
+      "$skip": "{offset}",
+      "$select": "PARTNAME,FAMILYNAME,PARTDES,BARCODE,PURPRICE,STATDES,SPEC1,SPEC2,SPEC3,SPEC4,SPEC5,SPEC6,SPEC7,SPEC8,SPEC9,SPEC10,SPEC11,SPEC12,SPEC13,SPEC14,SPEC15,SPEC16,SPEC17,SPEC18,SPEC19,SPEC20"
+    },
+    "body_template": null,
+    "body_type": "none",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2025-12-20T14:35:49.294603",
+    "updated_at": "2025-12-20T14:35:49.294603",
+    "variables": [
+      {
+        "name": "limit",
+        "type": "number",
+        "default": 100,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "offset",
+        "type": "number",
+        "default": 0,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      }
+    ],
+    "strict_variables": true
+  },
+  {
+    "key": "priority_categories_v1",
+    "name": "Priority Categories v1 (FAMILY_LOG)",
+    "connection_id": null,
+    "method": "GET",
+    "path": "FAMILY_LOG",
+    "headers": null,
+    "query": {
+      "$select": "FAMILYNAME,FAMILYDESC"
+    },
+    "body_template": null,
+    "body_type": "none",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2025-12-20T14:35:49.294603",
+    "updated_at": "2025-12-20T14:35:49.294603",
+    "variables": [],
+    "strict_variables": true
+  },
+  {
+    "key": "priority_categories_v2",
+    "name": "Priority Categories V2 (SEPC3,SPEC4)",
+    "connection_id": null,
+    "method": "GET",
+    "path": "LOGPART",
+    "headers": null,
+    "query": {
+      "$select": "SPEC3,SPEC4"
+    },
+    "body_template": null,
+    "body_type": "none",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2025-12-20T14:35:49.294603",
+    "updated_at": "2025-12-20T14:35:49.294603",
+    "variables": [],
+    "strict_variables": true
+  },
+  {
+    "key": "priority_price_lists",
+    "name": "priority price lists",
+    "connection_id": null,
+    "method": "GET",
+    "path": "PRICELIST",
+    "headers": null,
+    "query": {
+      "$top": "{limit}",
+      "$skip": "{offset}",
+      "$select": "PLNAME,PLDES,PLDATE"
+    },
+    "body_template": null,
+    "body_type": "none",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2025-12-20T14:35:49.294603",
+    "updated_at": "2025-12-20T14:35:49.294603",
+    "variables": [
+      {
+        "name": "limit",
+        "type": "number",
+        "default": 100,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "offset",
+        "type": "number",
+        "default": 0,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      }
+    ],
+    "strict_variables": true
+  },
+  {
+    "key": "priority_price_list_user",
+    "name": "priority price list user",
+    "connection_id": null,
+    "method": "GET",
+    "path": "CUSTOMERS",
+    "headers": null,
+    "query": {
+      "$top": "{limit}",
+      "$skip": "{offset}",
+      "$expand": "CUSTPLIST_SUBFORM($select=PLNAME)",
+      "$select":"CUSTNAME"
+    },
+    "body_template": null,
+    "body_type": "none",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2025-12-20T14:35:49.294603",
+    "updated_at": "2025-12-20T14:35:49.294603",
+    "variables": [
+      {
+        "name": "limit",
+        "type": "number",
+        "default": 100,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "offset",
+        "type": "number",
+        "default": 0,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      }
+    ],
+    "strict_variables": true
+  },
+  {
+    "key": "priority_product_images",
+    "name": "priority product images",
+    "connection_id": null,
+    "method": "GET",
+    "path": "LOGPART",
+    "headers": null,
+    "query": {
+      "$top": "{limit}",
+      "$skip": "{offset}",
+      "$select": "PARTNAME,EXTFILENAME"
+    },
+    "body_template": null,
+    "body_type": "none",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2025-12-20T14:35:49.294603",
+    "updated_at": "2025-12-20T14:35:49.294603",
+    "variables": [
+      {
+        "name": "limit",
+        "type": "number",
+        "default": 100,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "offset",
+        "type": "number",
+        "default": 0,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      }
+    ],
+    "strict_variables": true
+  },
+  {
+    "key": "priority_family_types",
+    "name": "priority family types",
+    "connection_id": null,
+    "method": "GET",
+    "path": "FAMILYTYPES",
+    "headers": null,
+    "query": {
+      "$top": "{limit}",
+      "$skip": "{offset}",
+      "$select": "FTCODE,FTNAME,FAMILYTYPE"
+    },
+    "body_template": null,
+    "body_type": "none",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2025-12-20T16:00:00.000000",
+    "updated_at": "2025-12-20T16:00:00.000000",
+    "variables": [
+      { "name": "limit", "type": "number", "default": 200, "required": true, "enumValues": null, "description": null },
+      { "name": "offset", "type": "number", "default": 0, "required": true, "enumValues": null, "description": null }
+    ],
+    "strict_variables": true
+  },
+  {
+    "key": "priority_families",
+    "name": "priority families",
+    "connection_id": null,
+    "method": "GET",
+    "path": "FAMILY_LOG",
+    "headers": null,
+    "query": {
+      "$top": "{limit}",
+      "$skip": "{offset}",
+      "$select": "FAMILYNAME,FAMILYDESC,FTCODE"
+    },
+    "body_template": null,
+    "body_type": "none",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2025-12-20T16:00:00.000000",
+    "updated_at": "2025-12-20T16:00:00.000000",
+    "variables": [
+      { "name": "limit", "type": "number", "default": 200, "required": true, "enumValues": null, "description": null },
+      { "name": "offset", "type": "number", "default": 0, "required": true, "enumValues": null, "description": null }
+    ],
+    "strict_variables": true
+  },
+
+
+  
+  {
+    
+    "key": "priority_orders",
+    "name": "priority user orders list",
+    "connection_id": null,
+    "method": "GET",
+    "path": "ORDERS",
+    "headers": null,
+    "query": {
+      "$top": "{limit}",
+      "$skip": "{offset}",
+      "$filter": "CUSTNAME eq '{userExtId}' and CURDATE ge {dateFrom} and CURDATE le {dateTo}",
+      "$select": "CUSTNAME,CURDATE,ORDNAME,QPRICE,DISPRICE,VAT,TOTPRICE,ORDSTATUSDES"
+    },
+    "body_template": null,
+    "body_type": "none",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2025-12-20T14:48:49.987772",
+    "updated_at": "2025-12-20T15:35:29.362292",
+    "variables": [
+      {
+        "name": "userExtId",
+        "type": "string",
+        "default": "41107200",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "dateFrom",
+        "type": "string",
+        "default": "2025-10-06T00:00:00.000000Z",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "dateTo",
+        "type": "string",
+        "default": "2025-12-06T00:00:00.000000Z",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "limit",
+        "type": "number",
+        "default": 50,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "offset",
+        "type": "number",
+        "default": 0,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      }
+    ],
+    "strict_variables": true
+  },
+  {
+    "key": "priority_cprof",
+    "name": "priority user price offers list",
+    "connection_id": null,
+    "method": "GET",
+    "path": "CPROF",
+    "headers": null,
+    "query": {
+      "$top": "{limit}",
+      "$skip": "{offset}",
+      "$filter": "CUSTNAME eq '{userExtId}' and PDATE ge {dateFrom} and PDATE le {dateTo}",
+      "$select": "CUSTNAME,PDATE,CPROFNUM,QPRICE,DISPRICE,VAT,TOTPRICE,STATDES,EXPIRYDATE"
+    },
+    "body_template": null,
+    "body_type": "none",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2025-12-20T16:00:00.000000",
+    "updated_at": "2025-12-20T16:00:00.000000",
+    "variables": [
+      { "name": "userExtId", "type": "string", "default": "41107200", "required": true, "enumValues": null, "description": null },
+      { "name": "dateFrom", "type": "string", "default": "2025-10-06T00:00:00.000000Z", "required": true, "enumValues": null, "description": null },
+      { "name": "dateTo", "type": "string", "default": "2025-12-06T00:00:00.000000Z", "required": true, "enumValues": null, "description": null },
+      { "name": "limit", "type": "number", "default": 50, "required": true, "enumValues": null, "description": null },
+      { "name": "offset", "type": "number", "default": 0, "required": true, "enumValues": null, "description": null }
+    ],
+    "strict_variables": true
+  },
+  {
+    "key": "priority_documents_d",
+    "name": "priority user delivery orders list",
+    "connection_id": null,
+    "method": "GET",
+    "path": "DOCUMENTS_D",
+    "headers": null,
+    "query": {
+      "$top": "{limit}",
+      "$skip": "{offset}",
+      "$filter": "CUSTNAME eq '{userExtId}' and CURDATE ge {dateFrom} and CURDATE le {dateTo}",
+      "$select": "CUSTNAME,CURDATE,DOCNO,TOTQUANT,QPRICE,DISPRICE,VAT,TOTPRICE,STATDES,UDATE"
+    },
+    "body_template": null,
+    "body_type": "none",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2025-12-20T16:00:00.000000",
+    "updated_at": "2025-12-20T16:00:00.000000",
+    "variables": [
+      { "name": "userExtId", "type": "string", "default": "41107200", "required": true, "enumValues": null, "description": null },
+      { "name": "dateFrom", "type": "string", "default": "2025-10-06T00:00:00.000000Z", "required": true, "enumValues": null, "description": null },
+      { "name": "dateTo", "type": "string", "default": "2025-12-06T00:00:00.000000Z", "required": true, "enumValues": null, "description": null },
+      { "name": "limit", "type": "number", "default": 50, "required": true, "enumValues": null, "description": null },
+      { "name": "offset", "type": "number", "default": 0, "required": true, "enumValues": null, "description": null }
+    ],
+    "strict_variables": true
+  },
+  {
+    "key": "priority_aiinvoices",
+    "name": "priority user ar invoices list",
+    "connection_id": null,
+    "method": "GET",
+    "path": "AINVOICES",
+    "headers": null,
+    "query": {
+      "$top": "{limit}",
+      "$skip": "{offset}",
+      "$filter": "CUSTNAME eq '{userExtId}' and IVDATE ge {dateFrom} and IVDATE le {dateTo}",
+      "$select": "CUSTNAME,IVDATE,IVNUM,QPRICE,DISPRICE,VAT,TOTPRICE,STATDES"
+    },
+    "body_template": null,
+    "body_type": "none",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2025-12-20T16:00:00.000000",
+    "updated_at": "2025-12-20T16:00:00.000000",
+    "variables": [
+      { "name": "userExtId", "type": "string", "default": "41107200", "required": true, "enumValues": null, "description": null },
+      { "name": "dateFrom", "type": "string", "default": "2025-10-06T00:00:00.000000Z", "required": true, "enumValues": null, "description": null },
+      { "name": "dateTo", "type": "string", "default": "2025-12-06T00:00:00.000000Z", "required": true, "enumValues": null, "description": null },
+      { "name": "limit", "type": "number", "default": 50, "required": true, "enumValues": null, "description": null },
+      { "name": "offset", "type": "number", "default": 0, "required": true, "enumValues": null, "description": null }
+    ],
+    "strict_variables": true
+  },
+  {
+    "key": "priority_cinvoices",
+    "name": "priority user ci invoices list",
+    "connection_id": null,
+    "method": "GET",
+    "path": "CINVOICES",
+    "headers": null,
+    "query": {
+      "$top": "{limit}",
+      "$skip": "{offset}",
+      "$filter": "CUSTNAME eq '{userExtId}' and IVDATE ge {dateFrom} and IVDATE le {dateTo}",
+      "$select": "CUSTNAME,IVDATE,IVNUM,QPRICE,DISPRICE,VAT,TOTPRICE,STATDES"
+    },
+    "body_template": null,
+    "body_type": "none",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2025-12-20T16:00:00.000000",
+    "updated_at": "2025-12-20T16:00:00.000000",
+    "variables": [
+      { "name": "userExtId", "type": "string", "default": "41107200", "required": true, "enumValues": null, "description": null },
+      { "name": "dateFrom", "type": "string", "default": "2025-10-06T00:00:00.000000Z", "required": true, "enumValues": null, "description": null },
+      { "name": "dateTo", "type": "string", "default": "2025-12-06T00:00:00.000000Z", "required": true, "enumValues": null, "description": null },
+      { "name": "limit", "type": "number", "default": 50, "required": true, "enumValues": null, "description": null },
+      { "name": "offset", "type": "number", "default": 0, "required": true, "enumValues": null, "description": null }
+    ],
+    "strict_variables": true
+  },
+  {
+    "key": "priority_documents_n",
+    "name": "priority user return orders list",
+    "connection_id": null,
+    "method": "GET",
+    "path": "DOCUMENTS_N",
+    "headers": null,
+    "query": {
+      "$top": "{limit}",
+      "$skip": "{offset}",
+      "$filter": "CUSTNAME eq '{userExtId}' and CURDATE ge {dateFrom} and CURDATE le {dateTo}",
+      "$select": "CUSTNAME,CURDATE,DOCNO,QPRICE,DISPRICE,VAT,TOTPRICE,STATDES,UDATE"
+    },
+    "body_template": null,
+    "body_type": "none",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2025-12-20T16:00:00.000000",
+    "updated_at": "2025-12-20T16:00:00.000000",
+    "variables": [
+      { "name": "userExtId", "type": "string", "default": "41107200", "required": true, "enumValues": null, "description": null },
+      { "name": "dateFrom", "type": "string", "default": "2025-10-06T00:00:00.000000Z", "required": true, "enumValues": null, "description": null },
+      { "name": "dateTo", "type": "string", "default": "2025-12-06T00:00:00.000000Z", "required": true, "enumValues": null, "description": null },
+      { "name": "limit", "type": "number", "default": 50, "required": true, "enumValues": null, "description": null },
+      { "name": "offset", "type": "number", "default": 0, "required": true, "enumValues": null, "description": null }
+    ],
+    "strict_variables": true
+  },
+  {
+    "key": "priority_rinvoices",
+    "name": "priority user return r inovice list",
+    "connection_id": null,
+    "method": "GET",
+    "path": "RINVOICES",
+    "headers": null,
+    "query": {
+      "$top": "{limit}",
+      "$skip": "{offset}",
+      "$filter": "CUSTNAME eq '{userExtId}' and IVDATE ge {dateFrom} and IVDATE le {dateTo}",
+      "$select": "CUSTNAME,IVDATE,IVNUM,QPRICE,DISPRICE,VAT,TOTPRICE,STATDES"
+    },
+    "body_template": null,
+    "body_type": "none",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2025-12-20T16:00:00.000000",
+    "updated_at": "2025-12-20T16:00:00.000000",
+    "variables": [
+      { "name": "userExtId", "type": "string", "default": "100366", "required": true, "enumValues": null, "description": null },
+      { "name": "dateFrom", "type": "string", "default": "2025-10-06T00:00:00.000000Z", "required": true, "enumValues": null, "description": null },
+      { "name": "dateTo", "type": "string", "default": "2025-12-06T00:00:00.000000Z", "required": true, "enumValues": null, "description": null },
+      { "name": "limit", "type": "number", "default": 50, "required": true, "enumValues": null, "description": null },
+      { "name": "offset", "type": "number", "default": 0, "required": true, "enumValues": null, "description": null }
+    ],
+    "strict_variables": true
+  },
+
+  {
+    "key": "priority_orders_agent",
+    "name": "priority user orders list",
+    "connection_id": null,
+    "method": "GET",
+    "path": "ORDERS",
+    "headers": null,
+    "query": {
+      "$top": "{limit}",
+      "$skip": "{offset}",
+      "$filter": "CURDATE ge {dateFrom} and CURDATE le {dateTo}",
+      "$select": "CUSTNAME,CDES,CURDATE,ORDNAME,QPRICE,DISPRICE,VAT,TOTPRICE,ORDSTATUSDES,AGENTNAME"
+    },
+    "body_template": null,
+    "body_type": "none",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2025-12-20T14:48:49.987772",
+    "updated_at": "2025-12-20T15:35:29.362292",
+    "variables": [
+      {
+        "name": "dateFrom",
+        "type": "string",
+        "default": "2025-10-06T00:00:00.000000Z",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "dateTo",
+        "type": "string",
+        "default": "2025-12-06T00:00:00.000000Z",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "limit",
+        "type": "number",
+        "default": 50,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "offset",
+        "type": "number",
+        "default": 0,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      }
+    ],
+    "strict_variables": true
+  },
+  {
+    "key": "priority_cprof_agent",
+    "name": "priority user price offers list",
+    "connection_id": null,
+    "method": "GET",
+    "path": "CPROF",
+    "headers": null,
+    "query": {
+      "$top": "{limit}",
+      "$skip": "{offset}",
+      "$filter": "PDATE ge {dateFrom} and PDATE le {dateTo}",
+      "$select": "CUSTNAME,PDATE,CPROFNUM,QPRICE,DISPRICE,VAT,TOTPRICE,STATDES,EXPIRYDATE,CDES,AGENTNAME"
+    },
+    "body_template": null,
+    "body_type": "none",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2025-12-20T16:00:00.000000",
+    "updated_at": "2025-12-20T16:00:00.000000",
+    "variables": [
+      { "name": "dateFrom", "type": "string", "default": "2025-10-06T00:00:00.000000Z", "required": true, "enumValues": null, "description": null },
+      { "name": "dateTo", "type": "string", "default": "2025-12-06T00:00:00.000000Z", "required": true, "enumValues": null, "description": null },
+      { "name": "limit", "type": "number", "default": 50, "required": true, "enumValues": null, "description": null },
+      { "name": "offset", "type": "number", "default": 0, "required": true, "enumValues": null, "description": null }
+    ],
+    "strict_variables": true
+  },
+  {
+    "key": "priority_documents_d_agent",
+    "name": "priority user delivery orders list",
+    "connection_id": null,
+    "method": "GET",
+    "path": "DOCUMENTS_D",
+    "headers": null,
+    "query": {
+      "$top": "{limit}",
+      "$skip": "{offset}",
+      "$filter": "CURDATE ge {dateFrom} and CURDATE le {dateTo}",
+      "$select": "CUSTNAME,CURDATE,DOCNO,TOTQUANT,QPRICE,DISPRICE,VAT,TOTPRICE,STATDES,UDATE,CDES,AGENTNAME"
+    },
+    "body_template": null,
+    "body_type": "none",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2025-12-20T16:00:00.000000",
+    "updated_at": "2025-12-20T16:00:00.000000",
+    "variables": [
+      { "name": "dateFrom", "type": "string", "default": "2025-10-06T00:00:00.000000Z", "required": true, "enumValues": null, "description": null },
+      { "name": "dateTo", "type": "string", "default": "2025-12-06T00:00:00.000000Z", "required": true, "enumValues": null, "description": null },
+      { "name": "limit", "type": "number", "default": 50, "required": true, "enumValues": null, "description": null },
+      { "name": "offset", "type": "number", "default": 0, "required": true, "enumValues": null, "description": null }
+    ],
+    "strict_variables": true
+  },
+  {
+    "key": "priority_aiinvoices_agent",
+    "name": "priority user ar invoices list",
+    "connection_id": null,
+    "method": "GET",
+    "path": "AINVOICES",
+    "headers": null,
+    "query": {
+      "$top": "{limit}",
+      "$skip": "{offset}",
+      "$filter": "IVDATE ge {dateFrom} and IVDATE le {dateTo}",
+      "$select": "CUSTNAME,IVDATE,IVNUM,QPRICE,DISPRICE,VAT,TOTPRICE,STATDES,CDES,AGENTNAME"
+    },
+    "body_template": null,
+    "body_type": "none",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2025-12-20T16:00:00.000000",
+    "updated_at": "2025-12-20T16:00:00.000000",
+    "variables": [
+      { "name": "dateFrom", "type": "string", "default": "2025-10-06T00:00:00.000000Z", "required": true, "enumValues": null, "description": null },
+      { "name": "dateTo", "type": "string", "default": "2025-12-06T00:00:00.000000Z", "required": true, "enumValues": null, "description": null },
+      { "name": "limit", "type": "number", "default": 50, "required": true, "enumValues": null, "description": null },
+      { "name": "offset", "type": "number", "default": 0, "required": true, "enumValues": null, "description": null }
+    ],
+    "strict_variables": true
+  },
+  {
+    "key": "priority_cinvoices_agent",
+    "name": "priority user ci invoices list",
+    "connection_id": null,
+    "method": "GET",
+    "path": "CINVOICES",
+    "headers": null,
+    "query": {
+      "$top": "{limit}",
+      "$skip": "{offset}",
+      "$filter": "IVDATE ge {dateFrom} and IVDATE le {dateTo}",
+      "$select": "CUSTNAME,IVDATE,IVNUM,QPRICE,DISPRICE,VAT,TOTPRICE,STATDES,CDES,AGENTNAME"
+    },
+    "body_template": null,
+    "body_type": "none",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2025-12-20T16:00:00.000000",
+    "updated_at": "2025-12-20T16:00:00.000000",
+    "variables": [
+      { "name": "dateFrom", "type": "string", "default": "2025-10-06T00:00:00.000000Z", "required": true, "enumValues": null, "description": null },
+      { "name": "dateTo", "type": "string", "default": "2025-12-06T00:00:00.000000Z", "required": true, "enumValues": null, "description": null },
+      { "name": "limit", "type": "number", "default": 50, "required": true, "enumValues": null, "description": null },
+      { "name": "offset", "type": "number", "default": 0, "required": true, "enumValues": null, "description": null }
+    ],
+    "strict_variables": true
+  },
+  {
+    "key": "priority_documents_n_agent",
+    "name": "priority user return orders list",
+    "connection_id": null,
+    "method": "GET",
+    "path": "DOCUMENTS_N",
+    "headers": null,
+    "query": {
+      "$top": "{limit}",
+      "$skip": "{offset}",
+      "$filter": "CURDATE ge {dateFrom} and CURDATE le {dateTo}",
+      "$select": "CUSTNAME,CURDATE,DOCNO,QPRICE,DISPRICE,VAT,TOTPRICE,STATDES,UDATE,CDES,AGENTNAME"
+    },
+    "body_template": null,
+    "body_type": "none",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2025-12-20T16:00:00.000000",
+    "updated_at": "2025-12-20T16:00:00.000000",
+    "variables": [
+      { "name": "dateFrom", "type": "string", "default": "2025-10-06T00:00:00.000000Z", "required": true, "enumValues": null, "description": null },
+      { "name": "dateTo", "type": "string", "default": "2025-12-06T00:00:00.000000Z", "required": true, "enumValues": null, "description": null },
+      { "name": "limit", "type": "number", "default": 50, "required": true, "enumValues": null, "description": null },
+      { "name": "offset", "type": "number", "default": 0, "required": true, "enumValues": null, "description": null }
+    ],
+    "strict_variables": true
+  },
+  {
+    "key": "priority_rinvoices_agent",
+    "name": "priority user return r inovice list for agent",
+    "connection_id": null,
+    "method": "GET",
+    "path": "RINVOICES",
+    "headers": null,
+    "query": {
+      "$top": "{limit}",
+      "$skip": "{offset}",
+      "$filter": "IVDATE ge {dateFrom} and IVDATE le {dateTo}",
+      "$select": "CUSTNAME,IVDATE,IVNUM,QPRICE,DISPRICE,VAT,TOTPRICE,STATDES"
+    },
+    "body_template": null,
+    "body_type": "none",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2025-12-20T16:00:00.000000",
+    "updated_at": "2025-12-20T16:00:00.000000",
+    "variables": [
+      { "name": "dateFrom", "type": "string", "default": "2025-10-06T00:00:00.000000Z", "required": true, "enumValues": null, "description": null },
+      { "name": "dateTo", "type": "string", "default": "2025-12-06T00:00:00.000000Z", "required": true, "enumValues": null, "description": null },
+      { "name": "limit", "type": "number", "default": 50, "required": true, "enumValues": null, "description": null },
+      { "name": "offset", "type": "number", "default": 0, "required": true, "enumValues": null, "description": null }
+    ],
+    "strict_variables": true
+  },
+
+
+
+  {
+    "key": "priority_order_items",
+    "name": "priority_order_items",
+    "connection_id": null,
+    "method": "GET",
+    "path": "ORDERS",
+    "headers": null,
+    "query": {
+      "$filter": "ORDNAME eq '{documentNumber}'",
+      "$expand": "ORDERITEMS_SUBFORM"
+    },
+    "body_template": null,
+    "body_type": "none",
+    "response_parser": "auto",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2025-12-20T15:14:23.874262",
+    "updated_at": "2025-12-20T15:14:23.874262",
+    "variables": [
+      {
+        "name": "documentNumber",
+        "type": "string",
+        "default": "SO25816326",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      }
+    ],
+    "strict_variables": true
+  },
+  {
+    "key": "priority_cprof_items",
+    "name": "priority cprof items by number",
+    "connection_id": null,
+    "method": "GET",
+    "path": "CPROF",
+    "headers": null,
+    "query": {
+      "$filter": "CPROFNUM eq '{documentNumber}'",
+      "$expand": "CPROFITEMS_SUBFORM($select=PARTNAME,PDES,TQUANT,PRICE,QPRICE,PERCENT)"
+    },
+    "body_template": null,
+    "body_type": "none",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2025-12-20T16:00:00.000000",
+    "updated_at": "2025-12-20T16:00:00.000000",
+    "variables": [
+      { "name": "documentNumber", "type": "string", "default": "CP00000001", "required": true, "enumValues": null, "description": null }
+    ],
+    "strict_variables": true
+  },
+  {
+    "key": "priority_documents_d_items",
+    "name": "priority documents d items by number",
+    "connection_id": null,
+    "method": "GET",
+    "path": "DOCUMENTS_D",
+    "headers": null,
+    "query": {
+      "$filter": "DOCNO eq '{documentNumber}'",
+      "$expand": "TRANSORDER_D_SUBFORM($select=PARTNAME,PDES,TQUANT,PRICE,QPRICE,PERCENT)"
+    },
+    "body_template": null,
+    "body_type": "none",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2025-12-20T16:00:00.000000",
+    "updated_at": "2025-12-20T16:00:00.000000",
+    "variables": [
+      { "name": "documentNumber", "type": "string", "default": "D00000001", "required": true, "enumValues": null, "description": null }
+    ],
+    "strict_variables": true
+  },
+  {
+    "key": "priority_ainvoices_items",
+    "name": "priority ainvoices items by number",
+    "connection_id": null,
+    "method": "GET",
+    "path": "AINVOICES",
+    "headers": null,
+    "query": {
+      "$filter": "IVNUM eq '{documentNumber}'",
+      "$expand": "AINVOICEITEMS_SUBFORM($select=PARTNAME,PDES,TQUANT,PRICE,QPRICE,PERCENT)"
+    },
+    "body_template": null,
+    "body_type": "none",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2025-12-20T16:00:00.000000",
+    "updated_at": "2025-12-20T16:00:00.000000",
+    "variables": [
+      { "name": "documentNumber", "type": "string", "default": "IV00000001", "required": true, "enumValues": null, "description": null }
+    ],
+    "strict_variables": true
+  },
+  {
+    "key": "priority_cinvoices_items",
+    "name": "priority cinvoices items by number",
+    "connection_id": null,
+    "method": "GET",
+    "path": "CINVOICES",
+    "headers": null,
+    "query": {
+      "$filter": "IVNUM eq '{documentNumber}'",
+      "$expand": "CINVOICEITEMS_SUBFORM($select=PARTNAME,PDES,TQUANT,PRICE,QPRICE,PERCENT)"
+    },
+    "body_template": null,
+    "body_type": "none",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2025-12-20T16:00:00.000000",
+    "updated_at": "2025-12-20T16:00:00.000000",
+    "variables": [
+      { "name": "documentNumber", "type": "string", "default": "CI00000001", "required": true, "enumValues": null, "description": null }
+    ],
+    "strict_variables": true
+  },
+  {
+    "key": "priority_documents_n_items",
+    "name": "priority documents n items by number",
+    "connection_id": null,
+    "method": "GET",
+    "path": "DOCUMENTS_N",
+    "headers": null,
+    "query": {
+      "$filter": "DOCNO eq '{documentNumber}'",
+      "$expand": "TRANSORDER_N_SUBFORM($select=PARTNAME,PDES,TQUANT,PRICE,QPRICE,PERCENT)"
+    },
+    "body_template": null,
+    "body_type": "none",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2025-12-20T16:00:00.000000",
+    "updated_at": "2025-12-20T16:00:00.000000",
+    "variables": [
+      { "name": "documentNumber", "type": "string", "default": "N00000001", "required": true, "enumValues": null, "description": null }
+    ],
+    "strict_variables": true
+  },
+
+
+
+  {
+    "key": "priority_order_pdf",
+    "name": "priority orders pdf",
+    "connection_id": null,
+    "method": "GET",
+    "path": "ORDERS",
+    "headers": null,
+    "query": {
+      "$filter": "ORDNAME eq '{documentNumber}'",
+      "$expand": "EXTFILES_SUBFORM($select=EXTFILEDES,EXTFILENAME,SUFFIX)"
+    },
+    "body_template": null,
+    "body_type": "none",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2025-12-20T16:00:00.000000",
+    "updated_at": "2025-12-20T16:00:00.000000",
+    "variables": [
+      { "name": "documentNumber", "type": "string", "default": "SO25816326", "required": true, "enumValues": null, "description": null }
+    ],
+    "strict_variables": true
+  },
+  {
+    "key": "priority_cprof_pdf",
+    "name": "priority cprof pdf",
+    "connection_id": null,
+    "method": "GET",
+    "path": "CPROF",
+    "headers": null,
+    "query": {
+      "$filter": "CPROFNUM eq '{documentNumber}'",
+      "$expand": "EXTFILES_SUBFORM($select=EXTFILEDES,EXTFILENAME,SUFFIX)"
+    },
+    "body_template": null,
+    "body_type": "none",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2025-12-20T16:00:00.000000",
+    "updated_at": "2025-12-20T16:00:00.000000",
+    "variables": [
+      { "name": "documentNumber", "type": "string", "default": "CP00000001", "required": true, "enumValues": null, "description": null }
+    ],
+    "strict_variables": true
+  },
+  {
+    "key": "priority_documents_d_pdf",
+    "name": "priority documents d pdf",
+    "connection_id": null,
+    "method": "GET",
+    "path": "DOCUMENTS_D",
+    "headers": null,
+    "query": {
+      "$filter": "DOCNO eq '{documentNumber}'",
+      "$expand": "EXTFILES_SUBFORM($select=EXTFILEDES,EXTFILENAME,SUFFIX)"
+    },
+    "body_template": null,
+    "body_type": "none",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2025-12-20T16:00:00.000000",
+    "updated_at": "2025-12-20T16:00:00.000000",
+    "variables": [
+      { "name": "documentNumber", "type": "string", "default": "D00000001", "required": true, "enumValues": null, "description": null }
+    ],
+    "strict_variables": true
+  },
+  {
+    "key": "priority_ainvoices_pdf",
+    "name": "priority ainvoices pdf",
+    "connection_id": null,
+    "method": "GET",
+    "path": "AINVOICES",
+    "headers": null,
+    "query": {
+      "$filter": "IVNUM eq '{documentNumber}'",
+      "$expand": "EXTFILES_SUBFORM($select=EXTFILEDES,EXTFILENAME,SUFFIX)"
+    },
+    "body_template": null,
+    "body_type": "none",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2025-12-20T16:00:00.000000",
+    "updated_at": "2025-12-20T16:00:00.000000",
+    "variables": [
+      { "name": "documentNumber", "type": "string", "default": "IV00000001", "required": true, "enumValues": null, "description": null }
+    ],
+    "strict_variables": true
+  },
+  {
+    "key": "priority_cinvoices_pdf",
+    "name": "priority cinvoices pdf",
+    "connection_id": null,
+    "method": "GET",
+    "path": "CINVOICES",
+    "headers": null,
+    "query": {
+      "$filter": "IVNUM eq '{documentNumber}'",
+      "$expand": "EXTFILES_SUBFORM($select=EXTFILEDES,EXTFILENAME,SUFFIX)"
+    },
+    "body_template": null,
+    "body_type": "none",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2025-12-20T16:00:00.000000",
+    "updated_at": "2025-12-20T16:00:00.000000",
+    "variables": [
+      { "name": "documentNumber", "type": "string", "default": "CI00000001", "required": true, "enumValues": null, "description": null }
+    ],
+    "strict_variables": true
+  },
+  {
+    "key": "priority_documents_n_pdf",
+    "name": "priority documents n pdf",
+    "connection_id": null,
+    "method": "GET",
+    "path": "DOCUMENTS_N",
+    "headers": null,
+    "query": {
+      "$filter": "DOCNO eq '{documentNumber}'",
+      "$expand": "EXTFILES_SUBFORM($select=EXTFILEDES,EXTFILENAME,SUFFIX)"
+    },
+    "body_template": null,
+    "body_type": "none",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2025-12-20T16:00:00.000000",
+    "updated_at": "2025-12-20T16:00:00.000000",
+    "variables": [
+      { "name": "documentNumber", "type": "string", "default": "N00000001", "required": true, "enumValues": null, "description": null }
+    ],
+    "strict_variables": true
+  },
+
+
+
+  {
+    "key": "USER_PURCHASE_HISTORY_SKU",
+    "name": "user_purchase_history_sku",
+    "connection_id": null,
+    "method": "GET",
+    "path": "ORDERS",
+    "headers": null,
+    "query": {
+      "$expand": "ORDERITEMS_SUBFORM($filter=PARTNAME eq '{sku}')",
+      "$filter": "CUSTNAME eq '{userExtId}'"
+    },
+    "body_template": null,
+    "body_type": "none",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2025-12-20T15:32:39.230469",
+    "updated_at": "2025-12-20T15:33:20.782816",
+    "variables": [
+      {
+        "name": "userExtId",
+        "type": "string",
+        "default": "41107200",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "sku",
+        "type": "string",
+        "default": "01-194580-7",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      }
+    ],
+    "strict_variables": true
+  },
+  {
+    "key": "USER_PROFILE",
+    "name": "priority user profile",
+    "connection_id": null,
+    "method": "GET",
+    "path": "CUSTOMERS",
+    "headers": null,
+    "query": {
+      "$filter": "CUSTNAME eq '{userExtId}'"
+    },
+    "body_template": null,
+    "body_type": "none",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2025-12-20T16:00:00.000000",
+    "updated_at": "2025-12-20T16:00:00.000000",
+    "variables": [
+      { "name": "userExtId", "type": "string", "default": "41107200", "required": true, "enumValues": null, "description": null }
+    ],
+    "strict_variables": true
+  },
+  {
+    "key": "CARTESSET",
+    "name": "priority carteset",
+    "connection_id": null,
+    "method": "GET",
+    "path": "ACCFNCITEMS2",
+    "headers": null,
+    "query": {
+      "$top": "{limit}",
+      "$skip": "{offset}",
+      "$select": "ACCNAME",
+      "$filter": "ACCNAME eq '{userExtId}'",
+      "$expand": "ACCFNCITEMS2_SUBFORM($filter=BALDATE ge {dateFrom} and BALDATE le {dateTo};$select=CURDATE,BALDATE,FNCNUM,TODOREF,FNCPATNAME,DETAILS,DEBIT,CREDIT,BAL)"
+    },
+    "body_template": null,
+    "body_type": "none",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2025-12-20T16:00:00.000000",
+    "updated_at": "2025-12-20T16:00:00.000000",
+    "variables": [
+      { "name": "userExtId", "type": "string", "default": "41107200", "required": true, "enumValues": null, "description": null },
+      { "name": "dateFrom", "type": "string", "default": "2025-10-06T00:00:00.000000Z", "required": true, "enumValues": null, "description": null },
+      { "name": "dateTo", "type": "string", "default": "2025-12-06T00:00:00.000000Z", "required": true, "enumValues": null, "description": null },
+      { "name": "limit", "type": "number", "default": 200, "required": true, "enumValues": null, "description": null },
+      { "name": "offset", "type": "number", "default": 0, "required": true, "enumValues": null, "description": null }
+    ],
+    "strict_variables": true
+  },
+  {
+    "key": "DEBITS",
+    "name": "priority debits",
+    "connection_id": null,
+    "method": "GET",
+    "path": "ACCOUNTS_RECEIVABLE",
+    "headers": null,
+    "query": {
+      "$filter": "ACCNAME eq '{userExtId}'",
+      "$expand": "ARFNCITEMS3_SUBFORM($filter=BALDATE ge {dateFrom} and BALDATE le {dateTo})"
+    },
+    "body_template": null,
+    "body_type": "none",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2025-12-20T16:00:00.000000",
+    "updated_at": "2025-12-20T16:00:00.000000",
+    "variables": [
+      { "name": "userExtId", "type": "string", "default": "41107200", "required": true, "enumValues": null, "description": null },
+      { "name": "dateFrom", "type": "string", "default": "2025-10-06T00:00:00.000000Z", "required": true, "enumValues": null, "description": null },
+      { "name": "dateTo", "type": "string", "default": "2025-12-06T00:00:00.000000Z", "required": true, "enumValues": null, "description": null }
+    ],
+    "strict_variables": true
+  },
+  {
+    "key": "WAREHOUSE_DETAILED_BY_SKU",
+    "name": "priority warehouse detailed by sku",
+    "connection_id": null,
+    "method": "GET",
+    "path": "WAREHOUSES",
+    "headers": null,
+    "query": {
+      "$top": "{limit}",
+      "$skip": "{offset}",
+      "$expand": "WARHSBAL_SUBFORM($filter=PARTNAME eq '{sku}')"
+    },
+    "body_template": null,
+    "body_type": "none",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2025-12-20T16:00:00.000000",
+    "updated_at": "2025-12-20T16:00:00.000000",
+    "variables": [
+      { "name": "sku", "type": "string", "default": "01-194580-7", "required": true, "enumValues": null, "description": null },
+      { "name": "limit", "type": "number", "default": 200, "required": true, "enumValues": null, "description": null },
+      { "name": "offset", "type": "number", "default": 0, "required": true, "enumValues": null, "description": null }
+    ],
+    "strict_variables": true
+  },
+  {
+    "key": "priority_user_orders_list_extended",
+    "name": "priority user orders list extended",
+    "connection_id": null,
+    "method": "GET",
+    "path": "ORDERS",
+    "headers": null,
+    "query": {
+      "$top": "{limit}",
+      "$skip": "{offset}",
+      "$filter": "CUSTNAME eq '{userExtId}' and CURDATE ge {dateFrom} and CURDATE le {dateTo}",
+      "$select": "CUSTNAME,CURDATE,ORDNAME,QPRICE,VAT,DISPRICE,TOTPRICE,CODE,AGENTCODE,ORDSTATUSDES,DUEDATE"
+    },
+    "body_template": null,
+    "body_type": "none",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2025-12-20T16:00:00.000000",
+    "updated_at": "2025-12-20T16:00:00.000000",
+    "variables": [
+      { "name": "userExtId", "type": "string", "default": "41107200", "required": true, "enumValues": null, "description": null },
+      { "name": "dateFrom", "type": "string", "default": "2025-10-06T00:00:00.000000Z", "required": true, "enumValues": null, "description": null },
+      { "name": "dateTo", "type": "string", "default": "2025-12-06T00:00:00.000000Z", "required": true, "enumValues": null, "description": null },
+      { "name": "limit", "type": "number", "default": 50, "required": true, "enumValues": null, "description": null },
+      { "name": "offset", "type": "number", "default": 0, "required": true, "enumValues": null, "description": null }
+    ],
+    "strict_variables": true
+  },
+  {
+    "key": "priority_products_im_buy",
+    "name": "Priority Products im buy from AINVOCIES",
+    "connection_id": null,
+    "method": "GET",
+    "path": "AINVOICES",
+    "headers": null,
+    "query": {
+      "$top": "{limit}",
+      "$skip": "{offset}",
+      "$expand": "AINVOICEITEMS_SUBFORM($select=PARTNAME)",
+      "$filter": "CUSTNAME eq '{userExtId}' "
+    },
+    "body_template": null,
+    "body_type": "none",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2025-12-20T16:00:00.000000",
+    "updated_at": "2025-12-20T16:00:00.000000",
+    "variables": [
+        {
+            "name": "userExtId",
+            "type": "string",
+            "default": "511-84",
+            "required": true,
+            "enumValues": null,
+            "description": null
+        },
+        {
+            "name": "limit",
+            "type": "number",
+            "default": 50,
+            "required": true,
+            "enumValues": null,
+            "description": null
+        },
+        {
+            "name": "offset",
+            "type": "number",
+            "default": 0,
+            "required": true,
+            "enumValues": null,
+            "description": null
+        }
+    ],
+    "strict_variables": true
+  }
+]

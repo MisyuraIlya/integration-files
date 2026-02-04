@@ -127,7 +127,28 @@
     ],
     "strict_variables": true
   },
- {
+  {
+    "key": "sap_alternate_cat_codes_only",
+    "name": "sap alternate catalog codes only",
+    "connection_id": null,
+    "method": "POST",
+    "path": "/sql",
+    "headers": null,
+    "query": null,
+    "body_template": "{\"query\":\"SELECT CardCode, ItemCode, Substitute AS AlternateCatNum FROM dbo.OSCN ORDER BY CardCode, ItemCode OFFSET @offset ROWS FETCH NEXT @limit ROWS ONLY\",\"params\":{\"offset\":{{offset}},\"limit\":{{limit}}}}",
+    "body_type": "json",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "variables": [
+      { "name": "offset", "type": "number", "default": 0, "required": true },
+      { "name": "limit", "type": "number", "default": 100, "required": true }
+    ],
+    "strict_variables": true
+  },
+
+
+  {
     "key": "sap_orders_by_customer",
     "name": "sap orders by customer",
     "connection_id": null,
@@ -170,7 +191,7 @@
     ],
     "strict_variables": true
   },
-    {
+  {
     "key": "sap_quotations_by_customer",
     "name": "sap quotations by customer",
     "connection_id": null,
@@ -213,7 +234,6 @@
     ],
     "strict_variables": true
   },
-
   {
     "key": "sap_deliveries_by_customer",
     "name": "sap deliveries by customer",
@@ -257,7 +277,6 @@
     ],
     "strict_variables": true
   },
-
   {
     "key": "sap_returns_by_customer",
     "name": "sap returns by customer",
@@ -301,7 +320,6 @@
     ],
     "strict_variables": true
   },
-
   {
     "key": "sap_ar_invoices_by_customer",
     "name": "sap A/R invoices by customer",
@@ -345,7 +363,6 @@
     ],
     "strict_variables": true
   },
-
   {
     "key": "sap_ar_credit_memos_by_customer",
     "name": "sap A/R credit memos by customer",
@@ -389,7 +406,6 @@
     ],
     "strict_variables": true
   },
-
   {
     "key": "sap_ar_down_payments_by_customer",
     "name": "sap A/R down payments by customer",
@@ -433,7 +449,6 @@
     ],
     "strict_variables": true
   },
-
   {
     "key": "sap_correction_invoices_by_customer",
     "name": "sap correction invoices by customer",
@@ -588,8 +603,155 @@
     "is_active": true,
     "variables": [{ "name": "documentNumber", "type": "number", "default": 0, "required": true }],
     "strict_variables": true
+  },
+
+
+  {
+    "key": "sap_customer_purchase_history_sku",
+    "name": "sap customer purchase history by SKU",
+    "connection_id": null,
+    "method": "POST",
+    "path": "/sql",
+    "headers": null,
+    "query": null,
+    "body_template": "{\"query\":\"SELECT t0.DocEntry, t0.DocNum, t0.DocDate, t0.CardCode, t0.CardName, t1.ItemCode, t1.Dscription AS ItemDescription, t1.Quantity, t1.Price, t1.LineTotal, t1.WhsCode, t0.DocCur FROM dbo.ORDR t0 INNER JOIN dbo.RDR1 t1 ON t0.DocEntry = t1.DocEntry WHERE t0.CardCode = @CardCode AND t1.ItemCode = @ItemCode ORDER BY t0.DocDate DESC OFFSET @offset ROWS FETCH NEXT @limit ROWS ONLY\",\"params\":{\"CardCode\":\"{{CardCode}}\",\"ItemCode\":\"{{ItemCode}}\",\"offset\":{{offset}},\"limit\":{{limit}}}}",
+    "body_type": "json",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "variables": [
+      { "name": "CardCode", "type": "string", "default": "", "required": true, "description": "The SAP Customer Code (e.g., C20000)" },
+      { "name": "ItemCode", "type": "string", "default": "", "required": true, "description": "The SAP SKU / Item Code" },
+      { "name": "offset", "type": "number", "default": 0, "required": true },
+      { "name": "limit", "type": "number", "default": 100, "required": true }
+    ],
+    "strict_variables": true
+  },
+
+  {
+    "key": "sap_customer_debits",
+    "name": "sap customer debits",
+    "connection_id": null,
+    "method": "POST",
+    "path": "/sql",
+    "headers": null,
+    "query": null,
+    "body_template": "{\"query\":\"SELECT t1.TransId, t0.RefDate, t0.BaseRef AS DocNum, t1.ShortName AS CardCode, t1.Line_ID, t1.Debit, t1.Ref1, t1.LineMemo FROM dbo.OJDT t0 INNER JOIN dbo.JDT1 t1 ON t0.BatchNum = t1.BatchNum WHERE t1.ShortName = @CardCode AND t1.Debit > 0 AND t0.RefDate >= @dateFrom AND t0.RefDate <= @dateTo ORDER BY t0.RefDate DESC\",\"params\":{\"CardCode\":\"{{CardCode}}\",\"dateFrom\":\"{{dateFrom}}\",\"dateTo\":\"{{dateTo}}\"}}",
+    "body_type": "json",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "variables": [
+      { "name": "CardCode", "type": "string", "default": "", "required": true },
+      { "name": "dateFrom", "type": "string", "default": "2026-01-01", "required": true, "description": "YYYY-MM-DD" },
+      { "name": "dateTo", "type": "string", "default": "2026-12-31", "required": true, "description": "YYYY-MM-DD" }
+    ],
+    "strict_variables": true
+  },
+  {
+    "key": "sap_customer_journal",
+    "name": "sap customer journal",
+    "connection_id": null,
+    "method": "POST",
+    "path": "/sql",
+    "headers": null,
+    "query": null,
+    "body_template": "{\"query\":\"SELECT t1.TransId, t0.RefDate, t0.BaseRef AS DocNum, t1.ShortName AS CardCode, t1.LineMemo, t1.Debit, t1.Credit, (t1.Debit - t1.Credit) AS NetAmount, t0.TransType FROM dbo.OJDT t0 INNER JOIN dbo.JDT1 t1 ON t0.BatchNum = t1.BatchNum WHERE t1.ShortName = @CardCode AND t0.RefDate >= @dateFrom AND t0.RefDate <= @dateTo ORDER BY t0.RefDate DESC, t1.TransId DESC\",\"params\":{\"CardCode\":\"{{CardCode}}\",\"dateFrom\":\"{{dateFrom}}\",\"dateTo\":\"{{dateTo}}\"}}",
+    "body_type": "json",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "variables": [
+      { "name": "CardCode", "type": "string", "default": "", "required": true },
+      { "name": "dateFrom", "type": "string", "default": "2026-01-01", "required": true, "description": "YYYY-MM-DD" },
+      { "name": "dateTo", "type": "string", "default": "2026-12-31", "required": true, "description": "YYYY-MM-DD" }
+    ],
+    "strict_variables": true
+  },
+
+  {
+    "key": "sap_warehouse_stock_by_sku",
+    "name": "sap warehouse stock detailed by SKU",
+    "connection_id": null,
+    "method": "POST",
+    "path": "/sql",
+    "headers": null,
+    "query": null,
+    "body_template": "{\"query\":\"SELECT t0.ItemCode, t1.ItemName, t0.WhsCode, t2.WhsName, t0.OnHand, t0.IsCommited, t0.OnOrder, (t0.OnHand + t0.OnOrder - t0.IsCommited) AS Available FROM dbo.OITW t0 INNER JOIN dbo.OITM t1 ON t0.ItemCode = t1.ItemCode INNER JOIN dbo.OWHS t2 ON t0.WhsCode = t2.WhsCode WHERE t0.ItemCode = @ItemCode AND (t0.OnHand <> 0 OR t0.OnOrder <> 0 OR t0.IsCommited <> 0) ORDER BY t0.WhsCode\",\"params\":{\"ItemCode\":\"{{ItemCode}}\"}}",
+    "body_type": "json",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "variables": [
+      { 
+        "name": "ItemCode", 
+        "type": "string", 
+        "default": "", 
+        "required": true, 
+        "description": "The SAP SKU / Item Code" 
+      }
+    ],
+    "strict_variables": true
+  },
+  {
+    "key": "sap_warehouse_stock_by_sku",
+    "name": "sap warehouse stock detailed by SKU",
+    "connection_id": null,
+    "method": "POST",
+    "path": "/sql",
+    "headers": null,
+    "query": null,
+    "body_template": "{\"query\":\"SELECT t0.ItemCode, t1.ItemName, t0.WhsCode, t2.WhsName, t0.OnHand, t0.IsCommited, t0.OnOrder, (t0.OnHand + t0.OnOrder - t0.IsCommited) AS Available FROM dbo.OITW t0 INNER JOIN dbo.OITM t1 ON t0.ItemCode = t1.ItemCode INNER JOIN dbo.OWHS t2 ON t0.WhsCode = t2.WhsCode WHERE t0.ItemCode = @ItemCode AND (t0.OnHand <> 0 OR t0.OnOrder <> 0 OR t0.IsCommited <> 0) ORDER BY t0.WhsCode\",\"params\":{\"ItemCode\":\"{{ItemCode}}\"}}",
+    "body_type": "json",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "variables": [
+      { 
+        "name": "ItemCode", 
+        "type": "string", 
+        "default": "", 
+        "required": true, 
+        "description": "The SAP SKU / Item Code" 
+      }
+    ],
+    "strict_variables": true
+  },
+  {
+    "key": "sap_customer_profile_summary",
+    "name": "sap customer 360 profile summary",
+    "connection_id": null,
+    "method": "POST",
+    "path": "/sql",
+    "headers": null,
+    "query": null,
+    "body_template": "{\"query\":\"SELECT t0.CardCode, t0.CardName, t0.Balance, t0.OrdersBal, t0.DnotesBal, t0.CreditLine, t2.SlpName AS SalesAgent, t0.Phone1, t0.E_Mail, t0.CntctPrsn FROM dbo.OCRD t0 LEFT JOIN dbo.OSLP t2 ON t0.SlpCode = t2.SlpCode WHERE t0.CardCode = @CardCode\",\"params\":{\"CardCode\":\"{{CardCode}}\"}}",
+    "body_type": "json",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "variables": [
+      { "name": "CardCode", "type": "string", "default": "", "required": true }
+    ],
+    "strict_variables": true
+  },
+  {
+    "key": "sap_customer_purchased_skus",
+    "name": "sap unique itemcodes bought by customer",
+    "connection_id": null,
+    "method": "POST",
+    "path": "/sql",
+    "headers": null,
+    "query": null,
+    "body_template": "{\"query\":\"SELECT DISTINCT T.ItemCode FROM (SELECT t1.ItemCode FROM dbo.OINV t0 INNER JOIN dbo.INV1 t1 ON t0.DocEntry = t1.DocEntry WHERE t0.CardCode = @CardCode UNION SELECT t1.ItemCode FROM dbo.ODLN t0 INNER JOIN dbo.DLN1 t1 ON t0.DocEntry = t1.DocEntry WHERE t0.CardCode = @CardCode UNION SELECT t1.ItemCode FROM dbo.ORDR t0 INNER JOIN dbo.RDR1 t1 ON t0.DocEntry = t1.DocEntry WHERE t0.CardCode = @CardCode) T ORDER BY T.ItemCode\",\"params\":{\"CardCode\":\"{{CardCode}}\"}}",
+    "body_type": "json",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "variables": [
+      { "name": "CardCode", "type": "string", "default": "", "required": true }
+    ],
+    "strict_variables": true
   }
-
-
-  
+    
 ]

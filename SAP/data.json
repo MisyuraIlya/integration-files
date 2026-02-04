@@ -1,0 +1,225 @@
+{
+  "mode": "upsert",
+  "dryRun": false,
+  "dataTypes": [
+    {
+      "id": null,
+      "key": "cron_users",
+      "name": "cron users",
+      "mapperType": "simple",
+      "table": "User",
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "cron users",
+      "linkedName": null,
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "users_cron",
+          "name": "users cron",
+          "description": "users cron",
+          "templateKey": "sap_customers_list",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "simple": {
+                "mappings": {
+                    "hp": {
+                        "sourceField": "FederalTaxID"
+                    },
+                    "city": {
+                        "sourceField": "City"
+                    },
+                    "name": {
+                        "sourceField": "CardName"
+                    },
+                    "role": {},
+                    "type": {},
+                    "agent": {
+                        "sourceField": "SalesPersonCode"
+                    },
+                    "email": {},
+                    "extId": {
+                        "sourceField": "CardCode"
+                    },
+                    "phone": {
+                        "sourceField": "Phone1"
+                    },
+                    "PayDes": {},
+                    "extra1": {},
+                    "extra2": {},
+                    "extra3": {},
+                    "extra4": {},
+                    "extra5": {},
+                    "extra6": {},
+                    "extra7": {},
+                    "extra8": {},
+                    "extra9": {},
+                    "parent": {},
+                    "search": {},
+                    "address": {
+                        "sourceField": "Address"
+                    },
+                    "company": {},
+                    "extra10": {},
+                    "isAgent": {},
+                    "payCode": {},
+                    "taxCode": {},
+                    "discount": {
+                        "sourceField": "DiscountPercent"
+                    },
+                    "password": {},
+                    "recovery": {},
+                    "username": {
+                        "sourceField": null
+                    },
+                    "createdAt": {},
+                    "isBlocked": {
+                        "type": "boolean",
+                        "trueValues": [
+                            "Y"
+                        ],
+                        "falseValues": [],
+                        "sourceField": "IsFrozen"
+                    },
+                    "maxCredit": {
+                        "sourceField": "CreditLimit"
+                    },
+                    "maxObligo": {
+                        "sourceField": "CreditLimit"
+                    },
+                    "updatedAt": {},
+                    "isPublished": {},
+                    "masterExtId": {},
+                    "isAllowOrder": {},
+                    "isRegistered": {},
+                    "isVatEnabled": {
+                        "type": "boolean",
+                        "trueValues": [
+                            "Y"
+                        ],
+                        "falseValues": [],
+                        "sourceField": "IsTaxable"
+                    },
+                    "refreshToken": {},
+                    "salesCurrency": {},
+                    "minimumPriceUser": {},
+                    "vereficationData": {
+                        "sourceField": "Phone1"
+                    },
+                    "deliveryPriceUser": {},
+                    "isAllowAllClients": {},
+                    "isAllowPriceOffer": {}
+                }
+            },
+            "itemsPath": "rows"
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": false
+    },
+    {
+      "id": null,
+      "key": "sap_agents",
+      "name": "sap agents",
+      "mapperType": "simple",
+      "table": "Agent",
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "sap agents",
+      "linkedName": null,
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "sap_agents",
+          "name": "sap agents",
+          "description": null,
+          "templateKey": "sap_agents_list",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "simple": {
+                "mappings": {
+                    "hp": {},
+                    "city": {},
+                    "name": {
+                        "sourceField": "SlpName"
+                    },
+                    "role": {},
+                    "type": {},
+                    "agent": {},
+                    "email": {},
+                    "extId": {
+                        "sourceField": "SlpCode"
+                    },
+                    "phone": {},
+                    "PayDes": {},
+                    "extra1": {},
+                    "extra2": {},
+                    "extra3": {},
+                    "extra4": {},
+                    "extra5": {},
+                    "extra6": {},
+                    "extra7": {},
+                    "extra8": {},
+                    "extra9": {},
+                    "parent": {},
+                    "search": {},
+                    "address": {},
+                    "company": {},
+                    "extra10": {},
+                    "isAgent": {},
+                    "payCode": {},
+                    "taxCode": {},
+                    "discount": {},
+                    "password": {},
+                    "recovery": {},
+                    "username": {},
+                    "createdAt": {},
+                    "isBlocked": {
+                        "type": "boolean",
+                        "trueValues": [
+                            "N"
+                        ],
+                        "falseValues": [],
+                        "sourceField": "Active"
+                    },
+                    "maxCredit": {},
+                    "maxObligo": {},
+                    "updatedAt": {},
+                    "isPublished": {},
+                    "masterExtId": {},
+                    "isAllowOrder": {},
+                    "isRegistered": {},
+                    "isVatEnabled": {},
+                    "refreshToken": {},
+                    "salesCurrency": {},
+                    "minimumPriceUser": {},
+                    "vereficationData": {},
+                    "deliveryPriceUser": {},
+                    "isAllowAllClients": {},
+                    "isAllowPriceOffer": {}
+                }
+            },
+            "itemsPath": "rows"
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": false
+    }
+  ]
+}

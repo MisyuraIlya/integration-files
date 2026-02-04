@@ -20,20 +20,20 @@
   },
   {
     "key": "sap_customers_list",
-    "name": "sap customers list",
+    "name": "sap customers list extended",
     "connection_id": null,
     "method": "POST",
     "path": "/sql",
     "headers": null,
     "query": null,
-    "body_template": "{\"query\":\"SELECT c.CardCode, c.CardName, c.CardType, c.GroupCode, c.Phone1, c.E_Mail, c.Address, c.City, c.Country, c.SlpCode AS SalesPersonCode, s.SlpName AS SalesPersonName FROM dbo.OCRD c LEFT JOIN dbo.OSLP s ON s.SlpCode = c.SlpCode WHERE c.CardType = 'C' ORDER BY c.CardCode OFFSET @offset ROWS FETCH NEXT @limit ROWS ONLY\",\"params\":{\"offset\":{{offset}},\"limit\":{{limit}}}}",
+    "body_template": "{\"query\":\"SELECT c.CardCode, c.CardName, c.CardType, c.GroupCode, c.Phone1, c.Cellular, c.E_Mail, c.Address, c.City, c.Country, c.SlpCode AS SalesPersonCode, s.SlpName AS SalesPersonName, c.VatStatus AS IsTaxable, c.frozenFor AS IsFrozen, c.validFor AS IsActive, c.Discount AS DiscountPercent, c.CreditLine AS CreditLimit, c.LicTradNum AS FederalTaxID FROM dbo.OCRD c LEFT JOIN dbo.OSLP s ON s.SlpCode = c.SlpCode WHERE c.CardType = 'C' ORDER BY c.CardCode OFFSET @offset ROWS FETCH NEXT @limit ROWS ONLY\",\"params\":{\"offset\":{{offset}},\"limit\":{{limit}}}}",
     "body_type": "json",
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
     "variables": [
-      { "name": "offset", "type": "number", "default": 0, "required": true, "enumValues": null, "description": null },
-      { "name": "limit", "type": "number", "default": 100, "required": true, "enumValues": null, "description": null }
+      { "name": "offset", "type": "number", "default": 0, "required": true },
+      { "name": "limit", "type": "number", "default": 100, "required": true }
     ],
     "strict_variables": true
   },
@@ -162,7 +162,7 @@
     "output_root": null,
     "is_active": true,
     "variables": [
-      { "name": "CardCode", "type": "string", "default": "", "required": true, "enumValues": null, "description": null },
+      { "name": "userExtId", "type": "string", "default": "", "required": true, "enumValues": null, "description": null },
       { "name": "dateFrom", "type": "string", "default": "2025-01-01", "required": true, "enumValues": null, "description": "YYYY-MM-DD" },
       { "name": "dateTo", "type": "string", "default": "2025-12-31", "required": true, "enumValues": null, "description": "YYYY-MM-DD" },
       { "name": "offset", "type": "number", "default": 0, "required": true, "enumValues": null, "description": null },
@@ -205,7 +205,7 @@
     "output_root": null,
     "is_active": true,
     "variables": [
-      { "name": "CardCode", "type": "string", "default": "", "required": true, "enumValues": null, "description": null },
+      { "name": "userExtId", "type": "string", "default": "", "required": true, "enumValues": null, "description": null },
       { "name": "dateFrom", "type": "string", "default": "2025-01-01", "required": true, "enumValues": null, "description": "YYYY-MM-DD" },
       { "name": "dateTo", "type": "string", "default": "2025-12-31", "required": true, "enumValues": null, "description": "YYYY-MM-DD" },
       { "name": "offset", "type": "number", "default": 0, "required": true, "enumValues": null, "description": null },
@@ -248,7 +248,7 @@
     "output_root": null,
     "is_active": true,
     "variables": [
-      { "name": "CardCode", "type": "string", "default": "", "required": true, "enumValues": null, "description": null },
+      { "name": "userExtId", "type": "string", "default": "", "required": true, "enumValues": null, "description": null },
       { "name": "dateFrom", "type": "string", "default": "2025-01-01", "required": true, "enumValues": null, "description": "YYYY-MM-DD" },
       { "name": "dateTo", "type": "string", "default": "2025-12-31", "required": true, "enumValues": null, "description": "YYYY-MM-DD" },
       { "name": "offset", "type": "number", "default": 0, "required": true, "enumValues": null, "description": null },
@@ -291,7 +291,7 @@
     "output_root": null,
     "is_active": true,
     "variables": [
-      { "name": "CardCode", "type": "string", "default": "", "required": true, "enumValues": null, "description": null },
+      { "name": "userExtId", "type": "string", "default": "", "required": true, "enumValues": null, "description": null },
       { "name": "dateFrom", "type": "string", "default": "2025-01-01", "required": true, "enumValues": null, "description": "YYYY-MM-DD" },
       { "name": "dateTo", "type": "string", "default": "2025-12-31", "required": true, "enumValues": null, "description": "YYYY-MM-DD" },
       { "name": "offset", "type": "number", "default": 0, "required": true, "enumValues": null, "description": null },
@@ -334,7 +334,7 @@
     "output_root": null,
     "is_active": true,
     "variables": [
-      { "name": "CardCode", "type": "string", "default": "", "required": true, "enumValues": null, "description": null },
+      { "name": "userExtId", "type": "string", "default": "", "required": true, "enumValues": null, "description": null },
       { "name": "dateFrom", "type": "string", "default": "2025-01-01", "required": true, "enumValues": null, "description": "YYYY-MM-DD" },
       { "name": "dateTo", "type": "string", "default": "2025-12-31", "required": true, "enumValues": null, "description": "YYYY-MM-DD" },
       { "name": "offset", "type": "number", "default": 0, "required": true, "enumValues": null, "description": null },
@@ -377,7 +377,7 @@
     "output_root": null,
     "is_active": true,
     "variables": [
-      { "name": "CardCode", "type": "string", "default": "", "required": true, "enumValues": null, "description": null },
+      { "name": "userExtId", "type": "string", "default": "", "required": true, "enumValues": null, "description": null },
       { "name": "dateFrom", "type": "string", "default": "2025-01-01", "required": true, "enumValues": null, "description": "YYYY-MM-DD" },
       { "name": "dateTo", "type": "string", "default": "2025-12-31", "required": true, "enumValues": null, "description": "YYYY-MM-DD" },
       { "name": "offset", "type": "number", "default": 0, "required": true, "enumValues": null, "description": null },
@@ -420,7 +420,7 @@
     "output_root": null,
     "is_active": true,
     "variables": [
-      { "name": "CardCode", "type": "string", "default": "", "required": true, "enumValues": null, "description": null },
+      { "name": "userExtId", "type": "string", "default": "", "required": true, "enumValues": null, "description": null },
       { "name": "dateFrom", "type": "string", "default": "2025-01-01", "required": true, "enumValues": null, "description": "YYYY-MM-DD" },
       { "name": "dateTo", "type": "string", "default": "2025-12-31", "required": true, "enumValues": null, "description": "YYYY-MM-DD" },
       { "name": "offset", "type": "number", "default": 0, "required": true, "enumValues": null, "description": null },
@@ -463,7 +463,7 @@
     "output_root": null,
     "is_active": true,
     "variables": [
-      { "name": "CardCode", "type": "string", "default": "", "required": true, "enumValues": null, "description": null },
+      { "name": "userExtId", "type": "string", "default": "", "required": true, "enumValues": null, "description": null },
       { "name": "dateFrom", "type": "string", "default": "2025-01-01", "required": true, "enumValues": null, "description": "YYYY-MM-DD" },
       { "name": "dateTo", "type": "string", "default": "2025-12-31", "required": true, "enumValues": null, "description": "YYYY-MM-DD" },
       { "name": "offset", "type": "number", "default": 0, "required": true, "enumValues": null, "description": null },
@@ -620,8 +620,8 @@
     "output_root": null,
     "is_active": true,
     "variables": [
-      { "name": "CardCode", "type": "string", "default": "", "required": true, "description": "The SAP Customer Code (e.g., C20000)" },
-      { "name": "ItemCode", "type": "string", "default": "", "required": true, "description": "The SAP SKU / Item Code" },
+      { "name": "userExtId", "type": "string", "default": "", "required": true, "description": "The SAP Customer Code (e.g., C20000)" },
+      { "name": "sku", "type": "string", "default": "", "required": true, "description": "The SAP SKU / Item Code" },
       { "name": "offset", "type": "number", "default": 0, "required": true },
       { "name": "limit", "type": "number", "default": 100, "required": true }
     ],
@@ -642,7 +642,7 @@
     "output_root": null,
     "is_active": true,
     "variables": [
-      { "name": "CardCode", "type": "string", "default": "", "required": true },
+      { "name": "userExtId", "type": "string", "default": "", "required": true },
       { "name": "dateFrom", "type": "string", "default": "2026-01-01", "required": true, "description": "YYYY-MM-DD" },
       { "name": "dateTo", "type": "string", "default": "2026-12-31", "required": true, "description": "YYYY-MM-DD" }
     ],
@@ -662,7 +662,7 @@
     "output_root": null,
     "is_active": true,
     "variables": [
-      { "name": "CardCode", "type": "string", "default": "", "required": true },
+      { "name": "userExtId", "type": "string", "default": "", "required": true },
       { "name": "dateFrom", "type": "string", "default": "2026-01-01", "required": true, "description": "YYYY-MM-DD" },
       { "name": "dateTo", "type": "string", "default": "2026-12-31", "required": true, "description": "YYYY-MM-DD" }
     ],
@@ -684,7 +684,7 @@
     "is_active": true,
     "variables": [
       { 
-        "name": "ItemCode", 
+        "name": "sku", 
         "type": "string", 
         "default": "", 
         "required": true, 
@@ -708,7 +708,7 @@
     "is_active": true,
     "variables": [
       { 
-        "name": "ItemCode", 
+        "name": "sku", 
         "type": "string", 
         "default": "", 
         "required": true, 
@@ -731,7 +731,7 @@
     "output_root": null,
     "is_active": true,
     "variables": [
-      { "name": "CardCode", "type": "string", "default": "", "required": true }
+      { "name": "userExtId", "type": "string", "default": "", "required": true }
     ],
     "strict_variables": true
   },
@@ -749,7 +749,7 @@
     "output_root": null,
     "is_active": true,
     "variables": [
-      { "name": "CardCode", "type": "string", "default": "", "required": true }
+      { "name": "userExtId", "type": "string", "default": "", "required": true }
     ],
     "strict_variables": true
   }

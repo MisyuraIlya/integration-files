@@ -478,147 +478,118 @@
     "strict_variables": true
   },
   {
-    "key": "sap_quotation_with_lines_by_docnum",
-    "name": "sap quotation (header + lines) by document number",
+    "key": "sap_quotation_with_rows_by_docnum",
+    "name": "sap quotation (header + rows) by document number",
     "connection_id": null,
     "method": "POST",
     "path": "/sql",
     "headers": null,
     "query": null,
-    "body_template": "{\"query\":\"SELECT h.DocEntry, h.DocNum, h.DocDate, h.DocDueDate, h.CardCode, h.CardName, h.SlpCode AS SalesPersonCode, s.SlpName AS SalesPersonName, h.DocCur, h.DocRate, h.DocTotal, h.VatSum, h.DiscSum, h.PaidToDate, h.DocStatus, h.CANCELED, l.LineNum, l.ItemCode, l.Dscription, l.Quantity, l.Price, l.Currency, l.DiscPrcnt, l.LineTotal, l.VatPrcnt, l.VatSum, l.WhsCode, l.TaxCode FROM dbo.QUT1 l INNER JOIN dbo.OQUT h ON h.DocEntry = l.DocEntry LEFT JOIN dbo.OSLP s ON s.SlpCode = h.SlpCode WHERE h.DocNum = @documentNumber ORDER BY l.LineNum\",\"params\":{\"documentNumber\":{{documentNumber}}}}",
+    "body_template": "{\"query\":\"SELECT (SELECT T0.DocEntry, T0.DocNum, T0.DocDate, T0.CardCode, T0.CardName, T0.DocTotal, T0.DocCur, (SELECT T1.LineNum, T1.ItemCode, T1.Dscription AS ItemDescription, T1.Quantity, T1.Price, T1.WhsCode FROM dbo.QUT1 T1 WHERE T1.DocEntry = T0.DocEntry ORDER BY T1.LineNum FOR JSON PATH) AS DocumentLines FROM dbo.OQUT T0 WHERE T0.DocNum = @documentNumber FOR JSON PATH, WITHOUT_ARRAY_WRAPPER) AS OrderData\",\"params\":{\"documentNumber\":{{documentNumber}}}}",
     "body_type": "json",
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "variables": [
-      { "name": "documentNumber", "type": "number", "default": 0, "required": true, "enumValues": null, "description": null }
-    ],
+    "variables": [{ "name": "documentNumber", "type": "number", "default": 0, "required": true }],
     "strict_variables": true
   },
   {
-    "key": "sap_order_with_lines_by_docnum",
-    "name": "sap order (header + lines) by document number",
+    "key": "sap_order_with_rows_by_docnum",
+    "name": "sap order (header + rows) by document number",
     "connection_id": null,
     "method": "POST",
     "path": "/sql",
     "headers": null,
     "query": null,
-    "body_template": "{\"query\":\"SELECT h.DocEntry, h.DocNum, h.DocDate, h.DocDueDate, h.CardCode, h.CardName, h.SlpCode AS SalesPersonCode, s.SlpName AS SalesPersonName, h.DocCur, h.DocRate, h.DocTotal, h.VatSum, h.DiscSum, h.PaidToDate, h.DocStatus, h.CANCELED, l.LineNum, l.ItemCode, l.Dscription, l.Quantity, l.Price, l.Currency, l.DiscPrcnt, l.LineTotal, l.VatPrcnt, l.VatSum, l.WhsCode, l.TaxCode FROM dbo.RDR1 l INNER JOIN dbo.ORDR h ON h.DocEntry = l.DocEntry LEFT JOIN dbo.OSLP s ON s.SlpCode = h.SlpCode WHERE h.DocNum = @documentNumber ORDER BY l.LineNum\",\"params\":{\"documentNumber\":{{documentNumber}}}}",
+    "body_template": "{\"query\":\"SELECT (SELECT T0.DocEntry, T0.DocNum, T0.DocDate, T0.CardCode, T0.CardName, T0.DocTotal, T0.DocCur, (SELECT T1.LineNum, T1.ItemCode, T1.Dscription AS ItemDescription, T1.Quantity, T1.Price, T1.WhsCode FROM dbo.RDR1 T1 WHERE T1.DocEntry = T0.DocEntry ORDER BY T1.LineNum FOR JSON PATH) AS DocumentLines FROM dbo.ORDR T0 WHERE T0.DocNum = @documentNumber FOR JSON PATH, WITHOUT_ARRAY_WRAPPER) AS OrderData\",\"params\":{\"documentNumber\":{{documentNumber}}}}",
     "body_type": "json",
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "variables": [
-      { "name": "documentNumber", "type": "number", "default": 0, "required": true, "enumValues": null, "description": null }
-    ],
+    "variables": [{ "name": "documentNumber", "type": "number", "default": 0, "required": true }],
     "strict_variables": true
   },
   {
-    "key": "sap_delivery_with_lines_by_docnum",
-    "name": "sap delivery (header + lines) by document number",
+    "key": "sap_delivery_with_rows_by_docnum",
+    "name": "sap delivery (header + rows) by document number",
     "connection_id": null,
     "method": "POST",
     "path": "/sql",
     "headers": null,
     "query": null,
-    "body_template": "{\"query\":\"SELECT h.DocEntry, h.DocNum, h.DocDate, h.DocDueDate, h.CardCode, h.CardName, h.SlpCode AS SalesPersonCode, s.SlpName AS SalesPersonName, h.DocCur, h.DocRate, h.DocTotal, h.VatSum, h.DiscSum, h.PaidToDate, h.DocStatus, h.CANCELED, l.LineNum, l.ItemCode, l.Dscription, l.Quantity, l.Price, l.Currency, l.DiscPrcnt, l.LineTotal, l.VatPrcnt, l.VatSum, l.WhsCode, l.TaxCode FROM dbo.DLN1 l INNER JOIN dbo.ODLN h ON h.DocEntry = l.DocEntry LEFT JOIN dbo.OSLP s ON s.SlpCode = h.SlpCode WHERE h.DocNum = @documentNumber ORDER BY l.LineNum\",\"params\":{\"documentNumber\":{{documentNumber}}}}",
+    "body_template": "{\"query\":\"SELECT (SELECT T0.DocEntry, T0.DocNum, T0.DocDate, T0.CardCode, T0.CardName, T0.DocTotal, T0.DocCur, (SELECT T1.LineNum, T1.ItemCode, T1.Dscription AS ItemDescription, T1.Quantity, T1.Price, T1.WhsCode FROM dbo.DLN1 T1 WHERE T1.DocEntry = T0.DocEntry ORDER BY T1.LineNum FOR JSON PATH) AS DocumentLines FROM dbo.ODLN T0 WHERE T0.DocNum = @documentNumber FOR JSON PATH, WITHOUT_ARRAY_WRAPPER) AS OrderData\",\"params\":{\"documentNumber\":{{documentNumber}}}}",
     "body_type": "json",
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "variables": [
-      { "name": "documentNumber", "type": "number", "default": 0, "required": true, "enumValues": null, "description": null }
-    ],
+    "variables": [{ "name": "documentNumber", "type": "number", "default": 0, "required": true }],
     "strict_variables": true
   },
   {
-    "key": "sap_return_with_lines_by_docnum",
-    "name": "sap return (header + lines) by document number",
+    "key": "sap_return_with_rows_by_docnum",
+    "name": "sap return (header + rows) by document number",
     "connection_id": null,
     "method": "POST",
     "path": "/sql",
     "headers": null,
     "query": null,
-    "body_template": "{\"query\":\"SELECT h.DocEntry, h.DocNum, h.DocDate, h.DocDueDate, h.CardCode, h.CardName, h.SlpCode AS SalesPersonCode, s.SlpName AS SalesPersonName, h.DocCur, h.DocRate, h.DocTotal, h.VatSum, h.DiscSum, h.PaidToDate, h.DocStatus, h.CANCELED, l.LineNum, l.ItemCode, l.Dscription, l.Quantity, l.Price, l.Currency, l.DiscPrcnt, l.LineTotal, l.VatPrcnt, l.VatSum, l.WhsCode, l.TaxCode FROM dbo.RDN1 l INNER JOIN dbo.ORDN h ON h.DocEntry = l.DocEntry LEFT JOIN dbo.OSLP s ON s.SlpCode = h.SlpCode WHERE h.DocNum = @documentNumber ORDER BY l.LineNum\",\"params\":{\"documentNumber\":{{documentNumber}}}}",
+    "body_template": "{\"query\":\"SELECT (SELECT T0.DocEntry, T0.DocNum, T0.DocDate, T0.CardCode, T0.CardName, T0.DocTotal, T0.DocCur, (SELECT T1.LineNum, T1.ItemCode, T1.Dscription AS ItemDescription, T1.Quantity, T1.Price, T1.WhsCode FROM dbo.RDN1 T1 WHERE T1.DocEntry = T0.DocEntry ORDER BY T1.LineNum FOR JSON PATH) AS DocumentLines FROM dbo.ORDN T0 WHERE T0.DocNum = @documentNumber FOR JSON PATH, WITHOUT_ARRAY_WRAPPER) AS OrderData\",\"params\":{\"documentNumber\":{{documentNumber}}}}",
     "body_type": "json",
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "variables": [
-      { "name": "documentNumber", "type": "number", "default": 0, "required": true, "enumValues": null, "description": null }
-    ],
+    "variables": [{ "name": "documentNumber", "type": "number", "default": 0, "required": true }],
     "strict_variables": true
   },
   {
-    "key": "sap_ar_invoice_with_lines_by_docnum",
-    "name": "sap A/R invoice (header + lines) by document number",
+    "key": "sap_ar_invoice_with_rows_by_docnum",
+    "name": "sap A/R invoice (header + rows) by document number",
     "connection_id": null,
     "method": "POST",
     "path": "/sql",
     "headers": null,
     "query": null,
-    "body_template": "{\"query\":\"SELECT h.DocEntry, h.DocNum, h.DocDate, h.DocDueDate, h.CardCode, h.CardName, h.SlpCode AS SalesPersonCode, s.SlpName AS SalesPersonName, h.DocCur, h.DocRate, h.DocTotal, h.VatSum, h.DiscSum, h.PaidToDate, h.DocStatus, h.CANCELED, l.LineNum, l.ItemCode, l.Dscription, l.Quantity, l.Price, l.Currency, l.DiscPrcnt, l.LineTotal, l.VatPrcnt, l.VatSum, l.WhsCode, l.TaxCode FROM dbo.INV1 l INNER JOIN dbo.OINV h ON h.DocEntry = l.DocEntry LEFT JOIN dbo.OSLP s ON s.SlpCode = h.SlpCode WHERE h.DocNum = @documentNumber ORDER BY l.LineNum\",\"params\":{\"documentNumber\":{{documentNumber}}}}",
+    "body_template": "{\"query\":\"SELECT (SELECT T0.DocEntry, T0.DocNum, T0.DocDate, T0.CardCode, T0.CardName, T0.DocTotal, T0.DocCur, (SELECT T1.LineNum, T1.ItemCode, T1.Dscription AS ItemDescription, T1.Quantity, T1.Price, T1.WhsCode FROM dbo.INV1 T1 WHERE T1.DocEntry = T0.DocEntry ORDER BY T1.LineNum FOR JSON PATH) AS DocumentLines FROM dbo.OINV T0 WHERE T0.DocNum = @documentNumber FOR JSON PATH, WITHOUT_ARRAY_WRAPPER) AS OrderData\",\"params\":{\"documentNumber\":{{documentNumber}}}}",
     "body_type": "json",
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "variables": [
-      { "name": "documentNumber", "type": "number", "default": 0, "required": true, "enumValues": null, "description": null }
-    ],
+    "variables": [{ "name": "documentNumber", "type": "number", "default": 0, "required": true }],
     "strict_variables": true
   },
   {
-    "key": "sap_ar_credit_memo_with_lines_by_docnum",
-    "name": "sap A/R credit memo (header + lines) by document number",
+    "key": "sap_ar_credit_memo_with_rows_by_docnum",
+    "name": "sap A/R credit memo (header + rows) by document number",
     "connection_id": null,
     "method": "POST",
     "path": "/sql",
     "headers": null,
     "query": null,
-    "body_template": "{\"query\":\"SELECT h.DocEntry, h.DocNum, h.DocDate, h.DocDueDate, h.CardCode, h.CardName, h.SlpCode AS SalesPersonCode, s.SlpName AS SalesPersonName, h.DocCur, h.DocRate, h.DocTotal, h.VatSum, h.DiscSum, h.PaidToDate, h.DocStatus, h.CANCELED, l.LineNum, l.ItemCode, l.Dscription, l.Quantity, l.Price, l.Currency, l.DiscPrcnt, l.LineTotal, l.VatPrcnt, l.VatSum, l.WhsCode, l.TaxCode FROM dbo.RIN1 l INNER JOIN dbo.ORIN h ON h.DocEntry = l.DocEntry LEFT JOIN dbo.OSLP s ON s.SlpCode = h.SlpCode WHERE h.DocNum = @documentNumber ORDER BY l.LineNum\",\"params\":{\"documentNumber\":{{documentNumber}}}}",
+    "body_template": "{\"query\":\"SELECT (SELECT T0.DocEntry, T0.DocNum, T0.DocDate, T0.CardCode, T0.CardName, T0.DocTotal, T0.DocCur, (SELECT T1.LineNum, T1.ItemCode, T1.Dscription AS ItemDescription, T1.Quantity, T1.Price, T1.WhsCode FROM dbo.RIN1 T1 WHERE T1.DocEntry = T0.DocEntry ORDER BY T1.LineNum FOR JSON PATH) AS DocumentLines FROM dbo.ORIN T0 WHERE T0.DocNum = @documentNumber FOR JSON PATH, WITHOUT_ARRAY_WRAPPER) AS OrderData\",\"params\":{\"documentNumber\":{{documentNumber}}}}",
     "body_type": "json",
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "variables": [
-      { "name": "documentNumber", "type": "number", "default": 0, "required": true, "enumValues": null, "description": null }
-    ],
+    "variables": [{ "name": "documentNumber", "type": "number", "default": 0, "required": true }],
     "strict_variables": true
   },
   {
-    "key": "sap_ar_down_payment_with_lines_by_docnum",
-    "name": "sap A/R down payment (header + lines) by document number",
+    "key": "sap_ar_down_payment_with_rows_by_docnum",
+    "name": "sap A/R down payment (header + rows) by document number",
     "connection_id": null,
     "method": "POST",
     "path": "/sql",
     "headers": null,
     "query": null,
-    "body_template": "{\"query\":\"SELECT h.DocEntry, h.DocNum, h.DocDate, h.DocDueDate, h.CardCode, h.CardName, h.SlpCode AS SalesPersonCode, s.SlpName AS SalesPersonName, h.DocCur, h.DocRate, h.DocTotal, h.VatSum, h.DiscSum, h.PaidToDate, h.DocStatus, h.CANCELED, l.LineNum, l.ItemCode, l.Dscription, l.Quantity, l.Price, l.Currency, l.DiscPrcnt, l.LineTotal, l.VatPrcnt, l.VatSum, l.WhsCode, l.TaxCode FROM dbo.DPI1 l INNER JOIN dbo.ODPI h ON h.DocEntry = l.DocEntry LEFT JOIN dbo.OSLP s ON s.SlpCode = h.SlpCode WHERE h.DocNum = @documentNumber ORDER BY l.LineNum\",\"params\":{\"documentNumber\":{{documentNumber}}}}",
+    "body_template": "{\"query\":\"SELECT (SELECT T0.DocEntry, T0.DocNum, T0.DocDate, T0.CardCode, T0.CardName, T0.DocTotal, T0.DocCur, (SELECT T1.LineNum, T1.ItemCode, T1.Dscription AS ItemDescription, T1.Quantity, T1.Price, T1.WhsCode FROM dbo.DPI1 T1 WHERE T1.DocEntry = T0.DocEntry ORDER BY T1.LineNum FOR JSON PATH) AS DocumentLines FROM dbo.ODPI T0 WHERE T0.DocNum = @documentNumber FOR JSON PATH, WITHOUT_ARRAY_WRAPPER) AS OrderData\",\"params\":{\"documentNumber\":{{documentNumber}}}}",
     "body_type": "json",
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "variables": [
-      { "name": "documentNumber", "type": "number", "default": 0, "required": true, "enumValues": null, "description": null }
-    ],
-    "strict_variables": true
-  },
-  {
-    "key": "sap_correction_invoice_with_lines_by_docnum",
-    "name": "sap correction invoice (header + lines) by document number",
-    "connection_id": null,
-    "method": "POST",
-    "path": "/sql",
-    "headers": null,
-    "query": null,
-    "body_template": "{\"query\":\"SELECT h.DocEntry, h.DocNum, h.DocDate, h.DocDueDate, h.CardCode, h.CardName, h.SlpCode AS SalesPersonCode, s.SlpName AS SalesPersonName, h.DocCur, h.DocRate, h.DocTotal, h.VatSum, h.DiscSum, h.PaidToDate, h.DocStatus, h.CANCELED, l.LineNum, l.ItemCode, l.Dscription, l.Quantity, l.Price, l.Currency, l.DiscPrcnt, l.LineTotal, l.VatPrcnt, l.VatSum, l.WhsCode, l.TaxCode FROM dbo.CSI1 l INNER JOIN dbo.OCSI h ON h.DocEntry = l.DocEntry LEFT JOIN dbo.OSLP s ON s.SlpCode = h.SlpCode WHERE h.DocNum = @documentNumber ORDER BY l.LineNum\",\"params\":{\"documentNumber\":{{documentNumber}}}}",
-    "body_type": "json",
-    "response_parser": "json",
-    "output_root": null,
-    "is_active": true,
-    "variables": [
-      { "name": "documentNumber", "type": "number", "default": 0, "required": true, "enumValues": null, "description": null }
-    ],
+    "variables": [{ "name": "documentNumber", "type": "number", "default": 0, "required": true }],
     "strict_variables": true
   }
+
+
+  
 ]

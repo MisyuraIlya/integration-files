@@ -1,0 +1,23 @@
+[{
+  "key": "sap_order_with_rows_by_docnum",
+  "name": "sap order (header + rows) by document number",
+  "connection_id": null,
+  "method": "POST",
+  "path": "/sql",
+  "headers": null,
+  "query": null,
+  "body_template": "{\"query\":\"SELECT (SELECT T0.DocEntry, T0.DocNum, T0.DocDate, T0.CardCode, T0.CardName, T0.DocTotal, T0.DocCur, (SELECT T1.LineNum, T1.ItemCode, T1.Dscription AS ItemDescription, T1.Quantity, T1.Price, T1.WhsCode FROM dbo.RDR1 T1 WHERE T1.DocEntry = T0.DocEntry ORDER BY T1.LineNum FOR JSON PATH) AS DocumentLines FROM dbo.ORDR T0 WHERE T0.DocNum = @documentNumber FOR JSON PATH, WITHOUT_ARRAY_WRAPPER) AS OrderData\",\"params\":{\"documentNumber\":{{documentNumber}}}}",
+  "body_type": "json",
+  "response_parser": "json",
+  "output_root": null,
+  "is_active": true,
+  "variables": [
+    {
+      "name": "documentNumber",
+      "type": "number",
+      "default": 0,
+      "required": true
+    }
+  ],
+  "strict_variables": true
+}]

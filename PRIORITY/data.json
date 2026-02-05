@@ -409,7 +409,9 @@
                 },
                 "isNew": {},
                 "orden": {},
-                "stock": {},
+                "stock": {
+                    "sourceField": "LOGCOUNTERS_SUBFORM.BALANCE"
+                },
                 "title": {
                   "sourceField": "PARTDES"
                 },

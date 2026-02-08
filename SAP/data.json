@@ -116,10 +116,10 @@
                 "isAllowPriceOffer": {}
               }
             },
-            "itemsPath": "rows",
             "execution": {
               "mode": "single"
-            }
+            },
+            "itemsPath": "rows"
           },
           "isCanChange": true,
           "createdAt": null,
@@ -215,10 +215,314 @@
                 "isAllowPriceOffer": {}
               }
             },
-            "itemsPath": "rows",
             "execution": {
               "mode": "single"
-            }
+            },
+            "itemsPath": "rows"
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": false
+    },
+    {
+      "id": null,
+      "key": "sap_categories",
+      "name": "categories",
+      "mapperType": "hierarchy",
+      "table": "Category",
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "sap categories",
+      "linkedName": null,
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "categories_sap",
+          "name": "categories sap",
+          "description": "categories sap",
+          "templateKey": null,
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "execution": {
+              "mode": "single"
+            },
+            "hierarchy": {
+              "levels": [
+                {
+                  "level": 1,
+                  "mappings": {
+                    "extId": {
+                      "type": "string",
+                      "sourceField": "CategoryCode"
+                    },
+                    "title": {
+                      "type": "string",
+                      "sourceField": "CategoryName"
+                    },
+                    "parentExtId": {
+                      "type": "string"
+                    }
+                  },
+                  "itemsPath": "rows",
+                  "templateId": 3
+                }
+              ]
+            },
+            "itemsPath": "rows"
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": false
+    },
+    {
+      "id": null,
+      "key": "sap_price_list",
+      "name": "sap price list",
+      "mapperType": "simple",
+      "table": "PriceList",
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "sap price list",
+      "linkedName": null,
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "sap_price_list",
+          "name": "sap price list",
+          "description": "sap price list",
+          "templateKey": "sap_price_lists",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "simple": {
+              "mappings": {
+                "extId": {
+                  "sourceField": "ListNum"
+                },
+                "title": {
+                  "sourceField": "ListName"
+                },
+                "discount": {},
+                "erpConnectionId": {}
+              }
+            },
+            "execution": {
+              "mode": "single"
+            },
+            "itemsPath": "rows"
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": false
+    },
+    {
+      "id": null,
+      "key": "sap_products",
+      "name": "sap products",
+      "mapperType": "simple",
+      "table": "Product",
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "sap products",
+      "linkedName": null,
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "sap_products",
+          "name": "sap products",
+          "description": "sap products",
+          "templateKey": "sap_products_list",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "simple": {
+              "mappings": {
+                "sku": {
+                  "sourceField": "ItemCode"
+                },
+                "type": {},
+                "group": {},
+                "isNew": {},
+                "orden": {},
+                "stock": {},
+                "title": {
+                  "sourceField": "ItemName"
+                },
+                "extra1": {},
+                "extra2": {},
+                "extra3": {},
+                "extra4": {},
+                "extra5": {},
+                "extra6": {},
+                "extra7": {},
+                "extra8": {},
+                "extra9": {},
+                "search": {
+                  "sourceField": "ItemCode + ItemName"
+                },
+                "barcode": {
+                  "sourceField": "BarCode"
+                },
+                "extra10": {},
+                "category": {
+                  "sourceField": "ItemGroupCode"
+                },
+                "discount": {},
+                "basePrice": {},
+                "createdAt": {},
+                "isSpecial": {},
+                "isTaxable": {},
+                "updatedAt": {},
+                "finalPrice": {},
+                "taxPrecent": {},
+                "description": {},
+                "isPublished": {
+                  "type": "boolean",
+                  "trueValues": [
+                    "Y"
+                  ],
+                  "falseValues": [
+                    "N"
+                  ],
+                  "sourceField": "Property40"
+                },
+                "packageType": {},
+                "productType": {},
+                "minimumPrice": {},
+                "packQuantity": {},
+                "titleEnglish": {},
+                "multiCategory": {},
+                "purchasePrice": {},
+                "erpConnectionId": {},
+                "jumpingQuantity": {},
+                "defaultImagePath": {},
+                "remoteDefaultImagePath": {}
+              }
+            },
+            "execution": {
+              "mode": "single"
+            },
+            "itemsPath": "rows"
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": false
+    },
+    {
+      "id": null,
+      "key": "sap_user_price_list",
+      "name": "sap user price list",
+      "mapperType": "simple",
+      "table": "PriceListUser",
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "sap user price list",
+      "linkedName": null,
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "sap_user_price_list",
+          "name": "sap user price list",
+          "description": "sap user price list",
+          "templateKey": "sap_customers_price_lists",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "simple": {
+              "mappings": {
+                "user": {
+                  "sourceField": "CardCode"
+                },
+                "priceList": {
+                  "sourceField": "PriceListNum"
+                },
+                "erpConnectionId": {}
+              }
+            },
+            "execution": {
+              "mode": "single"
+            },
+            "itemsPath": "rows"
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": false
+    },
+    {
+      "id": null,
+      "key": "sap_warehousers",
+      "name": "sap warehouses",
+      "mapperType": "simple",
+      "table": "Warehouse",
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "sap warehouses",
+      "linkedName": null,
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "sap_warehouses",
+          "name": "sap warehouses",
+          "description": "sap warehouses",
+          "templateKey": "sap_warehouses_list",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "simple": {
+              "mappings": {
+                "code": {
+                  "sourceField": "WhsCode"
+                },
+                "name": {
+                  "sourceField": "WhsName"
+                },
+                "isValid": {},
+                "createdAt": {},
+                "updatedAt": {},
+                "description": {},
+                "erpConnectionId": {}
+              }
+            },
+            "execution": {
+              "mode": "single"
+            },
+            "itemsPath": "rows"
           },
           "isCanChange": true,
           "createdAt": null,

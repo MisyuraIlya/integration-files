@@ -111,6 +111,9 @@
                 "isAllowAllClients": {},
                 "isAllowPriceOffer": {}
               }
+            },
+            "execution": {
+              "mode": "single"
             }
           },
           "isCanChange": true,
@@ -207,6 +210,9 @@
                 "isAllowAllClients": {},
                 "isAllowPriceOffer": {}
               }
+            },
+            "execution": {
+              "mode": "single"
             }
           },
           "isCanChange": true,
@@ -360,6 +366,9 @@
                   "sourceField": "CUSTPERSONNEL_SUBFORM.PHONENUM"
                 }
               ]
+            },
+            "execution": {
+              "mode": "single"
             }
           },
           "isCanChange": true,
@@ -410,7 +419,7 @@
                 "isNew": {},
                 "orden": {},
                 "stock": {
-                    "sourceField": "LOGCOUNTERS_SUBFORM.BALANCE"
+                  "sourceField": "LOGCOUNTERS_SUBFORM.BALANCE"
                 },
                 "title": {
                   "sourceField": "PARTDES"
@@ -437,14 +446,14 @@
                 "taxPrecent": {},
                 "description": {},
                 "isPublished": {
-                    "type": "boolean",
-                    "trueValues": [
-                        "Y"
-                    ],
-                    "falseValues": [
-                        "null"
-                    ],
-                    "sourceField": "SHOWINWEB"
+                  "type": "boolean",
+                  "trueValues": [
+                    "Y"
+                  ],
+                  "falseValues": [
+                    "null"
+                  ],
+                  "sourceField": "SHOWINWEB"
                 },
                 "packageType": {},
                 "productType": {},
@@ -458,6 +467,9 @@
                 "defaultImagePath": {},
                 "remoteDefaultImagePath": {}
               }
+            },
+            "execution": {
+              "mode": "single"
             }
           },
           "isCanChange": true,
@@ -530,6 +542,9 @@
                   "templateId": null
                 }
               ]
+            },
+            "execution": {
+              "mode": "single"
             }
           },
           "isCanChange": true,
@@ -573,6 +588,9 @@
                 },
                 "discount": {}
               }
+            },
+            "execution": {
+              "mode": "single"
             }
           },
           "isCanChange": true,
@@ -615,6 +633,9 @@
                   "sourceField": "CUSTPLIST_SUBFORM.PLNAME"
                 }
               }
+            },
+            "execution": {
+              "mode": "single"
             }
           },
           "isCanChange": true,
@@ -733,22 +754,25 @@
           "integrationTemplateId": null,
           "template": null,
           "config": {
-              "simple": {
-                  "mappings": {
-                      "hash": {
-                          "sourceField": "EXTFILENAME"
-                      },
-                      "source": {
-                          "sourceField": "PARTNAME"
-                      },
-                      "erp_file": {},
-                      "filePath": {},
-                      "mimeType": {},
-                      "createdAt": {},
-                      "updatedAt": {},
-                      "contentUrl": {}
-                  }
+            "simple": {
+              "mappings": {
+                "hash": {
+                  "sourceField": "EXTFILENAME"
+                },
+                "source": {
+                  "sourceField": "PARTNAME"
+                },
+                "erp_file": {},
+                "filePath": {},
+                "mimeType": {},
+                "createdAt": {},
+                "updatedAt": {},
+                "contentUrl": {}
               }
+            },
+            "execution": {
+              "mode": "single"
+            }
           },
           "isCanChange": true,
           "createdAt": null,
@@ -757,10 +781,6 @@
       ],
       "isAgentRequest": false
     },
-
-
-
-
     {
       "id": null,
       "key": "priority_order_items",
@@ -910,6 +930,9 @@
                   "sourceField": "ORDERITEMS_SUBFORM.PERCENT"
                 }
               ]
+            },
+            "execution": {
+              "mode": "single"
             }
           },
           "isCanChange": true,
@@ -1050,6 +1073,9 @@
                   "sourceField": "PERCENT"
                 }
               ]
+            },
+            "execution": {
+              "mode": "single"
             }
           },
           "isCanChange": true,
@@ -1172,6 +1198,9 @@
                   "sourceField": "TRANSORDER_D_SUBFORM.PERCENT"
                 }
               ]
+            },
+            "execution": {
+              "mode": "single"
             }
           },
           "isCanChange": true,
@@ -1306,6 +1335,9 @@
                   "sourceField": "AINVOICEITEMS_SUBFORM.PERCENT"
                 }
               ]
+            },
+            "execution": {
+              "mode": "single"
             }
           },
           "isCanChange": true,
@@ -1422,6 +1454,9 @@
                   "sourceField": "CINVOICEITEMS_SUBFORM.PERCENT"
                 }
               ]
+            },
+            "execution": {
+              "mode": "single"
             }
           },
           "isCanChange": true,
@@ -1458,72 +1493,72 @@
             "documents": {
               "headFields": [
                 {
-                    "type": "string",
-                    "label": "מספר מסמך",
-                    "sourceField": "DOCNO",
-                    "targetField": "documentNumber"
+                  "type": "string",
+                  "label": "מספר מסמך",
+                  "sourceField": "DOCNO",
+                  "targetField": "documentNumber"
                 },
                 {
-                    "type": "date",
-                    "label": "תאריך",
-                    "sourceField": "CURDATE",
-                    "targetField": "date"
+                  "type": "date",
+                  "label": "תאריך",
+                  "sourceField": "CURDATE",
+                  "targetField": "date"
                 },
                 {
-                    "type": "string",
-                    "label": "לקוח",
-                    "sourceField": "CUSTNAME",
-                    "targetField": "userExtId"
+                  "type": "string",
+                  "label": "לקוח",
+                  "sourceField": "CUSTNAME",
+                  "targetField": "userExtId"
                 },
                 {
-                    "type": "number",
-                    "label": "סה״כ כולל מע״מ",
-                    "sourceField": "TOTPRICE",
-                    "targetField": "totalPriceAfterTax"
+                  "type": "number",
+                  "label": "סה״כ כולל מע״מ",
+                  "sourceField": "TOTPRICE",
+                  "targetField": "totalPriceAfterTax"
                 },
                 {
-                    "type": "string",
-                    "label": "סטטוס",
-                    "sourceField": "STATDES",
-                    "targetField": "status"
+                  "type": "string",
+                  "label": "סטטוס",
+                  "sourceField": "STATDES",
+                  "targetField": "status"
                 },
                 {
-                    "type": "date",
-                    "label": "תאריך יעד",
-                    "sourceField": "UDATE",
-                    "targetField": "dueDate"
+                  "type": "date",
+                  "label": "תאריך יעד",
+                  "sourceField": "UDATE",
+                  "targetField": "dueDate"
                 },
                 {
-                    "type": "string",
-                    "label": "הערות",
-                    "sourceField": "DETAILS",
-                    "targetField": "comment"
+                  "type": "string",
+                  "label": "הערות",
+                  "sourceField": "DETAILS",
+                  "targetField": "comment"
                 },
                 {
-                    "type": "number",
-                    "label": "סה״כ לפני הנחה",
-                    "sourceField": "QPRICE",
-                    "targetField": "totalBeforeDiscount"
+                  "type": "number",
+                  "label": "סה״כ לפני הנחה",
+                  "sourceField": "QPRICE",
+                  "targetField": "totalBeforeDiscount"
                 },
                 {
-                    "type": "number",
-                    "label": "מע״מ",
-                    "sourceField": "VAT",
-                    "targetField": "totalTax"
+                  "type": "number",
+                  "label": "מע״מ",
+                  "sourceField": "VAT",
+                  "targetField": "totalTax"
                 },
                 {
-                    "type": "number",
-                    "label": "סה״כ לאחר הנחה",
-                    "sourceField": "DISPRICE",
-                    "targetField": "totalAfterDiscount"
+                  "type": "number",
+                  "label": "סה״כ לאחר הנחה",
+                  "sourceField": "DISPRICE",
+                  "targetField": "totalAfterDiscount"
                 },
                 {
-                    "type": "discount",
-                    "label": "הנחה",
-                    "sourceField": "PERCENT",
-                    "targetField": "totalPrecentDiscount"
+                  "type": "discount",
+                  "label": "הנחה",
+                  "sourceField": "PERCENT",
+                  "targetField": "totalPrecentDiscount"
                 }
-            ],
+              ],
               "lineColumns": [
                 {
                   "label": "תמונה",
@@ -1568,6 +1603,9 @@
                   "sourceField": "TRANSORDER_N_SUBFORM.PERCENT"
                 }
               ]
+            },
+            "execution": {
+              "mode": "single"
             }
           },
           "isCanChange": true,
@@ -1601,19 +1639,22 @@
           "integrationTemplateId": null,
           "template": null,
           "config": {
-              "simple": {
-                  "mappings": {
-                      "base64": {
-                          "sourceField": "EXTFILES_SUBFORM.EXTFILENAME"
-                      },
-                      "suffix": {
-                          "sourceField": "EXTFILES_SUBFORM.SUFFIX"
-                      },
-                      "fileName": {
-                          "sourceField": "EXTFILES_SUBFORM.EXTFILEDES"
-                      }
-                  }
+            "simple": {
+              "mappings": {
+                "base64": {
+                  "sourceField": "EXTFILES_SUBFORM.EXTFILENAME"
+                },
+                "suffix": {
+                  "sourceField": "EXTFILES_SUBFORM.SUFFIX"
+                },
+                "fileName": {
+                  "sourceField": "EXTFILES_SUBFORM.EXTFILEDES"
+                }
               }
+            },
+            "execution": {
+              "mode": "single"
+            }
           },
           "isCanChange": true,
           "createdAt": null,
@@ -1646,19 +1687,22 @@
           "integrationTemplateId": null,
           "template": null,
           "config": {
-              "simple": {
-                  "mappings": {
-                      "base64": {
-                          "sourceField": "EXTFILES_SUBFORM.EXTFILENAME"
-                      },
-                      "suffix": {
-                          "sourceField": "EXTFILES_SUBFORM.SUFFIX"
-                      },
-                      "fileName": {
-                          "sourceField": "EXTFILES_SUBFORM.EXTFILEDES"
-                      }
-                  }
+            "simple": {
+              "mappings": {
+                "base64": {
+                  "sourceField": "EXTFILES_SUBFORM.EXTFILENAME"
+                },
+                "suffix": {
+                  "sourceField": "EXTFILES_SUBFORM.SUFFIX"
+                },
+                "fileName": {
+                  "sourceField": "EXTFILES_SUBFORM.EXTFILEDES"
+                }
               }
+            },
+            "execution": {
+              "mode": "single"
+            }
           },
           "isCanChange": true,
           "createdAt": null,
@@ -1691,19 +1735,22 @@
           "integrationTemplateId": null,
           "template": null,
           "config": {
-              "simple": {
-                  "mappings": {
-                      "base64": {
-                          "sourceField": "EXTFILES_SUBFORM.EXTFILENAME"
-                      },
-                      "suffix": {
-                          "sourceField": "EXTFILES_SUBFORM.SUFFIX"
-                      },
-                      "fileName": {
-                          "sourceField": "EXTFILES_SUBFORM.EXTFILEDES"
-                      }
-                  }
+            "simple": {
+              "mappings": {
+                "base64": {
+                  "sourceField": "EXTFILES_SUBFORM.EXTFILENAME"
+                },
+                "suffix": {
+                  "sourceField": "EXTFILES_SUBFORM.SUFFIX"
+                },
+                "fileName": {
+                  "sourceField": "EXTFILES_SUBFORM.EXTFILEDES"
+                }
               }
+            },
+            "execution": {
+              "mode": "single"
+            }
           },
           "isCanChange": true,
           "createdAt": null,
@@ -1736,19 +1783,22 @@
           "integrationTemplateId": null,
           "template": null,
           "config": {
-              "simple": {
-                  "mappings": {
-                      "base64": {
-                          "sourceField": "EXTFILES_SUBFORM.EXTFILENAME"
-                      },
-                      "suffix": {
-                          "sourceField": "EXTFILES_SUBFORM.SUFFIX"
-                      },
-                      "fileName": {
-                          "sourceField": "EXTFILES_SUBFORM.EXTFILEDES"
-                      }
-                  }
+            "simple": {
+              "mappings": {
+                "base64": {
+                  "sourceField": "EXTFILES_SUBFORM.EXTFILENAME"
+                },
+                "suffix": {
+                  "sourceField": "EXTFILES_SUBFORM.SUFFIX"
+                },
+                "fileName": {
+                  "sourceField": "EXTFILES_SUBFORM.EXTFILEDES"
+                }
               }
+            },
+            "execution": {
+              "mode": "single"
+            }
           },
           "isCanChange": true,
           "createdAt": null,
@@ -1781,19 +1831,22 @@
           "integrationTemplateId": null,
           "template": null,
           "config": {
-              "simple": {
-                  "mappings": {
-                      "base64": {
-                          "sourceField": "EXTFILES_SUBFORM.EXTFILENAME"
-                      },
-                      "suffix": {
-                          "sourceField": "EXTFILES_SUBFORM.SUFFIX"
-                      },
-                      "fileName": {
-                          "sourceField": "EXTFILES_SUBFORM.EXTFILEDES"
-                      }
-                  }
+            "simple": {
+              "mappings": {
+                "base64": {
+                  "sourceField": "EXTFILES_SUBFORM.EXTFILENAME"
+                },
+                "suffix": {
+                  "sourceField": "EXTFILES_SUBFORM.SUFFIX"
+                },
+                "fileName": {
+                  "sourceField": "EXTFILES_SUBFORM.EXTFILEDES"
+                }
               }
+            },
+            "execution": {
+              "mode": "single"
+            }
           },
           "isCanChange": true,
           "createdAt": null,
@@ -1826,19 +1879,22 @@
           "integrationTemplateId": null,
           "template": null,
           "config": {
-              "simple": {
-                  "mappings": {
-                      "base64": {
-                          "sourceField": "EXTFILES_SUBFORM.EXTFILENAME"
-                      },
-                      "suffix": {
-                          "sourceField": "EXTFILES_SUBFORM.SUFFIX"
-                      },
-                      "fileName": {
-                          "sourceField": "EXTFILES_SUBFORM.EXTFILEDES"
-                      }
-                  }
+            "simple": {
+              "mappings": {
+                "base64": {
+                  "sourceField": "EXTFILES_SUBFORM.EXTFILENAME"
+                },
+                "suffix": {
+                  "sourceField": "EXTFILES_SUBFORM.SUFFIX"
+                },
+                "fileName": {
+                  "sourceField": "EXTFILES_SUBFORM.EXTFILEDES"
+                }
               }
+            },
+            "execution": {
+              "mode": "single"
+            }
           },
           "isCanChange": true,
           "createdAt": null,
@@ -1847,7 +1903,6 @@
       ],
       "isAgentRequest": false
     },
-
     {
       "id": null,
       "key": "priority_orders",
@@ -1912,6 +1967,9 @@
                 }
               ],
               "lineColumns": []
+            },
+            "execution": {
+              "mode": "single"
             }
           },
           "isCanChange": true,
@@ -1985,6 +2043,9 @@
                 }
               ],
               "lineColumns": []
+            },
+            "execution": {
+              "mode": "single"
             }
           },
           "isCanChange": true,
@@ -2058,6 +2119,9 @@
                 }
               ],
               "lineColumns": []
+            },
+            "execution": {
+              "mode": "single"
             }
           },
           "isCanChange": true,
@@ -2137,6 +2201,9 @@
                 }
               ],
               "lineColumns": []
+            },
+            "execution": {
+              "mode": "single"
             }
           },
           "isCanChange": true,
@@ -2216,6 +2283,9 @@
                 }
               ],
               "lineColumns": []
+            },
+            "execution": {
+              "mode": "single"
             }
           },
           "isCanChange": true,
@@ -2295,6 +2365,9 @@
                 }
               ],
               "lineColumns": []
+            },
+            "execution": {
+              "mode": "single"
             }
           },
           "isCanChange": true,
@@ -2304,8 +2377,6 @@
       ],
       "isAgentRequest": false
     },
-
-
     {
       "id": null,
       "key": "priority_orders_agent",
@@ -2388,6 +2459,9 @@
                 }
               ],
               "lineColumns": []
+            },
+            "execution": {
+              "mode": "single"
             }
           },
           "isCanChange": true,
@@ -2479,6 +2553,9 @@
                 }
               ],
               "lineColumns": []
+            },
+            "execution": {
+              "mode": "single"
             }
           },
           "isCanChange": true,
@@ -2570,6 +2647,9 @@
                 }
               ],
               "lineColumns": []
+            },
+            "execution": {
+              "mode": "single"
             }
           },
           "isCanChange": true,
@@ -2667,6 +2747,9 @@
                 }
               ],
               "lineColumns": []
+            },
+            "execution": {
+              "mode": "single"
             }
           },
           "isCanChange": true,
@@ -2764,6 +2847,9 @@
                 }
               ],
               "lineColumns": []
+            },
+            "execution": {
+              "mode": "single"
             }
           },
           "isCanChange": true,
@@ -2861,6 +2947,9 @@
                 }
               ],
               "lineColumns": []
+            },
+            "execution": {
+              "mode": "single"
             }
           },
           "isCanChange": true,
@@ -2870,7 +2959,6 @@
       ],
       "isAgentRequest": true
     },
-
     {
       "id": null,
       "key": "USER_PROFILE",
@@ -2898,204 +2986,207 @@
             "dynamic": {
               "columns": [
                 {
-                    "key": "custName",
-                    "type": "id",
-                    "label": "מספר לקוח",
-                    "sourceField": "CUSTNAME"
+                  "key": "custName",
+                  "type": "id",
+                  "label": "מספר לקוח",
+                  "sourceField": "CUSTNAME"
                 },
                 {
-                    "key": "name",
-                    "type": "text",
-                    "label": "שם לקוח",
-                    "sourceField": "CUSTDES"
+                  "key": "name",
+                  "type": "text",
+                  "label": "שם לקוח",
+                  "sourceField": "CUSTDES"
                 },
                 {
-                    "key": "companyFullName",
-                    "type": "text",
-                    "label": "שם חברה מלא",
-                    "sourceField": "X_ZOOMTITLE_ESHB"
+                  "key": "companyFullName",
+                  "type": "text",
+                  "label": "שם חברה מלא",
+                  "sourceField": "X_ZOOMTITLE_ESHB"
                 },
                 {
-                    "key": "status",
-                    "type": "text",
-                    "label": "סטטוס",
-                    "sourceField": "STATDES"
+                  "key": "status",
+                  "type": "text",
+                  "label": "סטטוס",
+                  "sourceField": "STATDES"
                 },
                 {
-                    "key": "createdAt",
-                    "type": "date",
-                    "label": "תאריך פתיחה",
-                    "sourceField": "CREATEDDATE"
+                  "key": "createdAt",
+                  "type": "date",
+                  "label": "תאריך פתיחה",
+                  "sourceField": "CREATEDDATE"
                 },
                 {
-                    "key": "statusDate",
-                    "type": "date",
-                    "label": "תאריך עדכון סטטוס",
-                    "sourceField": "STATUSDATE"
+                  "key": "statusDate",
+                  "type": "date",
+                  "label": "תאריך עדכון סטטוס",
+                  "sourceField": "STATUSDATE"
                 },
                 {
-                    "key": "phone",
-                    "type": "text",
-                    "label": "מספר טלפון",
-                    "sourceField": "PHONE"
+                  "key": "phone",
+                  "type": "text",
+                  "label": "מספר טלפון",
+                  "sourceField": "PHONE"
                 },
                 {
-                    "key": "fax",
-                    "type": "text",
-                    "label": "פקס",
-                    "sourceField": "FAX"
+                  "key": "fax",
+                  "type": "text",
+                  "label": "פקס",
+                  "sourceField": "FAX"
                 },
                 {
-                    "key": "email",
-                    "type": "text",
-                    "label": "דואר אלקטרוני",
-                    "sourceField": "EMAIL"
+                  "key": "email",
+                  "type": "text",
+                  "label": "דואר אלקטרוני",
+                  "sourceField": "EMAIL"
                 },
                 {
-                    "key": "businessType",
-                    "type": "text",
-                    "label": "תחום עיסוק",
-                    "sourceField": "BUSINESSTYPE"
+                  "key": "businessType",
+                  "type": "text",
+                  "label": "תחום עיסוק",
+                  "sourceField": "BUSINESSTYPE"
                 },
                 {
-                    "key": "address",
-                    "type": "text",
-                    "label": "כתובת",
-                    "sourceField": "ADDRESS"
+                  "key": "address",
+                  "type": "text",
+                  "label": "כתובת",
+                  "sourceField": "ADDRESS"
                 },
                 {
-                    "key": "address2",
-                    "type": "text",
-                    "label": "כתובת - שורה 2",
-                    "sourceField": "ADDRESS2"
+                  "key": "address2",
+                  "type": "text",
+                  "label": "כתובת - שורה 2",
+                  "sourceField": "ADDRESS2"
                 },
                 {
-                    "key": "address3",
-                    "type": "text",
-                    "label": "כתובת - שורה 3",
-                    "sourceField": "ADDRESS3"
+                  "key": "address3",
+                  "type": "text",
+                  "label": "כתובת - שורה 3",
+                  "sourceField": "ADDRESS3"
                 },
                 {
-                    "key": "city",
-                    "type": "text",
-                    "label": "עיר",
-                    "sourceField": "STATEA"
+                  "key": "city",
+                  "type": "text",
+                  "label": "עיר",
+                  "sourceField": "STATEA"
                 },
                 {
-                    "key": "zip",
-                    "type": "text",
-                    "label": "מיקוד",
-                    "sourceField": "ZIP"
+                  "key": "zip",
+                  "type": "text",
+                  "label": "מיקוד",
+                  "sourceField": "ZIP"
                 },
                 {
-                    "key": "country",
-                    "type": "text",
-                    "label": "ארץ",
-                    "sourceField": "COUNTRYNAME"
+                  "key": "country",
+                  "type": "text",
+                  "label": "ארץ",
+                  "sourceField": "COUNTRYNAME"
                 },
                 {
-                    "key": "companyIdNumber",
-                    "type": "text",
-                    "label": "מס' חברה",
-                    "sourceField": "WTAXNUM"
+                  "key": "companyIdNumber",
+                  "type": "text",
+                  "label": "מס' חברה",
+                  "sourceField": "WTAXNUM"
                 },
                 {
-                    "key": "vatNumber",
-                    "type": "text",
-                    "label": "מספר תיק במע\"מ",
-                    "sourceField": "VATNUM"
+                  "key": "vatNumber",
+                  "type": "text",
+                  "label": "מספר תיק במע\"מ",
+                  "sourceField": "VATNUM"
                 },
                 {
-                    "key": "taxCode",
-                    "type": "text",
-                    "label": "קוד מע\"מ",
-                    "sourceField": "TAXCODE"
+                  "key": "taxCode",
+                  "type": "text",
+                  "label": "קוד מע\"מ",
+                  "sourceField": "TAXCODE"
                 },
                 {
-                    "key": "taxDescription",
-                    "type": "text",
-                    "label": "תאור מס",
-                    "sourceField": "TAXDES"
+                  "key": "taxDescription",
+                  "type": "text",
+                  "label": "תאור מס",
+                  "sourceField": "TAXDES"
                 },
                 {
-                    "key": "agentCode",
-                    "type": "text",
-                    "label": "מס' סוכן",
-                    "sourceField": "AGENTCODE"
+                  "key": "agentCode",
+                  "type": "text",
+                  "label": "מס' סוכן",
+                  "sourceField": "AGENTCODE"
                 },
                 {
-                    "key": "agentName",
-                    "type": "text",
-                    "label": "שם סוכן",
-                    "sourceField": "AGENTNAME"
+                  "key": "agentName",
+                  "type": "text",
+                  "label": "שם סוכן",
+                  "sourceField": "AGENTNAME"
                 },
                 {
-                    "key": "paymentCode",
-                    "type": "text",
-                    "label": "קוד תנאי תשלום",
-                    "sourceField": "PAYCODE"
+                  "key": "paymentCode",
+                  "type": "text",
+                  "label": "קוד תנאי תשלום",
+                  "sourceField": "PAYCODE"
                 },
                 {
-                    "key": "paymentDescription",
-                    "type": "text",
-                    "label": "תנאי תשלום",
-                    "sourceField": "PAYDES"
+                  "key": "paymentDescription",
+                  "type": "text",
+                  "label": "תנאי תשלום",
+                  "sourceField": "PAYDES"
                 },
                 {
-                    "key": "maxCredit",
-                    "type": "number",
-                    "label": "תיקרת אשראי",
-                    "sourceField": "MAX_CREDIT"
+                  "key": "maxCredit",
+                  "type": "number",
+                  "label": "תיקרת אשראי",
+                  "sourceField": "MAX_CREDIT"
                 },
                 {
-                    "key": "maxObligo",
-                    "type": "number",
-                    "label": "תיקרת אובליגו",
-                    "sourceField": "MAX_OBLIGO"
+                  "key": "maxObligo",
+                  "type": "number",
+                  "label": "תיקרת אובליגו",
+                  "sourceField": "MAX_OBLIGO"
                 },
                 {
-                    "key": "creditCurrency",
-                    "type": "text",
-                    "label": "מטבע אשראי",
-                    "sourceField": "OBCODE"
+                  "key": "creditCurrency",
+                  "type": "text",
+                  "label": "מטבע אשראי",
+                  "sourceField": "OBCODE"
                 },
                 {
-                    "key": "customerCurrency",
-                    "type": "text",
-                    "label": "מטבע הלקוח",
-                    "sourceField": "CODE"
+                  "key": "customerCurrency",
+                  "type": "text",
+                  "label": "מטבע הלקוח",
+                  "sourceField": "CODE"
                 },
                 {
-                    "key": "parentCustomerNumber",
-                    "type": "text",
-                    "label": "מס' לקוח מרכז",
-                    "sourceField": "MCUSTNAME"
+                  "key": "parentCustomerNumber",
+                  "type": "text",
+                  "label": "מס' לקוח מרכז",
+                  "sourceField": "MCUSTNAME"
                 },
                 {
-                    "key": "parentCustomerName",
-                    "type": "text",
-                    "label": "שם לקוח מרכז",
-                    "sourceField": "MCUSTDES"
+                  "key": "parentCustomerName",
+                  "type": "text",
+                  "label": "שם לקוח מרכז",
+                  "sourceField": "MCUSTDES"
                 },
                 {
-                    "key": "languageCode",
-                    "type": "number",
-                    "label": "קוד שפה",
-                    "sourceField": "LANG"
+                  "key": "languageCode",
+                  "type": "number",
+                  "label": "קוד שפה",
+                  "sourceField": "LANG"
                 },
                 {
-                    "key": "languageName",
-                    "type": "text",
-                    "label": "שפה",
-                    "sourceField": "LANGNAME"
+                  "key": "languageName",
+                  "type": "text",
+                  "label": "שפה",
+                  "sourceField": "LANGNAME"
                 },
                 {
-                    "key": "remarks",
-                    "type": "text",
-                    "label": "הערות לקוח",
-                    "sourceField": "CUSTREMARK"
+                  "key": "remarks",
+                  "type": "text",
+                  "label": "הערות לקוח",
+                  "sourceField": "CUSTREMARK"
                 }
               ]
+            },
+            "execution": {
+              "mode": "single"
             }
           },
           "isCanChange": true,
@@ -3180,6 +3271,9 @@
                   "sourceField": "ORDERITEMS_SUBFORM.VATPRICE"
                 }
               ]
+            },
+            "execution": {
+              "mode": "single"
             }
           },
           "isCanChange": true,
@@ -3246,6 +3340,9 @@
                   "sourceField": "WARHSBAL_SUBFORM.0.BALANCE"
                 }
               ]
+            },
+            "execution": {
+              "mode": "single"
             }
           },
           "isCanChange": true,
@@ -3297,38 +3394,41 @@
           "template": null,
           "config": {
             "dynamic": {
-            "columns": [
+              "columns": [
                 {
-                    "key": "doc",
-                    "type": "text",
-                    "label": "מסמך",
-                    "sourceField": "ARFNCITEMS3_SUBFORM.IVNUM"
+                  "key": "doc",
+                  "type": "text",
+                  "label": "מסמך",
+                  "sourceField": "ARFNCITEMS3_SUBFORM.IVNUM"
                 },
                 {
-                    "key": "date",
-                    "type": "date",
-                    "label": "תאריך",
-                    "sourceField": "ARFNCITEMS3_SUBFORM.BALDATE"
+                  "key": "date",
+                  "type": "date",
+                  "label": "תאריך",
+                  "sourceField": "ARFNCITEMS3_SUBFORM.BALDATE"
                 },
                 {
-                    "key": "amount",
-                    "type": "money",
-                    "label": "סכום",
-                    "sourceField": "ARFNCITEMS3_SUBFORM.CREDIT1"
+                  "key": "amount",
+                  "type": "money",
+                  "label": "סכום",
+                  "sourceField": "ARFNCITEMS3_SUBFORM.CREDIT1"
                 },
                 {
-                    "key": "balance",
-                    "type": "money",
-                    "label": "יתרה",
-                    "sourceField": "ARFNCITEMS3_SUBFORM.DEBIT1"
+                  "key": "balance",
+                  "type": "money",
+                  "label": "יתרה",
+                  "sourceField": "ARFNCITEMS3_SUBFORM.DEBIT1"
                 },
                 {
-                    "key": "dueDate",
-                    "type": "date",
-                    "label": "תאריך פירעון",
-                    "sourceField": "ARFNCITEMS3_SUBFORM.FNCDATE"
+                  "key": "dueDate",
+                  "type": "date",
+                  "label": "תאריך פירעון",
+                  "sourceField": "ARFNCITEMS3_SUBFORM.FNCDATE"
                 }
               ]
+            },
+            "execution": {
+              "mode": "single"
             }
           },
           "isCanChange": true,
@@ -3463,13 +3563,16 @@
           "integrationTemplateId": null,
           "template": null,
           "config": {
-              "simple": {
-                  "mappings": {
-                      "sku": {
-                          "sourceField": "AINVOICEITEMS_SUBFORM.PARTNAME"
-                      }
-                  }
+            "simple": {
+              "mappings": {
+                "sku": {
+                  "sourceField": "AINVOICEITEMS_SUBFORM.PARTNAME"
+                }
               }
+            },
+            "execution": {
+              "mode": "single"
+            }
           },
           "isCanChange": true,
           "createdAt": null,

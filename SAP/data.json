@@ -27,96 +27,99 @@
           "template": null,
           "config": {
             "simple": {
-                "mappings": {
-                    "hp": {
-                        "sourceField": "FederalTaxID"
-                    },
-                    "city": {
-                        "sourceField": "City"
-                    },
-                    "name": {
-                        "sourceField": "CardName"
-                    },
-                    "role": {},
-                    "type": {},
-                    "agent": {
-                        "sourceField": "SalesPersonCode"
-                    },
-                    "email": {},
-                    "extId": {
-                        "sourceField": "CardCode"
-                    },
-                    "phone": {
-                        "sourceField": "Phone1"
-                    },
-                    "PayDes": {},
-                    "extra1": {},
-                    "extra2": {},
-                    "extra3": {},
-                    "extra4": {},
-                    "extra5": {},
-                    "extra6": {},
-                    "extra7": {},
-                    "extra8": {},
-                    "extra9": {},
-                    "parent": {},
-                    "search": {},
-                    "address": {
-                        "sourceField": "Address"
-                    },
-                    "company": {},
-                    "extra10": {},
-                    "isAgent": {},
-                    "payCode": {},
-                    "taxCode": {},
-                    "discount": {
-                        "sourceField": "DiscountPercent"
-                    },
-                    "password": {},
-                    "recovery": {},
-                    "username": {
-                        "sourceField": null
-                    },
-                    "createdAt": {},
-                    "isBlocked": {
-                        "type": "boolean",
-                        "trueValues": [
-                            "Y"
-                        ],
-                        "falseValues": [],
-                        "sourceField": "IsFrozen"
-                    },
-                    "maxCredit": {
-                        "sourceField": "CreditLimit"
-                    },
-                    "maxObligo": {
-                        "sourceField": "CreditLimit"
-                    },
-                    "updatedAt": {},
-                    "isPublished": {},
-                    "masterExtId": {},
-                    "isAllowOrder": {},
-                    "isRegistered": {},
-                    "isVatEnabled": {
-                        "type": "boolean",
-                        "trueValues": [
-                            "Y"
-                        ],
-                        "falseValues": [],
-                        "sourceField": "IsTaxable"
-                    },
-                    "refreshToken": {},
-                    "salesCurrency": {},
-                    "minimumPriceUser": {},
-                    "vereficationData": {
-                        "sourceField": "Phone1"
-                    },
-                    "deliveryPriceUser": {},
-                    "isAllowAllClients": {},
-                    "isAllowPriceOffer": {}
-                }
+              "mappings": {
+                "hp": {
+                  "sourceField": "FederalTaxID"
+                },
+                "city": {
+                  "sourceField": "City"
+                },
+                "name": {
+                  "sourceField": "CardName"
+                },
+                "role": {},
+                "type": {},
+                "agent": {
+                  "sourceField": "SalesPersonCode"
+                },
+                "email": {},
+                "extId": {
+                  "sourceField": "CardCode"
+                },
+                "phone": {
+                  "sourceField": "Phone1"
+                },
+                "PayDes": {},
+                "extra1": {},
+                "extra2": {},
+                "extra3": {},
+                "extra4": {},
+                "extra5": {},
+                "extra6": {},
+                "extra7": {},
+                "extra8": {},
+                "extra9": {},
+                "parent": {},
+                "search": {},
+                "address": {
+                  "sourceField": "Address"
+                },
+                "company": {},
+                "extra10": {},
+                "isAgent": {},
+                "payCode": {},
+                "taxCode": {},
+                "discount": {
+                  "sourceField": "DiscountPercent"
+                },
+                "password": {},
+                "recovery": {},
+                "username": {
+                  "sourceField": null
+                },
+                "createdAt": {},
+                "isBlocked": {
+                  "type": "boolean",
+                  "trueValues": [
+                    "Y"
+                  ],
+                  "falseValues": [],
+                  "sourceField": "IsFrozen"
+                },
+                "maxCredit": {
+                  "sourceField": "CreditLimit"
+                },
+                "maxObligo": {
+                  "sourceField": "CreditLimit"
+                },
+                "updatedAt": {},
+                "isPublished": {},
+                "masterExtId": {},
+                "isAllowOrder": {},
+                "isRegistered": {},
+                "isVatEnabled": {
+                  "type": "boolean",
+                  "trueValues": [
+                    "Y"
+                  ],
+                  "falseValues": [],
+                  "sourceField": "IsTaxable"
+                },
+                "refreshToken": {},
+                "salesCurrency": {},
+                "minimumPriceUser": {},
+                "vereficationData": {
+                  "sourceField": "Phone1"
+                },
+                "deliveryPriceUser": {},
+                "isAllowAllClients": {},
+                "isAllowPriceOffer": {}
+              }
             },
-            "itemsPath": "rows"
+            "itemsPath": "rows",
+            "execution": {
+              "mode": "single"
+            }
           },
           "isCanChange": true,
           "createdAt": null,
@@ -150,69 +153,72 @@
           "template": null,
           "config": {
             "simple": {
-                "mappings": {
-                    "hp": {},
-                    "city": {},
-                    "name": {
-                        "sourceField": "SlpName"
-                    },
-                    "role": {},
-                    "type": {},
-                    "agent": {},
-                    "email": {},
-                    "extId": {
-                        "sourceField": "SlpCode"
-                    },
-                    "phone": {},
-                    "PayDes": {},
-                    "extra1": {},
-                    "extra2": {},
-                    "extra3": {},
-                    "extra4": {},
-                    "extra5": {},
-                    "extra6": {},
-                    "extra7": {},
-                    "extra8": {},
-                    "extra9": {},
-                    "parent": {},
-                    "search": {},
-                    "address": {},
-                    "company": {},
-                    "extra10": {},
-                    "isAgent": {},
-                    "payCode": {},
-                    "taxCode": {},
-                    "discount": {},
-                    "password": {},
-                    "recovery": {},
-                    "username": {},
-                    "createdAt": {},
-                    "isBlocked": {
-                        "type": "boolean",
-                        "trueValues": [
-                            "N"
-                        ],
-                        "falseValues": [],
-                        "sourceField": "Active"
-                    },
-                    "maxCredit": {},
-                    "maxObligo": {},
-                    "updatedAt": {},
-                    "isPublished": {},
-                    "masterExtId": {},
-                    "isAllowOrder": {},
-                    "isRegistered": {},
-                    "isVatEnabled": {},
-                    "refreshToken": {},
-                    "salesCurrency": {},
-                    "minimumPriceUser": {},
-                    "vereficationData": {},
-                    "deliveryPriceUser": {},
-                    "isAllowAllClients": {},
-                    "isAllowPriceOffer": {}
-                }
+              "mappings": {
+                "hp": {},
+                "city": {},
+                "name": {
+                  "sourceField": "SlpName"
+                },
+                "role": {},
+                "type": {},
+                "agent": {},
+                "email": {},
+                "extId": {
+                  "sourceField": "SlpCode"
+                },
+                "phone": {},
+                "PayDes": {},
+                "extra1": {},
+                "extra2": {},
+                "extra3": {},
+                "extra4": {},
+                "extra5": {},
+                "extra6": {},
+                "extra7": {},
+                "extra8": {},
+                "extra9": {},
+                "parent": {},
+                "search": {},
+                "address": {},
+                "company": {},
+                "extra10": {},
+                "isAgent": {},
+                "payCode": {},
+                "taxCode": {},
+                "discount": {},
+                "password": {},
+                "recovery": {},
+                "username": {},
+                "createdAt": {},
+                "isBlocked": {
+                  "type": "boolean",
+                  "trueValues": [
+                    "N"
+                  ],
+                  "falseValues": [],
+                  "sourceField": "Active"
+                },
+                "maxCredit": {},
+                "maxObligo": {},
+                "updatedAt": {},
+                "isPublished": {},
+                "masterExtId": {},
+                "isAllowOrder": {},
+                "isRegistered": {},
+                "isVatEnabled": {},
+                "refreshToken": {},
+                "salesCurrency": {},
+                "minimumPriceUser": {},
+                "vereficationData": {},
+                "deliveryPriceUser": {},
+                "isAllowAllClients": {},
+                "isAllowPriceOffer": {}
+              }
             },
-            "itemsPath": "rows"
+            "itemsPath": "rows",
+            "execution": {
+              "mode": "single"
+            }
           },
           "isCanChange": true,
           "createdAt": null,

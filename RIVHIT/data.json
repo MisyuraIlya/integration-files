@@ -199,6 +199,9 @@
                 "isAllowAllClients": {},
                 "isAllowPriceOffer": {}
               }
+            },
+            "execution": {
+              "mode": "single"
             }
           },
           "isCanChange": true,
@@ -278,9 +281,12 @@
                 },
                 "defaultImagePath": {},
                 "remoteDefaultImagePath": {
-                    "sourceField": "data.item_list.picture_link"
+                  "sourceField": "data.item_list.picture_link"
                 }
               }
+            },
+            "execution": {
+              "mode": "single"
             }
           },
           "isCanChange": true,
@@ -314,22 +320,25 @@
           "integrationTemplateId": null,
           "template": null,
           "config": {
-              "simple": {
-                  "mappings": {
-                      "hash": {
-                          "sourceField": "data.item_list.picture_link"
-                      },
-                      "source": {
-                          "sourceField": "data.item_list.item_id"
-                      },
-                      "erp_file": {},
-                      "filePath": {},
-                      "mimeType": {},
-                      "createdAt": {},
-                      "updatedAt": {},
-                      "contentUrl": {}
-                  }
+            "simple": {
+              "mappings": {
+                "hash": {
+                  "sourceField": "data.item_list.picture_link"
+                },
+                "source": {
+                  "sourceField": "data.item_list.item_id"
+                },
+                "erp_file": {},
+                "filePath": {},
+                "mimeType": {},
+                "createdAt": {},
+                "updatedAt": {},
+                "contentUrl": {}
               }
+            },
+            "execution": {
+              "mode": "single"
+            }
           },
           "isCanChange": true,
           "createdAt": null,
@@ -383,6 +392,9 @@
                   "templateId": null
                 }
               ]
+            },
+            "execution": {
+              "mode": "single"
             }
           },
           "isCanChange": true,
@@ -426,6 +438,9 @@
                 },
                 "discount": {}
               }
+            },
+            "execution": {
+              "mode": "single"
             }
           },
           "isCanChange": true,
@@ -468,6 +483,9 @@
                   "sourceField": "data.customer_list.price_list_id"
                 }
               }
+            },
+            "execution": {
+              "mode": "single"
             }
           },
           "isCanChange": true,
@@ -590,7 +608,7 @@
       "isCanChange": true,
       "isShow": true,
       "isActive": true,
-      "description":  "rivhit warehouses fetcher",
+      "description": "rivhit warehouses fetcher",
       "linkedName": null,
       "linkedPdf": null,
       "dataSources": [
@@ -603,20 +621,23 @@
           "integrationTemplateId": null,
           "template": null,
           "config": {
-              "simple": {
-                  "mappings": {
-                      "code": {
-                          "sourceField": "data.storage_list.storage_id"
-                      },
-                      "name": {
-                          "sourceField": "data.storage_list.storage_name"
-                      },
-                      "isValid": {},
-                      "createdAt": {},
-                      "updatedAt": {},
-                      "description": {}
-                  }
+            "simple": {
+              "mappings": {
+                "code": {
+                  "sourceField": "data.storage_list.storage_id"
+                },
+                "name": {
+                  "sourceField": "data.storage_list.storage_name"
+                },
+                "isValid": {},
+                "createdAt": {},
+                "updatedAt": {},
+                "description": {}
               }
+            },
+            "execution": {
+              "mode": "single"
+            }
           },
           "isCanChange": true,
           "createdAt": "2026-02-03T15:00:02.332Z",
@@ -625,8 +646,6 @@
       ],
       "isAgentRequest": false
     },
-
-
     {
       "id": null,
       "key": "order_items",
@@ -638,7 +657,7 @@
       "isCanChange": true,
       "isShow": false,
       "isActive": true,
-      "description":"תעודות חשבונית מס",
+      "description": "תעודות חשבונית מס",
       "linkedName": null,
       "linkedPdf": null,
       "dataSources": [
@@ -673,7 +692,6 @@
                   "sourceField": "data.customer_id",
                   "targetField": "userExtId"
                 },
-
                 {
                   "type": "number",
                   "label": "מע״מ",
@@ -749,6 +767,9 @@
                   "sourceField": "data.items.discount"
                 }
               ]
+            },
+            "execution": {
+              "mode": "single"
             }
           },
           "isCanChange": true,
@@ -786,24 +807,102 @@
             "documents": {
               "linesPath": "data.items",
               "headFields": [
-                { "type": "string", "label": "מספר מסמך", "sourceField": "data.document_number", "targetField": "documentNumber" },
-                { "type": "date", "label": "תאריך", "sourceField": "data.document_date", "targetField": "date" },
-                { "type": "string", "label": "לקוח", "sourceField": "data.customer_id", "targetField": "userExtId" },
-                { "type": "number", "label": "מע״מ", "sourceField": "data.total_vat", "targetField": "totalTax" },
-                { "type": "number", "label": "סה״כ", "sourceField": "data.total_without_vat", "targetField": "totalBeforeDiscount" },
-                { "type": "number", "label": "סה״כ כולל מע״מ", "sourceField": "data.document_total", "targetField": "totalPriceAfterTax" },
-                { "type": "date", "label": "תאריך יעד", "sourceField": "data.document_due_date", "targetField": "dueDate" },
-                { "type": "string", "label": "הערות", "sourceField": "data.comments", "targetField": "comment" }
+                {
+                  "type": "string",
+                  "label": "מספר מסמך",
+                  "sourceField": "data.document_number",
+                  "targetField": "documentNumber"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך",
+                  "sourceField": "data.document_date",
+                  "targetField": "date"
+                },
+                {
+                  "type": "string",
+                  "label": "לקוח",
+                  "sourceField": "data.customer_id",
+                  "targetField": "userExtId"
+                },
+                {
+                  "type": "number",
+                  "label": "מע״מ",
+                  "sourceField": "data.total_vat",
+                  "targetField": "totalTax"
+                },
+                {
+                  "type": "number",
+                  "label": "סה״כ",
+                  "sourceField": "data.total_without_vat",
+                  "targetField": "totalBeforeDiscount"
+                },
+                {
+                  "type": "number",
+                  "label": "סה״כ כולל מע״מ",
+                  "sourceField": "data.document_total",
+                  "targetField": "totalPriceAfterTax"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך יעד",
+                  "sourceField": "data.document_due_date",
+                  "targetField": "dueDate"
+                },
+                {
+                  "type": "string",
+                  "label": "הערות",
+                  "sourceField": "data.comments",
+                  "targetField": "comment"
+                }
               ],
               "lineColumns": [
-                { "label": "תמונה", "cellType": "image", "columnKey": "image", "sourceField": null },
-                { "label": "מק״ט", "cellType": "sku", "columnKey": "sku", "sourceField": "data.items.item_id" },
-                { "label": "תיאור פריט", "cellType": "text", "columnKey": "title", "sourceField": "data.items.description" },
-                { "label": "כמות", "cellType": "quantity", "columnKey": "quantity", "sourceField": "data.items.quantity" },
-                { "label": "מחיר", "cellType": "money", "columnKey": "money", "sourceField": "data.items.price_nis" },
-                { "label": "סה״כ שורה", "cellType": "money", "columnKey": "money", "sourceField": "data.items.total_line" },
-                { "label": "% הנחה", "cellType": "discount", "columnKey": "discount", "sourceField": "data.items.discount" }
+                {
+                  "label": "תמונה",
+                  "cellType": "image",
+                  "columnKey": "image",
+                  "sourceField": null
+                },
+                {
+                  "label": "מק״ט",
+                  "cellType": "sku",
+                  "columnKey": "sku",
+                  "sourceField": "data.items.item_id"
+                },
+                {
+                  "label": "תיאור פריט",
+                  "cellType": "text",
+                  "columnKey": "title",
+                  "sourceField": "data.items.description"
+                },
+                {
+                  "label": "כמות",
+                  "cellType": "quantity",
+                  "columnKey": "quantity",
+                  "sourceField": "data.items.quantity"
+                },
+                {
+                  "label": "מחיר",
+                  "cellType": "money",
+                  "columnKey": "money",
+                  "sourceField": "data.items.price_nis"
+                },
+                {
+                  "label": "סה״כ שורה",
+                  "cellType": "money",
+                  "columnKey": "money",
+                  "sourceField": "data.items.total_line"
+                },
+                {
+                  "label": "% הנחה",
+                  "cellType": "discount",
+                  "columnKey": "discount",
+                  "sourceField": "data.items.discount"
+                }
               ]
+            },
+            "execution": {
+              "mode": "single"
             }
           },
           "isCanChange": true,
@@ -841,24 +940,102 @@
             "documents": {
               "linesPath": "data.items",
               "headFields": [
-                { "type": "string", "label": "מספר מסמך", "sourceField": "data.document_number", "targetField": "documentNumber" },
-                { "type": "date", "label": "תאריך", "sourceField": "data.document_date", "targetField": "date" },
-                { "type": "string", "label": "לקוח", "sourceField": "data.customer_id", "targetField": "userExtId" },
-                { "type": "number", "label": "מע״מ", "sourceField": "data.total_vat", "targetField": "totalTax" },
-                { "type": "number", "label": "סה״כ", "sourceField": "data.total_without_vat", "targetField": "totalBeforeDiscount" },
-                { "type": "number", "label": "סה״כ כולל מע״מ", "sourceField": "data.document_total", "targetField": "totalPriceAfterTax" },
-                { "type": "date", "label": "תאריך יעד", "sourceField": "data.document_due_date", "targetField": "dueDate" },
-                { "type": "string", "label": "הערות", "sourceField": "data.comments", "targetField": "comment" }
+                {
+                  "type": "string",
+                  "label": "מספר מסמך",
+                  "sourceField": "data.document_number",
+                  "targetField": "documentNumber"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך",
+                  "sourceField": "data.document_date",
+                  "targetField": "date"
+                },
+                {
+                  "type": "string",
+                  "label": "לקוח",
+                  "sourceField": "data.customer_id",
+                  "targetField": "userExtId"
+                },
+                {
+                  "type": "number",
+                  "label": "מע״מ",
+                  "sourceField": "data.total_vat",
+                  "targetField": "totalTax"
+                },
+                {
+                  "type": "number",
+                  "label": "סה״כ",
+                  "sourceField": "data.total_without_vat",
+                  "targetField": "totalBeforeDiscount"
+                },
+                {
+                  "type": "number",
+                  "label": "סה״כ כולל מע״מ",
+                  "sourceField": "data.document_total",
+                  "targetField": "totalPriceAfterTax"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך יעד",
+                  "sourceField": "data.document_due_date",
+                  "targetField": "dueDate"
+                },
+                {
+                  "type": "string",
+                  "label": "הערות",
+                  "sourceField": "data.comments",
+                  "targetField": "comment"
+                }
               ],
               "lineColumns": [
-                { "label": "תמונה", "cellType": "image", "columnKey": "image", "sourceField": null },
-                { "label": "מק״ט", "cellType": "sku", "columnKey": "sku", "sourceField": "data.items.item_id" },
-                { "label": "תיאור פריט", "cellType": "text", "columnKey": "title", "sourceField": "data.items.description" },
-                { "label": "כמות", "cellType": "quantity", "columnKey": "quantity", "sourceField": "data.items.quantity" },
-                { "label": "מחיר", "cellType": "money", "columnKey": "money", "sourceField": "data.items.price_nis" },
-                { "label": "סה״כ שורה", "cellType": "money", "columnKey": "money", "sourceField": "data.items.total_line" },
-                { "label": "% הנחה", "cellType": "discount", "columnKey": "discount", "sourceField": "data.items.discount" }
+                {
+                  "label": "תמונה",
+                  "cellType": "image",
+                  "columnKey": "image",
+                  "sourceField": null
+                },
+                {
+                  "label": "מק״ט",
+                  "cellType": "sku",
+                  "columnKey": "sku",
+                  "sourceField": "data.items.item_id"
+                },
+                {
+                  "label": "תיאור פריט",
+                  "cellType": "text",
+                  "columnKey": "title",
+                  "sourceField": "data.items.description"
+                },
+                {
+                  "label": "כמות",
+                  "cellType": "quantity",
+                  "columnKey": "quantity",
+                  "sourceField": "data.items.quantity"
+                },
+                {
+                  "label": "מחיר",
+                  "cellType": "money",
+                  "columnKey": "money",
+                  "sourceField": "data.items.price_nis"
+                },
+                {
+                  "label": "סה״כ שורה",
+                  "cellType": "money",
+                  "columnKey": "money",
+                  "sourceField": "data.items.total_line"
+                },
+                {
+                  "label": "% הנחה",
+                  "cellType": "discount",
+                  "columnKey": "discount",
+                  "sourceField": "data.items.discount"
+                }
               ]
+            },
+            "execution": {
+              "mode": "single"
             }
           },
           "isCanChange": true,
@@ -896,24 +1073,102 @@
             "documents": {
               "linesPath": "data.items",
               "headFields": [
-                { "type": "string", "label": "מספר מסמך", "sourceField": "data.document_number", "targetField": "documentNumber" },
-                { "type": "date", "label": "תאריך", "sourceField": "data.document_date", "targetField": "date" },
-                { "type": "string", "label": "לקוח", "sourceField": "data.customer_id", "targetField": "userExtId" },
-                { "type": "number", "label": "מע״מ", "sourceField": "data.total_vat", "targetField": "totalTax" },
-                { "type": "number", "label": "סה״כ", "sourceField": "data.total_without_vat", "targetField": "totalBeforeDiscount" },
-                { "type": "number", "label": "סה״כ כולל מע״מ", "sourceField": "data.document_total", "targetField": "totalPriceAfterTax" },
-                { "type": "date", "label": "תאריך יעד", "sourceField": "data.document_due_date", "targetField": "dueDate" },
-                { "type": "string", "label": "הערות", "sourceField": "data.comments", "targetField": "comment" }
+                {
+                  "type": "string",
+                  "label": "מספר מסמך",
+                  "sourceField": "data.document_number",
+                  "targetField": "documentNumber"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך",
+                  "sourceField": "data.document_date",
+                  "targetField": "date"
+                },
+                {
+                  "type": "string",
+                  "label": "לקוח",
+                  "sourceField": "data.customer_id",
+                  "targetField": "userExtId"
+                },
+                {
+                  "type": "number",
+                  "label": "מע״מ",
+                  "sourceField": "data.total_vat",
+                  "targetField": "totalTax"
+                },
+                {
+                  "type": "number",
+                  "label": "סה״כ",
+                  "sourceField": "data.total_without_vat",
+                  "targetField": "totalBeforeDiscount"
+                },
+                {
+                  "type": "number",
+                  "label": "סה״כ כולל מע״מ",
+                  "sourceField": "data.document_total",
+                  "targetField": "totalPriceAfterTax"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך יעד",
+                  "sourceField": "data.document_due_date",
+                  "targetField": "dueDate"
+                },
+                {
+                  "type": "string",
+                  "label": "הערות",
+                  "sourceField": "data.comments",
+                  "targetField": "comment"
+                }
               ],
               "lineColumns": [
-                { "label": "תמונה", "cellType": "image", "columnKey": "image", "sourceField": null },
-                { "label": "מק״ט", "cellType": "sku", "columnKey": "sku", "sourceField": "data.items.item_id" },
-                { "label": "תיאור פריט", "cellType": "text", "columnKey": "title", "sourceField": "data.items.description" },
-                { "label": "כמות", "cellType": "quantity", "columnKey": "quantity", "sourceField": "data.items.quantity" },
-                { "label": "מחיר", "cellType": "money", "columnKey": "money", "sourceField": "data.items.price_nis" },
-                { "label": "סה״כ שורה", "cellType": "money", "columnKey": "money", "sourceField": "data.items.total_line" },
-                { "label": "% הנחה", "cellType": "discount", "columnKey": "discount", "sourceField": "data.items.discount" }
+                {
+                  "label": "תמונה",
+                  "cellType": "image",
+                  "columnKey": "image",
+                  "sourceField": null
+                },
+                {
+                  "label": "מק״ט",
+                  "cellType": "sku",
+                  "columnKey": "sku",
+                  "sourceField": "data.items.item_id"
+                },
+                {
+                  "label": "תיאור פריט",
+                  "cellType": "text",
+                  "columnKey": "title",
+                  "sourceField": "data.items.description"
+                },
+                {
+                  "label": "כמות",
+                  "cellType": "quantity",
+                  "columnKey": "quantity",
+                  "sourceField": "data.items.quantity"
+                },
+                {
+                  "label": "מחיר",
+                  "cellType": "money",
+                  "columnKey": "money",
+                  "sourceField": "data.items.price_nis"
+                },
+                {
+                  "label": "סה״כ שורה",
+                  "cellType": "money",
+                  "columnKey": "money",
+                  "sourceField": "data.items.total_line"
+                },
+                {
+                  "label": "% הנחה",
+                  "cellType": "discount",
+                  "columnKey": "discount",
+                  "sourceField": "data.items.discount"
+                }
               ]
+            },
+            "execution": {
+              "mode": "single"
             }
           },
           "isCanChange": true,
@@ -951,24 +1206,102 @@
             "documents": {
               "linesPath": "data.items",
               "headFields": [
-                { "type": "string", "label": "מספר מסמך", "sourceField": "data.document_number", "targetField": "documentNumber" },
-                { "type": "date", "label": "תאריך", "sourceField": "data.document_date", "targetField": "date" },
-                { "type": "string", "label": "לקוח", "sourceField": "data.customer_id", "targetField": "userExtId" },
-                { "type": "number", "label": "מע״מ", "sourceField": "data.total_vat", "targetField": "totalTax" },
-                { "type": "number", "label": "סה״כ", "sourceField": "data.total_without_vat", "targetField": "totalBeforeDiscount" },
-                { "type": "number", "label": "סה״כ כולל מע״מ", "sourceField": "data.document_total", "targetField": "totalPriceAfterTax" },
-                { "type": "date", "label": "תאריך יעד", "sourceField": "data.document_due_date", "targetField": "dueDate" },
-                { "type": "string", "label": "הערות", "sourceField": "data.comments", "targetField": "comment" }
+                {
+                  "type": "string",
+                  "label": "מספר מסמך",
+                  "sourceField": "data.document_number",
+                  "targetField": "documentNumber"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך",
+                  "sourceField": "data.document_date",
+                  "targetField": "date"
+                },
+                {
+                  "type": "string",
+                  "label": "לקוח",
+                  "sourceField": "data.customer_id",
+                  "targetField": "userExtId"
+                },
+                {
+                  "type": "number",
+                  "label": "מע״מ",
+                  "sourceField": "data.total_vat",
+                  "targetField": "totalTax"
+                },
+                {
+                  "type": "number",
+                  "label": "סה״כ",
+                  "sourceField": "data.total_without_vat",
+                  "targetField": "totalBeforeDiscount"
+                },
+                {
+                  "type": "number",
+                  "label": "סה״כ כולל מע״מ",
+                  "sourceField": "data.document_total",
+                  "targetField": "totalPriceAfterTax"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך יעד",
+                  "sourceField": "data.document_due_date",
+                  "targetField": "dueDate"
+                },
+                {
+                  "type": "string",
+                  "label": "הערות",
+                  "sourceField": "data.comments",
+                  "targetField": "comment"
+                }
               ],
               "lineColumns": [
-                { "label": "תמונה", "cellType": "image", "columnKey": "image", "sourceField": null },
-                { "label": "מק״ט", "cellType": "sku", "columnKey": "sku", "sourceField": "data.items.item_id" },
-                { "label": "תיאור פריט", "cellType": "text", "columnKey": "title", "sourceField": "data.items.description" },
-                { "label": "כמות", "cellType": "quantity", "columnKey": "quantity", "sourceField": "data.items.quantity" },
-                { "label": "מחיר", "cellType": "money", "columnKey": "money", "sourceField": "data.items.price_nis" },
-                { "label": "סה״כ שורה", "cellType": "money", "columnKey": "money", "sourceField": "data.items.total_line" },
-                { "label": "% הנחה", "cellType": "discount", "columnKey": "discount", "sourceField": "data.items.discount" }
+                {
+                  "label": "תמונה",
+                  "cellType": "image",
+                  "columnKey": "image",
+                  "sourceField": null
+                },
+                {
+                  "label": "מק״ט",
+                  "cellType": "sku",
+                  "columnKey": "sku",
+                  "sourceField": "data.items.item_id"
+                },
+                {
+                  "label": "תיאור פריט",
+                  "cellType": "text",
+                  "columnKey": "title",
+                  "sourceField": "data.items.description"
+                },
+                {
+                  "label": "כמות",
+                  "cellType": "quantity",
+                  "columnKey": "quantity",
+                  "sourceField": "data.items.quantity"
+                },
+                {
+                  "label": "מחיר",
+                  "cellType": "money",
+                  "columnKey": "money",
+                  "sourceField": "data.items.price_nis"
+                },
+                {
+                  "label": "סה״כ שורה",
+                  "cellType": "money",
+                  "columnKey": "money",
+                  "sourceField": "data.items.total_line"
+                },
+                {
+                  "label": "% הנחה",
+                  "cellType": "discount",
+                  "columnKey": "discount",
+                  "sourceField": "data.items.discount"
+                }
               ]
+            },
+            "execution": {
+              "mode": "single"
             }
           },
           "isCanChange": true,
@@ -1006,24 +1339,102 @@
             "documents": {
               "linesPath": "data.items",
               "headFields": [
-                { "type": "string", "label": "מספר מסמך", "sourceField": "data.document_number", "targetField": "documentNumber" },
-                { "type": "date", "label": "תאריך", "sourceField": "data.document_date", "targetField": "date" },
-                { "type": "string", "label": "לקוח", "sourceField": "data.customer_id", "targetField": "userExtId" },
-                { "type": "number", "label": "מע״מ", "sourceField": "data.total_vat", "targetField": "totalTax" },
-                { "type": "number", "label": "סה״כ", "sourceField": "data.total_without_vat", "targetField": "totalBeforeDiscount" },
-                { "type": "number", "label": "סה״כ כולל מע״מ", "sourceField": "data.document_total", "targetField": "totalPriceAfterTax" },
-                { "type": "date", "label": "תאריך יעד", "sourceField": "data.document_due_date", "targetField": "dueDate" },
-                { "type": "string", "label": "הערות", "sourceField": "data.comments", "targetField": "comment" }
+                {
+                  "type": "string",
+                  "label": "מספר מסמך",
+                  "sourceField": "data.document_number",
+                  "targetField": "documentNumber"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך",
+                  "sourceField": "data.document_date",
+                  "targetField": "date"
+                },
+                {
+                  "type": "string",
+                  "label": "לקוח",
+                  "sourceField": "data.customer_id",
+                  "targetField": "userExtId"
+                },
+                {
+                  "type": "number",
+                  "label": "מע״מ",
+                  "sourceField": "data.total_vat",
+                  "targetField": "totalTax"
+                },
+                {
+                  "type": "number",
+                  "label": "סה״כ",
+                  "sourceField": "data.total_without_vat",
+                  "targetField": "totalBeforeDiscount"
+                },
+                {
+                  "type": "number",
+                  "label": "סה״כ כולל מע״מ",
+                  "sourceField": "data.document_total",
+                  "targetField": "totalPriceAfterTax"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך יעד",
+                  "sourceField": "data.document_due_date",
+                  "targetField": "dueDate"
+                },
+                {
+                  "type": "string",
+                  "label": "הערות",
+                  "sourceField": "data.comments",
+                  "targetField": "comment"
+                }
               ],
               "lineColumns": [
-                { "label": "תמונה", "cellType": "image", "columnKey": "image", "sourceField": null },
-                { "label": "מק״ט", "cellType": "sku", "columnKey": "sku", "sourceField": "data.items.item_id" },
-                { "label": "תיאור פריט", "cellType": "text", "columnKey": "title", "sourceField": "data.items.description" },
-                { "label": "כמות", "cellType": "quantity", "columnKey": "quantity", "sourceField": "data.items.quantity" },
-                { "label": "מחיר", "cellType": "money", "columnKey": "money", "sourceField": "data.items.price_nis" },
-                { "label": "סה״כ שורה", "cellType": "money", "columnKey": "money", "sourceField": "data.items.total_line" },
-                { "label": "% הנחה", "cellType": "discount", "columnKey": "discount", "sourceField": "data.items.discount" }
+                {
+                  "label": "תמונה",
+                  "cellType": "image",
+                  "columnKey": "image",
+                  "sourceField": null
+                },
+                {
+                  "label": "מק״ט",
+                  "cellType": "sku",
+                  "columnKey": "sku",
+                  "sourceField": "data.items.item_id"
+                },
+                {
+                  "label": "תיאור פריט",
+                  "cellType": "text",
+                  "columnKey": "title",
+                  "sourceField": "data.items.description"
+                },
+                {
+                  "label": "כמות",
+                  "cellType": "quantity",
+                  "columnKey": "quantity",
+                  "sourceField": "data.items.quantity"
+                },
+                {
+                  "label": "מחיר",
+                  "cellType": "money",
+                  "columnKey": "money",
+                  "sourceField": "data.items.price_nis"
+                },
+                {
+                  "label": "סה״כ שורה",
+                  "cellType": "money",
+                  "columnKey": "money",
+                  "sourceField": "data.items.total_line"
+                },
+                {
+                  "label": "% הנחה",
+                  "cellType": "discount",
+                  "columnKey": "discount",
+                  "sourceField": "data.items.discount"
+                }
               ]
+            },
+            "execution": {
+              "mode": "single"
             }
           },
           "isCanChange": true,
@@ -1061,24 +1472,102 @@
             "documents": {
               "linesPath": "data.items",
               "headFields": [
-                { "type": "string", "label": "מספר מסמך", "sourceField": "data.document_number", "targetField": "documentNumber" },
-                { "type": "date", "label": "תאריך", "sourceField": "data.document_date", "targetField": "date" },
-                { "type": "string", "label": "לקוח", "sourceField": "data.customer_id", "targetField": "userExtId" },
-                { "type": "number", "label": "מע״מ", "sourceField": "data.total_vat", "targetField": "totalTax" },
-                { "type": "number", "label": "סה״כ", "sourceField": "data.total_without_vat", "targetField": "totalBeforeDiscount" },
-                { "type": "number", "label": "סה״כ כולל מע״מ", "sourceField": "data.document_total", "targetField": "totalPriceAfterTax" },
-                { "type": "date", "label": "תאריך יעד", "sourceField": "data.document_due_date", "targetField": "dueDate" },
-                { "type": "string", "label": "הערות", "sourceField": "data.comments", "targetField": "comment" }
+                {
+                  "type": "string",
+                  "label": "מספר מסמך",
+                  "sourceField": "data.document_number",
+                  "targetField": "documentNumber"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך",
+                  "sourceField": "data.document_date",
+                  "targetField": "date"
+                },
+                {
+                  "type": "string",
+                  "label": "לקוח",
+                  "sourceField": "data.customer_id",
+                  "targetField": "userExtId"
+                },
+                {
+                  "type": "number",
+                  "label": "מע״מ",
+                  "sourceField": "data.total_vat",
+                  "targetField": "totalTax"
+                },
+                {
+                  "type": "number",
+                  "label": "סה״כ",
+                  "sourceField": "data.total_without_vat",
+                  "targetField": "totalBeforeDiscount"
+                },
+                {
+                  "type": "number",
+                  "label": "סה״כ כולל מע״מ",
+                  "sourceField": "data.document_total",
+                  "targetField": "totalPriceAfterTax"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך יעד",
+                  "sourceField": "data.document_due_date",
+                  "targetField": "dueDate"
+                },
+                {
+                  "type": "string",
+                  "label": "הערות",
+                  "sourceField": "data.comments",
+                  "targetField": "comment"
+                }
               ],
               "lineColumns": [
-                { "label": "תמונה", "cellType": "image", "columnKey": "image", "sourceField": null },
-                { "label": "מק״ט", "cellType": "sku", "columnKey": "sku", "sourceField": "data.items.item_id" },
-                { "label": "תיאור פריט", "cellType": "text", "columnKey": "title", "sourceField": "data.items.description" },
-                { "label": "כמות", "cellType": "quantity", "columnKey": "quantity", "sourceField": "data.items.quantity" },
-                { "label": "מחיר", "cellType": "money", "columnKey": "money", "sourceField": "data.items.price_nis" },
-                { "label": "סה״כ שורה", "cellType": "money", "columnKey": "money", "sourceField": "data.items.total_line" },
-                { "label": "% הנחה", "cellType": "discount", "columnKey": "discount", "sourceField": "data.items.discount" }
+                {
+                  "label": "תמונה",
+                  "cellType": "image",
+                  "columnKey": "image",
+                  "sourceField": null
+                },
+                {
+                  "label": "מק״ט",
+                  "cellType": "sku",
+                  "columnKey": "sku",
+                  "sourceField": "data.items.item_id"
+                },
+                {
+                  "label": "תיאור פריט",
+                  "cellType": "text",
+                  "columnKey": "title",
+                  "sourceField": "data.items.description"
+                },
+                {
+                  "label": "כמות",
+                  "cellType": "quantity",
+                  "columnKey": "quantity",
+                  "sourceField": "data.items.quantity"
+                },
+                {
+                  "label": "מחיר",
+                  "cellType": "money",
+                  "columnKey": "money",
+                  "sourceField": "data.items.price_nis"
+                },
+                {
+                  "label": "סה״כ שורה",
+                  "cellType": "money",
+                  "columnKey": "money",
+                  "sourceField": "data.items.total_line"
+                },
+                {
+                  "label": "% הנחה",
+                  "cellType": "discount",
+                  "columnKey": "discount",
+                  "sourceField": "data.items.discount"
+                }
               ]
+            },
+            "execution": {
+              "mode": "single"
             }
           },
           "isCanChange": true,
@@ -1088,8 +1577,6 @@
       ],
       "isAgentRequest": false
     },
-
-    
     {
       "id": null,
       "key": "orders",
@@ -1148,6 +1635,9 @@
                 }
               ],
               "lineColumns": []
+            },
+            "execution": {
+              "mode": "single"
             }
           },
           "isCanChange": true,
@@ -1183,13 +1673,41 @@
           "config": {
             "documents": {
               "headFields": [
-                { "type": "string", "label": "מספר מסמך", "sourceField": "data.document_list.document_number", "targetField": "documentNumber" },
-                { "type": "date", "label": "תאריך", "sourceField": "data.document_list.document_date", "targetField": "date" },
-                { "type": "money", "label": "סה״כ", "sourceField": "data.document_list.amount", "targetField": "totalAfterDiscount" },
-                { "type": "money", "label": "מע״מ", "sourceField": "data.document_list.total_vat", "targetField": "vat" },
-                { "type": "link", "label": "מסמך", "sourceField": "data.document_list.total_vat", "targetField": "link" }
+                {
+                  "type": "string",
+                  "label": "מספר מסמך",
+                  "sourceField": "data.document_list.document_number",
+                  "targetField": "documentNumber"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך",
+                  "sourceField": "data.document_list.document_date",
+                  "targetField": "date"
+                },
+                {
+                  "type": "money",
+                  "label": "סה״כ",
+                  "sourceField": "data.document_list.amount",
+                  "targetField": "totalAfterDiscount"
+                },
+                {
+                  "type": "money",
+                  "label": "מע״מ",
+                  "sourceField": "data.document_list.total_vat",
+                  "targetField": "vat"
+                },
+                {
+                  "type": "link",
+                  "label": "מסמך",
+                  "sourceField": "data.document_list.total_vat",
+                  "targetField": "link"
+                }
               ],
               "lineColumns": []
+            },
+            "execution": {
+              "mode": "single"
             }
           },
           "isCanChange": true,
@@ -1225,13 +1743,41 @@
           "config": {
             "documents": {
               "headFields": [
-                { "type": "string", "label": "מספר מסמך", "sourceField": "data.document_list.document_number", "targetField": "documentNumber" },
-                { "type": "date", "label": "תאריך", "sourceField": "data.document_list.document_date", "targetField": "date" },
-                { "type": "money", "label": "סה״כ", "sourceField": "data.document_list.amount", "targetField": "totalAfterDiscount" },
-                { "type": "money", "label": "מע״מ", "sourceField": "data.document_list.total_vat", "targetField": "vat" },
-                { "type": "link", "label": "מסמך", "sourceField": "data.document_list.total_vat", "targetField": "link" }
+                {
+                  "type": "string",
+                  "label": "מספר מסמך",
+                  "sourceField": "data.document_list.document_number",
+                  "targetField": "documentNumber"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך",
+                  "sourceField": "data.document_list.document_date",
+                  "targetField": "date"
+                },
+                {
+                  "type": "money",
+                  "label": "סה״כ",
+                  "sourceField": "data.document_list.amount",
+                  "targetField": "totalAfterDiscount"
+                },
+                {
+                  "type": "money",
+                  "label": "מע״מ",
+                  "sourceField": "data.document_list.total_vat",
+                  "targetField": "vat"
+                },
+                {
+                  "type": "link",
+                  "label": "מסמך",
+                  "sourceField": "data.document_list.total_vat",
+                  "targetField": "link"
+                }
               ],
               "lineColumns": []
+            },
+            "execution": {
+              "mode": "single"
             }
           },
           "isCanChange": true,
@@ -1267,13 +1813,41 @@
           "config": {
             "documents": {
               "headFields": [
-                { "type": "string", "label": "מספר מסמך", "sourceField": "data.document_list.document_number", "targetField": "documentNumber" },
-                { "type": "date", "label": "תאריך", "sourceField": "data.document_list.document_date", "targetField": "date" },
-                { "type": "money", "label": "סה״כ", "sourceField": "data.document_list.amount", "targetField": "totalAfterDiscount" },
-                { "type": "money", "label": "מע״מ", "sourceField": "data.document_list.total_vat", "targetField": "vat" },
-                { "type": "link", "label": "מסמך", "sourceField": "data.document_list.total_vat", "targetField": "link" }
+                {
+                  "type": "string",
+                  "label": "מספר מסמך",
+                  "sourceField": "data.document_list.document_number",
+                  "targetField": "documentNumber"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך",
+                  "sourceField": "data.document_list.document_date",
+                  "targetField": "date"
+                },
+                {
+                  "type": "money",
+                  "label": "סה״כ",
+                  "sourceField": "data.document_list.amount",
+                  "targetField": "totalAfterDiscount"
+                },
+                {
+                  "type": "money",
+                  "label": "מע״מ",
+                  "sourceField": "data.document_list.total_vat",
+                  "targetField": "vat"
+                },
+                {
+                  "type": "link",
+                  "label": "מסמך",
+                  "sourceField": "data.document_list.total_vat",
+                  "targetField": "link"
+                }
               ],
               "lineColumns": []
+            },
+            "execution": {
+              "mode": "single"
             }
           },
           "isCanChange": true,
@@ -1309,13 +1883,41 @@
           "config": {
             "documents": {
               "headFields": [
-                { "type": "string", "label": "מספר מסמך", "sourceField": "data.document_list.document_number", "targetField": "documentNumber" },
-                { "type": "date", "label": "תאריך", "sourceField": "data.document_list.document_date", "targetField": "date" },
-                { "type": "money", "label": "סה״כ", "sourceField": "data.document_list.amount", "targetField": "totalAfterDiscount" },
-                { "type": "money", "label": "מע״מ", "sourceField": "data.document_list.total_vat", "targetField": "vat" },
-                { "type": "link", "label": "מסמך", "sourceField": "data.document_list.total_vat", "targetField": "link" }
+                {
+                  "type": "string",
+                  "label": "מספר מסמך",
+                  "sourceField": "data.document_list.document_number",
+                  "targetField": "documentNumber"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך",
+                  "sourceField": "data.document_list.document_date",
+                  "targetField": "date"
+                },
+                {
+                  "type": "money",
+                  "label": "סה״כ",
+                  "sourceField": "data.document_list.amount",
+                  "targetField": "totalAfterDiscount"
+                },
+                {
+                  "type": "money",
+                  "label": "מע״מ",
+                  "sourceField": "data.document_list.total_vat",
+                  "targetField": "vat"
+                },
+                {
+                  "type": "link",
+                  "label": "מסמך",
+                  "sourceField": "data.document_list.total_vat",
+                  "targetField": "link"
+                }
               ],
               "lineColumns": []
+            },
+            "execution": {
+              "mode": "single"
             }
           },
           "isCanChange": true,
@@ -1351,13 +1953,41 @@
           "config": {
             "documents": {
               "headFields": [
-                { "type": "string", "label": "מספר מסמך", "sourceField": "data.document_list.document_number", "targetField": "documentNumber" },
-                { "type": "date", "label": "תאריך", "sourceField": "data.document_list.document_date", "targetField": "date" },
-                { "type": "money", "label": "סה״כ", "sourceField": "data.document_list.amount", "targetField": "totalAfterDiscount" },
-                { "type": "money", "label": "מע״מ", "sourceField": "data.document_list.total_vat", "targetField": "vat" },
-                { "type": "link", "label": "מסמך", "sourceField": "data.document_list.total_vat", "targetField": "link" }
+                {
+                  "type": "string",
+                  "label": "מספר מסמך",
+                  "sourceField": "data.document_list.document_number",
+                  "targetField": "documentNumber"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך",
+                  "sourceField": "data.document_list.document_date",
+                  "targetField": "date"
+                },
+                {
+                  "type": "money",
+                  "label": "סה״כ",
+                  "sourceField": "data.document_list.amount",
+                  "targetField": "totalAfterDiscount"
+                },
+                {
+                  "type": "money",
+                  "label": "מע״מ",
+                  "sourceField": "data.document_list.total_vat",
+                  "targetField": "vat"
+                },
+                {
+                  "type": "link",
+                  "label": "מסמך",
+                  "sourceField": "data.document_list.total_vat",
+                  "targetField": "link"
+                }
               ],
               "lineColumns": []
+            },
+            "execution": {
+              "mode": "single"
             }
           },
           "isCanChange": true,
@@ -1393,13 +2023,41 @@
           "config": {
             "documents": {
               "headFields": [
-                { "type": "string", "label": "מספר מסמך", "sourceField": "data.document_list.document_number", "targetField": "documentNumber" },
-                { "type": "date", "label": "תאריך", "sourceField": "data.document_list.document_date", "targetField": "date" },
-                { "type": "money", "label": "סה״כ", "sourceField": "data.document_list.amount", "targetField": "totalAfterDiscount" },
-                { "type": "money", "label": "מע״מ", "sourceField": "data.document_list.total_vat", "targetField": "vat" },
-                { "type": "link", "label": "מסמך", "sourceField": "data.document_list.total_vat", "targetField": "link" }
+                {
+                  "type": "string",
+                  "label": "מספר מסמך",
+                  "sourceField": "data.document_list.document_number",
+                  "targetField": "documentNumber"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך",
+                  "sourceField": "data.document_list.document_date",
+                  "targetField": "date"
+                },
+                {
+                  "type": "money",
+                  "label": "סה״כ",
+                  "sourceField": "data.document_list.amount",
+                  "targetField": "totalAfterDiscount"
+                },
+                {
+                  "type": "money",
+                  "label": "מע״מ",
+                  "sourceField": "data.document_list.total_vat",
+                  "targetField": "vat"
+                },
+                {
+                  "type": "link",
+                  "label": "מסמך",
+                  "sourceField": "data.document_list.total_vat",
+                  "targetField": "link"
+                }
               ],
               "lineColumns": []
+            },
+            "execution": {
+              "mode": "single"
             }
           },
           "isCanChange": true,
@@ -1409,8 +2067,6 @@
       ],
       "isAgentRequest": false
     },
-
-
     {
       "id": null,
       "key": "orders_agent",
@@ -1435,53 +2091,56 @@
           "integrationTemplateId": null,
           "template": null,
           "config": {
-              "documents": {
-                "headFields": [
-                  {
-                    "type": "string",
-                    "label": "מספר מסמך",
-                    "sourceField": "data.document_list.document_number",
-                    "targetField": "documentNumber"
-                  },
-                  {
-                    "type": "string",
-                    "label": "מספר לקוח",
-                    "sourceField": "data.document_list.customer_id",
-                    "targetField": "userExtId"
-                  },
-                  {
-                    "type": "string",
-                    "label": "שם לקוח",
-                    "sourceField": "data.document_list.customer_name",
-                    "targetField": "text_1"
-                  },
-                  {
-                    "type": "date",
-                    "label": "תאריך",
-                    "sourceField": "data.document_list.document_date",
-                    "targetField": "date"
-                  },
-                  {
-                    "type": "money",
-                    "label": "סה״כ",
-                    "sourceField": "data.document_list.amount",
-                    "targetField": "totalAfterDiscount"
-                  },
-                  {
-                    "type": "money",
-                    "label": "מע״מ",
-                    "sourceField": "data.document_list.total_vat",
-                    "targetField": "vat"
-                  },
-                  {
-                    "type": "link",
-                    "label": "מסמך",
-                    "sourceField": "data.document_list.total_vat",
-                    "targetField": "link"
-                  }
-                ],
-                "lineColumns": []
-              }
+            "documents": {
+              "headFields": [
+                {
+                  "type": "string",
+                  "label": "מספר מסמך",
+                  "sourceField": "data.document_list.document_number",
+                  "targetField": "documentNumber"
+                },
+                {
+                  "type": "string",
+                  "label": "מספר לקוח",
+                  "sourceField": "data.document_list.customer_id",
+                  "targetField": "userExtId"
+                },
+                {
+                  "type": "string",
+                  "label": "שם לקוח",
+                  "sourceField": "data.document_list.customer_name",
+                  "targetField": "text_1"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך",
+                  "sourceField": "data.document_list.document_date",
+                  "targetField": "date"
+                },
+                {
+                  "type": "money",
+                  "label": "סה״כ",
+                  "sourceField": "data.document_list.amount",
+                  "targetField": "totalAfterDiscount"
+                },
+                {
+                  "type": "money",
+                  "label": "מע״מ",
+                  "sourceField": "data.document_list.total_vat",
+                  "targetField": "vat"
+                },
+                {
+                  "type": "link",
+                  "label": "מסמך",
+                  "sourceField": "data.document_list.total_vat",
+                  "targetField": "link"
+                }
+              ],
+              "lineColumns": []
+            },
+            "execution": {
+              "mode": "single"
+            }
           },
           "isCanChange": true,
           "createdAt": null,
@@ -1516,15 +2175,53 @@
           "config": {
             "documents": {
               "headFields": [
-                { "type": "string", "label": "מספר מסמך", "sourceField": "data.document_list.document_number", "targetField": "documentNumber" },
-                { "type": "string", "label": "מספר לקוח", "sourceField": "data.document_list.customer_id", "targetField": "userExtId" },
-                { "type": "string", "label": "שם לקוח", "sourceField": "data.document_list.customer_name", "targetField": "text_1" },
-                { "type": "date", "label": "תאריך", "sourceField": "data.document_list.document_date", "targetField": "date" },
-                { "type": "money", "label": "סה״כ", "sourceField": "data.document_list.amount", "targetField": "totalAfterDiscount" },
-                { "type": "money", "label": "מע״מ", "sourceField": "data.document_list.total_vat", "targetField": "vat" },
-                { "type": "link", "label": "מסמך", "sourceField": "data.document_list.total_vat", "targetField": "link" }
+                {
+                  "type": "string",
+                  "label": "מספר מסמך",
+                  "sourceField": "data.document_list.document_number",
+                  "targetField": "documentNumber"
+                },
+                {
+                  "type": "string",
+                  "label": "מספר לקוח",
+                  "sourceField": "data.document_list.customer_id",
+                  "targetField": "userExtId"
+                },
+                {
+                  "type": "string",
+                  "label": "שם לקוח",
+                  "sourceField": "data.document_list.customer_name",
+                  "targetField": "text_1"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך",
+                  "sourceField": "data.document_list.document_date",
+                  "targetField": "date"
+                },
+                {
+                  "type": "money",
+                  "label": "סה״כ",
+                  "sourceField": "data.document_list.amount",
+                  "targetField": "totalAfterDiscount"
+                },
+                {
+                  "type": "money",
+                  "label": "מע״מ",
+                  "sourceField": "data.document_list.total_vat",
+                  "targetField": "vat"
+                },
+                {
+                  "type": "link",
+                  "label": "מסמך",
+                  "sourceField": "data.document_list.total_vat",
+                  "targetField": "link"
+                }
               ],
               "lineColumns": []
+            },
+            "execution": {
+              "mode": "single"
             }
           },
           "isCanChange": true,
@@ -1560,15 +2257,53 @@
           "config": {
             "documents": {
               "headFields": [
-                { "type": "string", "label": "מספר מסמך", "sourceField": "data.document_list.document_number", "targetField": "documentNumber" },
-                { "type": "string", "label": "מספר לקוח", "sourceField": "data.document_list.customer_id", "targetField": "userExtId" },
-                { "type": "string", "label": "שם לקוח", "sourceField": "data.document_list.customer_name", "targetField": "text_1" },
-                { "type": "date", "label": "תאריך", "sourceField": "data.document_list.document_date", "targetField": "date" },
-                { "type": "money", "label": "סה״כ", "sourceField": "data.document_list.amount", "targetField": "totalAfterDiscount" },
-                { "type": "money", "label": "מע״מ", "sourceField": "data.document_list.total_vat", "targetField": "vat" },
-                { "type": "link", "label": "מסמך", "sourceField": "data.document_list.total_vat", "targetField": "link" }
+                {
+                  "type": "string",
+                  "label": "מספר מסמך",
+                  "sourceField": "data.document_list.document_number",
+                  "targetField": "documentNumber"
+                },
+                {
+                  "type": "string",
+                  "label": "מספר לקוח",
+                  "sourceField": "data.document_list.customer_id",
+                  "targetField": "userExtId"
+                },
+                {
+                  "type": "string",
+                  "label": "שם לקוח",
+                  "sourceField": "data.document_list.customer_name",
+                  "targetField": "text_1"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך",
+                  "sourceField": "data.document_list.document_date",
+                  "targetField": "date"
+                },
+                {
+                  "type": "money",
+                  "label": "סה״כ",
+                  "sourceField": "data.document_list.amount",
+                  "targetField": "totalAfterDiscount"
+                },
+                {
+                  "type": "money",
+                  "label": "מע״מ",
+                  "sourceField": "data.document_list.total_vat",
+                  "targetField": "vat"
+                },
+                {
+                  "type": "link",
+                  "label": "מסמך",
+                  "sourceField": "data.document_list.total_vat",
+                  "targetField": "link"
+                }
               ],
               "lineColumns": []
+            },
+            "execution": {
+              "mode": "single"
             }
           },
           "isCanChange": true,
@@ -1604,15 +2339,53 @@
           "config": {
             "documents": {
               "headFields": [
-                { "type": "string", "label": "מספר מסמך", "sourceField": "data.document_list.document_number", "targetField": "documentNumber" },
-                { "type": "string", "label": "מספר לקוח", "sourceField": "data.document_list.customer_id", "targetField": "userExtId" },
-                { "type": "string", "label": "שם לקוח", "sourceField": "data.document_list.customer_name", "targetField": "text_1" },
-                { "type": "date", "label": "תאריך", "sourceField": "data.document_list.document_date", "targetField": "date" },
-                { "type": "money", "label": "סה״כ", "sourceField": "data.document_list.amount", "targetField": "totalAfterDiscount" },
-                { "type": "money", "label": "מע״מ", "sourceField": "data.document_list.total_vat", "targetField": "vat" },
-                { "type": "link", "label": "מסמך", "sourceField": "data.document_list.total_vat", "targetField": "link" }
+                {
+                  "type": "string",
+                  "label": "מספר מסמך",
+                  "sourceField": "data.document_list.document_number",
+                  "targetField": "documentNumber"
+                },
+                {
+                  "type": "string",
+                  "label": "מספר לקוח",
+                  "sourceField": "data.document_list.customer_id",
+                  "targetField": "userExtId"
+                },
+                {
+                  "type": "string",
+                  "label": "שם לקוח",
+                  "sourceField": "data.document_list.customer_name",
+                  "targetField": "text_1"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך",
+                  "sourceField": "data.document_list.document_date",
+                  "targetField": "date"
+                },
+                {
+                  "type": "money",
+                  "label": "סה״כ",
+                  "sourceField": "data.document_list.amount",
+                  "targetField": "totalAfterDiscount"
+                },
+                {
+                  "type": "money",
+                  "label": "מע״מ",
+                  "sourceField": "data.document_list.total_vat",
+                  "targetField": "vat"
+                },
+                {
+                  "type": "link",
+                  "label": "מסמך",
+                  "sourceField": "data.document_list.total_vat",
+                  "targetField": "link"
+                }
               ],
               "lineColumns": []
+            },
+            "execution": {
+              "mode": "single"
             }
           },
           "isCanChange": true,
@@ -1648,15 +2421,53 @@
           "config": {
             "documents": {
               "headFields": [
-                { "type": "string", "label": "מספר מסמך", "sourceField": "data.document_list.document_number", "targetField": "documentNumber" },
-                { "type": "string", "label": "מספר לקוח", "sourceField": "data.document_list.customer_id", "targetField": "userExtId" },
-                { "type": "string", "label": "שם לקוח", "sourceField": "data.document_list.customer_name", "targetField": "text_1" },
-                { "type": "date", "label": "תאריך", "sourceField": "data.document_list.document_date", "targetField": "date" },
-                { "type": "money", "label": "סה״כ", "sourceField": "data.document_list.amount", "targetField": "totalAfterDiscount" },
-                { "type": "money", "label": "מע״מ", "sourceField": "data.document_list.total_vat", "targetField": "vat" },
-                { "type": "link", "label": "מסמך", "sourceField": "data.document_list.total_vat", "targetField": "link" }
+                {
+                  "type": "string",
+                  "label": "מספר מסמך",
+                  "sourceField": "data.document_list.document_number",
+                  "targetField": "documentNumber"
+                },
+                {
+                  "type": "string",
+                  "label": "מספר לקוח",
+                  "sourceField": "data.document_list.customer_id",
+                  "targetField": "userExtId"
+                },
+                {
+                  "type": "string",
+                  "label": "שם לקוח",
+                  "sourceField": "data.document_list.customer_name",
+                  "targetField": "text_1"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך",
+                  "sourceField": "data.document_list.document_date",
+                  "targetField": "date"
+                },
+                {
+                  "type": "money",
+                  "label": "סה״כ",
+                  "sourceField": "data.document_list.amount",
+                  "targetField": "totalAfterDiscount"
+                },
+                {
+                  "type": "money",
+                  "label": "מע״מ",
+                  "sourceField": "data.document_list.total_vat",
+                  "targetField": "vat"
+                },
+                {
+                  "type": "link",
+                  "label": "מסמך",
+                  "sourceField": "data.document_list.total_vat",
+                  "targetField": "link"
+                }
               ],
               "lineColumns": []
+            },
+            "execution": {
+              "mode": "single"
             }
           },
           "isCanChange": true,
@@ -1692,15 +2503,53 @@
           "config": {
             "documents": {
               "headFields": [
-                { "type": "string", "label": "מספר מסמך", "sourceField": "data.document_list.document_number", "targetField": "documentNumber" },
-                { "type": "string", "label": "מספר לקוח", "sourceField": "data.document_list.customer_id", "targetField": "userExtId" },
-                { "type": "string", "label": "שם לקוח", "sourceField": "data.document_list.customer_name", "targetField": "text_1" },
-                { "type": "date", "label": "תאריך", "sourceField": "data.document_list.document_date", "targetField": "date" },
-                { "type": "money", "label": "סה״כ", "sourceField": "data.document_list.amount", "targetField": "totalAfterDiscount" },
-                { "type": "money", "label": "מע״מ", "sourceField": "data.document_list.total_vat", "targetField": "vat" },
-                { "type": "link", "label": "מסמך", "sourceField": "data.document_list.total_vat", "targetField": "link" }
+                {
+                  "type": "string",
+                  "label": "מספר מסמך",
+                  "sourceField": "data.document_list.document_number",
+                  "targetField": "documentNumber"
+                },
+                {
+                  "type": "string",
+                  "label": "מספר לקוח",
+                  "sourceField": "data.document_list.customer_id",
+                  "targetField": "userExtId"
+                },
+                {
+                  "type": "string",
+                  "label": "שם לקוח",
+                  "sourceField": "data.document_list.customer_name",
+                  "targetField": "text_1"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך",
+                  "sourceField": "data.document_list.document_date",
+                  "targetField": "date"
+                },
+                {
+                  "type": "money",
+                  "label": "סה״כ",
+                  "sourceField": "data.document_list.amount",
+                  "targetField": "totalAfterDiscount"
+                },
+                {
+                  "type": "money",
+                  "label": "מע״מ",
+                  "sourceField": "data.document_list.total_vat",
+                  "targetField": "vat"
+                },
+                {
+                  "type": "link",
+                  "label": "מסמך",
+                  "sourceField": "data.document_list.total_vat",
+                  "targetField": "link"
+                }
               ],
               "lineColumns": []
+            },
+            "execution": {
+              "mode": "single"
             }
           },
           "isCanChange": true,
@@ -1736,15 +2585,53 @@
           "config": {
             "documents": {
               "headFields": [
-                { "type": "string", "label": "מספר מסמך", "sourceField": "data.document_list.document_number", "targetField": "documentNumber" },
-                { "type": "string", "label": "מספר לקוח", "sourceField": "data.document_list.customer_id", "targetField": "userExtId" },
-                { "type": "string", "label": "שם לקוח", "sourceField": "data.document_list.customer_name", "targetField": "text_1" },
-                { "type": "date", "label": "תאריך", "sourceField": "data.document_list.document_date", "targetField": "date" },
-                { "type": "money", "label": "סה״כ", "sourceField": "data.document_list.amount", "targetField": "totalAfterDiscount" },
-                { "type": "money", "label": "מע״מ", "sourceField": "data.document_list.total_vat", "targetField": "vat" },
-                { "type": "link", "label": "מסמך", "sourceField": "data.document_list.total_vat", "targetField": "link" }
+                {
+                  "type": "string",
+                  "label": "מספר מסמך",
+                  "sourceField": "data.document_list.document_number",
+                  "targetField": "documentNumber"
+                },
+                {
+                  "type": "string",
+                  "label": "מספר לקוח",
+                  "sourceField": "data.document_list.customer_id",
+                  "targetField": "userExtId"
+                },
+                {
+                  "type": "string",
+                  "label": "שם לקוח",
+                  "sourceField": "data.document_list.customer_name",
+                  "targetField": "text_1"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך",
+                  "sourceField": "data.document_list.document_date",
+                  "targetField": "date"
+                },
+                {
+                  "type": "money",
+                  "label": "סה״כ",
+                  "sourceField": "data.document_list.amount",
+                  "targetField": "totalAfterDiscount"
+                },
+                {
+                  "type": "money",
+                  "label": "מע״מ",
+                  "sourceField": "data.document_list.total_vat",
+                  "targetField": "vat"
+                },
+                {
+                  "type": "link",
+                  "label": "מסמך",
+                  "sourceField": "data.document_list.total_vat",
+                  "targetField": "link"
+                }
               ],
               "lineColumns": []
+            },
+            "execution": {
+              "mode": "single"
             }
           },
           "isCanChange": true,
@@ -1754,8 +2641,6 @@
       ],
       "isAgentRequest": true
     },
-
-
     {
       "id": null,
       "key": "USER_PROFILE",
@@ -1783,30 +2668,33 @@
             "dynamic": {
               "columns": [
                 {
-                    "key": "balance",
-                    "type": "text",
-                    "label": "יתרה",
-                    "sourceField": "data.balance"
+                  "key": "balance",
+                  "type": "text",
+                  "label": "יתרה",
+                  "sourceField": "data.balance"
                 },
                 {
-                    "key": "future_checks",
-                    "type": "text",
-                    "label": "שיקים עתידיים",
-                    "sourceField": "data.future_checks"
+                  "key": "future_checks",
+                  "type": "text",
+                  "label": "שיקים עתידיים",
+                  "sourceField": "data.future_checks"
                 },
                 {
-                    "key": "obligo",
-                    "type": "text",
-                    "label": "אובליגו",
-                    "sourceField": "data.obligo"
+                  "key": "obligo",
+                  "type": "text",
+                  "label": "אובליגו",
+                  "sourceField": "data.obligo"
                 },
                 {
-                    "key": "obligo_value",
-                    "type": "text",
-                    "label": "שווי אובליגו",
-                    "sourceField": "data.obligo_value"
+                  "key": "obligo_value",
+                  "type": "text",
+                  "label": "שווי אובליגו",
+                  "sourceField": "data.obligo_value"
                 }
               ]
+            },
+            "execution": {
+              "mode": "single"
             }
           },
           "isCanChange": true,

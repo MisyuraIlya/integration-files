@@ -20,7 +20,7 @@
   },
   {
     "key": "sap_customers_list",
-    "name": "sap customers list extended",
+    "name": "sap customers list",
     "connection_id": null,
     "method": "POST",
     "path": "/sql",
@@ -38,38 +38,44 @@
     "strict_variables": true
   },
   {
-    "key": "sap_products_list",
-    "name": "sap products list",
+    "key": "sap_categories_list",
+    "name": "sap categories (item groups) list",
     "connection_id": null,
     "method": "POST",
     "path": "/sql",
     "headers": null,
     "query": null,
-    "body_template": "{\"query\":\"SELECT ItemCode, ItemName, ItmsGrpCod, FirmCode, VatGourpSa, CodeBars, SellItem, InvntItem, PrchseItem, OnHand, IsCommited, OnOrder, AvgPrice, LastPurPrc, LastPurCur, SWeight1, ManSerNum, ManBtchNum, validFor, frozenFor FROM dbo.OITM ORDER BY ItemCode OFFSET @offset ROWS FETCH NEXT @limit ROWS ONLY\",\"params\":{\"offset\":{{offset}},\"limit\":{{limit}}}}",
+    "body_template": "{\"query\":\"SELECT g.ItmsGrpCod AS CategoryCode, g.ItmsGrpNam AS CategoryName, g.Locked FROM dbo.OITB g ORDER BY g.ItmsGrpCod OFFSET @offset ROWS FETCH NEXT @limit ROWS ONLY\",\"params\":{\"offset\":{{offset}},\"limit\":{{limit}}}}",
     "body_type": "json",
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
     "variables": [
-      {
-        "name": "offset",
-        "type": "number",
-        "default": 0,
-        "required": true,
-        "enumValues": null,
-        "description": null
-      },
-      {
-        "name": "limit",
-        "type": "number",
-        "default": 100,
-        "required": true,
-        "enumValues": null,
-        "description": null
-      }
+      { "name": "offset", "type": "number", "default": 0, "required": true },
+      { "name": "limit", "type": "number", "default": 100, "required": true }
     ],
     "strict_variables": true
   },
+  {
+    "key": "sap_products_list",
+    "name": "sap products list (extended + 40 properties)",
+    "connection_id": null,
+    "method": "POST",
+    "path": "/sql",
+    "headers": null,
+    "query": null,
+    "body_template": "{\"query\":\"SELECT i.ItemCode, i.ItemName, i.ItmsGrpCod AS ItemGroupCode, g.ItmsGrpNam AS ItemGroup, i.FirmCode, m.FirmName AS ManufacturerName, i.CodeBars AS BarCode, i.SellItem, i.InvntItem, i.PrchseItem, i.validFor AS IsActive, i.frozenFor AS IsFrozen, i.OnHand, i.IsCommited, i.OnOrder, (i.OnHand + i.OnOrder - i.IsCommited) AS AvailableTotal, i.AvgPrice, i.LastPurPrc, i.LastPurCur, i.SWeight1, i.ManSerNum, i.ManBtchNum, i.QryGroup1 AS Property01, i.QryGroup2 AS Property02, i.QryGroup3 AS Property03, i.QryGroup4 AS Property04, i.QryGroup5 AS Property05, i.QryGroup6 AS Property06, i.QryGroup7 AS Property07, i.QryGroup8 AS Property08, i.QryGroup9 AS Property09, i.QryGroup10 AS Property10, i.QryGroup11 AS Property11, i.QryGroup12 AS Property12, i.QryGroup13 AS Property13, i.QryGroup14 AS Property14, i.QryGroup15 AS Property15, i.QryGroup16 AS Property16, i.QryGroup17 AS Property17, i.QryGroup18 AS Property18, i.QryGroup19 AS Property19, i.QryGroup20 AS Property20, i.QryGroup21 AS Property21, i.QryGroup22 AS Property22, i.QryGroup23 AS Property23, i.QryGroup24 AS Property24, i.QryGroup25 AS Property25, i.QryGroup26 AS Property26, i.QryGroup27 AS Property27, i.QryGroup28 AS Property28, i.QryGroup29 AS Property29, i.QryGroup30 AS Property30, i.QryGroup31 AS Property31, i.QryGroup32 AS Property32, i.QryGroup33 AS Property33, i.QryGroup34 AS Property34, i.QryGroup35 AS Property35, i.QryGroup36 AS Property36, i.QryGroup37 AS Property37, i.QryGroup38 AS Property38, i.QryGroup39 AS Property39, i.QryGroup40 AS Property40 FROM dbo.OITM i LEFT JOIN dbo.OITB g ON g.ItmsGrpCod = i.ItmsGrpCod LEFT JOIN dbo.OMRC m ON m.FirmCode = i.FirmCode ORDER BY i.ItemCode OFFSET @offset ROWS FETCH NEXT @limit ROWS ONLY\",\"params\":{\"offset\":{{offset}},\"limit\":{{limit}}}}",
+    "body_type": "json",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "variables": [
+      { "name": "offset", "type": "number", "default": 0, "required": true },
+      { "name": "limit", "type": "number", "default": 100, "required": true }
+    ],
+    "strict_variables": true
+  },
+
   {
     "key": "sap_warehouses_list",
     "name": "sap warehouses list",

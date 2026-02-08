@@ -26,6 +26,23 @@
           "integrationTemplateId": null,
           "template": null,
           "config": {
+            "execution": {
+              "mode": "fanout",
+              "fanout": {
+                "key": "customerType",
+                "target": "variables",
+                "range": {
+                  "from": 1,
+                  "to": 22,
+                  "step": 1
+                },
+                "concurrency": 4,
+                "continueOnError": true,
+                "dedupeBy": [
+                  "customer_id"
+                ]
+              }
+            },
             "simple": {
               "mappings": {
                 "hp": {
@@ -582,6 +599,8 @@
           "key": "rivhit_warehouses",
           "name": "rivhit warehouses fetcher",
           "description": "rivhit warehouses fetcher",
+          "templateKey": "rivhit_warehouses",
+          "integrationTemplateId": null,
           "template": null,
           "config": {
               "simple": {

@@ -146,8 +146,6 @@
     ],
     "strict_variables": true
   },
-
-
   {
     "key": "sap_orders_by_customer",
     "name": "sap orders by customer",

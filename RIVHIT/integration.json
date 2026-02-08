@@ -8,14 +8,23 @@
     "path": "Customer.List",
     "headers": null,
     "query": null,
-    "body_template": "{\n  \"api_token\": \"F0E84E05-6D60-43B4-8DA6-432D78827644\",\n  \"customer_type\": 1\n}",
+    "body_template": "{\n  \"api_token\": \"F0E84E05-6D60-43B4-8DA6-432D78827644\",\n  \"customer_type\": {customerType}\n}",
     "body_type": "json",
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
     "created_at": "2025-12-20T14: 37: 31.757809",
     "updated_at": "2025-12-20T14: 37: 31.757809",
-    "variables": [],
+    "variables": [
+      {
+        "name": "customerType",
+        "type": "number",
+        "default": 1,
+        "required": true,
+        "enumValues": null,
+        "description": "Rivhit customer type"
+      }
+    ],
     "strict_variables": true
   },
   {

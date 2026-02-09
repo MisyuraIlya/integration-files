@@ -287,6 +287,2436 @@
     },
     {
       "id": null,
+      "key": "sap_order_items",
+      "name": "sap order items",
+      "mapperType": "documentLines",
+      "table": null,
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "sap order items",
+      "linkedName": null,
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "sap_order_items",
+          "name": "sap order items",
+          "description": "sap order items",
+          "templateKey": "sap_order_with_rows_by_docnum",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "documents": {
+              "linesPath": "DocumentLines",
+              "headFields": [
+                {
+                  "type": "string",
+                  "label": "מספר מסמך",
+                  "sourceField": "DocNum",
+                  "targetField": "documentNumber"
+                },
+                {
+                  "type": "date",
+                  "label": "CURDATE",
+                  "sourceField": "DocDate",
+                  "targetField": "date"
+                },
+                {
+                  "type": "string",
+                  "label": "לקוח",
+                  "sourceField": "CardCode",
+                  "targetField": "userExtId"
+                },
+                {
+                  "type": "money",
+                  "label": "סה״כ לפני הנחה",
+                  "sourceField": "TotalBeforeDiscount",
+                  "targetField": "totalBeforeDiscount"
+                },
+                {
+                  "type": "money",
+                  "label": "סה״כ לאחר הנחה",
+                  "sourceField": "TotalAfterDiscount",
+                  "targetField": "totalAfterDiscount"
+                },
+                {
+                  "type": "discount",
+                  "label": "הנחה",
+                  "sourceField": "DiscPrcnt",
+                  "targetField": "totalPrecentDiscount"
+                },
+                {
+                  "type": "string",
+                  "label": "מטבע",
+                  "sourceField": "DocCur",
+                  "targetField": "currency"
+                },
+                {
+                  "type": "money",
+                  "label": "סה\"כ כולל מע\"מ",
+                  "sourceField": "TotalPriceAfterTax",
+                  "targetField": "totalPriceAfterTax"
+                },
+                {
+                  "type": "money",
+                  "label": "מע״מ",
+                  "sourceField": "TaxSum",
+                  "targetField": "totalTax"
+                },
+                {
+                  "type": "string",
+                  "label": "סטטוס",
+                  "sourceField": "DocStatus",
+                  "targetField": "status"
+                },
+                {
+                  "type": "string",
+                  "label": "הערה",
+                  "sourceField": "Comments",
+                  "targetField": "comment"
+                }
+              ],
+              "lineColumns": [
+                {
+                  "label": "תמונה",
+                  "cellType": "image",
+                  "columnKey": "image",
+                  "sourceField": null
+                },
+                {
+                  "label": "מק״ט",
+                  "cellType": "sku",
+                  "columnKey": "sku",
+                  "sourceField": "json(DocumentLines).ItemCode"
+                },
+                {
+                  "label": "תיאור פריט",
+                  "cellType": "text",
+                  "columnKey": "description",
+                  "sourceField": "json(DocumentLines).ItemDescription"
+                },
+                {
+                  "label": "כמות",
+                  "cellType": "quantity",
+                  "columnKey": "quantity",
+                  "sourceField": "json(DocumentLines).Quantity"
+                },
+                {
+                  "label": "מחיר",
+                  "cellType": "money",
+                  "columnKey": "price",
+                  "sourceField": "json(DocumentLines).Price"
+                },
+                {
+                  "label": "הנחה",
+                  "cellType": "discount",
+                  "columnKey": "discount",
+                  "sourceField": "json(DocumentLines).LineDiscount"
+                },
+                {
+                  "label": "הערה",
+                  "cellType": "text",
+                  "columnKey": "comment",
+                  "sourceField": "json(DocumentLines).FreeTxt"
+                },
+                {
+                  "label": "תאריך משלוח",
+                  "cellType": "dateHandler",
+                  "columnKey": "date",
+                  "sourceField": "json(DocumentLines).ShipDate"
+                }
+              ],
+              "lineAttributes": []
+            },
+            "execution": {
+              "mode": "single"
+            }
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": false
+    },
+    {
+      "id": null,
+      "key": "sap_orders",
+      "name": "sap user orders",
+      "mapperType": "documentLines",
+      "table": null,
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "sap user orders",
+      "linkedName": "sap_order_items",
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "sap_orders",
+          "name": "sap user orders",
+          "description": "sap user orders",
+          "templateKey": "sap_orders_by_customer",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "documents": {
+              "headFields": [
+                {
+                  "type": "string",
+                  "label": "מספר מסמך",
+                  "sourceField": "DocNum",
+                  "targetField": "documentNumber"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך",
+                  "sourceField": "DocDate",
+                  "targetField": "date"
+                },
+                {
+                  "type": "money",
+                  "label": "סה״כ",
+                  "sourceField": "TotalBeforeTax",
+                  "targetField": "totalAfterDiscount"
+                },
+                {
+                  "type": "money",
+                  "label": "מע״מ",
+                  "sourceField": "TaxSum",
+                  "targetField": "totalTax"
+                },
+                {
+                  "type": "money",
+                  "label": "סה\"כ אחרי מע\"מ",
+                  "sourceField": "TotalPriceAfterTax",
+                  "targetField": "money"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך משלוח",
+                  "sourceField": "DocDueDate",
+                  "targetField": "dueDate"
+                },
+                {
+                  "type": "string",
+                  "label": "סטטוס",
+                  "sourceField": "DocStatus",
+                  "targetField": "status"
+                }
+              ],
+              "lineColumns": [],
+              "lineAttributes": []
+            },
+            "execution": {
+              "mode": "single"
+            },
+            "itemsPath": "rows"
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": false
+    },
+    {
+      "id": null,
+      "key": "sap_orders_agent",
+      "name": "sap orders agent",
+      "mapperType": "documentLines",
+      "table": null,
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "sap orders agent",
+      "linkedName": "sap_order_items",
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "sap_orders_agent",
+          "name": "sap orders agent",
+          "description": "sap orders agent",
+          "templateKey": "sap_orders_for_agents",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "documents": {
+              "headFields": [
+                {
+                  "type": "string",
+                  "label": "מספר מסמך",
+                  "sourceField": "DocNum",
+                  "targetField": "documentNumber"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך",
+                  "sourceField": "DocDate",
+                  "targetField": "createdAt"
+                },
+                {
+                  "type": "string",
+                  "label": "מספר לקוח",
+                  "sourceField": "CardCode",
+                  "targetField": "userExtId"
+                },
+                {
+                  "type": "string",
+                  "label": "שם לקוח",
+                  "sourceField": "CardName",
+                  "targetField": "text_1"
+                },
+                {
+                  "type": "money",
+                  "label": "סה״כ",
+                  "sourceField": "TotalBeforeTax",
+                  "targetField": "totalAfterDiscount"
+                },
+                {
+                  "type": "money",
+                  "label": "מע״מ",
+                  "sourceField": "TaxSum",
+                  "targetField": "totalTax"
+                },
+                {
+                  "type": "money",
+                  "label": "סה״כ כולל מע״מ",
+                  "sourceField": "TotalPriceAfterTax",
+                  "targetField": "money"
+                },
+                {
+                  "type": "string",
+                  "label": "סוכן",
+                  "sourceField": "SalesPersonName",
+                  "targetField": "text_1"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך משלוח",
+                  "sourceField": "DocDueDate",
+                  "targetField": "dueDate"
+                },
+                {
+                  "type": "string",
+                  "label": "סטטוס",
+                  "sourceField": "DocStatus",
+                  "targetField": "status"
+                }
+              ],
+              "lineColumns": [],
+              "lineAttributes": []
+            },
+            "execution": {
+              "mode": "single"
+            },
+            "itemsPath": "rows"
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": true
+    },
+    {
+      "id": null,
+      "key": "sap_quotation_items",
+      "name": "sap quotation items",
+      "mapperType": "documentLines",
+      "table": null,
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "sap quotation items",
+      "linkedName": null,
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "sap_quotation_items",
+          "name": "sap quotation items",
+          "description": "sap quotation items",
+          "templateKey": "sap_quotation_with_rows_by_docnum",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "documents": {
+              "linesPath": "DocumentLines",
+              "headFields": [
+                {
+                  "type": "string",
+                  "label": "מספר מסמך",
+                  "sourceField": "DocNum",
+                  "targetField": "documentNumber"
+                },
+                {
+                  "type": "date",
+                  "label": "CURDATE",
+                  "sourceField": "DocDate",
+                  "targetField": "date"
+                },
+                {
+                  "type": "string",
+                  "label": "לקוח",
+                  "sourceField": "CardCode",
+                  "targetField": "userExtId"
+                },
+                {
+                  "type": "money",
+                  "label": "סה״כ לפני הנחה",
+                  "sourceField": "TotalBeforeDiscount",
+                  "targetField": "totalBeforeDiscount"
+                },
+                {
+                  "type": "money",
+                  "label": "סה״כ לאחר הנחה",
+                  "sourceField": "TotalAfterDiscount",
+                  "targetField": "totalAfterDiscount"
+                },
+                {
+                  "type": "discount",
+                  "label": "הנחה",
+                  "sourceField": "DiscPrcnt",
+                  "targetField": "totalPrecentDiscount"
+                },
+                {
+                  "type": "string",
+                  "label": "מטבע",
+                  "sourceField": "DocCur",
+                  "targetField": "currency"
+                },
+                {
+                  "type": "money",
+                  "label": "סה\"כ כולל מע\"מ",
+                  "sourceField": "TotalPriceAfterTax",
+                  "targetField": "totalPriceAfterTax"
+                },
+                {
+                  "type": "money",
+                  "label": "מע״מ",
+                  "sourceField": "TaxSum",
+                  "targetField": "totalTax"
+                },
+                {
+                  "type": "string",
+                  "label": "סטטוס",
+                  "sourceField": "DocStatus",
+                  "targetField": "status"
+                },
+                {
+                  "type": "string",
+                  "label": "הערה",
+                  "sourceField": "Comments",
+                  "targetField": "comment"
+                }
+              ],
+              "lineColumns": [
+                {
+                  "label": "תמונה",
+                  "cellType": "image",
+                  "columnKey": "image",
+                  "sourceField": null
+                },
+                {
+                  "label": "מק״ט",
+                  "cellType": "sku",
+                  "columnKey": "sku",
+                  "sourceField": "json(DocumentLines).ItemCode"
+                },
+                {
+                  "label": "תיאור פריט",
+                  "cellType": "text",
+                  "columnKey": "description",
+                  "sourceField": "json(DocumentLines).ItemDescription"
+                },
+                {
+                  "label": "כמות",
+                  "cellType": "quantity",
+                  "columnKey": "quantity",
+                  "sourceField": "json(DocumentLines).Quantity"
+                },
+                {
+                  "label": "מחיר",
+                  "cellType": "money",
+                  "columnKey": "price",
+                  "sourceField": "json(DocumentLines).Price"
+                },
+                {
+                  "label": "הנחה",
+                  "cellType": "discount",
+                  "columnKey": "discount",
+                  "sourceField": "json(DocumentLines).LineDiscount"
+                },
+                {
+                  "label": "הערה",
+                  "cellType": "text",
+                  "columnKey": "comment",
+                  "sourceField": "json(DocumentLines).FreeTxt"
+                },
+                {
+                  "label": "תאריך משלוח",
+                  "cellType": "dateHandler",
+                  "columnKey": "date",
+                  "sourceField": "json(DocumentLines).ShipDate"
+                }
+              ],
+              "lineAttributes": []
+            },
+            "execution": {
+              "mode": "single"
+            }
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": false
+    },
+    {
+      "id": null,
+      "key": "sap_quotations",
+      "name": "sap user quotations",
+      "mapperType": "documentLines",
+      "table": null,
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "sap user quotations",
+      "linkedName": "sap_quotation_items",
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "sap_quotations",
+          "name": "sap user quotations",
+          "description": "sap user quotations",
+          "templateKey": "sap_quotations_by_customer",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "documents": {
+              "headFields": [
+                {
+                  "type": "string",
+                  "label": "מספר מסמך",
+                  "sourceField": "DocNum",
+                  "targetField": "documentNumber"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך",
+                  "sourceField": "DocDate",
+                  "targetField": "date"
+                },
+                {
+                  "type": "money",
+                  "label": "סה״כ",
+                  "sourceField": "TotalBeforeTax",
+                  "targetField": "totalAfterDiscount"
+                },
+                {
+                  "type": "money",
+                  "label": "מע״מ",
+                  "sourceField": "TaxSum",
+                  "targetField": "totalTax"
+                },
+                {
+                  "type": "money",
+                  "label": "סה\"כ אחרי מע\"מ",
+                  "sourceField": "TotalPriceAfterTax",
+                  "targetField": "money"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך משלוח",
+                  "sourceField": "DocDueDate",
+                  "targetField": "dueDate"
+                },
+                {
+                  "type": "string",
+                  "label": "סטטוס",
+                  "sourceField": "DocStatus",
+                  "targetField": "status"
+                }
+              ],
+              "lineColumns": [],
+              "lineAttributes": []
+            },
+            "execution": {
+              "mode": "single"
+            },
+            "itemsPath": "rows"
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": false
+    },
+    {
+      "id": null,
+      "key": "sap_quotations_agent",
+      "name": "sap quotations agent",
+      "mapperType": "documentLines",
+      "table": null,
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "sap quotations agent",
+      "linkedName": "sap_quotation_items",
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "sap_quotations_agent",
+          "name": "sap quotations agent",
+          "description": "sap quotations agent",
+          "templateKey": "sap_quotations_for_agents",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "documents": {
+              "headFields": [
+                {
+                  "type": "string",
+                  "label": "מספר מסמך",
+                  "sourceField": "DocNum",
+                  "targetField": "documentNumber"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך",
+                  "sourceField": "DocDate",
+                  "targetField": "createdAt"
+                },
+                {
+                  "type": "string",
+                  "label": "מספר לקוח",
+                  "sourceField": "CardCode",
+                  "targetField": "userExtId"
+                },
+                {
+                  "type": "string",
+                  "label": "שם לקוח",
+                  "sourceField": "CardName",
+                  "targetField": "text_1"
+                },
+                {
+                  "type": "money",
+                  "label": "סה״כ",
+                  "sourceField": "TotalBeforeTax",
+                  "targetField": "totalAfterDiscount"
+                },
+                {
+                  "type": "money",
+                  "label": "מע״מ",
+                  "sourceField": "TaxSum",
+                  "targetField": "totalTax"
+                },
+                {
+                  "type": "money",
+                  "label": "סה״כ כולל מע״מ",
+                  "sourceField": "TotalPriceAfterTax",
+                  "targetField": "money"
+                },
+                {
+                  "type": "string",
+                  "label": "סוכן",
+                  "sourceField": "SalesPersonName",
+                  "targetField": "text_1"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך משלוח",
+                  "sourceField": "DocDueDate",
+                  "targetField": "dueDate"
+                },
+                {
+                  "type": "string",
+                  "label": "סטטוס",
+                  "sourceField": "DocStatus",
+                  "targetField": "status"
+                }
+              ],
+              "lineColumns": [],
+              "lineAttributes": []
+            },
+            "execution": {
+              "mode": "single"
+            },
+            "itemsPath": "rows"
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": true
+    },
+    {
+      "id": null,
+      "key": "sap_delivery_items",
+      "name": "sap delivery items",
+      "mapperType": "documentLines",
+      "table": null,
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "sap delivery items",
+      "linkedName": null,
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "sap_delivery_items",
+          "name": "sap delivery items",
+          "description": "sap delivery items",
+          "templateKey": "sap_delivery_with_rows_by_docnum",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "documents": {
+              "linesPath": "DocumentLines",
+              "headFields": [
+                {
+                  "type": "string",
+                  "label": "מספר מסמך",
+                  "sourceField": "DocNum",
+                  "targetField": "documentNumber"
+                },
+                {
+                  "type": "date",
+                  "label": "CURDATE",
+                  "sourceField": "DocDate",
+                  "targetField": "date"
+                },
+                {
+                  "type": "string",
+                  "label": "לקוח",
+                  "sourceField": "CardCode",
+                  "targetField": "userExtId"
+                },
+                {
+                  "type": "money",
+                  "label": "סה״כ לפני הנחה",
+                  "sourceField": "TotalBeforeDiscount",
+                  "targetField": "totalBeforeDiscount"
+                },
+                {
+                  "type": "money",
+                  "label": "סה״כ לאחר הנחה",
+                  "sourceField": "TotalAfterDiscount",
+                  "targetField": "totalAfterDiscount"
+                },
+                {
+                  "type": "discount",
+                  "label": "הנחה",
+                  "sourceField": "DiscPrcnt",
+                  "targetField": "totalPrecentDiscount"
+                },
+                {
+                  "type": "string",
+                  "label": "מטבע",
+                  "sourceField": "DocCur",
+                  "targetField": "currency"
+                },
+                {
+                  "type": "money",
+                  "label": "סה\"כ כולל מע\"מ",
+                  "sourceField": "TotalPriceAfterTax",
+                  "targetField": "totalPriceAfterTax"
+                },
+                {
+                  "type": "money",
+                  "label": "מע״מ",
+                  "sourceField": "TaxSum",
+                  "targetField": "totalTax"
+                },
+                {
+                  "type": "string",
+                  "label": "סטטוס",
+                  "sourceField": "DocStatus",
+                  "targetField": "status"
+                },
+                {
+                  "type": "string",
+                  "label": "הערה",
+                  "sourceField": "Comments",
+                  "targetField": "comment"
+                }
+              ],
+              "lineColumns": [
+                {
+                  "label": "תמונה",
+                  "cellType": "image",
+                  "columnKey": "image",
+                  "sourceField": null
+                },
+                {
+                  "label": "מק״ט",
+                  "cellType": "sku",
+                  "columnKey": "sku",
+                  "sourceField": "json(DocumentLines).ItemCode"
+                },
+                {
+                  "label": "תיאור פריט",
+                  "cellType": "text",
+                  "columnKey": "description",
+                  "sourceField": "json(DocumentLines).ItemDescription"
+                },
+                {
+                  "label": "כמות",
+                  "cellType": "quantity",
+                  "columnKey": "quantity",
+                  "sourceField": "json(DocumentLines).Quantity"
+                },
+                {
+                  "label": "מחיר",
+                  "cellType": "money",
+                  "columnKey": "price",
+                  "sourceField": "json(DocumentLines).Price"
+                },
+                {
+                  "label": "הנחה",
+                  "cellType": "discount",
+                  "columnKey": "discount",
+                  "sourceField": "json(DocumentLines).LineDiscount"
+                },
+                {
+                  "label": "הערה",
+                  "cellType": "text",
+                  "columnKey": "comment",
+                  "sourceField": "json(DocumentLines).FreeTxt"
+                },
+                {
+                  "label": "תאריך משלוח",
+                  "cellType": "dateHandler",
+                  "columnKey": "date",
+                  "sourceField": "json(DocumentLines).ShipDate"
+                }
+              ],
+              "lineAttributes": []
+            },
+            "execution": {
+              "mode": "single"
+            }
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": false
+    },
+    {
+      "id": null,
+      "key": "sap_deliveries",
+      "name": "sap user deliveries",
+      "mapperType": "documentLines",
+      "table": null,
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "sap user deliveries",
+      "linkedName": "sap_delivery_items",
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "sap_deliveries",
+          "name": "sap user deliveries",
+          "description": "sap user deliveries",
+          "templateKey": "sap_deliveries_by_customer",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "documents": {
+              "headFields": [
+                {
+                  "type": "string",
+                  "label": "מספר מסמך",
+                  "sourceField": "DocNum",
+                  "targetField": "documentNumber"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך",
+                  "sourceField": "DocDate",
+                  "targetField": "date"
+                },
+                {
+                  "type": "money",
+                  "label": "סה״כ",
+                  "sourceField": "TotalBeforeTax",
+                  "targetField": "totalAfterDiscount"
+                },
+                {
+                  "type": "money",
+                  "label": "מע״מ",
+                  "sourceField": "TaxSum",
+                  "targetField": "totalTax"
+                },
+                {
+                  "type": "money",
+                  "label": "סה\"כ אחרי מע\"מ",
+                  "sourceField": "TotalPriceAfterTax",
+                  "targetField": "money"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך משלוח",
+                  "sourceField": "DocDueDate",
+                  "targetField": "dueDate"
+                },
+                {
+                  "type": "string",
+                  "label": "סטטוס",
+                  "sourceField": "DocStatus",
+                  "targetField": "status"
+                }
+              ],
+              "lineColumns": [],
+              "lineAttributes": []
+            },
+            "execution": {
+              "mode": "single"
+            },
+            "itemsPath": "rows"
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": false
+    },
+    {
+      "id": null,
+      "key": "sap_deliveries_agent",
+      "name": "sap deliveries agent",
+      "mapperType": "documentLines",
+      "table": null,
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "sap deliveries agent",
+      "linkedName": "sap_delivery_items",
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "sap_deliveries_agent",
+          "name": "sap deliveries agent",
+          "description": "sap deliveries agent",
+          "templateKey": "sap_deliveries_for_agents",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "documents": {
+              "headFields": [
+                {
+                  "type": "string",
+                  "label": "מספר מסמך",
+                  "sourceField": "DocNum",
+                  "targetField": "documentNumber"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך",
+                  "sourceField": "DocDate",
+                  "targetField": "createdAt"
+                },
+                {
+                  "type": "string",
+                  "label": "מספר לקוח",
+                  "sourceField": "CardCode",
+                  "targetField": "userExtId"
+                },
+                {
+                  "type": "string",
+                  "label": "שם לקוח",
+                  "sourceField": "CardName",
+                  "targetField": "text_1"
+                },
+                {
+                  "type": "money",
+                  "label": "סה״כ",
+                  "sourceField": "TotalBeforeTax",
+                  "targetField": "totalAfterDiscount"
+                },
+                {
+                  "type": "money",
+                  "label": "מע״מ",
+                  "sourceField": "TaxSum",
+                  "targetField": "totalTax"
+                },
+                {
+                  "type": "money",
+                  "label": "סה״כ כולל מע״מ",
+                  "sourceField": "TotalPriceAfterTax",
+                  "targetField": "money"
+                },
+                {
+                  "type": "string",
+                  "label": "סוכן",
+                  "sourceField": "SalesPersonName",
+                  "targetField": "text_1"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך משלוח",
+                  "sourceField": "DocDueDate",
+                  "targetField": "dueDate"
+                },
+                {
+                  "type": "string",
+                  "label": "סטטוס",
+                  "sourceField": "DocStatus",
+                  "targetField": "status"
+                }
+              ],
+              "lineColumns": [],
+              "lineAttributes": []
+            },
+            "execution": {
+              "mode": "single"
+            },
+            "itemsPath": "rows"
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": true
+    },
+    {
+      "id": null,
+      "key": "sap_return_items",
+      "name": "sap return items",
+      "mapperType": "documentLines",
+      "table": null,
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "sap return items",
+      "linkedName": null,
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "sap_return_items",
+          "name": "sap return items",
+          "description": "sap return items",
+          "templateKey": "sap_return_with_rows_by_docnum",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "documents": {
+              "linesPath": "DocumentLines",
+              "headFields": [
+                {
+                  "type": "string",
+                  "label": "מספר מסמך",
+                  "sourceField": "DocNum",
+                  "targetField": "documentNumber"
+                },
+                {
+                  "type": "date",
+                  "label": "CURDATE",
+                  "sourceField": "DocDate",
+                  "targetField": "date"
+                },
+                {
+                  "type": "string",
+                  "label": "לקוח",
+                  "sourceField": "CardCode",
+                  "targetField": "userExtId"
+                },
+                {
+                  "type": "money",
+                  "label": "סה״כ לפני הנחה",
+                  "sourceField": "TotalBeforeDiscount",
+                  "targetField": "totalBeforeDiscount"
+                },
+                {
+                  "type": "money",
+                  "label": "סה״כ לאחר הנחה",
+                  "sourceField": "TotalAfterDiscount",
+                  "targetField": "totalAfterDiscount"
+                },
+                {
+                  "type": "discount",
+                  "label": "הנחה",
+                  "sourceField": "DiscPrcnt",
+                  "targetField": "totalPrecentDiscount"
+                },
+                {
+                  "type": "string",
+                  "label": "מטבע",
+                  "sourceField": "DocCur",
+                  "targetField": "currency"
+                },
+                {
+                  "type": "money",
+                  "label": "סה\"כ כולל מע\"מ",
+                  "sourceField": "TotalPriceAfterTax",
+                  "targetField": "totalPriceAfterTax"
+                },
+                {
+                  "type": "money",
+                  "label": "מע״מ",
+                  "sourceField": "TaxSum",
+                  "targetField": "totalTax"
+                },
+                {
+                  "type": "string",
+                  "label": "סטטוס",
+                  "sourceField": "DocStatus",
+                  "targetField": "status"
+                },
+                {
+                  "type": "string",
+                  "label": "הערה",
+                  "sourceField": "Comments",
+                  "targetField": "comment"
+                }
+              ],
+              "lineColumns": [
+                {
+                  "label": "תמונה",
+                  "cellType": "image",
+                  "columnKey": "image",
+                  "sourceField": null
+                },
+                {
+                  "label": "מק״ט",
+                  "cellType": "sku",
+                  "columnKey": "sku",
+                  "sourceField": "json(DocumentLines).ItemCode"
+                },
+                {
+                  "label": "תיאור פריט",
+                  "cellType": "text",
+                  "columnKey": "description",
+                  "sourceField": "json(DocumentLines).ItemDescription"
+                },
+                {
+                  "label": "כמות",
+                  "cellType": "quantity",
+                  "columnKey": "quantity",
+                  "sourceField": "json(DocumentLines).Quantity"
+                },
+                {
+                  "label": "מחיר",
+                  "cellType": "money",
+                  "columnKey": "price",
+                  "sourceField": "json(DocumentLines).Price"
+                },
+                {
+                  "label": "הנחה",
+                  "cellType": "discount",
+                  "columnKey": "discount",
+                  "sourceField": "json(DocumentLines).LineDiscount"
+                },
+                {
+                  "label": "הערה",
+                  "cellType": "text",
+                  "columnKey": "comment",
+                  "sourceField": "json(DocumentLines).FreeTxt"
+                },
+                {
+                  "label": "תאריך משלוח",
+                  "cellType": "dateHandler",
+                  "columnKey": "date",
+                  "sourceField": "json(DocumentLines).ShipDate"
+                }
+              ],
+              "lineAttributes": []
+            },
+            "execution": {
+              "mode": "single"
+            }
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": false
+    },
+    {
+      "id": null,
+      "key": "sap_returns",
+      "name": "sap user returns",
+      "mapperType": "documentLines",
+      "table": null,
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "sap user returns",
+      "linkedName": "sap_return_items",
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "sap_returns",
+          "name": "sap user returns",
+          "description": "sap user returns",
+          "templateKey": "sap_returns_by_customer",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "documents": {
+              "headFields": [
+                {
+                  "type": "string",
+                  "label": "מספר מסמך",
+                  "sourceField": "DocNum",
+                  "targetField": "documentNumber"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך",
+                  "sourceField": "DocDate",
+                  "targetField": "date"
+                },
+                {
+                  "type": "money",
+                  "label": "סה״כ",
+                  "sourceField": "TotalBeforeTax",
+                  "targetField": "totalAfterDiscount"
+                },
+                {
+                  "type": "money",
+                  "label": "מע״מ",
+                  "sourceField": "TaxSum",
+                  "targetField": "totalTax"
+                },
+                {
+                  "type": "money",
+                  "label": "סה\"כ אחרי מע\"מ",
+                  "sourceField": "TotalPriceAfterTax",
+                  "targetField": "money"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך משלוח",
+                  "sourceField": "DocDueDate",
+                  "targetField": "dueDate"
+                },
+                {
+                  "type": "string",
+                  "label": "סטטוס",
+                  "sourceField": "DocStatus",
+                  "targetField": "status"
+                }
+              ],
+              "lineColumns": [],
+              "lineAttributes": []
+            },
+            "execution": {
+              "mode": "single"
+            },
+            "itemsPath": "rows"
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": false
+    },
+    {
+      "id": null,
+      "key": "sap_returns_agent",
+      "name": "sap returns agent",
+      "mapperType": "documentLines",
+      "table": null,
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "sap returns agent",
+      "linkedName": "sap_return_items",
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "sap_returns_agent",
+          "name": "sap returns agent",
+          "description": "sap returns agent",
+          "templateKey": "sap_returns_for_agents",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "documents": {
+              "headFields": [
+                {
+                  "type": "string",
+                  "label": "מספר מסמך",
+                  "sourceField": "DocNum",
+                  "targetField": "documentNumber"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך",
+                  "sourceField": "DocDate",
+                  "targetField": "createdAt"
+                },
+                {
+                  "type": "string",
+                  "label": "מספר לקוח",
+                  "sourceField": "CardCode",
+                  "targetField": "userExtId"
+                },
+                {
+                  "type": "string",
+                  "label": "שם לקוח",
+                  "sourceField": "CardName",
+                  "targetField": "text_1"
+                },
+                {
+                  "type": "money",
+                  "label": "סה״כ",
+                  "sourceField": "TotalBeforeTax",
+                  "targetField": "totalAfterDiscount"
+                },
+                {
+                  "type": "money",
+                  "label": "מע״מ",
+                  "sourceField": "TaxSum",
+                  "targetField": "totalTax"
+                },
+                {
+                  "type": "money",
+                  "label": "סה״כ כולל מע״מ",
+                  "sourceField": "TotalPriceAfterTax",
+                  "targetField": "money"
+                },
+                {
+                  "type": "string",
+                  "label": "סוכן",
+                  "sourceField": "SalesPersonName",
+                  "targetField": "text_1"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך משלוח",
+                  "sourceField": "DocDueDate",
+                  "targetField": "dueDate"
+                },
+                {
+                  "type": "string",
+                  "label": "סטטוס",
+                  "sourceField": "DocStatus",
+                  "targetField": "status"
+                }
+              ],
+              "lineColumns": [],
+              "lineAttributes": []
+            },
+            "execution": {
+              "mode": "single"
+            },
+            "itemsPath": "rows"
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": true
+    },
+    {
+      "id": null,
+      "key": "sap_ar_invoice_items",
+      "name": "sap A/R invoice items",
+      "mapperType": "documentLines",
+      "table": null,
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "sap A/R invoice items",
+      "linkedName": null,
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "sap_ar_invoice_items",
+          "name": "sap A/R invoice items",
+          "description": "sap A/R invoice items",
+          "templateKey": "sap_ar_invoice_with_rows_by_docnum",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "documents": {
+              "linesPath": "DocumentLines",
+              "headFields": [
+                {
+                  "type": "string",
+                  "label": "מספר מסמך",
+                  "sourceField": "DocNum",
+                  "targetField": "documentNumber"
+                },
+                {
+                  "type": "date",
+                  "label": "CURDATE",
+                  "sourceField": "DocDate",
+                  "targetField": "date"
+                },
+                {
+                  "type": "string",
+                  "label": "לקוח",
+                  "sourceField": "CardCode",
+                  "targetField": "userExtId"
+                },
+                {
+                  "type": "money",
+                  "label": "סה״כ לפני הנחה",
+                  "sourceField": "TotalBeforeDiscount",
+                  "targetField": "totalBeforeDiscount"
+                },
+                {
+                  "type": "money",
+                  "label": "סה״כ לאחר הנחה",
+                  "sourceField": "TotalAfterDiscount",
+                  "targetField": "totalAfterDiscount"
+                },
+                {
+                  "type": "discount",
+                  "label": "הנחה",
+                  "sourceField": "DiscPrcnt",
+                  "targetField": "totalPrecentDiscount"
+                },
+                {
+                  "type": "string",
+                  "label": "מטבע",
+                  "sourceField": "DocCur",
+                  "targetField": "currency"
+                },
+                {
+                  "type": "money",
+                  "label": "סה\"כ כולל מע\"מ",
+                  "sourceField": "TotalPriceAfterTax",
+                  "targetField": "totalPriceAfterTax"
+                },
+                {
+                  "type": "money",
+                  "label": "מע״מ",
+                  "sourceField": "TaxSum",
+                  "targetField": "totalTax"
+                },
+                {
+                  "type": "string",
+                  "label": "סטטוס",
+                  "sourceField": "DocStatus",
+                  "targetField": "status"
+                },
+                {
+                  "type": "string",
+                  "label": "הערה",
+                  "sourceField": "Comments",
+                  "targetField": "comment"
+                }
+              ],
+              "lineColumns": [
+                {
+                  "label": "תמונה",
+                  "cellType": "image",
+                  "columnKey": "image",
+                  "sourceField": null
+                },
+                {
+                  "label": "מק״ט",
+                  "cellType": "sku",
+                  "columnKey": "sku",
+                  "sourceField": "json(DocumentLines).ItemCode"
+                },
+                {
+                  "label": "תיאור פריט",
+                  "cellType": "text",
+                  "columnKey": "description",
+                  "sourceField": "json(DocumentLines).ItemDescription"
+                },
+                {
+                  "label": "כמות",
+                  "cellType": "quantity",
+                  "columnKey": "quantity",
+                  "sourceField": "json(DocumentLines).Quantity"
+                },
+                {
+                  "label": "מחיר",
+                  "cellType": "money",
+                  "columnKey": "price",
+                  "sourceField": "json(DocumentLines).Price"
+                },
+                {
+                  "label": "הנחה",
+                  "cellType": "discount",
+                  "columnKey": "discount",
+                  "sourceField": "json(DocumentLines).LineDiscount"
+                },
+                {
+                  "label": "הערה",
+                  "cellType": "text",
+                  "columnKey": "comment",
+                  "sourceField": "json(DocumentLines).FreeTxt"
+                },
+                {
+                  "label": "תאריך משלוח",
+                  "cellType": "dateHandler",
+                  "columnKey": "date",
+                  "sourceField": "json(DocumentLines).ShipDate"
+                }
+              ],
+              "lineAttributes": []
+            },
+            "execution": {
+              "mode": "single"
+            }
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": false
+    },
+    {
+      "id": null,
+      "key": "sap_ar_invoices",
+      "name": "sap user A/R invoices",
+      "mapperType": "documentLines",
+      "table": null,
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "sap user A/R invoices",
+      "linkedName": "sap_ar_invoice_items",
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "sap_ar_invoices",
+          "name": "sap user A/R invoices",
+          "description": "sap user A/R invoices",
+          "templateKey": "sap_ar_invoices_by_customer",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "documents": {
+              "headFields": [
+                {
+                  "type": "string",
+                  "label": "מספר מסמך",
+                  "sourceField": "DocNum",
+                  "targetField": "documentNumber"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך",
+                  "sourceField": "DocDate",
+                  "targetField": "date"
+                },
+                {
+                  "type": "money",
+                  "label": "סה״כ",
+                  "sourceField": "TotalBeforeTax",
+                  "targetField": "totalAfterDiscount"
+                },
+                {
+                  "type": "money",
+                  "label": "מע״מ",
+                  "sourceField": "TaxSum",
+                  "targetField": "totalTax"
+                },
+                {
+                  "type": "money",
+                  "label": "סה\"כ אחרי מע\"מ",
+                  "sourceField": "TotalPriceAfterTax",
+                  "targetField": "money"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך משלוח",
+                  "sourceField": "DocDueDate",
+                  "targetField": "dueDate"
+                },
+                {
+                  "type": "string",
+                  "label": "סטטוס",
+                  "sourceField": "DocStatus",
+                  "targetField": "status"
+                }
+              ],
+              "lineColumns": [],
+              "lineAttributes": []
+            },
+            "execution": {
+              "mode": "single"
+            },
+            "itemsPath": "rows"
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": false
+    },
+    {
+      "id": null,
+      "key": "sap_ar_invoices_agent",
+      "name": "sap A/R invoices agent",
+      "mapperType": "documentLines",
+      "table": null,
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "sap A/R invoices agent",
+      "linkedName": "sap_ar_invoice_items",
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "sap_ar_invoices_agent",
+          "name": "sap A/R invoices agent",
+          "description": "sap A/R invoices agent",
+          "templateKey": "sap_ar_invoices_for_agents",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "documents": {
+              "headFields": [
+                {
+                  "type": "string",
+                  "label": "מספר מסמך",
+                  "sourceField": "DocNum",
+                  "targetField": "documentNumber"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך",
+                  "sourceField": "DocDate",
+                  "targetField": "createdAt"
+                },
+                {
+                  "type": "string",
+                  "label": "מספר לקוח",
+                  "sourceField": "CardCode",
+                  "targetField": "userExtId"
+                },
+                {
+                  "type": "string",
+                  "label": "שם לקוח",
+                  "sourceField": "CardName",
+                  "targetField": "text_1"
+                },
+                {
+                  "type": "money",
+                  "label": "סה״כ",
+                  "sourceField": "TotalBeforeTax",
+                  "targetField": "totalAfterDiscount"
+                },
+                {
+                  "type": "money",
+                  "label": "מע״מ",
+                  "sourceField": "TaxSum",
+                  "targetField": "totalTax"
+                },
+                {
+                  "type": "money",
+                  "label": "סה״כ כולל מע״מ",
+                  "sourceField": "TotalPriceAfterTax",
+                  "targetField": "money"
+                },
+                {
+                  "type": "string",
+                  "label": "סוכן",
+                  "sourceField": "SalesPersonName",
+                  "targetField": "text_1"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך משלוח",
+                  "sourceField": "DocDueDate",
+                  "targetField": "dueDate"
+                },
+                {
+                  "type": "string",
+                  "label": "סטטוס",
+                  "sourceField": "DocStatus",
+                  "targetField": "status"
+                }
+              ],
+              "lineColumns": [],
+              "lineAttributes": []
+            },
+            "execution": {
+              "mode": "single"
+            },
+            "itemsPath": "rows"
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": true
+    },
+    {
+      "id": null,
+      "key": "sap_ar_credit_memo_items",
+      "name": "sap A/R credit memo items",
+      "mapperType": "documentLines",
+      "table": null,
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "sap A/R credit memo items",
+      "linkedName": null,
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "sap_ar_credit_memo_items",
+          "name": "sap A/R credit memo items",
+          "description": "sap A/R credit memo items",
+          "templateKey": "sap_ar_credit_memo_with_rows_by_docnum",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "documents": {
+              "linesPath": "DocumentLines",
+              "headFields": [
+                {
+                  "type": "string",
+                  "label": "מספר מסמך",
+                  "sourceField": "DocNum",
+                  "targetField": "documentNumber"
+                },
+                {
+                  "type": "date",
+                  "label": "CURDATE",
+                  "sourceField": "DocDate",
+                  "targetField": "date"
+                },
+                {
+                  "type": "string",
+                  "label": "לקוח",
+                  "sourceField": "CardCode",
+                  "targetField": "userExtId"
+                },
+                {
+                  "type": "money",
+                  "label": "סה״כ לפני הנחה",
+                  "sourceField": "TotalBeforeDiscount",
+                  "targetField": "totalBeforeDiscount"
+                },
+                {
+                  "type": "money",
+                  "label": "סה״כ לאחר הנחה",
+                  "sourceField": "TotalAfterDiscount",
+                  "targetField": "totalAfterDiscount"
+                },
+                {
+                  "type": "discount",
+                  "label": "הנחה",
+                  "sourceField": "DiscPrcnt",
+                  "targetField": "totalPrecentDiscount"
+                },
+                {
+                  "type": "string",
+                  "label": "מטבע",
+                  "sourceField": "DocCur",
+                  "targetField": "currency"
+                },
+                {
+                  "type": "money",
+                  "label": "סה\"כ כולל מע\"מ",
+                  "sourceField": "TotalPriceAfterTax",
+                  "targetField": "totalPriceAfterTax"
+                },
+                {
+                  "type": "money",
+                  "label": "מע״מ",
+                  "sourceField": "TaxSum",
+                  "targetField": "totalTax"
+                },
+                {
+                  "type": "string",
+                  "label": "סטטוס",
+                  "sourceField": "DocStatus",
+                  "targetField": "status"
+                },
+                {
+                  "type": "string",
+                  "label": "הערה",
+                  "sourceField": "Comments",
+                  "targetField": "comment"
+                }
+              ],
+              "lineColumns": [
+                {
+                  "label": "תמונה",
+                  "cellType": "image",
+                  "columnKey": "image",
+                  "sourceField": null
+                },
+                {
+                  "label": "מק״ט",
+                  "cellType": "sku",
+                  "columnKey": "sku",
+                  "sourceField": "json(DocumentLines).ItemCode"
+                },
+                {
+                  "label": "תיאור פריט",
+                  "cellType": "text",
+                  "columnKey": "description",
+                  "sourceField": "json(DocumentLines).ItemDescription"
+                },
+                {
+                  "label": "כמות",
+                  "cellType": "quantity",
+                  "columnKey": "quantity",
+                  "sourceField": "json(DocumentLines).Quantity"
+                },
+                {
+                  "label": "מחיר",
+                  "cellType": "money",
+                  "columnKey": "price",
+                  "sourceField": "json(DocumentLines).Price"
+                },
+                {
+                  "label": "הנחה",
+                  "cellType": "discount",
+                  "columnKey": "discount",
+                  "sourceField": "json(DocumentLines).LineDiscount"
+                },
+                {
+                  "label": "הערה",
+                  "cellType": "text",
+                  "columnKey": "comment",
+                  "sourceField": "json(DocumentLines).FreeTxt"
+                },
+                {
+                  "label": "תאריך משלוח",
+                  "cellType": "dateHandler",
+                  "columnKey": "date",
+                  "sourceField": "json(DocumentLines).ShipDate"
+                }
+              ],
+              "lineAttributes": []
+            },
+            "execution": {
+              "mode": "single"
+            }
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": false
+    },
+    {
+      "id": null,
+      "key": "sap_ar_credit_memos",
+      "name": "sap user A/R credit memos",
+      "mapperType": "documentLines",
+      "table": null,
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "sap user A/R credit memos",
+      "linkedName": "sap_ar_credit_memo_items",
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "sap_ar_credit_memos",
+          "name": "sap user A/R credit memos",
+          "description": "sap user A/R credit memos",
+          "templateKey": "sap_ar_credit_memos_by_customer",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "documents": {
+              "headFields": [
+                {
+                  "type": "string",
+                  "label": "מספר מסמך",
+                  "sourceField": "DocNum",
+                  "targetField": "documentNumber"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך",
+                  "sourceField": "DocDate",
+                  "targetField": "date"
+                },
+                {
+                  "type": "money",
+                  "label": "סה״כ",
+                  "sourceField": "TotalBeforeTax",
+                  "targetField": "totalAfterDiscount"
+                },
+                {
+                  "type": "money",
+                  "label": "מע״מ",
+                  "sourceField": "TaxSum",
+                  "targetField": "totalTax"
+                },
+                {
+                  "type": "money",
+                  "label": "סה\"כ אחרי מע\"מ",
+                  "sourceField": "TotalPriceAfterTax",
+                  "targetField": "money"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך משלוח",
+                  "sourceField": "DocDueDate",
+                  "targetField": "dueDate"
+                },
+                {
+                  "type": "string",
+                  "label": "סטטוס",
+                  "sourceField": "DocStatus",
+                  "targetField": "status"
+                }
+              ],
+              "lineColumns": [],
+              "lineAttributes": []
+            },
+            "execution": {
+              "mode": "single"
+            },
+            "itemsPath": "rows"
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": false
+    },
+    {
+      "id": null,
+      "key": "sap_ar_credit_memos_agent",
+      "name": "sap A/R credit memos agent",
+      "mapperType": "documentLines",
+      "table": null,
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "sap A/R credit memos agent",
+      "linkedName": "sap_ar_credit_memo_items",
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "sap_ar_credit_memos_agent",
+          "name": "sap A/R credit memos agent",
+          "description": "sap A/R credit memos agent",
+          "templateKey": "sap_ar_credit_memos_for_agents",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "documents": {
+              "headFields": [
+                {
+                  "type": "string",
+                  "label": "מספר מסמך",
+                  "sourceField": "DocNum",
+                  "targetField": "documentNumber"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך",
+                  "sourceField": "DocDate",
+                  "targetField": "createdAt"
+                },
+                {
+                  "type": "string",
+                  "label": "מספר לקוח",
+                  "sourceField": "CardCode",
+                  "targetField": "userExtId"
+                },
+                {
+                  "type": "string",
+                  "label": "שם לקוח",
+                  "sourceField": "CardName",
+                  "targetField": "text_1"
+                },
+                {
+                  "type": "money",
+                  "label": "סה״כ",
+                  "sourceField": "TotalBeforeTax",
+                  "targetField": "totalAfterDiscount"
+                },
+                {
+                  "type": "money",
+                  "label": "מע״מ",
+                  "sourceField": "TaxSum",
+                  "targetField": "totalTax"
+                },
+                {
+                  "type": "money",
+                  "label": "סה״כ כולל מע״מ",
+                  "sourceField": "TotalPriceAfterTax",
+                  "targetField": "money"
+                },
+                {
+                  "type": "string",
+                  "label": "סוכן",
+                  "sourceField": "SalesPersonName",
+                  "targetField": "text_1"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך משלוח",
+                  "sourceField": "DocDueDate",
+                  "targetField": "dueDate"
+                },
+                {
+                  "type": "string",
+                  "label": "סטטוס",
+                  "sourceField": "DocStatus",
+                  "targetField": "status"
+                }
+              ],
+              "lineColumns": [],
+              "lineAttributes": []
+            },
+            "execution": {
+              "mode": "single"
+            },
+            "itemsPath": "rows"
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": true
+    },
+    {
+      "id": null,
+      "key": "sap_ar_down_payments",
+      "name": "sap user A/R down payments",
+      "mapperType": "documentLines",
+      "table": null,
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "sap user A/R down payments",
+      "linkedName": null,
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "sap_ar_down_payments",
+          "name": "sap user A/R down payments",
+          "description": "sap user A/R down payments",
+          "templateKey": "sap_ar_down_payments_by_customer",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "documents": {
+              "headFields": [
+                {
+                  "type": "string",
+                  "label": "מספר מסמך",
+                  "sourceField": "DocNum",
+                  "targetField": "documentNumber"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך",
+                  "sourceField": "DocDate",
+                  "targetField": "date"
+                },
+                {
+                  "type": "money",
+                  "label": "סה״כ",
+                  "sourceField": "TotalBeforeTax",
+                  "targetField": "totalAfterDiscount"
+                },
+                {
+                  "type": "money",
+                  "label": "מע״מ",
+                  "sourceField": "TaxSum",
+                  "targetField": "totalTax"
+                },
+                {
+                  "type": "money",
+                  "label": "סה\"כ אחרי מע\"מ",
+                  "sourceField": "TotalPriceAfterTax",
+                  "targetField": "money"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך משלוח",
+                  "sourceField": "DocDueDate",
+                  "targetField": "dueDate"
+                },
+                {
+                  "type": "string",
+                  "label": "סטטוס",
+                  "sourceField": "DocStatus",
+                  "targetField": "status"
+                }
+              ],
+              "lineColumns": [],
+              "lineAttributes": []
+            },
+            "execution": {
+              "mode": "single"
+            },
+            "itemsPath": "rows"
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": false
+    },
+    {
+      "id": null,
+      "key": "sap_ar_down_payments_agent",
+      "name": "sap A/R down payments agent",
+      "mapperType": "documentLines",
+      "table": null,
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "sap A/R down payments agent",
+      "linkedName": null,
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "sap_ar_down_payments_agent",
+          "name": "sap A/R down payments agent",
+          "description": "sap A/R down payments agent",
+          "templateKey": "sap_ar_down_payments_for_agents",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "documents": {
+              "headFields": [
+                {
+                  "type": "string",
+                  "label": "מספר מסמך",
+                  "sourceField": "DocNum",
+                  "targetField": "documentNumber"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך",
+                  "sourceField": "DocDate",
+                  "targetField": "createdAt"
+                },
+                {
+                  "type": "string",
+                  "label": "מספר לקוח",
+                  "sourceField": "CardCode",
+                  "targetField": "userExtId"
+                },
+                {
+                  "type": "string",
+                  "label": "שם לקוח",
+                  "sourceField": "CardName",
+                  "targetField": "text_1"
+                },
+                {
+                  "type": "money",
+                  "label": "סה״כ",
+                  "sourceField": "TotalBeforeTax",
+                  "targetField": "totalAfterDiscount"
+                },
+                {
+                  "type": "money",
+                  "label": "מע״מ",
+                  "sourceField": "TaxSum",
+                  "targetField": "totalTax"
+                },
+                {
+                  "type": "money",
+                  "label": "סה״כ כולל מע״מ",
+                  "sourceField": "TotalPriceAfterTax",
+                  "targetField": "money"
+                },
+                {
+                  "type": "string",
+                  "label": "סוכן",
+                  "sourceField": "SalesPersonName",
+                  "targetField": "text_1"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך משלוח",
+                  "sourceField": "DocDueDate",
+                  "targetField": "dueDate"
+                },
+                {
+                  "type": "string",
+                  "label": "סטטוס",
+                  "sourceField": "DocStatus",
+                  "targetField": "status"
+                }
+              ],
+              "lineColumns": [],
+              "lineAttributes": []
+            },
+            "execution": {
+              "mode": "single"
+            },
+            "itemsPath": "rows"
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": true
+    },
+    {
+      "id": null,
+      "key": "sap_correction_invoices",
+      "name": "sap user correction invoices",
+      "mapperType": "documentLines",
+      "table": null,
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "sap user correction invoices",
+      "linkedName": null,
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "sap_correction_invoices",
+          "name": "sap user correction invoices",
+          "description": "sap user correction invoices",
+          "templateKey": "sap_correction_invoices_by_customer",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "documents": {
+              "headFields": [
+                {
+                  "type": "string",
+                  "label": "מספר מסמך",
+                  "sourceField": "DocNum",
+                  "targetField": "documentNumber"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך",
+                  "sourceField": "DocDate",
+                  "targetField": "date"
+                },
+                {
+                  "type": "money",
+                  "label": "סה״כ",
+                  "sourceField": "TotalBeforeTax",
+                  "targetField": "totalAfterDiscount"
+                },
+                {
+                  "type": "money",
+                  "label": "מע״מ",
+                  "sourceField": "TaxSum",
+                  "targetField": "totalTax"
+                },
+                {
+                  "type": "money",
+                  "label": "סה\"כ אחרי מע\"מ",
+                  "sourceField": "TotalPriceAfterTax",
+                  "targetField": "money"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך משלוח",
+                  "sourceField": "DocDueDate",
+                  "targetField": "dueDate"
+                },
+                {
+                  "type": "string",
+                  "label": "סטטוס",
+                  "sourceField": "DocStatus",
+                  "targetField": "status"
+                }
+              ],
+              "lineColumns": [],
+              "lineAttributes": []
+            },
+            "execution": {
+              "mode": "single"
+            },
+            "itemsPath": "rows"
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": false
+    },
+    {
+      "id": null,
+      "key": "sap_correction_invoices_agent",
+      "name": "sap correction invoices agent",
+      "mapperType": "documentLines",
+      "table": null,
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "sap correction invoices agent",
+      "linkedName": null,
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "sap_correction_invoices_agent",
+          "name": "sap correction invoices agent",
+          "description": "sap correction invoices agent",
+          "templateKey": "sap_correction_invoices_for_agents",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "documents": {
+              "headFields": [
+                {
+                  "type": "string",
+                  "label": "מספר מסמך",
+                  "sourceField": "DocNum",
+                  "targetField": "documentNumber"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך",
+                  "sourceField": "DocDate",
+                  "targetField": "createdAt"
+                },
+                {
+                  "type": "string",
+                  "label": "מספר לקוח",
+                  "sourceField": "CardCode",
+                  "targetField": "userExtId"
+                },
+                {
+                  "type": "string",
+                  "label": "שם לקוח",
+                  "sourceField": "CardName",
+                  "targetField": "text_1"
+                },
+                {
+                  "type": "money",
+                  "label": "סה״כ",
+                  "sourceField": "TotalBeforeTax",
+                  "targetField": "totalAfterDiscount"
+                },
+                {
+                  "type": "money",
+                  "label": "מע״מ",
+                  "sourceField": "TaxSum",
+                  "targetField": "totalTax"
+                },
+                {
+                  "type": "money",
+                  "label": "סה״כ כולל מע״מ",
+                  "sourceField": "TotalPriceAfterTax",
+                  "targetField": "money"
+                },
+                {
+                  "type": "string",
+                  "label": "סוכן",
+                  "sourceField": "SalesPersonName",
+                  "targetField": "text_1"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך משלוח",
+                  "sourceField": "DocDueDate",
+                  "targetField": "dueDate"
+                },
+                {
+                  "type": "string",
+                  "label": "סטטוס",
+                  "sourceField": "DocStatus",
+                  "targetField": "status"
+                }
+              ],
+              "lineColumns": [],
+              "lineAttributes": []
+            },
+            "execution": {
+              "mode": "single"
+            },
+            "itemsPath": "rows"
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": true
+    },
+    {
+      "id": null,
       "key": "sap_price_list",
       "name": "sap price list",
       "mapperType": "simple",

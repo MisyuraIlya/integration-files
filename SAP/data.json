@@ -247,7 +247,7 @@
           "key": "categories_sap",
           "name": "categories sap",
           "description": "categories sap",
-          "templateKey": null,
+          "templateKey": "sap_categories_list",
           "integrationTemplateId": null,
           "template": null,
           "config": {

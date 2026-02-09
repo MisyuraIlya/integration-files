@@ -294,7 +294,7 @@
       "dynamicType": null,
       "manualHandle": null,
       "isCanChange": true,
-      "isShow": true,
+      "isShow": false,
       "isActive": true,
       "description": "שורות הזמנה",
       "linkedName": null,
@@ -637,7 +637,7 @@
       "dynamicType": null,
       "manualHandle": null,
       "isCanChange": true,
-      "isShow": true,
+      "isShow": false,
       "isActive": true,
       "description": "שורות הצעת מחיר",
       "linkedName": null,
@@ -980,7 +980,7 @@
       "dynamicType": null,
       "manualHandle": null,
       "isCanChange": true,
-      "isShow": true,
+      "isShow": false,
       "isActive": true,
       "description": "שורות תעודת משלוח",
       "linkedName": null,
@@ -1323,7 +1323,7 @@
       "dynamicType": null,
       "manualHandle": null,
       "isCanChange": true,
-      "isShow": true,
+      "isShow": false,
       "isActive": true,
       "description": "שורות החזרה",
       "linkedName": null,
@@ -1666,7 +1666,7 @@
       "dynamicType": null,
       "manualHandle": null,
       "isCanChange": true,
-      "isShow": true,
+      "isShow": false,
       "isActive": true,
       "description": "שורות חשבונית לקוח",
       "linkedName": null,
@@ -2009,7 +2009,7 @@
       "dynamicType": null,
       "manualHandle": null,
       "isCanChange": true,
-      "isShow": true,
+      "isShow": false,
       "isActive": true,
       "description": "שורות תעודת זיכוי",
       "linkedName": null,
@@ -2953,6 +2953,76 @@
               "mode": "single"
             },
             "itemsPath": "rows"
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": false
+    },
+
+    {
+      "id": null,
+      "key": "USER_PURCHASE_HISTORY_SKU",
+      "name": "sap USER_PURCHASE_HISTORY_SKU",
+      "mapperType": "dynamic",
+      "table": null,
+      "dynamicType": "USER_PURCHASE_HISTORY_SKU",
+      "manualHandle": true,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": null,
+      "linkedName": null,
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "USER_PURCHASE_HISTORY_SKU",
+          "name": "sap USER_PURCHASE_HISTORY_SKU",
+          "description": "USER_PURCHASE_HISTORY_SKU",
+          "templateKey": "sap_customer_purchase_history_sku",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "dynamic": {
+              "columns": [
+                {
+                  "key": "DocNum",
+                  "type": "documentNumber",
+                  "label": "מספר מסמך",
+                  "sourceField": "DocNum"
+                },
+                {
+                  "key": "DocDate",
+                  "type": "dateHandler",
+                  "label": "תאריך",
+                  "sourceField": "DocDate"
+                },
+                {
+                  "key": "Price",
+                  "type": "money",
+                  "label": "מחיר",
+                  "sourceField": "Price"
+                },
+                {
+                  "key": "Quantity",
+                  "type": "string",
+                  "label": "כמות",
+                  "sourceField": "Quantity"
+                },
+                {
+                  "key": "LineTotal",
+                  "type": "money",
+                  "label": "סה\"כ",
+                  "sourceField": "LineTotal"
+                }
+              ]
+            },
+            "execution": {
+              "mode": "single"
+            }
           },
           "isCanChange": true,
           "createdAt": null,

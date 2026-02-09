@@ -288,7 +288,7 @@
     {
       "id": null,
       "key": "sap_order_items",
-      "name": "sap order items",
+      "name": "שורות הזמנה",
       "mapperType": "documentLines",
       "table": null,
       "dynamicType": null,
@@ -445,7 +445,7 @@
     {
       "id": null,
       "key": "sap_orders",
-      "name": "sap user orders",
+      "name": "הזמנות לקוח",
       "mapperType": "documentLines",
       "table": null,
       "dynamicType": null,
@@ -529,7 +529,7 @@
     {
       "id": null,
       "key": "sap_orders_agent",
-      "name": "sap orders agent",
+      "name": "כל ההזמנות",
       "mapperType": "documentLines",
       "table": null,
       "dynamicType": null,
@@ -631,7 +631,7 @@
     {
       "id": null,
       "key": "sap_quotation_items",
-      "name": "sap quotation items",
+      "name": "שורות הצעת מחיר",
       "mapperType": "documentLines",
       "table": null,
       "dynamicType": null,
@@ -788,7 +788,7 @@
     {
       "id": null,
       "key": "sap_quotations",
-      "name": "sap user quotations",
+      "name": "הצעות מחיר לקוח",
       "mapperType": "documentLines",
       "table": null,
       "dynamicType": null,
@@ -872,7 +872,7 @@
     {
       "id": null,
       "key": "sap_quotations_agent",
-      "name": "sap quotations agent",
+      "name": "כל הצעות המחיר",
       "mapperType": "documentLines",
       "table": null,
       "dynamicType": null,
@@ -974,7 +974,7 @@
     {
       "id": null,
       "key": "sap_delivery_items",
-      "name": "sap delivery items",
+      "name": "שורות תעודת משלוח",
       "mapperType": "documentLines",
       "table": null,
       "dynamicType": null,
@@ -1131,7 +1131,7 @@
     {
       "id": null,
       "key": "sap_deliveries",
-      "name": "sap user deliveries",
+      "name": "תעודות משלוח לקוח",
       "mapperType": "documentLines",
       "table": null,
       "dynamicType": null,
@@ -1215,7 +1215,7 @@
     {
       "id": null,
       "key": "sap_deliveries_agent",
-      "name": "sap deliveries agent",
+      "name": "כל תעודות המשלוח",
       "mapperType": "documentLines",
       "table": null,
       "dynamicType": null,
@@ -1317,7 +1317,7 @@
     {
       "id": null,
       "key": "sap_return_items",
-      "name": "sap return items",
+      "name": "שורות החזרה",
       "mapperType": "documentLines",
       "table": null,
       "dynamicType": null,
@@ -1474,7 +1474,7 @@
     {
       "id": null,
       "key": "sap_returns",
-      "name": "sap user returns",
+      "name": "החזרות לקוח",
       "mapperType": "documentLines",
       "table": null,
       "dynamicType": null,
@@ -1558,7 +1558,7 @@
     {
       "id": null,
       "key": "sap_returns_agent",
-      "name": "sap returns agent",
+      "name": "כל ההחזרות",
       "mapperType": "documentLines",
       "table": null,
       "dynamicType": null,
@@ -1660,7 +1660,7 @@
     {
       "id": null,
       "key": "sap_ar_invoice_items",
-      "name": "sap A/R invoice items",
+      "name": "שורות חשבונית לקוח",
       "mapperType": "documentLines",
       "table": null,
       "dynamicType": null,
@@ -1817,7 +1817,7 @@
     {
       "id": null,
       "key": "sap_ar_invoices",
-      "name": "sap user A/R invoices",
+      "name": "חשבוניות לקוח",
       "mapperType": "documentLines",
       "table": null,
       "dynamicType": null,
@@ -1901,7 +1901,7 @@
     {
       "id": null,
       "key": "sap_ar_invoices_agent",
-      "name": "sap A/R invoices agent",
+      "name": "כל חשבוניות הלקוח",
       "mapperType": "documentLines",
       "table": null,
       "dynamicType": null,
@@ -2003,7 +2003,7 @@
     {
       "id": null,
       "key": "sap_ar_credit_memo_items",
-      "name": "sap A/R credit memo items",
+      "name": "שורות תעודת זיכוי",
       "mapperType": "documentLines",
       "table": null,
       "dynamicType": null,
@@ -2160,7 +2160,7 @@
     {
       "id": null,
       "key": "sap_ar_credit_memos",
-      "name": "sap user A/R credit memos",
+      "name": "תעודות זיכוי לקוח",
       "mapperType": "documentLines",
       "table": null,
       "dynamicType": null,
@@ -2244,7 +2244,7 @@
     {
       "id": null,
       "key": "sap_ar_credit_memos_agent",
-      "name": "sap A/R credit memos agent",
+      "name": "כל תעודות הזיכוי",
       "mapperType": "documentLines",
       "table": null,
       "dynamicType": null,
@@ -2346,7 +2346,7 @@
     {
       "id": null,
       "key": "sap_ar_down_payments",
-      "name": "sap user A/R down payments",
+      "name": "מקדמות לקוח",
       "mapperType": "documentLines",
       "table": null,
       "dynamicType": null,
@@ -2430,7 +2430,7 @@
     {
       "id": null,
       "key": "sap_ar_down_payments_agent",
-      "name": "sap A/R down payments agent",
+      "name": "כל המקדמות",
       "mapperType": "documentLines",
       "table": null,
       "dynamicType": null,
@@ -2532,7 +2532,7 @@
     {
       "id": null,
       "key": "sap_correction_invoices",
-      "name": "sap user correction invoices",
+      "name": "חשבוניות תיקון לקוח",
       "mapperType": "documentLines",
       "table": null,
       "dynamicType": null,
@@ -2616,7 +2616,7 @@
     {
       "id": null,
       "key": "sap_correction_invoices_agent",
-      "name": "sap correction invoices agent",
+      "name": "כל חשבוניות התיקון",
       "mapperType": "documentLines",
       "table": null,
       "dynamicType": null,

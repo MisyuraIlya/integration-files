@@ -296,7 +296,7 @@
       "isCanChange": true,
       "isShow": true,
       "isActive": true,
-      "description": "sap order items",
+      "description": "שורות הזמנה",
       "linkedName": null,
       "linkedPdf": null,
       "dataSources": [
@@ -453,7 +453,7 @@
       "isCanChange": true,
       "isShow": true,
       "isActive": true,
-      "description": "sap user orders",
+      "description": "הזמנות לקוח",
       "linkedName": "sap_order_items",
       "linkedPdf": null,
       "dataSources": [
@@ -537,7 +537,7 @@
       "isCanChange": true,
       "isShow": true,
       "isActive": true,
-      "description": "sap orders agent",
+      "description": "כל ההזמנות",
       "linkedName": "sap_order_items",
       "linkedPdf": null,
       "dataSources": [
@@ -639,7 +639,7 @@
       "isCanChange": true,
       "isShow": true,
       "isActive": true,
-      "description": "sap quotation items",
+      "description": "שורות הצעת מחיר",
       "linkedName": null,
       "linkedPdf": null,
       "dataSources": [
@@ -796,7 +796,7 @@
       "isCanChange": true,
       "isShow": true,
       "isActive": true,
-      "description": "sap user quotations",
+      "description": "הצעות מחיר לקוח",
       "linkedName": "sap_quotation_items",
       "linkedPdf": null,
       "dataSources": [
@@ -880,7 +880,7 @@
       "isCanChange": true,
       "isShow": true,
       "isActive": true,
-      "description": "sap quotations agent",
+      "description": "כל הצעות המחיר",
       "linkedName": "sap_quotation_items",
       "linkedPdf": null,
       "dataSources": [
@@ -982,7 +982,7 @@
       "isCanChange": true,
       "isShow": true,
       "isActive": true,
-      "description": "sap delivery items",
+      "description": "שורות תעודת משלוח",
       "linkedName": null,
       "linkedPdf": null,
       "dataSources": [
@@ -1139,7 +1139,7 @@
       "isCanChange": true,
       "isShow": true,
       "isActive": true,
-      "description": "sap user deliveries",
+      "description": "תעודות משלוח לקוח",
       "linkedName": "sap_delivery_items",
       "linkedPdf": null,
       "dataSources": [
@@ -1223,7 +1223,7 @@
       "isCanChange": true,
       "isShow": true,
       "isActive": true,
-      "description": "sap deliveries agent",
+      "description": "כל תעודות המשלוח",
       "linkedName": "sap_delivery_items",
       "linkedPdf": null,
       "dataSources": [
@@ -1325,7 +1325,7 @@
       "isCanChange": true,
       "isShow": true,
       "isActive": true,
-      "description": "sap return items",
+      "description": "שורות החזרה",
       "linkedName": null,
       "linkedPdf": null,
       "dataSources": [
@@ -1482,7 +1482,7 @@
       "isCanChange": true,
       "isShow": true,
       "isActive": true,
-      "description": "sap user returns",
+      "description": "החזרות לקוח",
       "linkedName": "sap_return_items",
       "linkedPdf": null,
       "dataSources": [
@@ -1566,7 +1566,7 @@
       "isCanChange": true,
       "isShow": true,
       "isActive": true,
-      "description": "sap returns agent",
+      "description": "כל ההחזרות",
       "linkedName": "sap_return_items",
       "linkedPdf": null,
       "dataSources": [
@@ -1668,7 +1668,7 @@
       "isCanChange": true,
       "isShow": true,
       "isActive": true,
-      "description": "sap A/R invoice items",
+      "description": "שורות חשבונית לקוח",
       "linkedName": null,
       "linkedPdf": null,
       "dataSources": [
@@ -1825,7 +1825,7 @@
       "isCanChange": true,
       "isShow": true,
       "isActive": true,
-      "description": "sap user A/R invoices",
+      "description": "חשבוניות לקוח",
       "linkedName": "sap_ar_invoice_items",
       "linkedPdf": null,
       "dataSources": [
@@ -1909,7 +1909,7 @@
       "isCanChange": true,
       "isShow": true,
       "isActive": true,
-      "description": "sap A/R invoices agent",
+      "description": "כל חשבוניות הלקוח",
       "linkedName": "sap_ar_invoice_items",
       "linkedPdf": null,
       "dataSources": [
@@ -2011,7 +2011,7 @@
       "isCanChange": true,
       "isShow": true,
       "isActive": true,
-      "description": "sap A/R credit memo items",
+      "description": "שורות תעודת זיכוי",
       "linkedName": null,
       "linkedPdf": null,
       "dataSources": [
@@ -2168,7 +2168,7 @@
       "isCanChange": true,
       "isShow": true,
       "isActive": true,
-      "description": "sap user A/R credit memos",
+      "description": "תעודות זיכוי לקוח",
       "linkedName": "sap_ar_credit_memo_items",
       "linkedPdf": null,
       "dataSources": [
@@ -2252,7 +2252,7 @@
       "isCanChange": true,
       "isShow": true,
       "isActive": true,
-      "description": "sap A/R credit memos agent",
+      "description": "כל תעודות הזיכוי",
       "linkedName": "sap_ar_credit_memo_items",
       "linkedPdf": null,
       "dataSources": [
@@ -2354,7 +2354,7 @@
       "isCanChange": true,
       "isShow": true,
       "isActive": true,
-      "description": "sap user A/R down payments",
+      "description": "מקדמות לקוח",
       "linkedName": null,
       "linkedPdf": null,
       "dataSources": [
@@ -2438,7 +2438,7 @@
       "isCanChange": true,
       "isShow": true,
       "isActive": true,
-      "description": "sap A/R down payments agent",
+      "description": "כל המקדמות",
       "linkedName": null,
       "linkedPdf": null,
       "dataSources": [
@@ -2540,7 +2540,7 @@
       "isCanChange": true,
       "isShow": true,
       "isActive": true,
-      "description": "sap user correction invoices",
+      "description": "חשבוניות תיקון לקוח",
       "linkedName": null,
       "linkedPdf": null,
       "dataSources": [
@@ -2624,7 +2624,7 @@
       "isCanChange": true,
       "isShow": true,
       "isActive": true,
-      "description": "sap correction invoices agent",
+      "description": "כל חשבוניות התיקון",
       "linkedName": null,
       "linkedPdf": null,
       "dataSources": [

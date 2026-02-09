@@ -512,6 +512,7 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
+    "isShow": false,
     "variables": [{ "name": "documentNumber", "type": "number", "default": 0, "required": true }],
     "strict_variables": true
   },
@@ -528,6 +529,7 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
+    "isShow": false,
     "variables": [{ "name": "documentNumber", "type": "number", "default": 0, "required": true }],
     "strict_variables": true
   },
@@ -544,6 +546,7 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
+    "isShow": false,
     "variables": [{ "name": "documentNumber", "type": "number", "default": 0, "required": true }],
     "strict_variables": true
   },
@@ -560,6 +563,7 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
+    "isShow": false,
     "variables": [{ "name": "documentNumber", "type": "number", "default": 0, "required": true }],
     "strict_variables": true
   },
@@ -576,6 +580,7 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
+    "isShow": false,
     "variables": [{ "name": "documentNumber", "type": "number", "default": 0, "required": true }],
     "strict_variables": true
   },
@@ -592,6 +597,7 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
+    "isShow": false,
     "variables": [{ "name": "documentNumber", "type": "number", "default": 0, "required": true }],
     "strict_variables": true
   },
@@ -605,7 +611,7 @@
     "path": "/sql",
     "headers": null,
     "query": null,
-    "body_template": "{\"query\":\"SELECT t0.DocEntry, t0.DocNum, t0.DocDate, t0.CardCode, t0.CardName, t1.ItemCode, t1.Dscription AS ItemDescription, t1.Quantity, t1.Price, t1.LineTotal, t1.WhsCode, t0.DocCur FROM dbo.ORDR t0 INNER JOIN dbo.RDR1 t1 ON t0.DocEntry = t1.DocEntry WHERE t0.CardCode = @CardCode AND t1.ItemCode = @ItemCode ORDER BY t0.DocDate DESC OFFSET @offset ROWS FETCH NEXT @limit ROWS ONLY\",\"params\":{\"CardCode\":\"{{userExtId}}\",\"ItemCode\":\"{{ItemCode}}\",\"offset\":{{offset}},\"limit\":{{limit}}}}",
+    "body_template": "{\"query\":\"SELECT t0.DocEntry, t0.DocNum, t0.DocDate, t0.CardCode, t0.CardName, t1.ItemCode, t1.Dscription AS ItemDescription, t1.Quantity, t1.Price, t1.LineTotal, t1.WhsCode, t0.DocCur FROM dbo.ORDR t0 INNER JOIN dbo.RDR1 t1 ON t0.DocEntry = t1.DocEntry WHERE t0.CardCode = @CardCode AND t1.ItemCode = @ItemCode ORDER BY t0.DocDate DESC OFFSET @offset ROWS FETCH NEXT @limit ROWS ONLY\",\"params\":{\"CardCode\":\"{{userExtId}}\",\"ItemCode\":\"{{sku}}\",\"offset\":{{offset}},\"limit\":{{limit}}}}",
     "body_type": "json",
     "response_parser": "json",
     "output_root": null,
@@ -668,7 +674,7 @@
     "path": "/sql",
     "headers": null,
     "query": null,
-    "body_template": "{\"query\":\"SELECT t0.ItemCode, t1.ItemName, t0.WhsCode, t2.WhsName, t0.OnHand, t0.IsCommited, t0.OnOrder, (t0.OnHand + t0.OnOrder - t0.IsCommited) AS Available FROM dbo.OITW t0 INNER JOIN dbo.OITM t1 ON t0.ItemCode = t1.ItemCode INNER JOIN dbo.OWHS t2 ON t0.WhsCode = t2.WhsCode WHERE t0.ItemCode = @ItemCode AND (t0.OnHand <> 0 OR t0.OnOrder <> 0 OR t0.IsCommited <> 0) ORDER BY t0.WhsCode\",\"params\":{\"ItemCode\":\"{{ItemCode}}\"}}",
+    "body_template": "{\"query\":\"SELECT t0.ItemCode, t1.ItemName, t0.WhsCode, t2.WhsName, t0.OnHand, t0.IsCommited, t0.OnOrder, (t0.OnHand + t0.OnOrder - t0.IsCommited) AS Available FROM dbo.OITW t0 INNER JOIN dbo.OITM t1 ON t0.ItemCode = t1.ItemCode INNER JOIN dbo.OWHS t2 ON t0.WhsCode = t2.WhsCode WHERE t0.ItemCode = @ItemCode AND (t0.OnHand <> 0 OR t0.OnOrder <> 0 OR t0.IsCommited <> 0) ORDER BY t0.WhsCode\",\"params\":{\"ItemCode\":\"{{sku}}\"}}",
     "body_type": "json",
     "response_parser": "json",
     "output_root": null,
@@ -692,7 +698,7 @@
     "path": "/sql",
     "headers": null,
     "query": null,
-    "body_template": "{\"query\":\"SELECT t0.ItemCode, t1.ItemName, t0.WhsCode, t2.WhsName, t0.OnHand, t0.IsCommited, t0.OnOrder, (t0.OnHand + t0.OnOrder - t0.IsCommited) AS Available FROM dbo.OITW t0 INNER JOIN dbo.OITM t1 ON t0.ItemCode = t1.ItemCode INNER JOIN dbo.OWHS t2 ON t0.WhsCode = t2.WhsCode WHERE t0.ItemCode = @ItemCode AND (t0.OnHand <> 0 OR t0.OnOrder <> 0 OR t0.IsCommited <> 0) ORDER BY t0.WhsCode\",\"params\":{\"ItemCode\":\"{{ItemCode}}\"}}",
+    "body_template": "{\"query\":\"SELECT t0.ItemCode, t1.ItemName, t0.WhsCode, t2.WhsName, t0.OnHand, t0.IsCommited, t0.OnOrder, (t0.OnHand + t0.OnOrder - t0.IsCommited) AS Available FROM dbo.OITW t0 INNER JOIN dbo.OITM t1 ON t0.ItemCode = t1.ItemCode INNER JOIN dbo.OWHS t2 ON t0.WhsCode = t2.WhsCode WHERE t0.ItemCode = @ItemCode AND (t0.OnHand <> 0 OR t0.OnOrder <> 0 OR t0.IsCommited <> 0) ORDER BY t0.WhsCode\",\"params\":{\"ItemCode\":\"{{sku}}\"}}",
     "body_type": "json",
     "response_parser": "json",
     "output_root": null,

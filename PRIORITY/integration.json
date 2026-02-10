@@ -479,7 +479,7 @@
       "$top": "{limit}",
       "$skip": "{offset}",
       "$filter": "AGENTCODE eq '{userExtId}' and CURDATE ge {dateFrom} and CURDATE le {dateTo}",
-      "$select": "CUSTNAME,CURDATE,ORDNAME,QPRICE,DISPRICE,VAT,TOTPRICE,ORDSTATUSDES"
+      "$select": "CUSTNAME,CDES,CURDATE,ORDNAME,QPRICE,DISPRICE,VAT,TOTPRICE,ORDSTATUSDES"
     },
     "body_template": null,
     "body_type": "none",
@@ -609,7 +609,7 @@
       "$top": "{limit}",
       "$skip": "{offset}",
       "$filter": "AGENTCODE eq '{userExtId}' and PDATE ge {dateFrom} and PDATE le {dateTo}",
-      "$select": "CUSTNAME,PDATE,CPROFNUM,QPRICE,DISPRICE,VAT,TOTPRICE,STATDES,EXPIRYDATE"
+      "$select": "CUSTNAME,CDES,PDATE,CPROFNUM,QPRICE,DISPRICE,VAT,TOTPRICE,STATDES,EXPIRYDATE"
     },
     "body_template": null,
     "body_type": "none",
@@ -739,7 +739,7 @@
       "$top": "{limit}",
       "$skip": "{offset}",
       "$filter": "AGENTCODE eq '{userExtId}' and CURDATE ge {dateFrom} and CURDATE le {dateTo}",
-      "$select": "CUSTNAME,CURDATE,DOCNO,TOTQUANT,QPRICE,DISPRICE,VAT,TOTPRICE,STATDES,UDATE"
+      "$select": "CUSTNAME,CDES,CURDATE,DOCNO,TOTQUANT,QPRICE,DISPRICE,VAT,TOTPRICE,STATDES,UDATE"
     },
     "body_template": null,
     "body_type": "none",
@@ -869,7 +869,7 @@
       "$top": "{limit}",
       "$skip": "{offset}",
       "$filter": "AGENTCODE eq '{userExtId}' and IVDATE ge {dateFrom} and IVDATE le {dateTo}",
-      "$select": "CUSTNAME,IVDATE,IVNUM,QPRICE,DISPRICE,VAT,TOTPRICE,STATDES"
+      "$select": "CUSTNAME,CDES,IVDATE,IVNUM,QPRICE,DISPRICE,VAT,TOTPRICE,STATDES"
     },
     "body_template": null,
     "body_type": "none",
@@ -999,7 +999,7 @@
       "$top": "{limit}",
       "$skip": "{offset}",
       "$filter": "AGENTCODE eq '{userExtId}' and IVDATE ge {dateFrom} and IVDATE le {dateTo}",
-      "$select": "CUSTNAME,IVDATE,IVNUM,QPRICE,DISPRICE,VAT,TOTPRICE,STATDES"
+      "$select": "CUSTNAME,CDES,IVDATE,IVNUM,QPRICE,DISPRICE,VAT,TOTPRICE,STATDES"
     },
     "body_template": null,
     "body_type": "none",
@@ -1129,7 +1129,7 @@
       "$top": "{limit}",
       "$skip": "{offset}",
       "$filter": "AGENTCODE eq '{userExtId}' and CURDATE ge {dateFrom} and CURDATE le {dateTo}",
-      "$select": "CUSTNAME,CURDATE,DOCNO,QPRICE,DISPRICE,VAT,TOTPRICE,STATDES,UDATE"
+      "$select": "CUSTNAME,CDES,CURDATE,DOCNO,QPRICE,DISPRICE,VAT,TOTPRICE,STATDES,UDATE"
     },
     "body_template": null,
     "body_type": "none",
@@ -1259,7 +1259,7 @@
       "$top": "{limit}",
       "$skip": "{offset}",
       "$filter": "AGENTCODE eq '{userExtId}' and IVDATE ge {dateFrom} and IVDATE le {dateTo}",
-      "$select": "CUSTNAME,IVDATE,IVNUM,QPRICE,DISPRICE,VAT,TOTPRICE,STATDES"
+      "$select": "CUSTNAME,CDES,IVDATE,IVNUM,QPRICE,DISPRICE,VAT,TOTPRICE,STATDES"
     },
     "body_template": null,
     "body_type": "none",

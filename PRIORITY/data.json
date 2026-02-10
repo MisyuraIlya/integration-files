@@ -716,6 +716,18 @@
                   "targetField": "date"
                 },
                 {
+                  "type": "string",
+                  "label": "מספר לקוח",
+                  "sourceField": "CUSTNAME",
+                  "targetField": "userExtId"
+                },
+                {
+                  "type": "string",
+                  "label": "שם לקוח",
+                  "sourceField": "CDES",
+                  "targetField": "text_1"
+                },
+                {
                   "type": "money",
                   "label": "סה״כ לפני הנחה",
                   "sourceField": "QPRICE",
@@ -1300,6 +1312,18 @@
                   "targetField": "date"
                 },
                 {
+                  "type": "string",
+                  "label": "מספר לקוח",
+                  "sourceField": "CUSTNAME",
+                  "targetField": "userExtId"
+                },
+                {
+                  "type": "string",
+                  "label": "שם לקוח",
+                  "sourceField": "CDES",
+                  "targetField": "text_1"
+                },
+                {
                   "type": "money",
                   "label": "סה״כ לפני הנחה",
                   "sourceField": "QPRICE",
@@ -1728,6 +1752,18 @@
                   "label": "תאריך",
                   "sourceField": "PDATE",
                   "targetField": "date"
+                },
+                {
+                  "type": "string",
+                  "label": "מספר לקוח",
+                  "sourceField": "CUSTNAME",
+                  "targetField": "userExtId"
+                },
+                {
+                  "type": "string",
+                  "label": "שם לקוח",
+                  "sourceField": "CDES",
+                  "targetField": "text_1"
                 },
                 {
                   "type": "money",
@@ -2167,6 +2203,18 @@
                   "targetField": "date"
                 },
                 {
+                  "type": "string",
+                  "label": "מספר לקוח",
+                  "sourceField": "CUSTNAME",
+                  "targetField": "userExtId"
+                },
+                {
+                  "type": "string",
+                  "label": "שם לקוח",
+                  "sourceField": "CDES",
+                  "targetField": "text_1"
+                },
+                {
                   "type": "money",
                   "label": "סה״כ לפני הנחה",
                   "sourceField": "QPRICE",
@@ -2597,6 +2645,18 @@
                   "targetField": "date"
                 },
                 {
+                  "type": "string",
+                  "label": "מספר לקוח",
+                  "sourceField": "CUSTNAME",
+                  "targetField": "userExtId"
+                },
+                {
+                  "type": "string",
+                  "label": "שם לקוח",
+                  "sourceField": "CDES",
+                  "targetField": "text_1"
+                },
+                {
                   "type": "money",
                   "label": "סה״כ לפני הנחה",
                   "sourceField": "QPRICE",
@@ -2678,6 +2738,18 @@
                   "label": "תאריך",
                   "sourceField": "IVDATE",
                   "targetField": "date"
+                },
+                {
+                  "type": "string",
+                  "label": "מספר לקוח",
+                  "sourceField": "CUSTNAME",
+                  "targetField": "userExtId"
+                },
+                {
+                  "type": "string",
+                  "label": "שם לקוח",
+                  "sourceField": "CDES",
+                  "targetField": "text_1"
                 },
                 {
                   "type": "money",
@@ -3408,6 +3480,18 @@
                   "label": "תאריך",
                   "sourceField": "CURDATE",
                   "targetField": "date"
+                },
+                {
+                  "type": "string",
+                  "label": "מספר לקוח",
+                  "sourceField": "CUSTNAME",
+                  "targetField": "userExtId"
+                },
+                {
+                  "type": "string",
+                  "label": "שם לקוח",
+                  "sourceField": "CDES",
+                  "targetField": "text_1"
                 },
                 {
                   "type": "money",

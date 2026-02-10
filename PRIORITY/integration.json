@@ -41,7 +41,7 @@
   },
   {
     "id": null,
-    "key": "priority_alls",
+    "key": "priority_agents",
     "name": "priority agents",
     "connection_id": null,
     "method": "GET",

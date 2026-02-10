@@ -26,23 +26,6 @@
           "integrationTemplateId": null,
           "template": null,
           "config": {
-            "execution": {
-              "mode": "fanout",
-              "fanout": {
-                "key": "customerType",
-                "target": "variables",
-                "range": {
-                  "from": 1,
-                  "to": 22,
-                  "step": 1
-                },
-                "concurrency": 4,
-                "continueOnError": true,
-                "dedupeBy": [
-                  "customer_id"
-                ]
-              }
-            },
             "simple": {
               "mappings": {
                 "hp": {
@@ -69,6 +52,15 @@
                   "sourceField": "data.customer_list.phone"
                 },
                 "PayDes": {},
+                "extra1": {},
+                "extra2": {},
+                "extra3": {},
+                "extra4": {},
+                "extra5": {},
+                "extra6": {},
+                "extra7": {},
+                "extra8": {},
+                "extra9": {},
                 "parent": {},
                 "search": {
                   "sourceField": "data.customer_list.first_name + data.customer_list.last_name + data.customer_list.customer_id"
@@ -79,9 +71,11 @@
                 "company": {
                   "sourceField": "data.customer_list.last_name"
                 },
+                "extra10": {},
                 "isAgent": {},
                 "payCode": {},
                 "taxCode": {},
+                "discount": {},
                 "password": {},
                 "recovery": {},
                 "username": {},
@@ -92,18 +86,41 @@
                   "sourceField": "data.customer_list.balance"
                 },
                 "updatedAt": {},
-                "isPublished": {},
+                "isPublished": {
+                  "sourceField": "data.customer_list.agent_id"
+                },
                 "masterExtId": {},
-                "isAllowOrder": {},
                 "isRegistered": {},
-                "isVatEnabled": {},
+                "isVatEnabled": {
+                  "sourceField": "data.customer_list.exempt_vat"
+                },
                 "refreshToken": {},
                 "salesCurrency": {},
-                "discount": {},
-                "deliveryPriceUser": {},
+                "erpConnectionId": {},
                 "minimumPriceUser": {},
-                "isAllowAllClients": {},
+                "vereficationData": {
+                  "sourceField": "data.customer_list.email"
+                },
+                "deliveryPriceUser": {},
                 "isAllowPriceOffer": {}
+              }
+            },
+            "execution": {
+              "mode": "fanout",
+              "fanout": {
+                "key": "customerType",
+                "range": {
+                  "to": 22,
+                  "from": 1,
+                  "step": 1
+                },
+                "target": "variables",
+                "values": [],
+                "dedupeBy": [
+                  "customer_id"
+                ],
+                "concurrency": 4,
+                "continueOnError": true
               }
             }
           },

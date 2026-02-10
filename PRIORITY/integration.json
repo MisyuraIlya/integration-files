@@ -599,6 +599,71 @@
   },
   {
     "id": null,
+    "key": "priority_cprof_agent",
+    "name": "priority agent price offers list",
+    "connection_id": null,
+    "method": "GET",
+    "path": "CPROF",
+    "headers": null,
+    "query": {
+      "$top": "{limit}",
+      "$skip": "{offset}",
+      "$filter": "AGENTCODE eq '{userExtId}' and PDATE ge {dateFrom} and PDATE le {dateTo}",
+      "$select": "CUSTNAME,PDATE,CPROFNUM,QPRICE,DISPRICE,VAT,TOTPRICE,STATDES,EXPIRYDATE"
+    },
+    "body_template": null,
+    "body_type": "none",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2026-02-10T08:32:39.241Z",
+    "updated_at": "2026-02-10T08:37:07.217Z",
+    "variables": [
+      {
+        "name": "userExtId",
+        "type": "string",
+        "default": "5",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "dateFrom",
+        "type": "string",
+        "default": "2025-10-06T00:00:00.000000Z",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "dateTo",
+        "type": "string",
+        "default": "2025-12-06T00:00:00.000000Z",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "limit",
+        "type": "number",
+        "default": 50,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "offset",
+        "type": "number",
+        "default": 0,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      }
+    ],
+    "strict_variables": true
+  },
+  {
+    "id": null,
     "key": "priority_documents_d",
     "name": "priority user delivery orders list",
     "connection_id": null,
@@ -623,6 +688,71 @@
         "name": "userExtId",
         "type": "string",
         "default": "41107200",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "dateFrom",
+        "type": "string",
+        "default": "2025-10-06T00:00:00.000000Z",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "dateTo",
+        "type": "string",
+        "default": "2025-12-06T00:00:00.000000Z",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "limit",
+        "type": "number",
+        "default": 50,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "offset",
+        "type": "number",
+        "default": 0,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      }
+    ],
+    "strict_variables": true
+  },
+  {
+    "id": null,
+    "key": "priority_documents_d_agent",
+    "name": "priority agent delivery orders list",
+    "connection_id": null,
+    "method": "GET",
+    "path": "DOCUMENTS_D",
+    "headers": null,
+    "query": {
+      "$top": "{limit}",
+      "$skip": "{offset}",
+      "$filter": "AGENTCODE eq '{userExtId}' and CURDATE ge {dateFrom} and CURDATE le {dateTo}",
+      "$select": "CUSTNAME,CURDATE,DOCNO,TOTQUANT,QPRICE,DISPRICE,VAT,TOTPRICE,STATDES,UDATE"
+    },
+    "body_template": null,
+    "body_type": "none",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2026-02-10T08:32:39.248Z",
+    "updated_at": "2026-02-10T08:37:07.184Z",
+    "variables": [
+      {
+        "name": "userExtId",
+        "type": "string",
+        "default": "5",
         "required": true,
         "enumValues": null,
         "description": null
@@ -729,6 +859,71 @@
   },
   {
     "id": null,
+    "key": "priority_aiinvoices_agent",
+    "name": "priority agent ar invoices list",
+    "connection_id": null,
+    "method": "GET",
+    "path": "AINVOICES",
+    "headers": null,
+    "query": {
+      "$top": "{limit}",
+      "$skip": "{offset}",
+      "$filter": "AGENTCODE eq '{userExtId}' and IVDATE ge {dateFrom} and IVDATE le {dateTo}",
+      "$select": "CUSTNAME,IVDATE,IVNUM,QPRICE,DISPRICE,VAT,TOTPRICE,STATDES"
+    },
+    "body_template": null,
+    "body_type": "none",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2026-02-10T08:32:39.255Z",
+    "updated_at": "2026-02-10T08:37:07.191Z",
+    "variables": [
+      {
+        "name": "userExtId",
+        "type": "string",
+        "default": "5",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "dateFrom",
+        "type": "string",
+        "default": "2025-10-06T00:00:00.000000Z",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "dateTo",
+        "type": "string",
+        "default": "2025-12-06T00:00:00.000000Z",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "limit",
+        "type": "number",
+        "default": 50,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "offset",
+        "type": "number",
+        "default": 0,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      }
+    ],
+    "strict_variables": true
+  },
+  {
+    "id": null,
     "key": "priority_cinvoices",
     "name": "priority user ci invoices list",
     "connection_id": null,
@@ -753,6 +948,71 @@
         "name": "userExtId",
         "type": "string",
         "default": "41107200",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "dateFrom",
+        "type": "string",
+        "default": "2025-10-06T00:00:00.000000Z",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "dateTo",
+        "type": "string",
+        "default": "2025-12-06T00:00:00.000000Z",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "limit",
+        "type": "number",
+        "default": 50,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "offset",
+        "type": "number",
+        "default": 0,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      }
+    ],
+    "strict_variables": true
+  },
+  {
+    "id": null,
+    "key": "priority_cinvoices_agent",
+    "name": "priority agent ci invoices list",
+    "connection_id": null,
+    "method": "GET",
+    "path": "CINVOICES",
+    "headers": null,
+    "query": {
+      "$top": "{limit}",
+      "$skip": "{offset}",
+      "$filter": "AGENTCODE eq '{userExtId}' and IVDATE ge {dateFrom} and IVDATE le {dateTo}",
+      "$select": "CUSTNAME,IVDATE,IVNUM,QPRICE,DISPRICE,VAT,TOTPRICE,STATDES"
+    },
+    "body_template": null,
+    "body_type": "none",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2026-02-10T08:32:39.263Z",
+    "updated_at": "2026-02-10T08:37:07.194Z",
+    "variables": [
+      {
+        "name": "userExtId",
+        "type": "string",
+        "default": "5",
         "required": true,
         "enumValues": null,
         "description": null
@@ -859,6 +1119,71 @@
   },
   {
     "id": null,
+    "key": "priority_documents_n_agent",
+    "name": "priority agent return orders list",
+    "connection_id": null,
+    "method": "GET",
+    "path": "DOCUMENTS_N",
+    "headers": null,
+    "query": {
+      "$top": "{limit}",
+      "$skip": "{offset}",
+      "$filter": "AGENTCODE eq '{userExtId}' and CURDATE ge {dateFrom} and CURDATE le {dateTo}",
+      "$select": "CUSTNAME,CURDATE,DOCNO,QPRICE,DISPRICE,VAT,TOTPRICE,STATDES,UDATE"
+    },
+    "body_template": null,
+    "body_type": "none",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2026-02-10T08:32:39.269Z",
+    "updated_at": "2026-02-10T08:37:07.201Z",
+    "variables": [
+      {
+        "name": "userExtId",
+        "type": "string",
+        "default": "5",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "dateFrom",
+        "type": "string",
+        "default": "2025-10-06T00:00:00.000000Z",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "dateTo",
+        "type": "string",
+        "default": "2025-12-06T00:00:00.000000Z",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "limit",
+        "type": "number",
+        "default": 50,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "offset",
+        "type": "number",
+        "default": 0,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      }
+    ],
+    "strict_variables": true
+  },
+  {
+    "id": null,
     "key": "priority_rinvoices",
     "name": "priority user return r inovice list",
     "connection_id": null,
@@ -883,6 +1208,71 @@
         "name": "userExtId",
         "type": "string",
         "default": "100366",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "dateFrom",
+        "type": "string",
+        "default": "2025-10-06T00:00:00.000000Z",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "dateTo",
+        "type": "string",
+        "default": "2025-12-06T00:00:00.000000Z",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "limit",
+        "type": "number",
+        "default": 50,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "offset",
+        "type": "number",
+        "default": 0,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      }
+    ],
+    "strict_variables": true
+  },
+  {
+    "id": null,
+    "key": "priority_rinvoices_agent",
+    "name": "priority agent return r inovice list",
+    "connection_id": null,
+    "method": "GET",
+    "path": "RINVOICES",
+    "headers": null,
+    "query": {
+      "$top": "{limit}",
+      "$skip": "{offset}",
+      "$filter": "AGENTCODE eq '{userExtId}' and IVDATE ge {dateFrom} and IVDATE le {dateTo}",
+      "$select": "CUSTNAME,IVDATE,IVNUM,QPRICE,DISPRICE,VAT,TOTPRICE,STATDES"
+    },
+    "body_template": null,
+    "body_type": "none",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2026-02-10T08:32:39.278Z",
+    "updated_at": "2026-02-10T08:37:07.199Z",
+    "variables": [
+      {
+        "name": "userExtId",
+        "type": "string",
+        "default": "5",
         "required": true,
         "enumValues": null,
         "description": null

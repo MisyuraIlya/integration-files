@@ -87,11 +87,24 @@
                 },
                 "updatedAt": {},
                 "isPublished": {
+                  "type": "boolean",
+                  "trueValues": [],
+                  "falseValues": [
+                    "0",
+                    "null"
+                  ],
                   "sourceField": "data.customer_list.agent_id"
                 },
                 "masterExtId": {},
                 "isRegistered": {},
                 "isVatEnabled": {
+                  "type": "boolean",
+                  "trueValues": [
+                    "false"
+                  ],
+                  "falseValues": [
+                    "true"
+                  ],
                   "sourceField": "data.customer_list.exempt_vat"
                 },
                 "refreshToken": {},

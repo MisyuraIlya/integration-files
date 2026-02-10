@@ -776,8 +776,8 @@
           "updatedAt": null
         }
       ],
-      "isAgentRequest": true,
-      "isSuperAgentRequest": false
+      "isAgentRequest": false,
+      "isSuperAgentRequest": true
     },
     {
       "id": null,
@@ -1277,8 +1277,8 @@
           "updatedAt": null
         }
       ],
-      "isAgentRequest": true,
-      "isSuperAgentRequest": false
+      "isAgentRequest": false,
+      "isSuperAgentRequest": true
     },
     {
       "id": null,
@@ -1618,8 +1618,8 @@
           "updatedAt": null
         }
       ],
-      "isAgentRequest": true,
-      "isSuperAgentRequest": false
+      "isAgentRequest": false,
+      "isSuperAgentRequest": true
     },
     {
       "id": null,
@@ -1978,8 +1978,8 @@
           "updatedAt": null
         }
       ],
-      "isAgentRequest": true,
-      "isSuperAgentRequest": false
+      "isAgentRequest": false,
+      "isSuperAgentRequest": true
     },
     {
       "id": null,
@@ -2337,8 +2337,8 @@
           "updatedAt": null
         }
       ],
-      "isAgentRequest": true,
-      "isSuperAgentRequest": false
+      "isAgentRequest": false,
+      "isSuperAgentRequest": true
     },
     {
       "id": null,
@@ -2888,6 +2888,83 @@
     },
     {
       "id": null,
+      "key": "priority_orders_agent",
+      "name": "Priority Orders agents",
+      "mapperType": "documentLines",
+      "table": null,
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "הזמנות",
+      "linkedName": "priority_order_items",
+      "linkedPdf": "priority_order_pdf",
+      "dataSources": [
+        {
+          "id": null,
+          "key": "priority_orders_agent",
+          "name": "priority agent orders list",
+          "description": "priority agent orders list",
+          "templateKey": "priority_orders_agent",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "documents": {
+              "headFields": [
+                {
+                  "type": "string",
+                  "label": "מספר מסמך",
+                  "sourceField": "ORDNAME",
+                  "targetField": "documentNumber"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך",
+                  "sourceField": "CURDATE",
+                  "targetField": "date"
+                },
+                {
+                  "type": "money",
+                  "label": "סה״כ לפני הנחה",
+                  "sourceField": "QPRICE",
+                  "targetField": "totalBeforeDiscount"
+                },
+                {
+                  "type": "money",
+                  "label": "סה״כ לאחר הנחה",
+                  "sourceField": "DISPRICE",
+                  "targetField": "totalAfterDiscount"
+                },
+                {
+                  "type": "money",
+                  "label": "סה״כ כולל מע״מ",
+                  "sourceField": "TOTPRICE",
+                  "targetField": "totalPriceAfterTax"
+                },
+                {
+                  "type": "string",
+                  "label": "סטטוס",
+                  "sourceField": "ORDSTATUSDES",
+                  "targetField": "status"
+                }
+              ],
+              "lineColumns": []
+            },
+            "execution": {
+              "mode": "single"
+            }
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": true,
+      "isSuperAgentRequest": false
+    },
+    {
+      "id": null,
       "key": "priority_orders_all",
       "name": "Priority Orders for all",
       "mapperType": "documentLines",
@@ -2978,8 +3055,8 @@
           "updatedAt": null
         }
       ],
-      "isAgentRequest": true,
-      "isSuperAgentRequest": false
+      "isAgentRequest": false,
+      "isSuperAgentRequest": true
     },
     {
       "id": null,

@@ -596,6 +596,106 @@
     },
     {
       "id": null,
+      "key": "priority_agents",
+      "name": "Priority agents",
+      "mapperType": "simple",
+      "table": "Agent",
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "Sync agents from Priority ERP AGENTS endpoint",
+      "linkedName": null,
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "priority_agents_ds",
+          "name": "Priority agents (AGENTS)",
+          "description": null,
+          "templateKey": "priority_agents",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "simple": {
+              "mappings": {
+                "hp": {
+                  "sourceField": "WTAXNUM"
+                },
+                "city": {},
+                "name": {
+                  "type": "string",
+                  "sourceField": "AGENTNAME"
+                },
+                "role": {},
+                "type": {},
+                "agent": {},
+                "email": {
+                  "sourceField": "EMAIL"
+                },
+                "extId": {
+                  "type": "string",
+                  "sourceField": "AGENTCODE"
+                },
+                "phone": {
+                  "sourceField": "CELLPHONE"
+                },
+                "PayDes": {},
+                "parent": {},
+                "search": {
+                  "sourceField": "AGENTCODE + AGENTNAME "
+                },
+                "address": {
+                  "sourceField": "ADDRESS"
+                },
+                "company": {},
+                "isAgent": {},
+                "payCode": {},
+                "taxCode": {},
+                "discount": {},
+                "password": {},
+                "recovery": {},
+                "username": {},
+                "createdAt": {},
+                "isBlocked": {
+                  "type": "boolean",
+                  "trueValues": [
+                    "Y"
+                  ],
+                  "falseValues": [],
+                  "sourceField": "INACTIVE"
+                },
+                "maxCredit": {},
+                "maxObligo": {},
+                "updatedAt": {},
+                "isPublished": {},
+                "masterExtId": {},
+                "isAllowOrder": {},
+                "isRegistered": {},
+                "isVatEnabled": {},
+                "refreshToken": {},
+                "salesCurrency": {},
+                "minimumPriceUser": {},
+                "deliveryPriceUser": {},
+                "isAllowAllClients": {},
+                "isAllowPriceOffer": {}
+              }
+            },
+            "execution": {
+              "mode": "single"
+            }
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": false,
+      "isSuperAgentRequest": false
+    },
+    {
+      "id": null,
       "key": "priority_aiinvoices",
       "name": "AINVOICES",
       "mapperType": "documentLines",
@@ -1924,6 +2024,7 @@
           "template": null,
           "config": {
             "documents": {
+              "linesPath": "CPROFITEMS_SUBFORM",
               "headFields": [
                 {
                   "type": "string",
@@ -1938,7 +2039,7 @@
                   "targetField": "date"
                 },
                 {
-                  "type": null,
+                  "type": "string",
                   "label": "לקוח",
                   "sourceField": "CUSTNAME",
                   "targetField": "userExtId"
@@ -1997,31 +2098,31 @@
                   "label": "מק״ט",
                   "cellType": "sku",
                   "columnKey": "PARTNAME",
-                  "sourceField": "PARTNAME"
+                  "sourceField": "CPROFITEMS_SUBFORM.PARTNAME"
                 },
                 {
                   "label": "תיאור פריט",
                   "cellType": "text",
                   "columnKey": "PDES",
-                  "sourceField": "PDES"
+                  "sourceField": "CPROFITEMS_SUBFORM.PDES"
                 },
                 {
                   "label": "כמות",
                   "cellType": "quantity",
                   "columnKey": "TQUANT",
-                  "sourceField": "TQUANT"
+                  "sourceField": "CPROFITEMS_SUBFORM.TQUANT"
                 },
                 {
                   "label": "מחיר",
                   "cellType": "money",
                   "columnKey": "PRICE",
-                  "sourceField": "PRICE"
+                  "sourceField": "CPROFITEMS_SUBFORM.PRICE"
                 },
                 {
                   "label": "סה״כ שורה",
                   "cellType": "money",
                   "columnKey": "QPRICE",
-                  "sourceField": "QPRICE"
+                  "sourceField": "CPROFITEMS_SUBFORM.QPRICE"
                 }
               ],
               "lineAttributes": []
@@ -2703,101 +2804,6 @@
     },
     {
       "id": null,
-      "key": "priority_rinvoices_agent",
-      "name": "Priority RINVOICES agents",
-      "mapperType": "documentLines",
-      "table": null,
-      "dynamicType": null,
-      "manualHandle": null,
-      "isCanChange": true,
-      "isShow": true,
-      "isActive": true,
-      "description": "חשבוניות החזרה",
-      "linkedName": null,
-      "linkedPdf": null,
-      "dataSources": [
-        {
-          "id": null,
-          "key": "priority_rinvoices_agent",
-          "name": "priority agent return r inovice list",
-          "description": "priority agent return r inovice list",
-          "templateKey": "priority_rinvoices_agent",
-          "integrationTemplateId": null,
-          "template": null,
-          "config": {
-            "documents": {
-              "headFields": [
-                {
-                  "type": "string",
-                  "label": "מספר מסמך",
-                  "sourceField": "IVNUM",
-                  "targetField": "documentNumber"
-                },
-                {
-                  "type": "date",
-                  "label": "תאריך",
-                  "sourceField": "IVDATE",
-                  "targetField": "date"
-                },
-                {
-                  "type": "string",
-                  "label": "מספר לקוח",
-                  "sourceField": "CUSTNAME",
-                  "targetField": "userExtId"
-                },
-                {
-                  "type": "string",
-                  "label": "שם לקוח",
-                  "sourceField": "CDES",
-                  "targetField": "text_1"
-                },
-                {
-                  "type": "money",
-                  "label": "סה״כ לפני הנחה",
-                  "sourceField": "QPRICE",
-                  "targetField": "totalBeforeDiscount"
-                },
-                {
-                  "type": "money",
-                  "label": "מע״מ",
-                  "sourceField": "VAT",
-                  "targetField": "totalTax"
-                },
-                {
-                  "type": "money",
-                  "label": "סה״כ לאחר הנחה",
-                  "sourceField": "DISPRICE",
-                  "targetField": "totalAfterDiscount"
-                },
-                {
-                  "type": "money",
-                  "label": "סה״כ כולל מע״מ",
-                  "sourceField": "TOTPRICE",
-                  "targetField": "totalPriceAfterTax"
-                },
-                {
-                  "type": "string",
-                  "label": "סטטוס",
-                  "sourceField": "STATDES",
-                  "targetField": "status"
-                }
-              ],
-              "lineColumns": []
-            },
-            "execution": {
-              "mode": "single"
-            }
-          },
-          "isCanChange": true,
-          "createdAt": null,
-          "updatedAt": null
-        }
-      ],
-      "isAgentRequest": true,
-      "isSuperAgentRequest": false
-    },
-    {
-      "id": null,
       "key": "priority_documents_n_all",
       "name": "DOCUMENTS_N for all",
       "mapperType": "documentLines",
@@ -3279,6 +3285,12 @@
                   "sourceField": "ORDERITEMS_SUBFORM.TQUANT"
                 },
                 {
+                  "label": "מחיר",
+                  "cellType": "money",
+                  "columnKey": "PRICE",
+                  "sourceField": "ORDERITEMS_SUBFORM.PRICE"
+                },
+                {
                   "label": "% הנחה",
                   "cellType": "discount",
                   "columnKey": "PERCENT",
@@ -3287,14 +3299,14 @@
                 {
                   "label": "עלות יחידה לאחר הנחה",
                   "cellType": "money",
-                  "columnKey": "PRICE",
-                  "sourceField": "ORDERITEMS_SUBFORM.PRICE"
-                },
-                {
-                  "label": "סה״כ שורה",
-                  "cellType": "money",
                   "columnKey": "DISPRICE",
                   "sourceField": "ORDERITEMS_SUBFORM.DISPRICE"
+                },
+                {
+                  "label": "סה\"כ להזמנה ",
+                  "cellType": "money",
+                  "columnKey": "QPRICE",
+                  "sourceField": "ORDERITEMS_SUBFORM.QPRICE"
                 },
                 {
                   "label": "ברקוד",
@@ -4008,6 +4020,101 @@
     },
     {
       "id": null,
+      "key": "priority_rinvoices_agent",
+      "name": "Priority RINVOICES agents",
+      "mapperType": "documentLines",
+      "table": null,
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "חשבוניות החזרה",
+      "linkedName": null,
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "priority_rinvoices_agent",
+          "name": "priority agent return r inovice list",
+          "description": "priority agent return r inovice list",
+          "templateKey": "priority_rinvoices_agent",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "documents": {
+              "headFields": [
+                {
+                  "type": "string",
+                  "label": "מספר מסמך",
+                  "sourceField": "IVNUM",
+                  "targetField": "documentNumber"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך",
+                  "sourceField": "IVDATE",
+                  "targetField": "date"
+                },
+                {
+                  "type": "string",
+                  "label": "מספר לקוח",
+                  "sourceField": "CUSTNAME",
+                  "targetField": "userExtId"
+                },
+                {
+                  "type": "string",
+                  "label": "שם לקוח",
+                  "sourceField": "CDES",
+                  "targetField": "text_1"
+                },
+                {
+                  "type": "money",
+                  "label": "סה״כ לפני הנחה",
+                  "sourceField": "QPRICE",
+                  "targetField": "totalBeforeDiscount"
+                },
+                {
+                  "type": "money",
+                  "label": "מע״מ",
+                  "sourceField": "VAT",
+                  "targetField": "totalTax"
+                },
+                {
+                  "type": "money",
+                  "label": "סה״כ לאחר הנחה",
+                  "sourceField": "DISPRICE",
+                  "targetField": "totalAfterDiscount"
+                },
+                {
+                  "type": "money",
+                  "label": "סה״כ כולל מע״מ",
+                  "sourceField": "TOTPRICE",
+                  "targetField": "totalPriceAfterTax"
+                },
+                {
+                  "type": "string",
+                  "label": "סטטוס",
+                  "sourceField": "STATDES",
+                  "targetField": "status"
+                }
+              ],
+              "lineColumns": []
+            },
+            "execution": {
+              "mode": "single"
+            }
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": true,
+      "isSuperAgentRequest": false
+    },
+    {
+      "id": null,
       "key": "priority_similar_products",
       "name": "Priority similar products",
       "mapperType": "simple",
@@ -4180,106 +4287,6 @@
                 "deliveryPriceUser": {},
                 "isAllowPriceOffer": {},
                 "isAllowSeeDocuments": {}
-              }
-            },
-            "execution": {
-              "mode": "single"
-            }
-          },
-          "isCanChange": true,
-          "createdAt": null,
-          "updatedAt": null
-        }
-      ],
-      "isAgentRequest": false,
-      "isSuperAgentRequest": false
-    },
-    {
-      "id": null,
-      "key": "priority_agents",
-      "name": "Priority agents",
-      "mapperType": "simple",
-      "table": "Agent",
-      "dynamicType": null,
-      "manualHandle": null,
-      "isCanChange": true,
-      "isShow": true,
-      "isActive": true,
-      "description": "Sync agents from Priority ERP AGENTS endpoint",
-      "linkedName": null,
-      "linkedPdf": null,
-      "dataSources": [
-        {
-          "id": null,
-          "key": "priority_agents_ds",
-          "name": "Priority agents (AGENTS)",
-          "description": null,
-          "templateKey": "priority_agents",
-          "integrationTemplateId": null,
-          "template": null,
-          "config": {
-            "simple": {
-              "mappings": {
-                "hp": {
-                  "sourceField": "WTAXNUM"
-                },
-                "city": {},
-                "name": {
-                  "type": "string",
-                  "sourceField": "AGENTNAME"
-                },
-                "role": {},
-                "type": {},
-                "agent": {},
-                "email": {
-                  "sourceField": "EMAIL"
-                },
-                "extId": {
-                  "type": "string",
-                  "sourceField": "AGENTCODE"
-                },
-                "phone": {
-                  "sourceField": "CELLPHONE"
-                },
-                "PayDes": {},
-                "parent": {},
-                "search": {
-                  "sourceField": "AGENTCODE + AGENTNAME "
-                },
-                "address": {
-                  "sourceField": "ADDRESS"
-                },
-                "company": {},
-                "isAgent": {},
-                "payCode": {},
-                "taxCode": {},
-                "discount": {},
-                "password": {},
-                "recovery": {},
-                "username": {},
-                "createdAt": {},
-                "isBlocked": {
-                  "type": "boolean",
-                  "trueValues": [
-                    "Y"
-                  ],
-                  "falseValues": [],
-                  "sourceField": "INACTIVE"
-                },
-                "maxCredit": {},
-                "maxObligo": {},
-                "updatedAt": {},
-                "isPublished": {},
-                "masterExtId": {},
-                "isAllowOrder": {},
-                "isRegistered": {},
-                "isVatEnabled": {},
-                "refreshToken": {},
-                "salesCurrency": {},
-                "minimumPriceUser": {},
-                "deliveryPriceUser": {},
-                "isAllowAllClients": {},
-                "isAllowPriceOffer": {}
               }
             },
             "execution": {

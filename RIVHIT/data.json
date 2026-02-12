@@ -1628,7 +1628,6 @@
       "isAgentRequest": false,
       "isSuperAgentRequest": false
     },
-
     {
       "id": null,
       "key": "orders",
@@ -2126,8 +2125,587 @@
       "isAgentRequest": false,
       "isSuperAgentRequest": false
     },
-
-
+    {
+      "id": null,
+      "key": "orders_agent_1",
+      "name": "Orders agent",
+      "mapperType": "documentLines",
+      "table": null,
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "תעודות חשבונית מס",
+      "linkedName": "order_items",
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "rivhit_agent_documents_1",
+          "name": "rivhit_agent_documents_1",
+          "description": "rivhit_agent_documents_1",
+          "templateKey": "rivhit_agent_documents_1",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "documents": {
+              "headFields": [
+                {
+                  "type": "string",
+                  "label": "מספר מסמך",
+                  "sourceField": "data.document_list.document_number",
+                  "targetField": "documentNumber"
+                },
+                {
+                  "type": "string",
+                  "label": "מספר לקוח",
+                  "sourceField": "data.document_list.customer_id",
+                  "targetField": "userExtId"
+                },
+                {
+                  "type": "string",
+                  "label": "שם לקוח",
+                  "sourceField": "data.document_list.customer_name",
+                  "targetField": "text_1"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך",
+                  "sourceField": "data.document_list.document_date",
+                  "targetField": "date"
+                },
+                {
+                  "type": "money",
+                  "label": "סה״כ",
+                  "sourceField": "data.document_list.amount",
+                  "targetField": "totalAfterDiscount"
+                },
+                {
+                  "type": "money",
+                  "label": "מע״מ",
+                  "sourceField": "data.document_list.total_vat",
+                  "targetField": "vat"
+                },
+                {
+                  "type": "link",
+                  "label": "מסמך",
+                  "sourceField": "data.document_list.total_vat",
+                  "targetField": "link"
+                }
+              ],
+              "lineColumns": []
+            },
+            "execution": {
+              "mode": "single"
+            }
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": true,
+      "isSuperAgentRequest": false
+    },
+    {
+      "id": null,
+      "key": "orders_agent_2",
+      "name": "Orders agent 2",
+      "mapperType": "documentLines",
+      "table": null,
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "מסמך חשבונית מס קבלה",
+      "linkedName": "order_items_2",
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "rivhit_agent_documents_2",
+          "name": "rivhit_agent_documents_2",
+          "description": "rivhit_agent_documents_2",
+          "templateKey": "rivhit_agent_documents_2",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "documents": {
+              "headFields": [
+                {
+                  "type": "string",
+                  "label": "מספר מסמך",
+                  "sourceField": "data.document_list.document_number",
+                  "targetField": "documentNumber"
+                },
+                {
+                  "type": "string",
+                  "label": "מספר לקוח",
+                  "sourceField": "data.document_list.customer_id",
+                  "targetField": "userExtId"
+                },
+                {
+                  "type": "string",
+                  "label": "שם לקוח",
+                  "sourceField": "data.document_list.customer_name",
+                  "targetField": "text_1"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך",
+                  "sourceField": "data.document_list.document_date",
+                  "targetField": "date"
+                },
+                {
+                  "type": "money",
+                  "label": "סה״כ",
+                  "sourceField": "data.document_list.amount",
+                  "targetField": "totalAfterDiscount"
+                },
+                {
+                  "type": "money",
+                  "label": "מע״מ",
+                  "sourceField": "data.document_list.total_vat",
+                  "targetField": "vat"
+                },
+                {
+                  "type": "link",
+                  "label": "מסמך",
+                  "sourceField": "data.document_list.total_vat",
+                  "targetField": "link"
+                }
+              ],
+              "lineColumns": []
+            },
+            "execution": {
+              "mode": "single"
+            }
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": true,
+      "isSuperAgentRequest": false
+    },
+    {
+      "id": null,
+      "key": "orders_agent_3",
+      "name": "Orders agent 3",
+      "mapperType": "documentLines",
+      "table": null,
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "מסמך חשבונית מס זיכוי",
+      "linkedName": "order_items_3",
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "rivhit_agent_documents_3",
+          "name": "rivhit_agent_documents_3",
+          "description": "rivhit_agent_documents_3",
+          "templateKey": "rivhit_agent_documents_3",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "documents": {
+              "headFields": [
+                {
+                  "type": "string",
+                  "label": "מספר מסמך",
+                  "sourceField": "data.document_list.document_number",
+                  "targetField": "documentNumber"
+                },
+                {
+                  "type": "string",
+                  "label": "מספר לקוח",
+                  "sourceField": "data.document_list.customer_id",
+                  "targetField": "userExtId"
+                },
+                {
+                  "type": "string",
+                  "label": "שם לקוח",
+                  "sourceField": "data.document_list.customer_name",
+                  "targetField": "text_1"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך",
+                  "sourceField": "data.document_list.document_date",
+                  "targetField": "date"
+                },
+                {
+                  "type": "money",
+                  "label": "סה״כ",
+                  "sourceField": "data.document_list.amount",
+                  "targetField": "totalAfterDiscount"
+                },
+                {
+                  "type": "money",
+                  "label": "מע״מ",
+                  "sourceField": "data.document_list.total_vat",
+                  "targetField": "vat"
+                },
+                {
+                  "type": "link",
+                  "label": "מסמך",
+                  "sourceField": "data.document_list.total_vat",
+                  "targetField": "link"
+                }
+              ],
+              "lineColumns": []
+            },
+            "execution": {
+              "mode": "single"
+            }
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": true,
+      "isSuperAgentRequest": false
+    },
+    {
+      "id": null,
+      "key": "orders_agent_4",
+      "name": "Orders agent 4",
+      "mapperType": "documentLines",
+      "table": null,
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "מסמך תעודת משלוח",
+      "linkedName": "order_items_4",
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "rivhit_agent_documents_4",
+          "name": "rivhit_agent_documents_4",
+          "description": "rivhit_agent_documents_4",
+          "templateKey": "rivhit_agent_documents_4",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "documents": {
+              "headFields": [
+                {
+                  "type": "string",
+                  "label": "מספר מסמך",
+                  "sourceField": "data.document_list.document_number",
+                  "targetField": "documentNumber"
+                },
+                {
+                  "type": "string",
+                  "label": "מספר לקוח",
+                  "sourceField": "data.document_list.customer_id",
+                  "targetField": "userExtId"
+                },
+                {
+                  "type": "string",
+                  "label": "שם לקוח",
+                  "sourceField": "data.document_list.customer_name",
+                  "targetField": "text_1"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך",
+                  "sourceField": "data.document_list.document_date",
+                  "targetField": "date"
+                },
+                {
+                  "type": "money",
+                  "label": "סה״כ",
+                  "sourceField": "data.document_list.amount",
+                  "targetField": "totalAfterDiscount"
+                },
+                {
+                  "type": "money",
+                  "label": "מע״מ",
+                  "sourceField": "data.document_list.total_vat",
+                  "targetField": "vat"
+                },
+                {
+                  "type": "link",
+                  "label": "מסמך",
+                  "sourceField": "data.document_list.total_vat",
+                  "targetField": "link"
+                }
+              ],
+              "lineColumns": []
+            },
+            "execution": {
+              "mode": "single"
+            }
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": true,
+      "isSuperAgentRequest": false
+    },
+    {
+      "id": null,
+      "key": "orders_agent_5",
+      "name": "Orders agent 5",
+      "mapperType": "documentLines",
+      "table": null,
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "מסמך תעודת החזרה",
+      "linkedName": "order_items_5",
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "rivhit_agent_documents_5",
+          "name": "rivhit_agent_documents_5",
+          "description": "rivhit_agent_documents_5",
+          "templateKey": "rivhit_agent_documents_5",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "documents": {
+              "headFields": [
+                {
+                  "type": "string",
+                  "label": "מספר מסמך",
+                  "sourceField": "data.document_list.document_number",
+                  "targetField": "documentNumber"
+                },
+                {
+                  "type": "string",
+                  "label": "מספר לקוח",
+                  "sourceField": "data.document_list.customer_id",
+                  "targetField": "userExtId"
+                },
+                {
+                  "type": "string",
+                  "label": "שם לקוח",
+                  "sourceField": "data.document_list.customer_name",
+                  "targetField": "text_1"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך",
+                  "sourceField": "data.document_list.document_date",
+                  "targetField": "date"
+                },
+                {
+                  "type": "money",
+                  "label": "סה״כ",
+                  "sourceField": "data.document_list.amount",
+                  "targetField": "totalAfterDiscount"
+                },
+                {
+                  "type": "money",
+                  "label": "מע״מ",
+                  "sourceField": "data.document_list.total_vat",
+                  "targetField": "vat"
+                },
+                {
+                  "type": "link",
+                  "label": "מסמך",
+                  "sourceField": "data.document_list.total_vat",
+                  "targetField": "link"
+                }
+              ],
+              "lineColumns": []
+            },
+            "execution": {
+              "mode": "single"
+            }
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": true,
+      "isSuperAgentRequest": false
+    },
+    {
+      "id": null,
+      "key": "orders_agent_6",
+      "name": "Orders agent 6",
+      "mapperType": "documentLines",
+      "table": null,
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "מסמך קריאת שירות",
+      "linkedName": "order_items_6",
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "rivhit_agent_documents_6",
+          "name": "rivhit_agent_documents_6",
+          "description": "rivhit_agent_documents_6",
+          "templateKey": "rivhit_agent_documents_6",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "documents": {
+              "headFields": [
+                {
+                  "type": "string",
+                  "label": "מספר מסמך",
+                  "sourceField": "data.document_list.document_number",
+                  "targetField": "documentNumber"
+                },
+                {
+                  "type": "string",
+                  "label": "מספר לקוח",
+                  "sourceField": "data.document_list.customer_id",
+                  "targetField": "userExtId"
+                },
+                {
+                  "type": "string",
+                  "label": "שם לקוח",
+                  "sourceField": "data.document_list.customer_name",
+                  "targetField": "text_1"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך",
+                  "sourceField": "data.document_list.document_date",
+                  "targetField": "date"
+                },
+                {
+                  "type": "money",
+                  "label": "סה״כ",
+                  "sourceField": "data.document_list.amount",
+                  "targetField": "totalAfterDiscount"
+                },
+                {
+                  "type": "money",
+                  "label": "מע״מ",
+                  "sourceField": "data.document_list.total_vat",
+                  "targetField": "vat"
+                },
+                {
+                  "type": "link",
+                  "label": "מסמך",
+                  "sourceField": "data.document_list.total_vat",
+                  "targetField": "link"
+                }
+              ],
+              "lineColumns": []
+            },
+            "execution": {
+              "mode": "single"
+            }
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": true,
+      "isSuperAgentRequest": false
+    },
+    {
+      "id": null,
+      "key": "orders_agent_7",
+      "name": "Orders agent 7",
+      "mapperType": "documentLines",
+      "table": null,
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "מסמך הזמנה",
+      "linkedName": "order_items_7",
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "rivhit_agent_documents_7",
+          "name": "rivhit_agent_documents_7",
+          "description": "rivhit_agent_documents_7",
+          "templateKey": "rivhit_agent_documents_7",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "documents": {
+              "headFields": [
+                {
+                  "type": "string",
+                  "label": "מספר מסמך",
+                  "sourceField": "data.document_list.document_number",
+                  "targetField": "documentNumber"
+                },
+                {
+                  "type": "string",
+                  "label": "מספר לקוח",
+                  "sourceField": "data.document_list.customer_id",
+                  "targetField": "userExtId"
+                },
+                {
+                  "type": "string",
+                  "label": "שם לקוח",
+                  "sourceField": "data.document_list.customer_name",
+                  "targetField": "text_1"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך",
+                  "sourceField": "data.document_list.document_date",
+                  "targetField": "date"
+                },
+                {
+                  "type": "money",
+                  "label": "סה״כ",
+                  "sourceField": "data.document_list.amount",
+                  "targetField": "totalAfterDiscount"
+                },
+                {
+                  "type": "money",
+                  "label": "מע״מ",
+                  "sourceField": "data.document_list.total_vat",
+                  "targetField": "vat"
+                },
+                {
+                  "type": "link",
+                  "label": "מסמך",
+                  "sourceField": "data.document_list.total_vat",
+                  "targetField": "link"
+                }
+              ],
+              "lineColumns": []
+            },
+            "execution": {
+              "mode": "single"
+            }
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": true,
+      "isSuperAgentRequest": false
+    },
     {
       "id": null,
       "key": "orders_all_1",
@@ -2709,8 +3287,6 @@
       "isAgentRequest": false,
       "isSuperAgentRequest": true
     },
-
-
     {
       "id": null,
       "key": "USER_PROFILE",

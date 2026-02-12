@@ -1607,6 +1607,7 @@
       ],
       "isAgentRequest": false
     },
+
     {
       "id": null,
       "key": "orders",
@@ -2097,10 +2098,12 @@
       ],
       "isAgentRequest": false
     },
+
+
     {
       "id": null,
-      "key": "orders_agent",
-      "name": "rivhit Orders for agent",
+      "key": "orders_all_1",
+      "name": "rivhit Orders for superagent",
       "mapperType": "documentLines",
       "table": null,
       "dynamicType": null,
@@ -2114,10 +2117,10 @@
       "dataSources": [
         {
           "id": null,
-          "key": "rivhit_user_documents_1_agent",
-          "name": "rivhit_user_documents_1_agent",
-          "description": "rivhit_user_documents_1_agent",
-          "templateKey": "rivhit_user_documents_1_agent",
+          "key": "rivhit_user_documents_1_all",
+          "name": "rivhit_user_documents_1_all",
+          "description": "rivhit_user_documents_1_all",
+          "templateKey": "rivhit_user_documents_1_all",
           "integrationTemplateId": null,
           "template": null,
           "config": {
@@ -2181,8 +2184,8 @@
     },
     {
       "id": null,
-      "key": "orders_agent_2",
-      "name": "rivhit Orders for agent 2",
+      "key": "orders_all_2",
+      "name": "rivhit Orders for super agent 2",
       "mapperType": "documentLines",
       "table": null,
       "dynamicType": null,
@@ -2196,10 +2199,10 @@
       "dataSources": [
         {
           "id": null,
-          "key": "rivhit_user_documents_2_agent",
-          "name": "rivhit_user_documents_2_agent",
-          "description": "rivhit_user_documents_2_agent",
-          "templateKey": "rivhit_user_documents_2_agent",
+          "key": "rivhit_user_documents_2_all",
+          "name": "rivhit_user_documents_2_all",
+          "description": "rivhit_user_documents_2_all",
+          "templateKey": "rivhit_user_documents_2_all",
           "integrationTemplateId": null,
           "template": null,
           "config": {
@@ -2263,8 +2266,8 @@
     },
     {
       "id": null,
-      "key": "orders_agent_3",
-      "name": "rivhit Orders for agent 3",
+      "key": "orders_all_3",
+      "name": "rivhit Orders for super agent 3",
       "mapperType": "documentLines",
       "table": null,
       "dynamicType": null,
@@ -2278,10 +2281,10 @@
       "dataSources": [
         {
           "id": null,
-          "key": "rivhit_user_documents_3_agent",
-          "name": "rivhit_user_documents_3_agent",
-          "description": "rivhit_user_documents_3_agent",
-          "templateKey": "rivhit_user_documents_3_agent",
+          "key": "rivhit_user_documents_3_all",
+          "name": "rivhit_user_documents_3_all",
+          "description": "rivhit_user_documents_3_all",
+          "templateKey": "rivhit_user_documents_3_all",
           "integrationTemplateId": null,
           "template": null,
           "config": {
@@ -2345,8 +2348,8 @@
     },
     {
       "id": null,
-      "key": "orders_agent_4",
-      "name": "rivhit Orders for agent 4",
+      "key": "orders_all_4",
+      "name": "rivhit Orders for super agent 4",
       "mapperType": "documentLines",
       "table": null,
       "dynamicType": null,
@@ -2360,10 +2363,10 @@
       "dataSources": [
         {
           "id": null,
-          "key": "rivhit_user_documents_4_agent",
-          "name": "rivhit_user_documents_4_agent",
-          "description": "rivhit_user_documents_4_agent",
-          "templateKey": "rivhit_user_documents_4_agent",
+          "key": "rivhit_user_documents_4_all",
+          "name": "rivhit_user_documents_4_all",
+          "description": "rivhit_user_documents_4_all",
+          "templateKey": "rivhit_user_documents_4_all",
           "integrationTemplateId": null,
           "template": null,
           "config": {
@@ -2427,8 +2430,8 @@
     },
     {
       "id": null,
-      "key": "orders_agent_5",
-      "name": "rivhit Orders for agent 5",
+      "key": "orders_all_5",
+      "name": "rivhit Orders for super agent 5",
       "mapperType": "documentLines",
       "table": null,
       "dynamicType": null,
@@ -2442,10 +2445,10 @@
       "dataSources": [
         {
           "id": null,
-          "key": "rivhit_user_documents_5_agent",
-          "name": "rivhit_user_documents_5_agent",
-          "description": "rivhit_user_documents_5_agent",
-          "templateKey": "rivhit_user_documents_5_agent",
+          "key": "rivhit_user_documents_5_all",
+          "name": "rivhit_user_documents_5_all",
+          "description": "rivhit_user_documents_5_all",
+          "templateKey": "rivhit_user_documents_5_all",
           "integrationTemplateId": null,
           "template": null,
           "config": {
@@ -2509,8 +2512,8 @@
     },
     {
       "id": null,
-      "key": "orders_agent_6",
-      "name": "rivhit Orders for agent 6",
+      "key": "orders_all_6",
+      "name": "rivhit Orders for super agent 6",
       "mapperType": "documentLines",
       "table": null,
       "dynamicType": null,
@@ -2524,10 +2527,10 @@
       "dataSources": [
         {
           "id": null,
-          "key": "rivhit_user_documents_6_agent",
-          "name": "rivhit_user_documents_6_agent",
-          "description": "rivhit_user_documents_6_agent",
-          "templateKey": "rivhit_user_documents_6_agent",
+          "key": "rivhit_user_documents_6_all",
+          "name": "rivhit_user_documents_6_all",
+          "description": "rivhit_user_documents_6_all",
+          "templateKey": "rivhit_user_documents_6_all",
           "integrationTemplateId": null,
           "template": null,
           "config": {
@@ -2591,8 +2594,8 @@
     },
     {
       "id": null,
-      "key": "orders_agent_7",
-      "name": "rivhit Orders for agent 7",
+      "key": "orders_all_7",
+      "name": "rivhit Orders for super agent 7",
       "mapperType": "documentLines",
       "table": null,
       "dynamicType": null,
@@ -2606,10 +2609,10 @@
       "dataSources": [
         {
           "id": null,
-          "key": "rivhit_user_documents_7_agent",
-          "name": "rivhit_user_documents_7_agent",
-          "description": "rivhit_user_documents_7_agent",
-          "templateKey": "rivhit_user_documents_7_agent",
+          "key": "rivhit_user_documents_7_all",
+          "name": "rivhit_user_documents_7_all",
+          "description": "rivhit_user_documents_7_all",
+          "templateKey": "rivhit_user_documents_7_all",
           "integrationTemplateId": null,
           "template": null,
           "config": {
@@ -2671,6 +2674,8 @@
       ],
       "isAgentRequest": true
     },
+
+
     {
       "id": null,
       "key": "USER_PROFILE",

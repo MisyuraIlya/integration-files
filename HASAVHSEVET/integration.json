@@ -13,8 +13,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-12T09:04:44.953Z",
-    "updated_at": "2026-02-12T09:11:24.342Z",
+    "created_at": "2026-02-12T10:25:16.133Z",
+    "updated_at": "2026-02-12T10:25:16.133Z",
     "variables": [
       {
         "name": "offset",
@@ -49,8 +49,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-12T09:11:06.383Z",
-    "updated_at": "2026-02-12T09:11:06.383Z",
+    "created_at": "2026-02-12T10:25:16.162Z",
+    "updated_at": "2026-02-12T10:25:16.162Z",
     "variables": [
       {
         "name": "offset",
@@ -85,8 +85,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-12T09:17:52.194Z",
-    "updated_at": "2026-02-12T09:17:52.194Z",
+    "created_at": "2026-02-12T10:25:16.182Z",
+    "updated_at": "2026-02-12T10:25:16.182Z",
     "variables": [
       {
         "name": "offset",
@@ -107,12 +107,11 @@
     ],
     "strict_variables": true
   },
-
-
   {
+    "id": null,
     "key": "hasavh_users_documents_list_1",
     "name": "חשבונית מס",
-    "connection_id": null,
+    "connection_id": 1,
     "method": "POST",
     "path": "/sql",
     "headers": null,
@@ -122,20 +121,65 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
+    "created_at": "2026-02-12T10:25:16.192Z",
+    "updated_at": "2026-02-12T10:25:31.309Z",
     "variables": [
-      { "name": "userExtId", "type": "string", "default": "50017", "required": true, "enumValues": null, "description": null },
-      { "name": "dateFrom", "type": "string", "default": "2025-12-01", "required": true, "enumValues": null, "description": null },
-      { "name": "dateTo", "type": "string", "default": "2025-12-18", "required": true, "enumValues": null, "description": null },
-      { "name": "offset", "type": "number", "default": 0, "required": false, "enumValues": null, "description": null },
-      { "name": "limit", "type": "number", "default": 10, "required": true, "enumValues": null, "description": null },
-      { "name": "search", "type": "string", "default": "", "required": false, "enumValues": null, "description": "search term (optional)" }
+      {
+        "name": "userExtId",
+        "type": "string",
+        "default": "50017",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "dateFrom",
+        "type": "string",
+        "default": "2025-12-01",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "dateTo",
+        "type": "string",
+        "default": "2025-12-18",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "offset",
+        "type": "number",
+        "default": 0,
+        "required": false,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "limit",
+        "type": "number",
+        "default": 10,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "search",
+        "type": "string",
+        "default": "",
+        "required": false,
+        "enumValues": null,
+        "description": "search term (optional)"
+      }
     ],
     "strict_variables": true
   },
   {
+    "id": null,
     "key": "hasavh_users_documents_list_2",
     "name": "חשבונית מס/קבלה",
-    "connection_id": null,
+    "connection_id": 1,
     "method": "POST",
     "path": "/sql",
     "headers": null,
@@ -145,20 +189,65 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
+    "created_at": "2026-02-12T10:25:16.207Z",
+    "updated_at": "2026-02-12T10:25:31.354Z",
     "variables": [
-      { "name": "userExtId", "type": "string", "default": "50017", "required": true, "enumValues": null, "description": null },
-      { "name": "dateFrom", "type": "string", "default": "2025-12-01", "required": true, "enumValues": null, "description": null },
-      { "name": "dateTo", "type": "string", "default": "2025-12-18", "required": true, "enumValues": null, "description": null },
-      { "name": "offset", "type": "number", "default": 0, "required": false, "enumValues": null, "description": null },
-      { "name": "limit", "type": "number", "default": 10, "required": true, "enumValues": null, "description": null },
-      { "name": "search", "type": "string", "default": "", "required": false, "enumValues": null, "description": "search term (optional)" }
+      {
+        "name": "userExtId",
+        "type": "string",
+        "default": "50017",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "dateFrom",
+        "type": "string",
+        "default": "2025-12-01",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "dateTo",
+        "type": "string",
+        "default": "2025-12-18",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "offset",
+        "type": "number",
+        "default": 0,
+        "required": false,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "limit",
+        "type": "number",
+        "default": 10,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "search",
+        "type": "string",
+        "default": "",
+        "required": false,
+        "enumValues": null,
+        "description": "search term (optional)"
+      }
     ],
     "strict_variables": true
   },
   {
+    "id": null,
     "key": "hasavh_users_documents_list_4",
     "name": "תעודת משלוח",
-    "connection_id": null,
+    "connection_id": 1,
     "method": "POST",
     "path": "/sql",
     "headers": null,
@@ -168,20 +257,65 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
+    "created_at": "2026-02-12T10:25:16.226Z",
+    "updated_at": "2026-02-12T10:25:31.325Z",
     "variables": [
-      { "name": "userExtId", "type": "string", "default": "50017", "required": true, "enumValues": null, "description": null },
-      { "name": "dateFrom", "type": "string", "default": "2025-12-01", "required": true, "enumValues": null, "description": null },
-      { "name": "dateTo", "type": "string", "default": "2025-12-18", "required": true, "enumValues": null, "description": null },
-      { "name": "offset", "type": "number", "default": 0, "required": false, "enumValues": null, "description": null },
-      { "name": "limit", "type": "number", "default": 10, "required": true, "enumValues": null, "description": null },
-      { "name": "search", "type": "string", "default": "", "required": false, "enumValues": null, "description": "search term (optional)" }
+      {
+        "name": "userExtId",
+        "type": "string",
+        "default": "50017",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "dateFrom",
+        "type": "string",
+        "default": "2025-12-01",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "dateTo",
+        "type": "string",
+        "default": "2025-12-18",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "offset",
+        "type": "number",
+        "default": 0,
+        "required": false,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "limit",
+        "type": "number",
+        "default": 10,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "search",
+        "type": "string",
+        "default": "",
+        "required": false,
+        "enumValues": null,
+        "description": "search term (optional)"
+      }
     ],
     "strict_variables": true
   },
   {
+    "id": null,
     "key": "hasavh_users_documents_list_5",
     "name": "החזרה",
-    "connection_id": null,
+    "connection_id": 1,
     "method": "POST",
     "path": "/sql",
     "headers": null,
@@ -191,20 +325,65 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
+    "created_at": "2026-02-12T10:25:16.236Z",
+    "updated_at": "2026-02-12T10:25:31.309Z",
     "variables": [
-      { "name": "userExtId", "type": "string", "default": "50017", "required": true, "enumValues": null, "description": null },
-      { "name": "dateFrom", "type": "string", "default": "2025-12-01", "required": true, "enumValues": null, "description": null },
-      { "name": "dateTo", "type": "string", "default": "2025-12-18", "required": true, "enumValues": null, "description": null },
-      { "name": "offset", "type": "number", "default": 0, "required": false, "enumValues": null, "description": null },
-      { "name": "limit", "type": "number", "default": 10, "required": true, "enumValues": null, "description": null },
-      { "name": "search", "type": "string", "default": "", "required": false, "enumValues": null, "description": "search term (optional)" }
+      {
+        "name": "userExtId",
+        "type": "string",
+        "default": "50017",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "dateFrom",
+        "type": "string",
+        "default": "2025-12-01",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "dateTo",
+        "type": "string",
+        "default": "2025-12-18",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "offset",
+        "type": "number",
+        "default": 0,
+        "required": false,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "limit",
+        "type": "number",
+        "default": 10,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "search",
+        "type": "string",
+        "default": "",
+        "required": false,
+        "enumValues": null,
+        "description": "search term (optional)"
+      }
     ],
     "strict_variables": true
   },
   {
+    "id": null,
     "key": "hasavh_users_documents_list_6",
     "name": "הזמנה",
-    "connection_id": null,
+    "connection_id": 1,
     "method": "POST",
     "path": "/sql",
     "headers": null,
@@ -214,20 +393,65 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
+    "created_at": "2026-02-12T10:25:16.244Z",
+    "updated_at": "2026-02-12T10:25:31.359Z",
     "variables": [
-      { "name": "userExtId", "type": "string", "default": "50017", "required": true, "enumValues": null, "description": null },
-      { "name": "dateFrom", "type": "string", "default": "2025-12-01", "required": true, "enumValues": null, "description": null },
-      { "name": "dateTo", "type": "string", "default": "2025-12-18", "required": true, "enumValues": null, "description": null },
-      { "name": "offset", "type": "number", "default": 0, "required": false, "enumValues": null, "description": null },
-      { "name": "limit", "type": "number", "default": 10, "required": true, "enumValues": null, "description": null },
-      { "name": "search", "type": "string", "default": "", "required": false, "enumValues": null, "description": "search term (optional)" }
+      {
+        "name": "userExtId",
+        "type": "string",
+        "default": "50017",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "dateFrom",
+        "type": "string",
+        "default": "2025-12-01",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "dateTo",
+        "type": "string",
+        "default": "2025-12-18",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "offset",
+        "type": "number",
+        "default": 0,
+        "required": false,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "limit",
+        "type": "number",
+        "default": 10,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "search",
+        "type": "string",
+        "default": "",
+        "required": false,
+        "enumValues": null,
+        "description": "search term (optional)"
+      }
     ],
     "strict_variables": true
   },
   {
+    "id": null,
     "key": "hasavh_users_documents_list_7",
     "name": "הצעת מחיר",
-    "connection_id": null,
+    "connection_id": 1,
     "method": "POST",
     "path": "/sql",
     "headers": null,
@@ -237,20 +461,65 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
+    "created_at": "2026-02-12T10:25:16.255Z",
+    "updated_at": "2026-02-12T10:25:31.327Z",
     "variables": [
-      { "name": "userExtId", "type": "string", "default": "50017", "required": true, "enumValues": null, "description": null },
-      { "name": "dateFrom", "type": "string", "default": "2025-12-01", "required": true, "enumValues": null, "description": null },
-      { "name": "dateTo", "type": "string", "default": "2025-12-18", "required": true, "enumValues": null, "description": null },
-      { "name": "offset", "type": "number", "default": 0, "required": false, "enumValues": null, "description": null },
-      { "name": "limit", "type": "number", "default": 10, "required": true, "enumValues": null, "description": null },
-      { "name": "search", "type": "string", "default": "", "required": false, "enumValues": null, "description": "search term (optional)" }
+      {
+        "name": "userExtId",
+        "type": "string",
+        "default": "50017",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "dateFrom",
+        "type": "string",
+        "default": "2025-12-01",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "dateTo",
+        "type": "string",
+        "default": "2025-12-18",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "offset",
+        "type": "number",
+        "default": 0,
+        "required": false,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "limit",
+        "type": "number",
+        "default": 10,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "search",
+        "type": "string",
+        "default": "",
+        "required": false,
+        "enumValues": null,
+        "description": "search term (optional)"
+      }
     ],
     "strict_variables": true
   },
   {
+    "id": null,
     "key": "hasavh_users_documents_list_11",
     "name": "הזמנת סוכן",
-    "connection_id": null,
+    "connection_id": 1,
     "method": "POST",
     "path": "/sql",
     "headers": null,
@@ -260,20 +529,65 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
+    "created_at": "2026-02-12T10:25:16.272Z",
+    "updated_at": "2026-02-12T10:25:31.365Z",
     "variables": [
-      { "name": "userExtId", "type": "string", "default": "50017", "required": true, "enumValues": null, "description": null },
-      { "name": "dateFrom", "type": "string", "default": "2025-12-01", "required": true, "enumValues": null, "description": null },
-      { "name": "dateTo", "type": "string", "default": "2025-12-18", "required": true, "enumValues": null, "description": null },
-      { "name": "offset", "type": "number", "default": 0, "required": false, "enumValues": null, "description": null },
-      { "name": "limit", "type": "number", "default": 10, "required": true, "enumValues": null, "description": null },
-      { "name": "search", "type": "string", "default": "", "required": false, "enumValues": null, "description": "search term (optional)" }
+      {
+        "name": "userExtId",
+        "type": "string",
+        "default": "50017",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "dateFrom",
+        "type": "string",
+        "default": "2025-12-01",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "dateTo",
+        "type": "string",
+        "default": "2025-12-18",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "offset",
+        "type": "number",
+        "default": 0,
+        "required": false,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "limit",
+        "type": "number",
+        "default": 10,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "search",
+        "type": "string",
+        "default": "",
+        "required": false,
+        "enumValues": null,
+        "description": "search term (optional)"
+      }
     ],
     "strict_variables": true
   },
   {
+    "id": null,
     "key": "hasavh_users_documents_list_31",
     "name": "קבלה",
-    "connection_id": null,
+    "connection_id": 1,
     "method": "POST",
     "path": "/sql",
     "headers": null,
@@ -283,20 +597,65 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
+    "created_at": "2026-02-12T10:25:16.291Z",
+    "updated_at": "2026-02-12T10:25:31.330Z",
     "variables": [
-      { "name": "userExtId", "type": "string", "default": "50017", "required": true, "enumValues": null, "description": null },
-      { "name": "dateFrom", "type": "string", "default": "2025-12-01", "required": true, "enumValues": null, "description": null },
-      { "name": "dateTo", "type": "string", "default": "2025-12-18", "required": true, "enumValues": null, "description": null },
-      { "name": "offset", "type": "number", "default": 0, "required": false, "enumValues": null, "description": null },
-      { "name": "limit", "type": "number", "default": 10, "required": true, "enumValues": null, "description": null },
-      { "name": "search", "type": "string", "default": "", "required": false, "enumValues": null, "description": "search term (optional)" }
+      {
+        "name": "userExtId",
+        "type": "string",
+        "default": "50017",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "dateFrom",
+        "type": "string",
+        "default": "2025-12-01",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "dateTo",
+        "type": "string",
+        "default": "2025-12-18",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "offset",
+        "type": "number",
+        "default": 0,
+        "required": false,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "limit",
+        "type": "number",
+        "default": 10,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "search",
+        "type": "string",
+        "default": "",
+        "required": false,
+        "enumValues": null,
+        "description": "search term (optional)"
+      }
     ],
     "strict_variables": true
   },
   {
+    "id": null,
     "key": "hasavh_users_documents_list_37",
     "name": "חשבונית מס ריכוז",
-    "connection_id": null,
+    "connection_id": 1,
     "method": "POST",
     "path": "/sql",
     "headers": null,
@@ -306,43 +665,125 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
+    "created_at": "2026-02-12T10:25:16.316Z",
+    "updated_at": "2026-02-12T10:25:31.364Z",
     "variables": [
-      { "name": "userExtId", "type": "string", "default": "50017", "required": true, "enumValues": null, "description": null },
-      { "name": "dateFrom", "type": "string", "default": "2025-12-01", "required": true, "enumValues": null, "description": null },
-      { "name": "dateTo", "type": "string", "default": "2025-12-18", "required": true, "enumValues": null, "description": null },
-      { "name": "offset", "type": "number", "default": 0, "required": false, "enumValues": null, "description": null },
-      { "name": "limit", "type": "number", "default": 10, "required": true, "enumValues": null, "description": null },
-      { "name": "search", "type": "string", "default": "", "required": false, "enumValues": null, "description": "search term (optional)" }
+      {
+        "name": "userExtId",
+        "type": "string",
+        "default": "50017",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "dateFrom",
+        "type": "string",
+        "default": "2025-12-01",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "dateTo",
+        "type": "string",
+        "default": "2025-12-18",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "offset",
+        "type": "number",
+        "default": 0,
+        "required": false,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "limit",
+        "type": "number",
+        "default": 10,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "search",
+        "type": "string",
+        "default": "",
+        "required": false,
+        "enumValues": null,
+        "description": "search term (optional)"
+      }
     ],
     "strict_variables": true
   },
-
   {
+    "id": null,
     "key": "hasavh_all_documents_list_1",
     "name": "חשבונית מס",
-    "connection_id": null,
+    "connection_id": 1,
     "method": "POST",
     "path": "/sql",
     "headers": null,
     "query": null,
-    "body_template": "{\n  \"query\": \"SELECT\\n  COUNT(1) OVER() AS TotalRows,\\n  *\\nFROM dbo.Stock\\nWHERE\\n  ValueDate >= TRY_CONVERT(date, @dateFrom)\\n  AND ValueDate <= TRY_CONVERT(date, @dateTo)\\n  AND DocumentID = @documentType\\n  AND (\\n    @search IS NULL\\n    OR LTRIM(RTRIM(@search)) = ''\\n    OR DocNumber LIKE CONCAT('%', @search, '%')\\n    OR AccountKey LIKE CONCAT('%', @search, '%')\\n    OR AccountName LIKE CONCAT('%', @search, '%')\\n  )\\nORDER BY ValueDate DESC\\nOFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY\",\n  \"params\": {\n    \"dateFrom\": \"{dateFrom}\",\n    \"dateTo\": \"{dateTo}\",\n    \"offset\": \"{offset}\",\n    \"pageSize\": \"{limit}\",\n    \"documentType\": 1,\n    \"search\": \"{search}\"\n  }\n}\n",
+    "body_template": "{\n  \"query\": \"SELECT\\n  COUNT(1) OVER() AS TotalRows,\\n  *\\nFROM dbo.Stock\\nWHERE\\n  ValueDate >= TRY_CONVERT(date, @dateFrom)\\n  AND ValueDate <= TRY_CONVERT(date, @dateTo)\\n  AND DocumentID = @documentType\\n  AND (\\n    @search IS NULL\\n    OR LTRIM(RTRIM(@search)) = ''\\n    OR DocNumber LIKE CONCAT('%', @search, '%')\\n    OR AccountKey LIKE CONCAT('%', @search, '%')\\n    OR AccountName LIKE CONCAT('%', @search, '%')\\n  )\\nORDER BY ValueDate DESC\\nOFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY\",\n  \"params\": {\n    \"dateFrom\": \"{dateFrom}\",\n    \"dateTo\": \"{dateTo}\",\n    \"offset\": {offset},\n    \"pageSize\": {limit},\n    \"documentType\": 1,\n    \"search\": \"{search}\"\n  }\n}\n",
     "body_type": "json",
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
+    "created_at": "2026-02-12T10:25:16.337Z",
+    "updated_at": "2026-02-12T10:26:05.664Z",
     "variables": [
-      { "name": "dateFrom", "type": "string", "default": "2025-12-01", "required": true, "enumValues": null, "description": null },
-      { "name": "dateTo", "type": "string", "default": "2025-12-18", "required": true, "enumValues": null, "description": null },
-      { "name": "offset", "type": "number", "default": 0, "required": false, "enumValues": null, "description": null },
-      { "name": "limit", "type": "number", "default": 10, "required": true, "enumValues": null, "description": null },
-      { "name": "search", "type": "string", "default": "", "required": false, "enumValues": null, "description": "search term (optional)" }
+      {
+        "name": "dateFrom",
+        "type": "string",
+        "default": "2025-12-01",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "dateTo",
+        "type": "string",
+        "default": "2025-12-18",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "offset",
+        "type": "number",
+        "default": 0,
+        "required": false,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "limit",
+        "type": "number",
+        "default": 10,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "search",
+        "type": "string",
+        "default": "",
+        "required": false,
+        "enumValues": null,
+        "description": "search term (optional)"
+      }
     ],
     "strict_variables": true
   },
   {
+    "id": null,
     "key": "hasavh_all_documents_list_2",
     "name": "חשבונית מס/קבלה",
-    "connection_id": null,
+    "connection_id": 1,
     "method": "POST",
     "path": "/sql",
     "headers": null,
@@ -352,19 +793,57 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
+    "created_at": "2026-02-12T10:25:16.355Z",
+    "updated_at": "2026-02-12T10:25:31.331Z",
     "variables": [
-      { "name": "dateFrom", "type": "string", "default": "2025-12-01", "required": true, "enumValues": null, "description": null },
-      { "name": "dateTo", "type": "string", "default": "2025-12-18", "required": true, "enumValues": null, "description": null },
-      { "name": "offset", "type": "number", "default": 0, "required": false, "enumValues": null, "description": null },
-      { "name": "limit", "type": "number", "default": 10, "required": true, "enumValues": null, "description": null },
-      { "name": "search", "type": "string", "default": "", "required": false, "enumValues": null, "description": "search term (optional)" }
+      {
+        "name": "dateFrom",
+        "type": "string",
+        "default": "2025-12-01",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "dateTo",
+        "type": "string",
+        "default": "2025-12-18",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "offset",
+        "type": "number",
+        "default": 0,
+        "required": false,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "limit",
+        "type": "number",
+        "default": 10,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "search",
+        "type": "string",
+        "default": "",
+        "required": false,
+        "enumValues": null,
+        "description": "search term (optional)"
+      }
     ],
     "strict_variables": true
   },
   {
+    "id": null,
     "key": "hasavh_all_documents_list_4",
     "name": "תעודת משלוח",
-    "connection_id": null,
+    "connection_id": 1,
     "method": "POST",
     "path": "/sql",
     "headers": null,
@@ -374,19 +853,57 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
+    "created_at": "2026-02-12T10:25:16.368Z",
+    "updated_at": "2026-02-12T10:25:31.328Z",
     "variables": [
-      { "name": "dateFrom", "type": "string", "default": "2025-12-01", "required": true, "enumValues": null, "description": null },
-      { "name": "dateTo", "type": "string", "default": "2025-12-18", "required": true, "enumValues": null, "description": null },
-      { "name": "offset", "type": "number", "default": 0, "required": false, "enumValues": null, "description": null },
-      { "name": "limit", "type": "number", "default": 10, "required": true, "enumValues": null, "description": null },
-      { "name": "search", "type": "string", "default": "", "required": false, "enumValues": null, "description": "search term (optional)" }
+      {
+        "name": "dateFrom",
+        "type": "string",
+        "default": "2025-12-01",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "dateTo",
+        "type": "string",
+        "default": "2025-12-18",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "offset",
+        "type": "number",
+        "default": 0,
+        "required": false,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "limit",
+        "type": "number",
+        "default": 10,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "search",
+        "type": "string",
+        "default": "",
+        "required": false,
+        "enumValues": null,
+        "description": "search term (optional)"
+      }
     ],
     "strict_variables": true
   },
   {
+    "id": null,
     "key": "hasavh_all_documents_list_5",
     "name": "החזרה",
-    "connection_id": null,
+    "connection_id": 1,
     "method": "POST",
     "path": "/sql",
     "headers": null,
@@ -396,19 +913,57 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
+    "created_at": "2026-02-12T10:25:16.377Z",
+    "updated_at": "2026-02-12T10:25:31.333Z",
     "variables": [
-      { "name": "dateFrom", "type": "string", "default": "2025-12-01", "required": true, "enumValues": null, "description": null },
-      { "name": "dateTo", "type": "string", "default": "2025-12-18", "required": true, "enumValues": null, "description": null },
-      { "name": "offset", "type": "number", "default": 0, "required": false, "enumValues": null, "description": null },
-      { "name": "limit", "type": "number", "default": 10, "required": true, "enumValues": null, "description": null },
-      { "name": "search", "type": "string", "default": "", "required": false, "enumValues": null, "description": "search term (optional)" }
+      {
+        "name": "dateFrom",
+        "type": "string",
+        "default": "2025-12-01",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "dateTo",
+        "type": "string",
+        "default": "2025-12-18",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "offset",
+        "type": "number",
+        "default": 0,
+        "required": false,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "limit",
+        "type": "number",
+        "default": 10,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "search",
+        "type": "string",
+        "default": "",
+        "required": false,
+        "enumValues": null,
+        "description": "search term (optional)"
+      }
     ],
     "strict_variables": true
   },
   {
+    "id": null,
     "key": "hasavh_all_documents_list_6",
     "name": "הזמנה",
-    "connection_id": null,
+    "connection_id": 1,
     "method": "POST",
     "path": "/sql",
     "headers": null,
@@ -418,19 +973,57 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
+    "created_at": "2026-02-12T10:25:16.384Z",
+    "updated_at": "2026-02-12T10:25:31.352Z",
     "variables": [
-      { "name": "dateFrom", "type": "string", "default": "2025-12-01", "required": true, "enumValues": null, "description": null },
-      { "name": "dateTo", "type": "string", "default": "2025-12-18", "required": true, "enumValues": null, "description": null },
-      { "name": "offset", "type": "number", "default": 0, "required": false, "enumValues": null, "description": null },
-      { "name": "limit", "type": "number", "default": 10, "required": true, "enumValues": null, "description": null },
-      { "name": "search", "type": "string", "default": "", "required": false, "enumValues": null, "description": "search term (optional)" }
+      {
+        "name": "dateFrom",
+        "type": "string",
+        "default": "2025-12-01",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "dateTo",
+        "type": "string",
+        "default": "2025-12-18",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "offset",
+        "type": "number",
+        "default": 0,
+        "required": false,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "limit",
+        "type": "number",
+        "default": 10,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "search",
+        "type": "string",
+        "default": "",
+        "required": false,
+        "enumValues": null,
+        "description": "search term (optional)"
+      }
     ],
     "strict_variables": true
   },
   {
+    "id": null,
     "key": "hasavh_all_documents_list_7",
     "name": "הצעת מחיר",
-    "connection_id": null,
+    "connection_id": 1,
     "method": "POST",
     "path": "/sql",
     "headers": null,
@@ -440,19 +1033,57 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
+    "created_at": "2026-02-12T10:25:16.390Z",
+    "updated_at": "2026-02-12T10:25:31.354Z",
     "variables": [
-      { "name": "dateFrom", "type": "string", "default": "2025-12-01", "required": true, "enumValues": null, "description": null },
-      { "name": "dateTo", "type": "string", "default": "2025-12-18", "required": true, "enumValues": null, "description": null },
-      { "name": "offset", "type": "number", "default": 0, "required": false, "enumValues": null, "description": null },
-      { "name": "limit", "type": "number", "default": 10, "required": true, "enumValues": null, "description": null },
-      { "name": "search", "type": "string", "default": "", "required": false, "enumValues": null, "description": "search term (optional)" }
+      {
+        "name": "dateFrom",
+        "type": "string",
+        "default": "2025-12-01",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "dateTo",
+        "type": "string",
+        "default": "2025-12-18",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "offset",
+        "type": "number",
+        "default": 0,
+        "required": false,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "limit",
+        "type": "number",
+        "default": 10,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "search",
+        "type": "string",
+        "default": "",
+        "required": false,
+        "enumValues": null,
+        "description": "search term (optional)"
+      }
     ],
     "strict_variables": true
   },
   {
+    "id": null,
     "key": "hasavh_all_documents_list_11",
     "name": "הזמנת סוכן",
-    "connection_id": null,
+    "connection_id": 1,
     "method": "POST",
     "path": "/sql",
     "headers": null,
@@ -462,19 +1093,57 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
+    "created_at": "2026-02-12T10:25:16.396Z",
+    "updated_at": "2026-02-12T10:25:31.377Z",
     "variables": [
-      { "name": "dateFrom", "type": "string", "default": "2025-12-01", "required": true, "enumValues": null, "description": null },
-      { "name": "dateTo", "type": "string", "default": "2025-12-18", "required": true, "enumValues": null, "description": null },
-      { "name": "offset", "type": "number", "default": 0, "required": false, "enumValues": null, "description": null },
-      { "name": "limit", "type": "number", "default": 10, "required": true, "enumValues": null, "description": null },
-      { "name": "search", "type": "string", "default": "", "required": false, "enumValues": null, "description": "search term (optional)" }
+      {
+        "name": "dateFrom",
+        "type": "string",
+        "default": "2025-12-01",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "dateTo",
+        "type": "string",
+        "default": "2025-12-18",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "offset",
+        "type": "number",
+        "default": 0,
+        "required": false,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "limit",
+        "type": "number",
+        "default": 10,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "search",
+        "type": "string",
+        "default": "",
+        "required": false,
+        "enumValues": null,
+        "description": "search term (optional)"
+      }
     ],
     "strict_variables": true
   },
   {
+    "id": null,
     "key": "hasavh_all_documents_list_31",
     "name": "קבלה",
-    "connection_id": null,
+    "connection_id": 1,
     "method": "POST",
     "path": "/sql",
     "headers": null,
@@ -484,19 +1153,57 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
+    "created_at": "2026-02-12T10:25:16.403Z",
+    "updated_at": "2026-02-12T10:25:31.381Z",
     "variables": [
-      { "name": "dateFrom", "type": "string", "default": "2025-12-01", "required": true, "enumValues": null, "description": null },
-      { "name": "dateTo", "type": "string", "default": "2025-12-18", "required": true, "enumValues": null, "description": null },
-      { "name": "offset", "type": "number", "default": 0, "required": false, "enumValues": null, "description": null },
-      { "name": "limit", "type": "number", "default": 10, "required": true, "enumValues": null, "description": null },
-      { "name": "search", "type": "string", "default": "", "required": false, "enumValues": null, "description": "search term (optional)" }
+      {
+        "name": "dateFrom",
+        "type": "string",
+        "default": "2025-12-01",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "dateTo",
+        "type": "string",
+        "default": "2025-12-18",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "offset",
+        "type": "number",
+        "default": 0,
+        "required": false,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "limit",
+        "type": "number",
+        "default": 10,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "search",
+        "type": "string",
+        "default": "",
+        "required": false,
+        "enumValues": null,
+        "description": "search term (optional)"
+      }
     ],
     "strict_variables": true
   },
   {
+    "id": null,
     "key": "hasavh_all_documents_list_37",
     "name": "חשבונית מס ריכוז",
-    "connection_id": null,
+    "connection_id": 1,
     "method": "POST",
     "path": "/sql",
     "headers": null,
@@ -506,20 +1213,57 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
+    "created_at": "2026-02-12T10:25:16.413Z",
+    "updated_at": "2026-02-12T10:25:31.387Z",
     "variables": [
-      { "name": "dateFrom", "type": "string", "default": "2025-12-01", "required": true, "enumValues": null, "description": null },
-      { "name": "dateTo", "type": "string", "default": "2025-12-18", "required": true, "enumValues": null, "description": null },
-      { "name": "offset", "type": "number", "default": 0, "required": false, "enumValues": null, "description": null },
-      { "name": "limit", "type": "number", "default": 10, "required": true, "enumValues": null, "description": null },
-      { "name": "search", "type": "string", "default": "", "required": false, "enumValues": null, "description": "search term (optional)" }
+      {
+        "name": "dateFrom",
+        "type": "string",
+        "default": "2025-12-01",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "dateTo",
+        "type": "string",
+        "default": "2025-12-18",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "offset",
+        "type": "number",
+        "default": 0,
+        "required": false,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "limit",
+        "type": "number",
+        "default": 10,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "search",
+        "type": "string",
+        "default": "",
+        "required": false,
+        "enumValues": null,
+        "description": "search term (optional)"
+      }
     ],
     "strict_variables": true
   },
-
   {
+    "id": null,
     "key": "hasavh_users_documents_list_1_agent",
     "name": "חשבונית מס (Agent)",
-    "connection_id": null,
+    "connection_id": 1,
     "method": "POST",
     "path": "/sql",
     "headers": null,
@@ -529,20 +1273,65 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
+    "created_at": "2026-02-12T10:25:16.425Z",
+    "updated_at": "2026-02-12T10:25:31.388Z",
     "variables": [
-      { "name": "userExtId", "type": "number", "default": 9, "required": true, "enumValues": null, "description": "Agent id" },
-      { "name": "dateFrom", "type": "string", "default": "2025-12-01", "required": true, "enumValues": null, "description": null },
-      { "name": "dateTo", "type": "string", "default": "2025-12-18", "required": true, "enumValues": null, "description": null },
-      { "name": "offset", "type": "number", "default": 0, "required": false, "enumValues": null, "description": null },
-      { "name": "limit", "type": "number", "default": 10, "required": true, "enumValues": null, "description": null },
-      { "name": "search", "type": "string", "default": "", "required": false, "enumValues": null, "description": "search term (optional)" }
+      {
+        "name": "userExtId",
+        "type": "number",
+        "default": 9,
+        "required": true,
+        "enumValues": null,
+        "description": "Agent id"
+      },
+      {
+        "name": "dateFrom",
+        "type": "string",
+        "default": "2025-12-01",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "dateTo",
+        "type": "string",
+        "default": "2025-12-18",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "offset",
+        "type": "number",
+        "default": 0,
+        "required": false,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "limit",
+        "type": "number",
+        "default": 10,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "search",
+        "type": "string",
+        "default": "",
+        "required": false,
+        "enumValues": null,
+        "description": "search term (optional)"
+      }
     ],
     "strict_variables": true
   },
   {
+    "id": null,
     "key": "hasavh_users_documents_list_2_agent",
     "name": "חשבונית מס/קבלה (Agent)",
-    "connection_id": null,
+    "connection_id": 1,
     "method": "POST",
     "path": "/sql",
     "headers": null,
@@ -552,20 +1341,65 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
+    "created_at": "2026-02-12T10:25:16.450Z",
+    "updated_at": "2026-02-12T10:25:31.400Z",
     "variables": [
-      { "name": "userExtId", "type": "number", "default": 9, "required": true, "enumValues": null, "description": "Agent id" },
-      { "name": "dateFrom", "type": "string", "default": "2025-12-01", "required": true, "enumValues": null, "description": null },
-      { "name": "dateTo", "type": "string", "default": "2025-12-18", "required": true, "enumValues": null, "description": null },
-      { "name": "offset", "type": "number", "default": 0, "required": false, "enumValues": null, "description": null },
-      { "name": "limit", "type": "number", "default": 10, "required": true, "enumValues": null, "description": null },
-      { "name": "search", "type": "string", "default": "", "required": false, "enumValues": null, "description": "search term (optional)" }
+      {
+        "name": "userExtId",
+        "type": "number",
+        "default": 9,
+        "required": true,
+        "enumValues": null,
+        "description": "Agent id"
+      },
+      {
+        "name": "dateFrom",
+        "type": "string",
+        "default": "2025-12-01",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "dateTo",
+        "type": "string",
+        "default": "2025-12-18",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "offset",
+        "type": "number",
+        "default": 0,
+        "required": false,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "limit",
+        "type": "number",
+        "default": 10,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "search",
+        "type": "string",
+        "default": "",
+        "required": false,
+        "enumValues": null,
+        "description": "search term (optional)"
+      }
     ],
     "strict_variables": true
   },
   {
+    "id": null,
     "key": "hasavh_users_documents_list_4_agent",
     "name": "תעודת משלוח (Agent)",
-    "connection_id": null,
+    "connection_id": 1,
     "method": "POST",
     "path": "/sql",
     "headers": null,
@@ -575,20 +1409,65 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
+    "created_at": "2026-02-12T10:25:16.478Z",
+    "updated_at": "2026-02-12T10:25:31.374Z",
     "variables": [
-      { "name": "userExtId", "type": "number", "default": 9, "required": true, "enumValues": null, "description": "Agent id" },
-      { "name": "dateFrom", "type": "string", "default": "2025-12-01", "required": true, "enumValues": null, "description": null },
-      { "name": "dateTo", "type": "string", "default": "2025-12-18", "required": true, "enumValues": null, "description": null },
-      { "name": "offset", "type": "number", "default": 0, "required": false, "enumValues": null, "description": null },
-      { "name": "limit", "type": "number", "default": 10, "required": true, "enumValues": null, "description": null },
-      { "name": "search", "type": "string", "default": "", "required": false, "enumValues": null, "description": "search term (optional)" }
+      {
+        "name": "userExtId",
+        "type": "number",
+        "default": 9,
+        "required": true,
+        "enumValues": null,
+        "description": "Agent id"
+      },
+      {
+        "name": "dateFrom",
+        "type": "string",
+        "default": "2025-12-01",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "dateTo",
+        "type": "string",
+        "default": "2025-12-18",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "offset",
+        "type": "number",
+        "default": 0,
+        "required": false,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "limit",
+        "type": "number",
+        "default": 10,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "search",
+        "type": "string",
+        "default": "",
+        "required": false,
+        "enumValues": null,
+        "description": "search term (optional)"
+      }
     ],
     "strict_variables": true
   },
   {
+    "id": null,
     "key": "hasavh_users_documents_list_5_agent",
     "name": "החזרה (Agent)",
-    "connection_id": null,
+    "connection_id": 1,
     "method": "POST",
     "path": "/sql",
     "headers": null,
@@ -598,20 +1477,65 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
+    "created_at": "2026-02-12T10:25:16.501Z",
+    "updated_at": "2026-02-12T10:25:31.397Z",
     "variables": [
-      { "name": "userExtId", "type": "number", "default": 9, "required": true, "enumValues": null, "description": "Agent id" },
-      { "name": "dateFrom", "type": "string", "default": "2025-12-01", "required": true, "enumValues": null, "description": null },
-      { "name": "dateTo", "type": "string", "default": "2025-12-18", "required": true, "enumValues": null, "description": null },
-      { "name": "offset", "type": "number", "default": 0, "required": false, "enumValues": null, "description": null },
-      { "name": "limit", "type": "number", "default": 10, "required": true, "enumValues": null, "description": null },
-      { "name": "search", "type": "string", "default": "", "required": false, "enumValues": null, "description": "search term (optional)" }
+      {
+        "name": "userExtId",
+        "type": "number",
+        "default": 9,
+        "required": true,
+        "enumValues": null,
+        "description": "Agent id"
+      },
+      {
+        "name": "dateFrom",
+        "type": "string",
+        "default": "2025-12-01",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "dateTo",
+        "type": "string",
+        "default": "2025-12-18",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "offset",
+        "type": "number",
+        "default": 0,
+        "required": false,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "limit",
+        "type": "number",
+        "default": 10,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "search",
+        "type": "string",
+        "default": "",
+        "required": false,
+        "enumValues": null,
+        "description": "search term (optional)"
+      }
     ],
     "strict_variables": true
   },
   {
+    "id": null,
     "key": "hasavh_users_documents_list_6_agent",
     "name": "הזמנה (Agent)",
-    "connection_id": null,
+    "connection_id": 1,
     "method": "POST",
     "path": "/sql",
     "headers": null,
@@ -621,20 +1545,65 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
+    "created_at": "2026-02-12T10:25:16.517Z",
+    "updated_at": "2026-02-12T10:25:31.395Z",
     "variables": [
-      { "name": "userExtId", "type": "number", "default": 9, "required": true, "enumValues": null, "description": "Agent id" },
-      { "name": "dateFrom", "type": "string", "default": "2025-12-01", "required": true, "enumValues": null, "description": null },
-      { "name": "dateTo", "type": "string", "default": "2025-12-18", "required": true, "enumValues": null, "description": null },
-      { "name": "offset", "type": "number", "default": 0, "required": false, "enumValues": null, "description": null },
-      { "name": "limit", "type": "number", "default": 10, "required": true, "enumValues": null, "description": null },
-      { "name": "search", "type": "string", "default": "", "required": false, "enumValues": null, "description": "search term (optional)" }
+      {
+        "name": "userExtId",
+        "type": "number",
+        "default": 9,
+        "required": true,
+        "enumValues": null,
+        "description": "Agent id"
+      },
+      {
+        "name": "dateFrom",
+        "type": "string",
+        "default": "2025-12-01",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "dateTo",
+        "type": "string",
+        "default": "2025-12-18",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "offset",
+        "type": "number",
+        "default": 0,
+        "required": false,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "limit",
+        "type": "number",
+        "default": 10,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "search",
+        "type": "string",
+        "default": "",
+        "required": false,
+        "enumValues": null,
+        "description": "search term (optional)"
+      }
     ],
     "strict_variables": true
   },
   {
+    "id": null,
     "key": "hasavh_users_documents_list_7_agent",
     "name": "הצעת מחיר (Agent)",
-    "connection_id": null,
+    "connection_id": 1,
     "method": "POST",
     "path": "/sql",
     "headers": null,
@@ -644,20 +1613,65 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
+    "created_at": "2026-02-12T10:25:16.529Z",
+    "updated_at": "2026-02-12T10:25:31.403Z",
     "variables": [
-      { "name": "userExtId", "type": "number", "default": 9, "required": true, "enumValues": null, "description": "Agent id" },
-      { "name": "dateFrom", "type": "string", "default": "2025-12-01", "required": true, "enumValues": null, "description": null },
-      { "name": "dateTo", "type": "string", "default": "2025-12-18", "required": true, "enumValues": null, "description": null },
-      { "name": "offset", "type": "number", "default": 0, "required": false, "enumValues": null, "description": null },
-      { "name": "limit", "type": "number", "default": 10, "required": true, "enumValues": null, "description": null },
-      { "name": "search", "type": "string", "default": "", "required": false, "enumValues": null, "description": "search term (optional)" }
+      {
+        "name": "userExtId",
+        "type": "number",
+        "default": 9,
+        "required": true,
+        "enumValues": null,
+        "description": "Agent id"
+      },
+      {
+        "name": "dateFrom",
+        "type": "string",
+        "default": "2025-12-01",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "dateTo",
+        "type": "string",
+        "default": "2025-12-18",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "offset",
+        "type": "number",
+        "default": 0,
+        "required": false,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "limit",
+        "type": "number",
+        "default": 10,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "search",
+        "type": "string",
+        "default": "",
+        "required": false,
+        "enumValues": null,
+        "description": "search term (optional)"
+      }
     ],
     "strict_variables": true
   },
   {
+    "id": null,
     "key": "hasavh_users_documents_list_11_agent",
     "name": "הזמנת סוכן (Agent)",
-    "connection_id": null,
+    "connection_id": 1,
     "method": "POST",
     "path": "/sql",
     "headers": null,
@@ -667,20 +1681,65 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
+    "created_at": "2026-02-12T10:25:16.541Z",
+    "updated_at": "2026-02-12T10:25:31.409Z",
     "variables": [
-      { "name": "userExtId", "type": "number", "default": 9, "required": true, "enumValues": null, "description": "Agent id" },
-      { "name": "dateFrom", "type": "string", "default": "2025-12-01", "required": true, "enumValues": null, "description": null },
-      { "name": "dateTo", "type": "string", "default": "2025-12-18", "required": true, "enumValues": null, "description": null },
-      { "name": "offset", "type": "number", "default": 0, "required": false, "enumValues": null, "description": null },
-      { "name": "limit", "type": "number", "default": 10, "required": true, "enumValues": null, "description": null },
-      { "name": "search", "type": "string", "default": "", "required": false, "enumValues": null, "description": "search term (optional)" }
+      {
+        "name": "userExtId",
+        "type": "number",
+        "default": 9,
+        "required": true,
+        "enumValues": null,
+        "description": "Agent id"
+      },
+      {
+        "name": "dateFrom",
+        "type": "string",
+        "default": "2025-12-01",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "dateTo",
+        "type": "string",
+        "default": "2025-12-18",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "offset",
+        "type": "number",
+        "default": 0,
+        "required": false,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "limit",
+        "type": "number",
+        "default": 10,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "search",
+        "type": "string",
+        "default": "",
+        "required": false,
+        "enumValues": null,
+        "description": "search term (optional)"
+      }
     ],
     "strict_variables": true
   },
   {
+    "id": null,
     "key": "hasavh_users_documents_list_31_agent",
     "name": "קבלה (Agent)",
-    "connection_id": null,
+    "connection_id": 1,
     "method": "POST",
     "path": "/sql",
     "headers": null,
@@ -690,20 +1749,65 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
+    "created_at": "2026-02-12T10:25:16.555Z",
+    "updated_at": "2026-02-12T10:25:31.409Z",
     "variables": [
-      { "name": "userExtId", "type": "number", "default": 9, "required": true, "enumValues": null, "description": "Agent id" },
-      { "name": "dateFrom", "type": "string", "default": "2025-12-01", "required": true, "enumValues": null, "description": null },
-      { "name": "dateTo", "type": "string", "default": "2025-12-18", "required": true, "enumValues": null, "description": null },
-      { "name": "offset", "type": "number", "default": 0, "required": false, "enumValues": null, "description": null },
-      { "name": "limit", "type": "number", "default": 10, "required": true, "enumValues": null, "description": null },
-      { "name": "search", "type": "string", "default": "", "required": false, "enumValues": null, "description": "search term (optional)" }
+      {
+        "name": "userExtId",
+        "type": "number",
+        "default": 9,
+        "required": true,
+        "enumValues": null,
+        "description": "Agent id"
+      },
+      {
+        "name": "dateFrom",
+        "type": "string",
+        "default": "2025-12-01",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "dateTo",
+        "type": "string",
+        "default": "2025-12-18",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "offset",
+        "type": "number",
+        "default": 0,
+        "required": false,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "limit",
+        "type": "number",
+        "default": 10,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "search",
+        "type": "string",
+        "default": "",
+        "required": false,
+        "enumValues": null,
+        "description": "search term (optional)"
+      }
     ],
     "strict_variables": true
   },
   {
+    "id": null,
     "key": "hasavh_users_documents_list_37_agent",
     "name": "חשבונית מס ריכוז (Agent)",
-    "connection_id": null,
+    "connection_id": 1,
     "method": "POST",
     "path": "/sql",
     "headers": null,
@@ -713,15 +1817,450 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
+    "created_at": "2026-02-12T10:25:16.570Z",
+    "updated_at": "2026-02-12T10:25:31.411Z",
     "variables": [
-      { "name": "userExtId", "type": "number", "default": 9, "required": true, "enumValues": null, "description": "Agent id" },
-      { "name": "dateFrom", "type": "string", "default": "2025-12-01", "required": true, "enumValues": null, "description": null },
-      { "name": "dateTo", "type": "string", "default": "2025-12-18", "required": true, "enumValues": null, "description": null },
-      { "name": "offset", "type": "number", "default": 0, "required": false, "enumValues": null, "description": null },
-      { "name": "limit", "type": "number", "default": 10, "required": true, "enumValues": null, "description": null },
-      { "name": "search", "type": "string", "default": "", "required": false, "enumValues": null, "description": "search term (optional)" }
+      {
+        "name": "userExtId",
+        "type": "number",
+        "default": 9,
+        "required": true,
+        "enumValues": null,
+        "description": "Agent id"
+      },
+      {
+        "name": "dateFrom",
+        "type": "string",
+        "default": "2025-12-01",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "dateTo",
+        "type": "string",
+        "default": "2025-12-18",
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "offset",
+        "type": "number",
+        "default": 0,
+        "required": false,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "limit",
+        "type": "number",
+        "default": 10,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "search",
+        "type": "string",
+        "default": "",
+        "required": false,
+        "enumValues": null,
+        "description": "search term (optional)"
+      }
+    ],
+    "strict_variables": true
+  },
+  {
+    "id": null,
+    "key": "hasav_sql_document_items",
+    "name": "hasav sql document items",
+    "connection_id": 1,
+    "method": "POST",
+    "path": "/sql",
+    "headers": null,
+    "query": null,
+    "body_template": "{\n  \"query\": \"SELECT doc.*, ( SELECT sm.* FROM dbo.StockMoves sm WHERE sm.StockId = doc.ID ORDER BY sm.ID ASC FOR JSON PATH ) AS lines FROM dbo.Stock doc WHERE doc.ID = @uniqueId\",\n  \"params\": {\n    \"uniqueId\": \"{documentNumber}\"\n  }\n}",
+    "body_type": "json",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2026-02-12T10:49:48.014Z",
+    "updated_at": "2026-02-12T10:52:52.596Z",
+    "variables": [
+      {
+        "name": "documentNumber",
+        "type": "number",
+        "default": 2954,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      }
+    ],
+    "strict_variables": true
+  },
+  {
+    "id": null,
+    "key": "hasav_sql_purchase_history",
+    "name": "hasav_sql_purchase_history",
+    "connection_id": 1,
+    "method": "POST",
+    "path": "/sql",
+    "headers": null,
+    "query": null,
+    "body_template": "{\n  \"query\": \"SELECT\\n  sm.Quantity,\\n  sm.Price,\\n  sm.SupplyQuantity,\\n  sm.DiscountPrc,\\n  sm.TFtal,\\n  s1.DocNumber,\\n  s1.ValueDate,\\n  s1.DocumentID,\\n  s1.Status\\nFROM dbo.Stock AS s1\\nLEFT JOIN dbo.Stock AS s2\\n  ON s1.DocNumber = s2.Reference AND s1.AccountKey = s2.AccountKey\\nJOIN dbo.StockMoves AS sm\\n  ON sm.StockId = s1.ID\\nWHERE\\n  (s1.DocumentID IN (2,4,1,6))\\n  AND s1.AccountKey = @userExtId\\n  AND sm.ItemKey = @sku\\n  AND s1.ValueDate >= DATEADD(MONTH, -6, GETDATE())\\nORDER BY s1.ValueDate DESC\",\n  \"params\": {\n    \"userExtId\": \"{userExtId}\",\n    \"sku\": \"{sku}\"\n  }\n}",
+    "body_type": "json",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2026-02-12T11:17:52.262Z",
+    "updated_at": "2026-02-12T11:17:52.262Z",
+    "variables": [
+      {
+        "name": "userExtId",
+        "type": "string",
+        "default": 32494,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "sku",
+        "type": "string",
+        "default": 16,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      }
+    ],
+    "strict_variables": true
+  },
+  {
+    "id": null,
+    "key": "hasav_sql_products_im_buy",
+    "name": "hasav_sql_products_im_buy",
+    "connection_id": 1,
+    "method": "POST",
+    "path": "/sql",
+    "headers": null,
+    "query": null,
+    "body_template": "{\n  \"query\": \"SELECT\\n  sm.Quantity,\\n  sm.Price,\\n  sm.DiscountPrc,\\n  sm.TFtal,\\n  sm.ItemKey,\\n  s1.DocNumber,\\n  s1.ValueDate,\\n  s1.DocumentID\\nFROM dbo.Stock AS s1\\nLEFT JOIN dbo.Stock AS s2\\n  ON s1.DocNumber = s2.Reference AND s1.AccountKey = s2.AccountKey\\nJOIN dbo.StockMoves AS sm\\n  ON sm.StockId = s1.ID\\nWHERE\\n  (s1.DocumentID IN (2,4,1))\\n  AND s1.AccountKey = @userExtId\\n  AND s1.ValueDate >= DATEADD(MONTH, -6, GETDATE())\\nORDER BY s1.ValueDate DESC\",\n  \"params\": {\n    \"userExtId\": \"{userExtId}\"\n  }\n}",
+    "body_type": "json",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2026-02-12T11:26:50.728Z",
+    "updated_at": "2026-02-12T11:26:50.728Z",
+    "variables": [
+      {
+        "name": "userExtId",
+        "type": "string",
+        "default": 32494,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      }
+    ],
+    "strict_variables": true
+  },
+  {
+    "id": null,
+    "key": "hasav_sql_purchases_by_sku_warehouses",
+    "name": "hasav_sql_purchases_by_sku_warehouses",
+    "connection_id": 1,
+    "method": "POST",
+    "path": "/sql",
+    "headers": null,
+    "query": null,
+    "body_template": "{\n  \"query\": \"WITH wh AS (\\n  SELECT LTRIM(RTRIM(value)) AS w\\n  FROM STRING_SPLIT(COALESCE(NULLIF(@warehousesCsv,''),''), ',')\\n  WHERE LTRIM(RTRIM(value)) <> ''\\n)\\nSELECT\\n  s1.WareHouse,\\n  stockData.ITEMWARHBAL AS stock,\\n  SUM(CASE WHEN sm.Status = 2 THEN sm.SupplyQuantity ELSE 0 END) AS committed,\\n  SUM(CASE WHEN sm.Status = 0 THEN sm.SupplyQuantity ELSE 0 END) AS ordered\\nFROM dbo.Stock AS s1\\nJOIN dbo.StockMoves AS sm\\n  ON sm.StockId = s1.ID\\nLEFT JOIN (\\n  SELECT ITEMKEY, SUM(ITEMWARHBAL) AS ITEMWARHBAL\\n  FROM dbo.vBalItemWarehouse\\n  WHERE ITEMKEY = @sku AND WAREHOUSE = '10'\\n  GROUP BY ITEMKEY\\n) AS stockData\\n  ON stockData.ITEMKEY = sm.ItemKey\\nWHERE\\n  sm.ItemKey = @sku\\n  AND sm.SupplyQuantity != 0\\n  AND (NOT EXISTS(SELECT 1 FROM wh) OR s1.WareHouse IN (SELECT w FROM wh))\\nGROUP BY\\n  s1.WareHouse,\\n  stockData.ITEMWARHBAL\",\n  \"params\": {\n    \"sku\": \"{sku}\",\n    \"warehousesCsv\": \"{warehousesCsv}\"\n  }\n}",
+    "body_type": "json",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2026-02-12T11:30:41.624Z",
+    "updated_at": "2026-02-12T11:30:41.624Z",
+    "variables": [
+      {
+        "name": "sku",
+        "type": "string",
+        "default": null,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "warehouse",
+        "type": "string",
+        "default": null,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      }
+    ],
+    "strict_variables": true
+  },
+  {
+    "id": null,
+    "key": "hasav_sql_purchase_delivery",
+    "name": "hasav_sql_purchase_delivery",
+    "connection_id": 1,
+    "method": "POST",
+    "path": "/sql",
+    "headers": null,
+    "query": null,
+    "body_template": "{\n  \"query\": \"SELECT\\n  SM.ItemKey,\\n  S1.DocNumber,\\n  SUM(SM.Quantity) AS Quantity,\\n  S1.DueDate,\\n  SM.Warehouse,\\n  SM.Status\\nFROM dbo.Stock AS S1\\nLEFT JOIN dbo.Stock AS S2\\n  ON S1.DocNumber = S2.Reference AND S1.AccountKey = S2.AccountKey\\nJOIN dbo.StockMoves SM\\n  ON S1.ID = SM.StockID\\nWHERE\\n  SM.ItemKey = @sku\\n  AND S1.DocumentID IN (17,38)\\n  AND SM.SupplyQuantity != 0\\n  AND SM.Status != '2'\\nGROUP BY\\n  S1.DocNumber, S1.DueDate, SM.ItemKey, SM.Warehouse, SM.Status\\nORDER BY S1.DueDate DESC\",\n  \"params\": {\n    \"sku\": \"{sku}\"\n  }\n}",
+    "body_type": "json",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2026-02-12T11:31:56.453Z",
+    "updated_at": "2026-02-12T11:31:56.453Z",
+    "variables": [
+      {
+        "name": "sku",
+        "type": "string",
+        "default": null,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      }
+    ],
+    "strict_variables": true
+  },
+  {
+    "id": null,
+    "key": "hasav_sql_debits",
+    "name": "hasav_sql_debits",
+    "connection_id": 1,
+    "method": "POST",
+    "path": "/sql",
+    "headers": null,
+    "query": null,
+    "body_template": "{\n  \"query\": \"SELECT\\n  j.Referance, j.TransType, j.ValueDate, j.IssueDate, j.DocumentID, j.SuF,\\n  m.AccountKey, m.DebitCredit, m.FullMatch,\\n  A.Balance, A.FullName\\nFROM dbo.JurnalTrans AS j\\nJOIN dbo.JurnalTransMoves AS m\\n  ON j.TransId = m.TransID\\nJOIN dbo.Accounts AS A\\n  ON A.AccountKey = m.AccountKey\\nWHERE\\n  m.AccountKey = @userExtId\\n  AND A.Balance != 0\\n  AND j.Referance != ''\\n  AND j.ValueDate >= TRY_CONVERT(date, @dateFrom)\\n  AND j.ValueDate <= TRY_CONVERT(date, @dateTo)\\nORDER BY j.ValueDate ASC\",\n  \"params\": {\n    \"dateFrom\": \"{dateFrom}\",\n    \"dateTo\": \"{dateTo}\",\n    \"userExtId\": \"{userExtId}\"\n  }\n}",
+    "body_type": "json",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2026-02-12T11:36:07.274Z",
+    "updated_at": "2026-02-12T11:36:38.644Z",
+    "variables": [
+      {
+        "name": "dateFrom",
+        "type": "string",
+        "default": null,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "dateTo",
+        "type": "string",
+        "default": null,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "userExtId",
+        "type": "string",
+        "default": null,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      }
+    ],
+    "strict_variables": true
+  },
+  {
+    "id": null,
+    "key": "hasav_sql_cartesset_lines",
+    "name": "hasav_sql_cartesset_lines",
+    "connection_id": 1,
+    "method": "POST",
+    "path": "/sql",
+    "headers": null,
+    "query": null,
+    "body_template": "{\n  \"query\": \"WITH base AS (\\n  SELECT\\n    JT.TransID,\\n    JT.BatchNo,\\n    JT.TransType,\\n    JT.TransCredID,\\n    CAST(JT.ValueDate AS date) AS ValueDate,\\n    CAST(JT.DueDate  AS date) AS DueDate,\\n    JT.Referance,\\n    JT.Ref2,\\n    JT.Description,\\n    JTM.ID,\\n    JTM.DebitCredit,\\n    CAST(JTM.suF AS float) AS suF,\\n    CASE WHEN CAST(JTM.DebitCredit AS varchar(10)) = '1' THEN -CAST(JTM.suF AS float) ELSE CAST(JTM.suF AS float) END AS adjSuF\\n  FROM dbo.JurnalTrans AS JT\\n  JOIN dbo.JurnalTransMoves AS JTM\\n    ON JT.TransID = JTM.TransID\\n  WHERE\\n    JTM.AccountKey = @userExtId\\n    AND JT.Status = '1'\\n    AND (NULLIF(@dateFrom, '') IS NULL OR CAST(JT.ValueDate AS date) >= TRY_CONVERT(date, NULLIF(@dateFrom, '')))\\n    AND (NULLIF(@dateTo, '') IS NULL OR CAST(JT.ValueDate AS date) <= TRY_CONVERT(date, NULLIF(@dateTo, '')))\\n)\\nSELECT\\n  *,\\n  SUM(CASE WHEN CAST(DebitCredit AS varchar(10)) = '1' THEN suF ELSE 0 END) OVER() AS glbDeptTtL,\\n  SUM(CASE WHEN CAST(DebitCredit AS varchar(10)) <> '1' THEN suF ELSE 0 END) OVER() AS glbCredTtl,\\n  SUM(adjSuF) OVER(ORDER BY ValueDate, TransID, ID ROWS UNBOUNDED PRECEDING) AS Balance\\nFROM base\\nORDER BY ValueDate, TransID, ID\",\n  \"params\": {\n    \"userExtId\": \"{userExtId}\",\n    \"dateFrom\": \"{dateFrom}\",\n    \"dateTo\": \"{dateTo}\"\n  }\n}",
+    "body_type": "json",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2026-02-12T11:41:08.079Z",
+    "updated_at": "2026-02-12T11:41:08.079Z",
+    "variables": [
+      {
+        "name": "userExtId",
+        "type": "string",
+        "default": null,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "dateFrom",
+        "type": "string",
+        "default": null,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "dateTo",
+        "type": "string",
+        "default": null,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      }
+    ],
+    "strict_variables": true
+  },
+  {
+    "id": null,
+    "key": "hasav_sql_agent_profile_bundle",
+    "name": "hasav_sql_agent_profile_bundle",
+    "connection_id": 1,
+    "method": "POST",
+    "path": "/sql",
+    "headers": null,
+    "query": null,
+    "body_template": "{\n  \"query\": \"WITH DateVars AS (\\n  SELECT\\n    CONVERT(date, GETDATE()) AS StartOfToday,\\n    DATEADD(ms, -3, DATEADD(day, 1, CONVERT(date, GETDATE()))) AS EndOfToday,\\n    DATEFROMPARTS(YEAR(GETDATE()), MONTH(GETDATE()), 1) AS StartOfMonth,\\n    DATEADD(ms, -3, DATEADD(month, 1, DATEFROMPARTS(YEAR(GETDATE()), MONTH(GETDATE()), 1))) AS EndOfMonth\\n),\\nMonthlyStats AS (\\n  SELECT\\n    SUM(TFtalVat) AS total,\\n    MONTH(ValueDate) AS month,\\n    YEAR(ValueDate) AS year\\n  FROM dbo.Stock\\n  WHERE\\n    Agent =@userExtId\\n    AND DocumentID IN (6, 11)\\n    AND Status = '1'\\n    AND ValueDate BETWEEN TRY_CONVERT(datetime, @dateFrom) AND TRY_CONVERT(datetime, @dateTo)\\n  GROUP BY YEAR(ValueDate), MONTH(ValueDate)\\n),\\nTotalsChosenPeriod AS (\\n  SELECT\\n    SUM(TFtalVat) AS total,\\n    COUNT(*) AS totalOrders,\\n    AVG(TFtalVat) AS averageBasket\\n  FROM dbo.Stock\\n  WHERE\\n    Agent =@userExtId\\n    AND DocumentID IN (6, 11)\\n    AND Status = '1'\\n    AND ValueDate BETWEEN TRY_CONVERT(datetime, @dateFrom) AND TRY_CONVERT(datetime, @dateTo)\\n),\\nTotalsToday AS (\\n  SELECT\\n    SUM(TFtalVat) AS totalToday,\\n    COUNT(*) AS countToday\\n  FROM dbo.Stock, DateVars\\n  WHERE\\n    Agent =@userExtId\\n    AND DocumentID IN (6, 11)\\n    AND Status = '1'\\n    AND ValueDate BETWEEN DateVars.StartOfToday AND DateVars.EndOfToday\\n),\\nTotalsMonth AS (\\n  SELECT\\n    SUM(TFtalVat) AS totalMonth,\\n    COUNT(*) AS countMonth\\n  FROM dbo.Stock, DateVars\\n  WHERE\\n    Agent =@userExtId\\n    AND DocumentID IN (6, 11)\\n    AND Status = '1'\\n    AND ValueDate BETWEEN DateVars.StartOfMonth AND DateVars.EndOfMonth\\n)\\nSELECT\\n  (SELECT * FROM MonthlyStats FOR JSON PATH) AS monthlyStats,\\n  (SELECT * FROM TotalsChosenPeriod FOR JSON PATH, WITHOUT_ARRAY_WRAPPER) AS totalsChosen,\\n  (SELECT * FROM TotalsToday FOR JSON PATH, WITHOUT_ARRAY_WRAPPER) AS totalsToday,\\n  (SELECT * FROM TotalsMonth FOR JSON PATH, WITHOUT_ARRAY_WRAPPER) AS totalsMonth\",\n  \"params\": {\n    \"userExtId\": \"{userExtId}\",\n    \"dateFrom\": \"{dateFrom}\",\n    \"dateTo\": \"{dateTo}\"\n  }\n}",
+    "body_type": "json",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2026-02-12T11:49:13.460Z",
+    "updated_at": "2026-02-12T11:49:13.460Z",
+    "variables": [
+      {
+        "name": "userExtId",
+        "type": "string",
+        "default": null,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      }
+    ],
+    "strict_variables": true
+  },
+  {
+    "id": null,
+    "key": "hasav_sql_sales_cycles",
+    "name": "hasav_sql_sales_cycles",
+    "connection_id": 1,
+    "method": "POST",
+    "path": "/sql",
+    "headers": null,
+    "query": null,
+    "body_template": "{\n  \"query\": \"SELECT\\n  SUM(CASE WHEN DATEDIFF(month, S.ValueDate, GETDATE()) = 1 THEN S.TFtal ELSE 0 END) AS sumPreviousMonthCurrentYear,\\n  SUM(CASE WHEN DATEDIFF(month, S.ValueDate, GETDATE()) = 13 THEN S.TFtal ELSE 0 END) AS sumPreviousMonthPreviousYear,\\n  SUM(CASE WHEN DATEDIFF(month, S.ValueDate, GETDATE()) IN (1, 2, 3) THEN S.TFtal ELSE 0 END) / 3.0 AS averageLastThreeMonths\\nFROM dbo.Stock S\\nWHERE\\n  S.AccountKey = @userExtId\\n  AND S.DocumentID IN (6, 11)\\n  AND S.TFtal IS NOT NULL\\n  AND DATEDIFF(month, S.ValueDate, GETDATE()) IN (1, 2, 3, 13)\",\n  \"params\": {\n    \"userExtId\": \"{userExtId}\"\n  }\n}",
+    "body_type": "json",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2026-02-12T11:51:38.654Z",
+    "updated_at": "2026-02-12T11:51:38.654Z",
+    "variables": [
+      {
+        "name": "userExtId",
+        "type": "string",
+        "default": null,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      }
+    ],
+    "strict_variables": true
+  },
+  {
+    "id": null,
+    "key": "hasav_sql_items_sales_cycles",
+    "name": "hasav_sql_items_sales_cycles",
+    "connection_id": 1,
+    "method": "POST",
+    "path": "/sql",
+    "headers": null,
+    "query": null,
+    "body_template": "{\n  \"query\": \"SELECT\\n  SM.ItemKey,\\n  SM.ItemName,\\n  SUM(CASE WHEN DATEDIFF(month, S.ValueDate, GETDATE()) = 1 THEN SM.Quantity ELSE 0 END) AS sumPreviousMonthCurrentYear,\\n  SUM(CASE WHEN DATEDIFF(month, S.ValueDate, GETDATE()) = 13 THEN SM.Quantity ELSE 0 END) AS sumPreviousMonthPreviousYear,\\n  SUM(CASE WHEN DATEDIFF(month, S.ValueDate, GETDATE()) IN (1, 2, 3) THEN SM.Quantity ELSE 0 END) / 3.0 AS averageLastThreeMonths\\nFROM dbo.Stock S\\nJOIN dbo.StockMoves SM\\n  ON S.ID = SM.StockID\\nWHERE\\n  S.AccountKey = @userExtId\\n  AND S.DocumentID IN (6, 11)\\n  AND S.Status = 1\\n  AND DATEDIFF(month, S.ValueDate, GETDATE()) IN (1, 2, 3, 13)\\nGROUP BY SM.ItemKey, SM.ItemName\",\n  \"params\": {\n    \"userExtId\": \"{userExtId}\"\n  }\n}",
+    "body_type": "json",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2026-02-12T11:53:15.280Z",
+    "updated_at": "2026-02-12T11:53:15.280Z",
+    "variables": [
+      {
+        "name": "userExtId",
+        "type": "string",
+        "default": null,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      }
+    ],
+    "strict_variables": true
+  },
+  {
+    "id": null,
+    "key": "hasav_sql_extra_notes_by_note_ids",
+    "name": "hasav_sql_extra_notes_by_note_ids",
+    "connection_id": 1,
+    "method": "POST",
+    "path": "/sql",
+    "headers": null,
+    "query": null,
+    "body_template": "{\n  \"query\": \"WITH ids AS (\\n  SELECT TRY_CONVERT(int, LTRIM(RTRIM(value))) AS NoteID\\n  FROM STRING_SPLIT(@noteIdsCsv, ',')\\n  WHERE LTRIM(RTRIM(value)) <> ''\\n)\\nSELECT TOP (1000)\\n  [ID], [KeF], [Note], [ItemFlag], [NoteID], [Dumi]\\nFROM dbo.ExtraNotes\\nWHERE [NoteID] IN (SELECT NoteID FROM ids WHERE NoteID IS NOT NULL)\",\n  \"params\": {\n    \"noteIdsCsv\": \"{noteIdsCsv}\"\n  }\n}",
+    "body_type": "json",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2026-02-12T11:57:01.336Z",
+    "updated_at": "2026-02-12T12:12:49.301Z",
+    "variables": [
+      {
+        "name": "noteIdsCsv",
+        "type": "string",
+        "default": null,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      }
+    ],
+    "strict_variables": true
+  },
+  {
+    "id": null,
+    "key": "hasav_sql_note_by_noteid_kef",
+    "name": "hasav_sql_note_by_noteid_kef",
+    "connection_id": 1,
+    "method": "POST",
+    "path": "/sql",
+    "headers": null,
+    "query": null,
+    "body_template": "{\n  \"query\": \"SELECT [Note]\\nFROM dbo.ExtraNotes\\nWHERE NoteID = @NoteId AND KeF = @Kef\",\n  \"params\": {\n    \"NoteId\": \"{NoteId}\",\n    \"Kef\": \"{Kef}\"\n  }\n}",
+    "body_type": "json",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2026-02-12T11:58:26.883Z",
+    "updated_at": "2026-02-12T12:13:22.126Z",
+    "variables": [
+      {
+        "name": "NoteId",
+        "type": "string",
+        "default": null,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "Kef",
+        "type": "string",
+        "default": null,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      }
     ],
     "strict_variables": true
   }
- 
 ]

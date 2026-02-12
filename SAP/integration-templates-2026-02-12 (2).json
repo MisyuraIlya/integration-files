@@ -1,5 +1,6 @@
 [
   {
+    "id": null,
     "key": "hasav_sql_agents",
     "name": "hasavh sql agents",
     "connection_id": 1,
@@ -35,6 +36,7 @@
     "strict_variables": true
   },
   {
+    "id": null,
     "key": "hasav_sql_customers",
     "name": "hasav sql customers",
     "connection_id": 1,
@@ -70,6 +72,7 @@
     "strict_variables": true
   },
   {
+    "id": null,
     "key": "hasav_sql_products",
     "name": "hasav_sql_products",
     "connection_id": 1,

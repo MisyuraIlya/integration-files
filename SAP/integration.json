@@ -176,7 +176,7 @@
   },
   {
     "key": "sap_orders_for_all",
-    "name": "sap orders for agents",
+    "name": "sap orders for all",
     "connection_id": null,
     "method": "POST",
     "path": "/sql",
@@ -219,7 +219,7 @@
   },
   {
     "key": "sap_quotations_for_all",
-    "name": "sap quotations for agents",
+    "name": "sap quotations for all",
     "connection_id": null,
     "method": "POST",
     "path": "/sql",
@@ -262,7 +262,7 @@
   },
   {
     "key": "sap_deliveries_for_all",
-    "name": "sap deliveries for agents",
+    "name": "sap deliveries for all",
     "connection_id": null,
     "method": "POST",
     "path": "/sql",
@@ -305,7 +305,7 @@
   },
   {
     "key": "sap_returns_for_all",
-    "name": "sap returns for agents",
+    "name": "sap returns for all",
     "connection_id": null,
     "method": "POST",
     "path": "/sql",
@@ -348,7 +348,7 @@
   },
   {
     "key": "sap_ar_invoices_for_all",
-    "name": "sap A/R invoices for agents",
+    "name": "sap A/R invoices for all",
     "connection_id": null,
     "method": "POST",
     "path": "/sql",
@@ -391,7 +391,7 @@
   },
   {
     "key": "sap_ar_credit_memos_for_all",
-    "name": "sap A/R credit memos for agents",
+    "name": "sap A/R credit memos for all",
     "connection_id": null,
     "method": "POST",
     "path": "/sql",
@@ -434,7 +434,7 @@
   },
   {
     "key": "sap_ar_down_payments_for_all",
-    "name": "sap A/R down payments for agents",
+    "name": "sap A/R down payments for all",
     "connection_id": null,
     "method": "POST",
     "path": "/sql",
@@ -477,7 +477,7 @@
   },
   {
     "key": "sap_correction_invoices_for_all",
-    "name": "sap correction invoices for agents",
+    "name": "sap correction invoices for all",
     "connection_id": null,
     "method": "POST",
     "path": "/sql",

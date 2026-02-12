@@ -196,6 +196,28 @@
     "strict_variables": true
   },
   {
+    "key": "sap_orders_for_agents",
+    "name": "sap orders for agents",
+    "connection_id": null,
+    "method": "POST",
+    "path": "/sql",
+    "headers": null,
+    "query": null,
+    "body_template": "{\"query\":\"SELECT o.DocEntry, o.DocNum, o.DocDate, o.DocDueDate, o.CardCode, o.CardName, o.SlpCode AS SalesPersonCode, s.SlpName AS SalesPersonName, o.DocCur, o.DocRate, (o.DocTotal - o.VatSum) AS TotalBeforeTax, o.VatSum AS TaxSum, o.DocTotal AS TotalPriceAfterTax, o.DiscSum, o.PaidToDate, o.DocStatus, o.CANCELED FROM dbo.ORDR o LEFT JOIN dbo.OSLP s ON s.SlpCode = o.SlpCode WHERE o.SlpCode = @SalesPersonCode AND o.DocDate >= @dateFrom AND o.DocDate <= @dateTo ORDER BY o.DocDate DESC, o.DocEntry DESC OFFSET @offset ROWS FETCH NEXT @limit ROWS ONLY\",\"params\":{\"offset\":{{offset}},\"limit\":{{limit}},\"dateFrom\":\"{{dateFrom}}\",\"dateTo\":\"{{dateTo}}\",\"SalesPersonCode\":\"{{userExtId}}\"}}",
+    "body_type": "json",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "variables": [
+      { "name": "userExtId", "type": "string", "default": "", "required": true },
+      { "name": "dateFrom", "type": "string", "default": "2025-01-01", "required": true },
+      { "name": "dateTo", "type": "string", "default": "2025-12-31", "required": true },
+      { "name": "offset", "type": "number", "default": 0, "required": true },
+      { "name": "limit", "type": "number", "default": 100, "required": true }
+    ],
+    "strict_variables": true
+  },
+  {
     "key": "sap_quotations_by_customer",
     "name": "sap quotations by customer",
     "connection_id": null,
@@ -231,6 +253,28 @@
     "output_root": null,
     "is_active": true,
     "variables": [
+      { "name": "dateFrom", "type": "string", "default": "2025-01-01", "required": true },
+      { "name": "dateTo", "type": "string", "default": "2025-12-31", "required": true },
+      { "name": "offset", "type": "number", "default": 0, "required": true },
+      { "name": "limit", "type": "number", "default": 100, "required": true }
+    ],
+    "strict_variables": true
+  },
+  {
+    "key": "sap_quotations_for_agents",
+    "name": "sap quotations for agents",
+    "connection_id": null,
+    "method": "POST",
+    "path": "/sql",
+    "headers": null,
+    "query": null,
+    "body_template": "{\"query\":\"SELECT d.DocEntry, d.DocNum, d.DocDate, d.DocDueDate, d.CardCode, d.CardName, d.SlpCode AS SalesPersonCode, s.SlpName AS SalesPersonName, d.DocCur, d.DocRate, (d.DocTotal - d.VatSum) AS TotalBeforeTax, d.VatSum AS TaxSum, d.DocTotal AS TotalPriceAfterTax, d.DiscSum, d.PaidToDate, d.DocStatus, d.CANCELED FROM dbo.OQUT d LEFT JOIN dbo.OSLP s ON s.SlpCode = d.SlpCode WHERE d.SlpCode = @SalesPersonCode AND d.DocDate >= @dateFrom AND d.DocDate <= @dateTo ORDER BY d.DocDate DESC, d.DocEntry DESC OFFSET @offset ROWS FETCH NEXT @limit ROWS ONLY\",\"params\":{\"offset\":{{offset}},\"limit\":{{limit}},\"dateFrom\":\"{{dateFrom}}\",\"dateTo\":\"{{dateTo}}\",\"SalesPersonCode\":\"{{userExtId}}\"}}",
+    "body_type": "json",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "variables": [
+      { "name": "userExtId", "type": "string", "default": "", "required": true },
       { "name": "dateFrom", "type": "string", "default": "2025-01-01", "required": true },
       { "name": "dateTo", "type": "string", "default": "2025-12-31", "required": true },
       { "name": "offset", "type": "number", "default": 0, "required": true },
@@ -282,6 +326,28 @@
     "strict_variables": true
   },
   {
+    "key": "sap_deliveries_for_agents",
+    "name": "sap deliveries for agents",
+    "connection_id": null,
+    "method": "POST",
+    "path": "/sql",
+    "headers": null,
+    "query": null,
+    "body_template": "{\"query\":\"SELECT d.DocEntry, d.DocNum, d.DocDate, d.DocDueDate, d.CardCode, d.CardName, d.SlpCode AS SalesPersonCode, s.SlpName AS SalesPersonName, d.DocCur, d.DocRate, (d.DocTotal - d.VatSum) AS TotalBeforeTax, d.VatSum AS TaxSum, d.DocTotal AS TotalPriceAfterTax, d.DiscSum, d.PaidToDate, d.DocStatus, d.CANCELED FROM dbo.ODLN d LEFT JOIN dbo.OSLP s ON s.SlpCode = d.SlpCode WHERE d.SlpCode = @SalesPersonCode AND d.DocDate >= @dateFrom AND d.DocDate <= @dateTo ORDER BY d.DocDate DESC, d.DocEntry DESC OFFSET @offset ROWS FETCH NEXT @limit ROWS ONLY\",\"params\":{\"offset\":{{offset}},\"limit\":{{limit}},\"dateFrom\":\"{{dateFrom}}\",\"dateTo\":\"{{dateTo}}\",\"SalesPersonCode\":\"{{userExtId}}\"}}",
+    "body_type": "json",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "variables": [
+      { "name": "userExtId", "type": "string", "default": "", "required": true },
+      { "name": "dateFrom", "type": "string", "default": "2025-01-01", "required": true },
+      { "name": "dateTo", "type": "string", "default": "2025-12-31", "required": true },
+      { "name": "offset", "type": "number", "default": 0, "required": true },
+      { "name": "limit", "type": "number", "default": 100, "required": true }
+    ],
+    "strict_variables": true
+  },
+  {
     "key": "sap_returns_by_customer",
     "name": "sap returns by customer",
     "connection_id": null,
@@ -317,6 +383,28 @@
     "output_root": null,
     "is_active": true,
     "variables": [
+      { "name": "dateFrom", "type": "string", "default": "2025-01-01", "required": true },
+      { "name": "dateTo", "type": "string", "default": "2025-12-31", "required": true },
+      { "name": "offset", "type": "number", "default": 0, "required": true },
+      { "name": "limit", "type": "number", "default": 100, "required": true }
+    ],
+    "strict_variables": true
+  },
+  {
+    "key": "sap_returns_for_agents",
+    "name": "sap returns for agents",
+    "connection_id": null,
+    "method": "POST",
+    "path": "/sql",
+    "headers": null,
+    "query": null,
+    "body_template": "{\"query\":\"SELECT d.DocEntry, d.DocNum, d.DocDate, d.DocDueDate, d.CardCode, d.CardName, d.SlpCode AS SalesPersonCode, s.SlpName AS SalesPersonName, d.DocCur, d.DocRate, (d.DocTotal - d.VatSum) AS TotalBeforeTax, d.VatSum AS TaxSum, d.DocTotal AS TotalPriceAfterTax, d.DiscSum, d.PaidToDate, d.DocStatus, d.CANCELED FROM dbo.ORDN d LEFT JOIN dbo.OSLP s ON s.SlpCode = d.SlpCode WHERE d.SlpCode = @SalesPersonCode AND d.DocDate >= @dateFrom AND d.DocDate <= @dateTo ORDER BY d.DocDate DESC, d.DocEntry DESC OFFSET @offset ROWS FETCH NEXT @limit ROWS ONLY\",\"params\":{\"offset\":{{offset}},\"limit\":{{limit}},\"dateFrom\":\"{{dateFrom}}\",\"dateTo\":\"{{dateTo}}\",\"SalesPersonCode\":\"{{userExtId}}\"}}",
+    "body_type": "json",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "variables": [
+      { "name": "userExtId", "type": "string", "default": "", "required": true },
       { "name": "dateFrom", "type": "string", "default": "2025-01-01", "required": true },
       { "name": "dateTo", "type": "string", "default": "2025-12-31", "required": true },
       { "name": "offset", "type": "number", "default": 0, "required": true },
@@ -368,6 +456,28 @@
     "strict_variables": true
   },
   {
+    "key": "sap_ar_invoices_for_agents",
+    "name": "sap A/R invoices for agents",
+    "connection_id": null,
+    "method": "POST",
+    "path": "/sql",
+    "headers": null,
+    "query": null,
+    "body_template": "{\"query\":\"SELECT d.DocEntry, d.DocNum, d.DocDate, d.DocDueDate, d.CardCode, d.CardName, d.SlpCode AS SalesPersonCode, s.SlpName AS SalesPersonName, d.DocCur, d.DocRate, (d.DocTotal - d.VatSum) AS TotalBeforeTax, d.VatSum AS TaxSum, d.DocTotal AS TotalPriceAfterTax, d.DiscSum, d.PaidToDate, d.DocStatus, d.CANCELED FROM dbo.OINV d LEFT JOIN dbo.OSLP s ON s.SlpCode = d.SlpCode WHERE d.SlpCode = @SalesPersonCode AND d.DocDate >= @dateFrom AND d.DocDate <= @dateTo ORDER BY d.DocDate DESC, d.DocEntry DESC OFFSET @offset ROWS FETCH NEXT @limit ROWS ONLY\",\"params\":{\"offset\":{{offset}},\"limit\":{{limit}},\"dateFrom\":\"{{dateFrom}}\",\"dateTo\":\"{{dateTo}}\",\"SalesPersonCode\":\"{{userExtId}}\"}}",
+    "body_type": "json",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "variables": [
+      { "name": "userExtId", "type": "string", "default": "", "required": true },
+      { "name": "dateFrom", "type": "string", "default": "2025-01-01", "required": true },
+      { "name": "dateTo", "type": "string", "default": "2025-12-31", "required": true },
+      { "name": "offset", "type": "number", "default": 0, "required": true },
+      { "name": "limit", "type": "number", "default": 100, "required": true }
+    ],
+    "strict_variables": true
+  },
+  {
     "key": "sap_ar_credit_memos_by_customer",
     "name": "sap A/R credit memos by customer",
     "connection_id": null,
@@ -403,6 +513,28 @@
     "output_root": null,
     "is_active": true,
     "variables": [
+      { "name": "dateFrom", "type": "string", "default": "2025-01-01", "required": true },
+      { "name": "dateTo", "type": "string", "default": "2025-12-31", "required": true },
+      { "name": "offset", "type": "number", "default": 0, "required": true },
+      { "name": "limit", "type": "number", "default": 100, "required": true }
+    ],
+    "strict_variables": true
+  },
+  {
+    "key": "sap_ar_credit_memos_for_agents",
+    "name": "sap A/R credit memos for agents",
+    "connection_id": null,
+    "method": "POST",
+    "path": "/sql",
+    "headers": null,
+    "query": null,
+    "body_template": "{\"query\":\"SELECT d.DocEntry, d.DocNum, d.DocDate, d.DocDueDate, d.CardCode, d.CardName, d.SlpCode AS SalesPersonCode, s.SlpName AS SalesPersonName, d.DocCur, d.DocRate, (d.DocTotal - d.VatSum) AS TotalBeforeTax, d.VatSum AS TaxSum, d.DocTotal AS TotalPriceAfterTax, d.DiscSum, d.PaidToDate, d.DocStatus, d.CANCELED FROM dbo.ORIN d LEFT JOIN dbo.OSLP s ON s.SlpCode = d.SlpCode WHERE d.SlpCode = @SalesPersonCode AND d.DocDate >= @dateFrom AND d.DocDate <= @dateTo ORDER BY d.DocDate DESC, d.DocEntry DESC OFFSET @offset ROWS FETCH NEXT @limit ROWS ONLY\",\"params\":{\"offset\":{{offset}},\"limit\":{{limit}},\"dateFrom\":\"{{dateFrom}}\",\"dateTo\":\"{{dateTo}}\",\"SalesPersonCode\":\"{{userExtId}}\"}}",
+    "body_type": "json",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "variables": [
+      { "name": "userExtId", "type": "string", "default": "", "required": true },
       { "name": "dateFrom", "type": "string", "default": "2025-01-01", "required": true },
       { "name": "dateTo", "type": "string", "default": "2025-12-31", "required": true },
       { "name": "offset", "type": "number", "default": 0, "required": true },
@@ -454,6 +586,28 @@
     "strict_variables": true
   },
   {
+    "key": "sap_ar_down_payments_for_agents",
+    "name": "sap A/R down payments for agents",
+    "connection_id": null,
+    "method": "POST",
+    "path": "/sql",
+    "headers": null,
+    "query": null,
+    "body_template": "{\"query\":\"SELECT d.DocEntry, d.DocNum, d.DocDate, d.DocDueDate, d.CardCode, d.CardName, d.SlpCode AS SalesPersonCode, s.SlpName AS SalesPersonName, d.DocCur, d.DocRate, (d.DocTotal - d.VatSum) AS TotalBeforeTax, d.VatSum AS TaxSum, d.DocTotal AS TotalPriceAfterTax, d.DiscSum, d.PaidToDate, d.DocStatus, d.CANCELED FROM dbo.ODPI d LEFT JOIN dbo.OSLP s ON s.SlpCode = d.SlpCode WHERE d.SlpCode = @SalesPersonCode AND d.DocDate >= @dateFrom AND d.DocDate <= @dateTo ORDER BY d.DocDate DESC, d.DocEntry DESC OFFSET @offset ROWS FETCH NEXT @limit ROWS ONLY\",\"params\":{\"offset\":{{offset}},\"limit\":{{limit}},\"dateFrom\":\"{{dateFrom}}\",\"dateTo\":\"{{dateTo}}\",\"SalesPersonCode\":\"{{userExtId}}\"}}",
+    "body_type": "json",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "variables": [
+      { "name": "userExtId", "type": "string", "default": "", "required": true },
+      { "name": "dateFrom", "type": "string", "default": "2025-01-01", "required": true },
+      { "name": "dateTo", "type": "string", "default": "2025-12-31", "required": true },
+      { "name": "offset", "type": "number", "default": 0, "required": true },
+      { "name": "limit", "type": "number", "default": 100, "required": true }
+    ],
+    "strict_variables": true
+  },
+  {
     "key": "sap_correction_invoices_by_customer",
     "name": "sap correction invoices by customer",
     "connection_id": null,
@@ -489,6 +643,28 @@
     "output_root": null,
     "is_active": true,
     "variables": [
+      { "name": "dateFrom", "type": "string", "default": "2025-01-01", "required": true },
+      { "name": "dateTo", "type": "string", "default": "2025-12-31", "required": true },
+      { "name": "offset", "type": "number", "default": 0, "required": true },
+      { "name": "limit", "type": "number", "default": 100, "required": true }
+    ],
+    "strict_variables": true
+  },
+  {
+    "key": "sap_correction_invoices_for_agents",
+    "name": "sap correction invoices for agents",
+    "connection_id": null,
+    "method": "POST",
+    "path": "/sql",
+    "headers": null,
+    "query": null,
+    "body_template": "{\"query\":\"SELECT d.DocEntry, d.DocNum, d.DocDate, d.DocDueDate, d.CardCode, d.CardName, d.SlpCode AS SalesPersonCode, s.SlpName AS SalesPersonName, d.DocCur, d.DocRate, (d.DocTotal - d.VatSum) AS TotalBeforeTax, d.VatSum AS TaxSum, d.DocTotal AS TotalPriceAfterTax, d.DiscSum, d.PaidToDate, d.DocStatus, d.CANCELED FROM dbo.OCSI d LEFT JOIN dbo.OSLP s ON s.SlpCode = d.SlpCode WHERE d.SlpCode = @SalesPersonCode AND d.DocDate >= @dateFrom AND d.DocDate <= @dateTo ORDER BY d.DocDate DESC, d.DocEntry DESC OFFSET @offset ROWS FETCH NEXT @limit ROWS ONLY\",\"params\":{\"offset\":{{offset}},\"limit\":{{limit}},\"dateFrom\":\"{{dateFrom}}\",\"dateTo\":\"{{dateTo}}\",\"SalesPersonCode\":\"{{userExtId}}\"}}",
+    "body_type": "json",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "variables": [
+      { "name": "userExtId", "type": "string", "default": "", "required": true },
       { "name": "dateFrom", "type": "string", "default": "2025-01-01", "required": true },
       { "name": "dateTo", "type": "string", "default": "2025-12-31", "required": true },
       { "name": "offset", "type": "number", "default": 0, "required": true },

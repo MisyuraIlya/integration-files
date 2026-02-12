@@ -126,7 +126,8 @@
           "updatedAt": null
         }
       ],
-      "isAgentRequest": false
+      "isAgentRequest": false,
+      "isSuperAgentRequest": false
     },
     {
       "id": null,
@@ -225,7 +226,8 @@
           "updatedAt": null
         }
       ],
-      "isAgentRequest": false
+      "isAgentRequest": false,
+      "isSuperAgentRequest": false
     },
     {
       "id": null,
@@ -283,7 +285,8 @@
           "updatedAt": null
         }
       ],
-      "isAgentRequest": false
+      "isAgentRequest": false,
+      "isSuperAgentRequest": false
     },
     {
       "id": null,
@@ -440,7 +443,8 @@
           "updatedAt": null
         }
       ],
-      "isAgentRequest": false
+      "isAgentRequest": false,
+      "isSuperAgentRequest": false
     },
     {
       "id": null,
@@ -524,7 +528,8 @@
           "updatedAt": null
         }
       ],
-      "isAgentRequest": false
+      "isAgentRequest": false,
+      "isSuperAgentRequest": false
     },
     {
       "id": null,
@@ -626,7 +631,8 @@
           "updatedAt": null
         }
       ],
-      "isAgentRequest": true
+      "isAgentRequest": true,
+      "isSuperAgentRequest": false
     },
     {
       "id": null,
@@ -783,7 +789,8 @@
           "updatedAt": null
         }
       ],
-      "isAgentRequest": false
+      "isAgentRequest": false,
+      "isSuperAgentRequest": false
     },
     {
       "id": null,
@@ -867,7 +874,8 @@
           "updatedAt": null
         }
       ],
-      "isAgentRequest": false
+      "isAgentRequest": false,
+      "isSuperAgentRequest": false
     },
     {
       "id": null,
@@ -969,7 +977,8 @@
           "updatedAt": null
         }
       ],
-      "isAgentRequest": true
+      "isAgentRequest": true,
+      "isSuperAgentRequest": false
     },
     {
       "id": null,
@@ -1126,7 +1135,8 @@
           "updatedAt": null
         }
       ],
-      "isAgentRequest": false
+      "isAgentRequest": false,
+      "isSuperAgentRequest": false
     },
     {
       "id": null,
@@ -1210,7 +1220,8 @@
           "updatedAt": null
         }
       ],
-      "isAgentRequest": false
+      "isAgentRequest": false,
+      "isSuperAgentRequest": false
     },
     {
       "id": null,
@@ -1312,7 +1323,8 @@
           "updatedAt": null
         }
       ],
-      "isAgentRequest": true
+      "isAgentRequest": true,
+      "isSuperAgentRequest": false
     },
     {
       "id": null,
@@ -1469,7 +1481,8 @@
           "updatedAt": null
         }
       ],
-      "isAgentRequest": false
+      "isAgentRequest": false,
+      "isSuperAgentRequest": false
     },
     {
       "id": null,
@@ -1553,7 +1566,8 @@
           "updatedAt": null
         }
       ],
-      "isAgentRequest": false
+      "isAgentRequest": false,
+      "isSuperAgentRequest": false
     },
     {
       "id": null,
@@ -1655,7 +1669,8 @@
           "updatedAt": null
         }
       ],
-      "isAgentRequest": true
+      "isAgentRequest": true,
+      "isSuperAgentRequest": false
     },
     {
       "id": null,
@@ -1812,7 +1827,8 @@
           "updatedAt": null
         }
       ],
-      "isAgentRequest": false
+      "isAgentRequest": false,
+      "isSuperAgentRequest": false
     },
     {
       "id": null,
@@ -1896,7 +1912,8 @@
           "updatedAt": null
         }
       ],
-      "isAgentRequest": false
+      "isAgentRequest": false,
+      "isSuperAgentRequest": false
     },
     {
       "id": null,
@@ -1998,7 +2015,8 @@
           "updatedAt": null
         }
       ],
-      "isAgentRequest": true
+      "isAgentRequest": true,
+      "isSuperAgentRequest": false
     },
     {
       "id": null,
@@ -2155,7 +2173,8 @@
           "updatedAt": null
         }
       ],
-      "isAgentRequest": false
+      "isAgentRequest": false,
+      "isSuperAgentRequest": false
     },
     {
       "id": null,
@@ -2239,7 +2258,8 @@
           "updatedAt": null
         }
       ],
-      "isAgentRequest": false
+      "isAgentRequest": false,
+      "isSuperAgentRequest": false
     },
     {
       "id": null,
@@ -2341,7 +2361,8 @@
           "updatedAt": null
         }
       ],
-      "isAgentRequest": true
+      "isAgentRequest": true,
+      "isSuperAgentRequest": false
     },
     {
       "id": null,
@@ -2425,7 +2446,8 @@
           "updatedAt": null
         }
       ],
-      "isAgentRequest": false
+      "isAgentRequest": false,
+      "isSuperAgentRequest": false
     },
     {
       "id": null,
@@ -2527,7 +2549,8 @@
           "updatedAt": null
         }
       ],
-      "isAgentRequest": true
+      "isAgentRequest": true,
+      "isSuperAgentRequest": false
     },
     {
       "id": null,
@@ -2611,7 +2634,8 @@
           "updatedAt": null
         }
       ],
-      "isAgentRequest": false
+      "isAgentRequest": false,
+      "isSuperAgentRequest": false
     },
     {
       "id": null,
@@ -2713,7 +2737,8 @@
           "updatedAt": null
         }
       ],
-      "isAgentRequest": true
+      "isAgentRequest": true,
+      "isSuperAgentRequest": false
     },
     {
       "id": null,
@@ -2761,7 +2786,8 @@
           "updatedAt": null
         }
       ],
-      "isAgentRequest": false
+      "isAgentRequest": false,
+      "isSuperAgentRequest": false
     },
     {
       "id": null,
@@ -2861,7 +2887,8 @@
           "updatedAt": null
         }
       ],
-      "isAgentRequest": false
+      "isAgentRequest": false,
+      "isSuperAgentRequest": false
     },
     {
       "id": null,
@@ -2908,7 +2935,8 @@
           "updatedAt": null
         }
       ],
-      "isAgentRequest": false
+      "isAgentRequest": false,
+      "isSuperAgentRequest": false
     },
     {
       "id": null,
@@ -2959,7 +2987,8 @@
           "updatedAt": null
         }
       ],
-      "isAgentRequest": false
+      "isAgentRequest": false,
+      "isSuperAgentRequest": false
     },
 
     {
@@ -3029,7 +3058,8 @@
           "updatedAt": null
         }
       ],
-      "isAgentRequest": false
+      "isAgentRequest": false,
+      "isSuperAgentRequest": false
     }
   ]
 }

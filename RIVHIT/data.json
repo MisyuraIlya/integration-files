@@ -2208,8 +2208,8 @@
           "updatedAt": null
         }
       ],
-      "isAgentRequest": true,
-      "isSuperAgentRequest": false
+      "isAgentRequest": false,
+      "isSuperAgentRequest": true
     },
     {
       "id": null,
@@ -2291,8 +2291,8 @@
           "updatedAt": null
         }
       ],
-      "isAgentRequest": true,
-      "isSuperAgentRequest": false
+      "isAgentRequest": false,
+      "isSuperAgentRequest": true
     },
     {
       "id": null,
@@ -2374,8 +2374,8 @@
           "updatedAt": null
         }
       ],
-      "isAgentRequest": true,
-      "isSuperAgentRequest": false
+      "isAgentRequest": false,
+      "isSuperAgentRequest": true
     },
     {
       "id": null,
@@ -2457,8 +2457,8 @@
           "updatedAt": null
         }
       ],
-      "isAgentRequest": true,
-      "isSuperAgentRequest": false
+      "isAgentRequest": false,
+      "isSuperAgentRequest": true
     },
     {
       "id": null,
@@ -2540,8 +2540,8 @@
           "updatedAt": null
         }
       ],
-      "isAgentRequest": true,
-      "isSuperAgentRequest": false
+      "isAgentRequest": false,
+      "isSuperAgentRequest": true
     },
     {
       "id": null,
@@ -2623,8 +2623,8 @@
           "updatedAt": null
         }
       ],
-      "isAgentRequest": true,
-      "isSuperAgentRequest": false
+      "isAgentRequest": false,
+      "isSuperAgentRequest": true
     },
     {
       "id": null,
@@ -2706,8 +2706,8 @@
           "updatedAt": null
         }
       ],
-      "isAgentRequest": true,
-      "isSuperAgentRequest": false
+      "isAgentRequest": false,
+      "isSuperAgentRequest": true
     },
 
 

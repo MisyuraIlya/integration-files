@@ -160,6 +160,8 @@
     "variables": [],
     "strict_variables": true
   },
+
+
   {
     "id": null,
     "key": "rivhit_user_documents_1",
@@ -324,7 +326,7 @@
 
   {
     "id": null,
-    "key": "rivhit_user_documents_1_agent",
+    "key": "rivhit_user_documents_1_all",
     "name": "תעודות חשבונית מס",
     "connection_id": null,
     "method": "POST",
@@ -360,7 +362,7 @@
   },
   {
     "id": null,
-    "key": "rivhit_user_documents_2_agent",
+    "key": "rivhit_user_documents_2_all",
     "name": "תעודות חשבונית מס קבלה",
     "connection_id": null,
     "method": "POST",
@@ -396,7 +398,7 @@
   },
   {
     "id": null,
-    "key": "rivhit_user_documents_3_agent",
+    "key": "rivhit_user_documents_3_all",
     "name": "תעודות חשבונית מס זיכוי",
     "connection_id": null,
     "method": "POST",
@@ -432,7 +434,7 @@
   },
   {
     "id": null,
-    "key": "rivhit_user_documents_4_agent",
+    "key": "rivhit_user_documents_4_all",
     "name": "תעודות תעודת משלוח",
     "connection_id": null,
     "method": "POST",
@@ -468,7 +470,7 @@
   },
   {
     "id": null,
-    "key": "rivhit_user_documents_5_agent",
+    "key": "rivhit_user_documents_5_all",
     "name": "תעודות תעודת החזרה",
     "connection_id": null,
     "method": "POST",
@@ -504,7 +506,7 @@
   },
   {
     "id": null,
-    "key": "rivhit_user_documents_6_agent",
+    "key": "rivhit_user_documents_6_all",
     "name": "תעודות קריאת שירות",
     "connection_id": null,
     "method": "POST",
@@ -540,7 +542,7 @@
   },
   {
     "id": null,
-    "key": "rivhit_user_documents_7_agent",
+    "key": "rivhit_user_documents_7_all",
     "name": "תעודות הזמנה",
     "connection_id": null,
     "method": "POST",

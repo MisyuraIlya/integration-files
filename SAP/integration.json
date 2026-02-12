@@ -175,7 +175,7 @@
     "strict_variables": true
   },
   {
-    "key": "sap_orders_for_agents",
+    "key": "sap_orders_for_all",
     "name": "sap orders for agents",
     "connection_id": null,
     "method": "POST",
@@ -218,7 +218,7 @@
     "strict_variables": true
   },
   {
-    "key": "sap_quotations_for_agents",
+    "key": "sap_quotations_for_all",
     "name": "sap quotations for agents",
     "connection_id": null,
     "method": "POST",
@@ -261,7 +261,7 @@
     "strict_variables": true
   },
   {
-    "key": "sap_deliveries_for_agents",
+    "key": "sap_deliveries_for_all",
     "name": "sap deliveries for agents",
     "connection_id": null,
     "method": "POST",
@@ -304,7 +304,7 @@
     "strict_variables": true
   },
   {
-    "key": "sap_returns_for_agents",
+    "key": "sap_returns_for_all",
     "name": "sap returns for agents",
     "connection_id": null,
     "method": "POST",
@@ -347,7 +347,7 @@
     "strict_variables": true
   },
   {
-    "key": "sap_ar_invoices_for_agents",
+    "key": "sap_ar_invoices_for_all",
     "name": "sap A/R invoices for agents",
     "connection_id": null,
     "method": "POST",
@@ -390,7 +390,7 @@
     "strict_variables": true
   },
   {
-    "key": "sap_ar_credit_memos_for_agents",
+    "key": "sap_ar_credit_memos_for_all",
     "name": "sap A/R credit memos for agents",
     "connection_id": null,
     "method": "POST",
@@ -433,7 +433,7 @@
     "strict_variables": true
   },
   {
-    "key": "sap_ar_down_payments_for_agents",
+    "key": "sap_ar_down_payments_for_all",
     "name": "sap A/R down payments for agents",
     "connection_id": null,
     "method": "POST",
@@ -476,7 +476,7 @@
     "strict_variables": true
   },
   {
-    "key": "sap_correction_invoices_for_agents",
+    "key": "sap_correction_invoices_for_all",
     "name": "sap correction invoices for agents",
     "connection_id": null,
     "method": "POST",

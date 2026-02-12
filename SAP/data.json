@@ -533,7 +533,7 @@
     },
     {
       "id": null,
-      "key": "sap_orders_agent",
+      "key": "sap_orders_all",
       "name": "כל ההזמנות",
       "mapperType": "documentLines",
       "table": null,
@@ -548,10 +548,10 @@
       "dataSources": [
         {
           "id": null,
-          "key": "sap_orders_agent",
-          "name": "sap orders agent",
-          "description": "sap orders agent",
-          "templateKey": "sap_orders_for_agents",
+          "key": "sap_orders_all",
+          "name": "sap orders super agent",
+          "description": "sap orders super agent",
+          "templateKey": "sap_orders_for_all",
           "integrationTemplateId": null,
           "template": null,
           "config": {
@@ -879,7 +879,7 @@
     },
     {
       "id": null,
-      "key": "sap_quotations_agent",
+      "key": "sap_quotations_all",
       "name": "כל הצעות המחיר",
       "mapperType": "documentLines",
       "table": null,
@@ -894,10 +894,10 @@
       "dataSources": [
         {
           "id": null,
-          "key": "sap_quotations_agent",
-          "name": "sap quotations agent",
-          "description": "sap quotations agent",
-          "templateKey": "sap_quotations_for_agents",
+          "key": "sap_quotations_all",
+          "name": "sap quotations all",
+          "description": "sap quotations all",
+          "templateKey": "sap_quotations_for_all",
           "integrationTemplateId": null,
           "template": null,
           "config": {
@@ -1225,7 +1225,7 @@
     },
     {
       "id": null,
-      "key": "sap_deliveries_agent",
+      "key": "sap_deliveries_all",
       "name": "כל תעודות המשלוח",
       "mapperType": "documentLines",
       "table": null,
@@ -1240,10 +1240,10 @@
       "dataSources": [
         {
           "id": null,
-          "key": "sap_deliveries_agent",
-          "name": "sap deliveries agent",
-          "description": "sap deliveries agent",
-          "templateKey": "sap_deliveries_for_agents",
+          "key": "sap_deliveries_all",
+          "name": "sap deliveries all",
+          "description": "sap deliveries all",
+          "templateKey": "sap_deliveries_for_all",
           "integrationTemplateId": null,
           "template": null,
           "config": {
@@ -1571,7 +1571,7 @@
     },
     {
       "id": null,
-      "key": "sap_returns_agent",
+      "key": "sap_returns_all",
       "name": "כל ההחזרות",
       "mapperType": "documentLines",
       "table": null,
@@ -1586,10 +1586,10 @@
       "dataSources": [
         {
           "id": null,
-          "key": "sap_returns_agent",
-          "name": "sap returns agent",
-          "description": "sap returns agent",
-          "templateKey": "sap_returns_for_agents",
+          "key": "sap_returns_all",
+          "name": "sap returns all",
+          "description": "sap returns all",
+          "templateKey": "sap_returns_for_all",
           "integrationTemplateId": null,
           "template": null,
           "config": {
@@ -1917,7 +1917,7 @@
     },
     {
       "id": null,
-      "key": "sap_ar_invoices_agent",
+      "key": "sap_ar_invoices_all",
       "name": "כל חשבוניות הלקוח",
       "mapperType": "documentLines",
       "table": null,
@@ -1932,10 +1932,10 @@
       "dataSources": [
         {
           "id": null,
-          "key": "sap_ar_invoices_agent",
-          "name": "sap A/R invoices agent",
-          "description": "sap A/R invoices agent",
-          "templateKey": "sap_ar_invoices_for_agents",
+          "key": "sap_ar_invoices_all",
+          "name": "sap A/R invoices all",
+          "description": "sap A/R invoices all",
+          "templateKey": "sap_ar_invoices_for_all",
           "integrationTemplateId": null,
           "template": null,
           "config": {
@@ -2263,7 +2263,7 @@
     },
     {
       "id": null,
-      "key": "sap_ar_credit_memos_agent",
+      "key": "sap_ar_credit_memos_all",
       "name": "כל תעודות הזיכוי",
       "mapperType": "documentLines",
       "table": null,
@@ -2278,10 +2278,10 @@
       "dataSources": [
         {
           "id": null,
-          "key": "sap_ar_credit_memos_agent",
-          "name": "sap A/R credit memos agent",
-          "description": "sap A/R credit memos agent",
-          "templateKey": "sap_ar_credit_memos_for_agents",
+          "key": "sap_ar_credit_memos_all",
+          "name": "sap A/R credit memos all",
+          "description": "sap A/R credit memos all",
+          "templateKey": "sap_ar_credit_memos_for_all",
           "integrationTemplateId": null,
           "template": null,
           "config": {
@@ -2451,7 +2451,7 @@
     },
     {
       "id": null,
-      "key": "sap_ar_down_payments_agent",
+      "key": "sap_ar_down_payments_all",
       "name": "כל המקדמות",
       "mapperType": "documentLines",
       "table": null,
@@ -2466,10 +2466,10 @@
       "dataSources": [
         {
           "id": null,
-          "key": "sap_ar_down_payments_agent",
-          "name": "sap A/R down payments agent",
-          "description": "sap A/R down payments agent",
-          "templateKey": "sap_ar_down_payments_for_agents",
+          "key": "sap_ar_down_payments_all",
+          "name": "sap A/R down payments all",
+          "description": "sap A/R down payments all",
+          "templateKey": "sap_ar_down_payments_for_all",
           "integrationTemplateId": null,
           "template": null,
           "config": {
@@ -2639,7 +2639,7 @@
     },
     {
       "id": null,
-      "key": "sap_correction_invoices_agent",
+      "key": "sap_correction_invoices_all",
       "name": "כל חשבוניות התיקון",
       "mapperType": "documentLines",
       "table": null,
@@ -2654,10 +2654,10 @@
       "dataSources": [
         {
           "id": null,
-          "key": "sap_correction_invoices_agent",
-          "name": "sap correction invoices agent",
-          "description": "sap correction invoices agent",
-          "templateKey": "sap_correction_invoices_for_agents",
+          "key": "sap_correction_invoices_all",
+          "name": "sap correction invoices all",
+          "description": "sap correction invoices all",
+          "templateKey": "sap_correction_invoices_for_all",
           "integrationTemplateId": null,
           "template": null,
           "config": {

@@ -533,6 +533,109 @@
     },
     {
       "id": null,
+      "key": "sap_orders_agent",
+      "name": "כל ההזמנות",
+      "mapperType": "documentLines",
+      "table": null,
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "כל ההזמנות",
+      "linkedName": "sap_order_items",
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "sap_orders_agent",
+          "name": "sap orders agent",
+          "description": "sap orders agent",
+          "templateKey": "sap_orders_for_agents",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "documents": {
+              "headFields": [
+                {
+                  "type": "string",
+                  "label": "מספר מסמך",
+                  "sourceField": "DocNum",
+                  "targetField": "documentNumber"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך",
+                  "sourceField": "DocDate",
+                  "targetField": "createdAt"
+                },
+                {
+                  "type": "string",
+                  "label": "מספר לקוח",
+                  "sourceField": "CardCode",
+                  "targetField": "userExtId"
+                },
+                {
+                  "type": "string",
+                  "label": "שם לקוח",
+                  "sourceField": "CardName",
+                  "targetField": "text_1"
+                },
+                {
+                  "type": "money",
+                  "label": "סה״כ",
+                  "sourceField": "TotalBeforeTax",
+                  "targetField": "totalAfterDiscount"
+                },
+                {
+                  "type": "money",
+                  "label": "מע״מ",
+                  "sourceField": "TaxSum",
+                  "targetField": "totalTax"
+                },
+                {
+                  "type": "money",
+                  "label": "סה״כ כולל מע״מ",
+                  "sourceField": "TotalPriceAfterTax",
+                  "targetField": "money"
+                },
+                {
+                  "type": "string",
+                  "label": "סוכן",
+                  "sourceField": "SalesPersonName",
+                  "targetField": "text_1"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך משלוח",
+                  "sourceField": "DocDueDate",
+                  "targetField": "dueDate"
+                },
+                {
+                  "type": "string",
+                  "label": "סטטוס",
+                  "sourceField": "DocStatus",
+                  "targetField": "status"
+                }
+              ],
+              "lineColumns": [],
+              "lineAttributes": []
+            },
+            "execution": {
+              "mode": "single"
+            },
+            "itemsPath": "rows"
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": true,
+      "isSuperAgentRequest": false
+    },
+    {
+      "id": null,
       "key": "sap_orders_all",
       "name": "כל ההזמנות",
       "mapperType": "documentLines",

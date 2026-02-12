@@ -1,5 +1,6 @@
 [
   {
+    "id": null,
     "key": "hasav_sql_agents",
     "name": "hasavh sql agents",
     "connection_id": 1,
@@ -35,6 +36,7 @@
     "strict_variables": true
   },
   {
+    "id": null,
     "key": "hasav_sql_customers",
     "name": "hasav sql customers",
     "connection_id": 1,
@@ -70,6 +72,7 @@
     "strict_variables": true
   },
   {
+    "id": null,
     "key": "hasav_sql_products",
     "name": "hasav_sql_products",
     "connection_id": 1,
@@ -105,26 +108,16 @@
     "strict_variables": true
   },
 
+
   {
     "key": "hasavh_users_documents_list_1",
     "name": "חשבונית מס",
     "connection_id": null,
     "method": "POST",
-    "path": "/sql/execute",
+    "path": "/sql",
     "headers": null,
     "query": null,
-    "body_template": {
-      "query": "SELECT\n  COUNT(1) OVER() AS TotalRows,\n  *\nFROM dbo.Stock\nWHERE\n  ValueDate >= TRY_CONVERT(date, @dateFrom)\n  AND ValueDate <= TRY_CONVERT(date, @dateTo)\n  AND DocumentID = @documentType\n  AND AccountKey = @userExtId\n  AND (\n    @search IS NULL\n    OR LTRIM(RTRIM(@search)) = ''\n    OR DocNumber LIKE CONCAT('%', @search, '%')\n    OR AccountKey LIKE CONCAT('%', @search, '%')\n    OR AccountName LIKE CONCAT('%', @search, '%')\n  )\nORDER BY ValueDate DESC\nOFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY",
-      "params": {
-        "dateFrom": "{dateFrom}",
-        "dateTo": "{dateTo}",
-        "offset": {offset},
-        "pageSize": {limit},
-        "documentType": 1,
-        "userExtId": "{userExtId}",
-        "search": "{search}"
-      }
-    },
+    "body_template": "{\n  \"query\": \"SELECT\\n  COUNT(1) OVER() AS TotalRows,\\n  *\\nFROM dbo.Stock\\nWHERE\\n  ValueDate >= TRY_CONVERT(date, @dateFrom)\\n  AND ValueDate <= TRY_CONVERT(date, @dateTo)\\n  AND DocumentID = @documentType\\n  AND AccountKey = @userExtId\\n  AND (\\n    @search IS NULL\\n    OR LTRIM(RTRIM(@search)) = ''\\n    OR DocNumber LIKE CONCAT('%', @search, '%')\\n    OR AccountKey LIKE CONCAT('%', @search, '%')\\n    OR AccountName LIKE CONCAT('%', @search, '%')\\n  )\\nORDER BY ValueDate DESC\\nOFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY\",\n  \"params\": {\n    \"dateFrom\": \"{dateFrom}\",\n    \"dateTo\": \"{dateTo}\",\n    \"offset\": \"{offset}\",\n    \"pageSize\": \"{limit}\",\n    \"documentType\": 1,\n    \"userExtId\": \"{userExtId}\",\n    \"search\": \"{search}\"\n  }\n}\n",
     "body_type": "json",
     "response_parser": "json",
     "output_root": null,
@@ -144,21 +137,10 @@
     "name": "חשבונית מס/קבלה",
     "connection_id": null,
     "method": "POST",
-    "path": "/sql/execute",
+    "path": "/sql",
     "headers": null,
     "query": null,
-    "body_template": {
-      "query": "SELECT\n  COUNT(1) OVER() AS TotalRows,\n  *\nFROM dbo.Stock\nWHERE\n  ValueDate >= TRY_CONVERT(date, @dateFrom)\n  AND ValueDate <= TRY_CONVERT(date, @dateTo)\n  AND DocumentID = @documentType\n  AND AccountKey = @userExtId\n  AND (\n    @search IS NULL\n    OR LTRIM(RTRIM(@search)) = ''\n    OR DocNumber LIKE CONCAT('%', @search, '%')\n    OR AccountKey LIKE CONCAT('%', @search, '%')\n    OR AccountName LIKE CONCAT('%', @search, '%')\n  )\nORDER BY ValueDate DESC\nOFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY",
-      "params": {
-        "dateFrom": "{dateFrom}",
-        "dateTo": "{dateTo}",
-        "offset": {offset},
-        "pageSize": {limit},
-        "documentType": 2,
-        "userExtId": "{userExtId}",
-        "search": "{search}"
-      }
-    },
+    "body_template": "{\n  \"query\": \"SELECT\\n  COUNT(1) OVER() AS TotalRows,\\n  *\\nFROM dbo.Stock\\nWHERE\\n  ValueDate >= TRY_CONVERT(date, @dateFrom)\\n  AND ValueDate <= TRY_CONVERT(date, @dateTo)\\n  AND DocumentID = @documentType\\n  AND AccountKey = @userExtId\\n  AND (\\n    @search IS NULL\\n    OR LTRIM(RTRIM(@search)) = ''\\n    OR DocNumber LIKE CONCAT('%', @search, '%')\\n    OR AccountKey LIKE CONCAT('%', @search, '%')\\n    OR AccountName LIKE CONCAT('%', @search, '%')\\n  )\\nORDER BY ValueDate DESC\\nOFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY\",\n  \"params\": {\n    \"dateFrom\": \"{dateFrom}\",\n    \"dateTo\": \"{dateTo}\",\n    \"offset\": \"{offset}\",\n    \"pageSize\": \"{limit}\",\n    \"documentType\": 2,\n    \"userExtId\": \"{userExtId}\",\n    \"search\": \"{search}\"\n  }\n}\n",
     "body_type": "json",
     "response_parser": "json",
     "output_root": null,
@@ -178,21 +160,10 @@
     "name": "תעודת משלוח",
     "connection_id": null,
     "method": "POST",
-    "path": "/sql/execute",
+    "path": "/sql",
     "headers": null,
     "query": null,
-    "body_template": {
-      "query": "SELECT\n  COUNT(1) OVER() AS TotalRows,\n  *\nFROM dbo.Stock\nWHERE\n  ValueDate >= TRY_CONVERT(date, @dateFrom)\n  AND ValueDate <= TRY_CONVERT(date, @dateTo)\n  AND DocumentID = @documentType\n  AND AccountKey = @userExtId\n  AND (\n    @search IS NULL\n    OR LTRIM(RTRIM(@search)) = ''\n    OR DocNumber LIKE CONCAT('%', @search, '%')\n    OR AccountKey LIKE CONCAT('%', @search, '%')\n    OR AccountName LIKE CONCAT('%', @search, '%')\n  )\nORDER BY ValueDate DESC\nOFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY",
-      "params": {
-        "dateFrom": "{dateFrom}",
-        "dateTo": "{dateTo}",
-        "offset": {offset},
-        "pageSize": {limit},
-        "documentType": 4,
-        "userExtId": "{userExtId}",
-        "search": "{search}"
-      }
-    },
+    "body_template": "{\n  \"query\": \"SELECT\\n  COUNT(1) OVER() AS TotalRows,\\n  *\\nFROM dbo.Stock\\nWHERE\\n  ValueDate >= TRY_CONVERT(date, @dateFrom)\\n  AND ValueDate <= TRY_CONVERT(date, @dateTo)\\n  AND DocumentID = @documentType\\n  AND AccountKey = @userExtId\\n  AND (\\n    @search IS NULL\\n    OR LTRIM(RTRIM(@search)) = ''\\n    OR DocNumber LIKE CONCAT('%', @search, '%')\\n    OR AccountKey LIKE CONCAT('%', @search, '%')\\n    OR AccountName LIKE CONCAT('%', @search, '%')\\n  )\\nORDER BY ValueDate DESC\\nOFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY\",\n  \"params\": {\n    \"dateFrom\": \"{dateFrom}\",\n    \"dateTo\": \"{dateTo}\",\n    \"offset\": \"{offset}\",\n    \"pageSize\": \"{limit}\",\n    \"documentType\": 4,\n    \"userExtId\": \"{userExtId}\",\n    \"search\": \"{search}\"\n  }\n}\n",
     "body_type": "json",
     "response_parser": "json",
     "output_root": null,
@@ -212,21 +183,10 @@
     "name": "החזרה",
     "connection_id": null,
     "method": "POST",
-    "path": "/sql/execute",
+    "path": "/sql",
     "headers": null,
     "query": null,
-    "body_template": {
-      "query": "SELECT\n  COUNT(1) OVER() AS TotalRows,\n  *\nFROM dbo.Stock\nWHERE\n  ValueDate >= TRY_CONVERT(date, @dateFrom)\n  AND ValueDate <= TRY_CONVERT(date, @dateTo)\n  AND DocumentID = @documentType\n  AND AccountKey = @userExtId\n  AND (\n    @search IS NULL\n    OR LTRIM(RTRIM(@search)) = ''\n    OR DocNumber LIKE CONCAT('%', @search, '%')\n    OR AccountKey LIKE CONCAT('%', @search, '%')\n    OR AccountName LIKE CONCAT('%', @search, '%')\n  )\nORDER BY ValueDate DESC\nOFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY",
-      "params": {
-        "dateFrom": "{dateFrom}",
-        "dateTo": "{dateTo}",
-        "offset": {offset},
-        "pageSize": {limit},
-        "documentType": 5,
-        "userExtId": "{userExtId}",
-        "search": "{search}"
-      }
-    },
+    "body_template": "{\n  \"query\": \"SELECT\\n  COUNT(1) OVER() AS TotalRows,\\n  *\\nFROM dbo.Stock\\nWHERE\\n  ValueDate >= TRY_CONVERT(date, @dateFrom)\\n  AND ValueDate <= TRY_CONVERT(date, @dateTo)\\n  AND DocumentID = @documentType\\n  AND AccountKey = @userExtId\\n  AND (\\n    @search IS NULL\\n    OR LTRIM(RTRIM(@search)) = ''\\n    OR DocNumber LIKE CONCAT('%', @search, '%')\\n    OR AccountKey LIKE CONCAT('%', @search, '%')\\n    OR AccountName LIKE CONCAT('%', @search, '%')\\n  )\\nORDER BY ValueDate DESC\\nOFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY\",\n  \"params\": {\n    \"dateFrom\": \"{dateFrom}\",\n    \"dateTo\": \"{dateTo}\",\n    \"offset\": \"{offset}\",\n    \"pageSize\": \"{limit}\",\n    \"documentType\": 5,\n    \"userExtId\": \"{userExtId}\",\n    \"search\": \"{search}\"\n  }\n}\n",
     "body_type": "json",
     "response_parser": "json",
     "output_root": null,
@@ -246,21 +206,10 @@
     "name": "הזמנה",
     "connection_id": null,
     "method": "POST",
-    "path": "/sql/execute",
+    "path": "/sql",
     "headers": null,
     "query": null,
-    "body_template": {
-      "query": "SELECT\n  COUNT(1) OVER() AS TotalRows,\n  *\nFROM dbo.Stock\nWHERE\n  ValueDate >= TRY_CONVERT(date, @dateFrom)\n  AND ValueDate <= TRY_CONVERT(date, @dateTo)\n  AND DocumentID = @documentType\n  AND AccountKey = @userExtId\n  AND (\n    @search IS NULL\n    OR LTRIM(RTRIM(@search)) = ''\n    OR DocNumber LIKE CONCAT('%', @search, '%')\n    OR AccountKey LIKE CONCAT('%', @search, '%')\n    OR AccountName LIKE CONCAT('%', @search, '%')\n  )\nORDER BY ValueDate DESC\nOFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY",
-      "params": {
-        "dateFrom": "{dateFrom}",
-        "dateTo": "{dateTo}",
-        "offset": {offset},
-        "pageSize": {limit},
-        "documentType": 6,
-        "userExtId": "{userExtId}",
-        "search": "{search}"
-      }
-    },
+    "body_template": "{\n  \"query\": \"SELECT\\n  COUNT(1) OVER() AS TotalRows,\\n  *\\nFROM dbo.Stock\\nWHERE\\n  ValueDate >= TRY_CONVERT(date, @dateFrom)\\n  AND ValueDate <= TRY_CONVERT(date, @dateTo)\\n  AND DocumentID = @documentType\\n  AND AccountKey = @userExtId\\n  AND (\\n    @search IS NULL\\n    OR LTRIM(RTRIM(@search)) = ''\\n    OR DocNumber LIKE CONCAT('%', @search, '%')\\n    OR AccountKey LIKE CONCAT('%', @search, '%')\\n    OR AccountName LIKE CONCAT('%', @search, '%')\\n  )\\nORDER BY ValueDate DESC\\nOFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY\",\n  \"params\": {\n    \"dateFrom\": \"{dateFrom}\",\n    \"dateTo\": \"{dateTo}\",\n    \"offset\": \"{offset}\",\n    \"pageSize\": \"{limit}\",\n    \"documentType\": 6,\n    \"userExtId\": \"{userExtId}\",\n    \"search\": \"{search}\"\n  }\n}\n",
     "body_type": "json",
     "response_parser": "json",
     "output_root": null,
@@ -280,21 +229,10 @@
     "name": "הצעת מחיר",
     "connection_id": null,
     "method": "POST",
-    "path": "/sql/execute",
+    "path": "/sql",
     "headers": null,
     "query": null,
-    "body_template": {
-      "query": "SELECT\n  COUNT(1) OVER() AS TotalRows,\n  *\nFROM dbo.Stock\nWHERE\n  ValueDate >= TRY_CONVERT(date, @dateFrom)\n  AND ValueDate <= TRY_CONVERT(date, @dateTo)\n  AND DocumentID = @documentType\n  AND AccountKey = @userExtId\n  AND (\n    @search IS NULL\n    OR LTRIM(RTRIM(@search)) = ''\n    OR DocNumber LIKE CONCAT('%', @search, '%')\n    OR AccountKey LIKE CONCAT('%', @search, '%')\n    OR AccountName LIKE CONCAT('%', @search, '%')\n  )\nORDER BY ValueDate DESC\nOFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY",
-      "params": {
-        "dateFrom": "{dateFrom}",
-        "dateTo": "{dateTo}",
-        "offset": {offset},
-        "pageSize": {limit},
-        "documentType": 7,
-        "userExtId": "{userExtId}",
-        "search": "{search}"
-      }
-    },
+    "body_template": "{\n  \"query\": \"SELECT\\n  COUNT(1) OVER() AS TotalRows,\\n  *\\nFROM dbo.Stock\\nWHERE\\n  ValueDate >= TRY_CONVERT(date, @dateFrom)\\n  AND ValueDate <= TRY_CONVERT(date, @dateTo)\\n  AND DocumentID = @documentType\\n  AND AccountKey = @userExtId\\n  AND (\\n    @search IS NULL\\n    OR LTRIM(RTRIM(@search)) = ''\\n    OR DocNumber LIKE CONCAT('%', @search, '%')\\n    OR AccountKey LIKE CONCAT('%', @search, '%')\\n    OR AccountName LIKE CONCAT('%', @search, '%')\\n  )\\nORDER BY ValueDate DESC\\nOFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY\",\n  \"params\": {\n    \"dateFrom\": \"{dateFrom}\",\n    \"dateTo\": \"{dateTo}\",\n    \"offset\": \"{offset}\",\n    \"pageSize\": \"{limit}\",\n    \"documentType\": 7,\n    \"userExtId\": \"{userExtId}\",\n    \"search\": \"{search}\"\n  }\n}\n",
     "body_type": "json",
     "response_parser": "json",
     "output_root": null,
@@ -314,21 +252,10 @@
     "name": "הזמנת סוכן",
     "connection_id": null,
     "method": "POST",
-    "path": "/sql/execute",
+    "path": "/sql",
     "headers": null,
     "query": null,
-    "body_template": {
-      "query": "SELECT\n  COUNT(1) OVER() AS TotalRows,\n  *\nFROM dbo.Stock\nWHERE\n  ValueDate >= TRY_CONVERT(date, @dateFrom)\n  AND ValueDate <= TRY_CONVERT(date, @dateTo)\n  AND DocumentID = @documentType\n  AND AccountKey = @userExtId\n  AND (\n    @search IS NULL\n    OR LTRIM(RTRIM(@search)) = ''\n    OR DocNumber LIKE CONCAT('%', @search, '%')\n    OR AccountKey LIKE CONCAT('%', @search, '%')\n    OR AccountName LIKE CONCAT('%', @search, '%')\n  )\nORDER BY ValueDate DESC\nOFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY",
-      "params": {
-        "dateFrom": "{dateFrom}",
-        "dateTo": "{dateTo}",
-        "offset": {offset},
-        "pageSize": {limit},
-        "documentType": 11,
-        "userExtId": "{userExtId}",
-        "search": "{search}"
-      }
-    },
+    "body_template": "{\n  \"query\": \"SELECT\\n  COUNT(1) OVER() AS TotalRows,\\n  *\\nFROM dbo.Stock\\nWHERE\\n  ValueDate >= TRY_CONVERT(date, @dateFrom)\\n  AND ValueDate <= TRY_CONVERT(date, @dateTo)\\n  AND DocumentID = @documentType\\n  AND AccountKey = @userExtId\\n  AND (\\n    @search IS NULL\\n    OR LTRIM(RTRIM(@search)) = ''\\n    OR DocNumber LIKE CONCAT('%', @search, '%')\\n    OR AccountKey LIKE CONCAT('%', @search, '%')\\n    OR AccountName LIKE CONCAT('%', @search, '%')\\n  )\\nORDER BY ValueDate DESC\\nOFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY\",\n  \"params\": {\n    \"dateFrom\": \"{dateFrom}\",\n    \"dateTo\": \"{dateTo}\",\n    \"offset\": \"{offset}\",\n    \"pageSize\": \"{limit}\",\n    \"documentType\": 11,\n    \"userExtId\": \"{userExtId}\",\n    \"search\": \"{search}\"\n  }\n}\n",
     "body_type": "json",
     "response_parser": "json",
     "output_root": null,
@@ -348,21 +275,10 @@
     "name": "קבלה",
     "connection_id": null,
     "method": "POST",
-    "path": "/sql/execute",
+    "path": "/sql",
     "headers": null,
     "query": null,
-    "body_template": {
-      "query": "SELECT\n  COUNT(1) OVER() AS TotalRows,\n  *\nFROM dbo.Stock\nWHERE\n  ValueDate >= TRY_CONVERT(date, @dateFrom)\n  AND ValueDate <= TRY_CONVERT(date, @dateTo)\n  AND DocumentID = @documentType\n  AND AccountKey = @userExtId\n  AND (\n    @search IS NULL\n    OR LTRIM(RTRIM(@search)) = ''\n    OR DocNumber LIKE CONCAT('%', @search, '%')\n    OR AccountKey LIKE CONCAT('%', @search, '%')\n    OR AccountName LIKE CONCAT('%', @search, '%')\n  )\nORDER BY ValueDate DESC\nOFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY",
-      "params": {
-        "dateFrom": "{dateFrom}",
-        "dateTo": "{dateTo}",
-        "offset": {offset},
-        "pageSize": {limit},
-        "documentType": 31,
-        "userExtId": "{userExtId}",
-        "search": "{search}"
-      }
-    },
+    "body_template": "{\n  \"query\": \"SELECT\\n  COUNT(1) OVER() AS TotalRows,\\n  *\\nFROM dbo.Stock\\nWHERE\\n  ValueDate >= TRY_CONVERT(date, @dateFrom)\\n  AND ValueDate <= TRY_CONVERT(date, @dateTo)\\n  AND DocumentID = @documentType\\n  AND AccountKey = @userExtId\\n  AND (\\n    @search IS NULL\\n    OR LTRIM(RTRIM(@search)) = ''\\n    OR DocNumber LIKE CONCAT('%', @search, '%')\\n    OR AccountKey LIKE CONCAT('%', @search, '%')\\n    OR AccountName LIKE CONCAT('%', @search, '%')\\n  )\\nORDER BY ValueDate DESC\\nOFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY\",\n  \"params\": {\n    \"dateFrom\": \"{dateFrom}\",\n    \"dateTo\": \"{dateTo}\",\n    \"offset\": \"{offset}\",\n    \"pageSize\": \"{limit}\",\n    \"documentType\": 31,\n    \"userExtId\": \"{userExtId}\",\n    \"search\": \"{search}\"\n  }\n}\n",
     "body_type": "json",
     "response_parser": "json",
     "output_root": null,
@@ -382,21 +298,10 @@
     "name": "חשבונית מס ריכוז",
     "connection_id": null,
     "method": "POST",
-    "path": "/sql/execute",
+    "path": "/sql",
     "headers": null,
     "query": null,
-    "body_template": {
-      "query": "SELECT\n  COUNT(1) OVER() AS TotalRows,\n  *\nFROM dbo.Stock\nWHERE\n  ValueDate >= TRY_CONVERT(date, @dateFrom)\n  AND ValueDate <= TRY_CONVERT(date, @dateTo)\n  AND DocumentID = @documentType\n  AND AccountKey = @userExtId\n  AND (\n    @search IS NULL\n    OR LTRIM(RTRIM(@search)) = ''\n    OR DocNumber LIKE CONCAT('%', @search, '%')\n    OR AccountKey LIKE CONCAT('%', @search, '%')\n    OR AccountName LIKE CONCAT('%', @search, '%')\n  )\nORDER BY ValueDate DESC\nOFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY",
-      "params": {
-        "dateFrom": "{dateFrom}",
-        "dateTo": "{dateTo}",
-        "offset": {offset},
-        "pageSize": {limit},
-        "documentType": 37,
-        "userExtId": "{userExtId}",
-        "search": "{search}"
-      }
-    },
+    "body_template": "{\n  \"query\": \"SELECT\\n  COUNT(1) OVER() AS TotalRows,\\n  *\\nFROM dbo.Stock\\nWHERE\\n  ValueDate >= TRY_CONVERT(date, @dateFrom)\\n  AND ValueDate <= TRY_CONVERT(date, @dateTo)\\n  AND DocumentID = @documentType\\n  AND AccountKey = @userExtId\\n  AND (\\n    @search IS NULL\\n    OR LTRIM(RTRIM(@search)) = ''\\n    OR DocNumber LIKE CONCAT('%', @search, '%')\\n    OR AccountKey LIKE CONCAT('%', @search, '%')\\n    OR AccountName LIKE CONCAT('%', @search, '%')\\n  )\\nORDER BY ValueDate DESC\\nOFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY\",\n  \"params\": {\n    \"dateFrom\": \"{dateFrom}\",\n    \"dateTo\": \"{dateTo}\",\n    \"offset\": \"{offset}\",\n    \"pageSize\": \"{limit}\",\n    \"documentType\": 37,\n    \"userExtId\": \"{userExtId}\",\n    \"search\": \"{search}\"\n  }\n}\n",
     "body_type": "json",
     "response_parser": "json",
     "output_root": null,
@@ -417,20 +322,10 @@
     "name": "חשבונית מס",
     "connection_id": null,
     "method": "POST",
-    "path": "/sql/execute",
+    "path": "/sql",
     "headers": null,
     "query": null,
-    "body_template": {
-      "query": "SELECT\n  COUNT(1) OVER() AS TotalRows,\n  *\nFROM dbo.Stock\nWHERE\n  ValueDate >= TRY_CONVERT(date, @dateFrom)\n  AND ValueDate <= TRY_CONVERT(date, @dateTo)\n  AND DocumentID = @documentType\n  AND (\n    @search IS NULL\n    OR LTRIM(RTRIM(@search)) = ''\n    OR DocNumber LIKE CONCAT('%', @search, '%')\n    OR AccountKey LIKE CONCAT('%', @search, '%')\n    OR AccountName LIKE CONCAT('%', @search, '%')\n  )\nORDER BY ValueDate DESC\nOFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY",
-      "params": {
-        "dateFrom": "{dateFrom}",
-        "dateTo": "{dateTo}",
-        "offset": {offset},
-        "pageSize": {limit},
-        "documentType": 1,
-        "search": "{search}"
-      }
-    },
+    "body_template": "{\n  \"query\": \"SELECT\\n  COUNT(1) OVER() AS TotalRows,\\n  *\\nFROM dbo.Stock\\nWHERE\\n  ValueDate >= TRY_CONVERT(date, @dateFrom)\\n  AND ValueDate <= TRY_CONVERT(date, @dateTo)\\n  AND DocumentID = @documentType\\n  AND (\\n    @search IS NULL\\n    OR LTRIM(RTRIM(@search)) = ''\\n    OR DocNumber LIKE CONCAT('%', @search, '%')\\n    OR AccountKey LIKE CONCAT('%', @search, '%')\\n    OR AccountName LIKE CONCAT('%', @search, '%')\\n  )\\nORDER BY ValueDate DESC\\nOFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY\",\n  \"params\": {\n    \"dateFrom\": \"{dateFrom}\",\n    \"dateTo\": \"{dateTo}\",\n    \"offset\": \"{offset}\",\n    \"pageSize\": \"{limit}\",\n    \"documentType\": 1,\n    \"search\": \"{search}\"\n  }\n}\n",
     "body_type": "json",
     "response_parser": "json",
     "output_root": null,
@@ -449,20 +344,10 @@
     "name": "חשבונית מס/קבלה",
     "connection_id": null,
     "method": "POST",
-    "path": "/sql/execute",
+    "path": "/sql",
     "headers": null,
     "query": null,
-    "body_template": {
-      "query": "SELECT\n  COUNT(1) OVER() AS TotalRows,\n  *\nFROM dbo.Stock\nWHERE\n  ValueDate >= TRY_CONVERT(date, @dateFrom)\n  AND ValueDate <= TRY_CONVERT(date, @dateTo)\n  AND DocumentID = @documentType\n  AND (\n    @search IS NULL\n    OR LTRIM(RTRIM(@search)) = ''\n    OR DocNumber LIKE CONCAT('%', @search, '%')\n    OR AccountKey LIKE CONCAT('%', @search, '%')\n    OR AccountName LIKE CONCAT('%', @search, '%')\n  )\nORDER BY ValueDate DESC\nOFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY",
-      "params": {
-        "dateFrom": "{dateFrom}",
-        "dateTo": "{dateTo}",
-        "offset": {offset},
-        "pageSize": {limit},
-        "documentType": 2,
-        "search": "{search}"
-      }
-    },
+    "body_template": "{\n  \"query\": \"SELECT\\n  COUNT(1) OVER() AS TotalRows,\\n  *\\nFROM dbo.Stock\\nWHERE\\n  ValueDate >= TRY_CONVERT(date, @dateFrom)\\n  AND ValueDate <= TRY_CONVERT(date, @dateTo)\\n  AND DocumentID = @documentType\\n  AND (\\n    @search IS NULL\\n    OR LTRIM(RTRIM(@search)) = ''\\n    OR DocNumber LIKE CONCAT('%', @search, '%')\\n    OR AccountKey LIKE CONCAT('%', @search, '%')\\n    OR AccountName LIKE CONCAT('%', @search, '%')\\n  )\\nORDER BY ValueDate DESC\\nOFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY\",\n  \"params\": {\n    \"dateFrom\": \"{dateFrom}\",\n    \"dateTo\": \"{dateTo}\",\n    \"offset\": \"{offset}\",\n    \"pageSize\": \"{limit}\",\n    \"documentType\": 2,\n    \"search\": \"{search}\"\n  }\n}\n",
     "body_type": "json",
     "response_parser": "json",
     "output_root": null,
@@ -481,20 +366,10 @@
     "name": "תעודת משלוח",
     "connection_id": null,
     "method": "POST",
-    "path": "/sql/execute",
+    "path": "/sql",
     "headers": null,
     "query": null,
-    "body_template": {
-      "query": "SELECT\n  COUNT(1) OVER() AS TotalRows,\n  *\nFROM dbo.Stock\nWHERE\n  ValueDate >= TRY_CONVERT(date, @dateFrom)\n  AND ValueDate <= TRY_CONVERT(date, @dateTo)\n  AND DocumentID = @documentType\n  AND (\n    @search IS NULL\n    OR LTRIM(RTRIM(@search)) = ''\n    OR DocNumber LIKE CONCAT('%', @search, '%')\n    OR AccountKey LIKE CONCAT('%', @search, '%')\n    OR AccountName LIKE CONCAT('%', @search, '%')\n  )\nORDER BY ValueDate DESC\nOFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY",
-      "params": {
-        "dateFrom": "{dateFrom}",
-        "dateTo": "{dateTo}",
-        "offset": {offset},
-        "pageSize": {limit},
-        "documentType": 4,
-        "search": "{search}"
-      }
-    },
+    "body_template": "{\n  \"query\": \"SELECT\\n  COUNT(1) OVER() AS TotalRows,\\n  *\\nFROM dbo.Stock\\nWHERE\\n  ValueDate >= TRY_CONVERT(date, @dateFrom)\\n  AND ValueDate <= TRY_CONVERT(date, @dateTo)\\n  AND DocumentID = @documentType\\n  AND (\\n    @search IS NULL\\n    OR LTRIM(RTRIM(@search)) = ''\\n    OR DocNumber LIKE CONCAT('%', @search, '%')\\n    OR AccountKey LIKE CONCAT('%', @search, '%')\\n    OR AccountName LIKE CONCAT('%', @search, '%')\\n  )\\nORDER BY ValueDate DESC\\nOFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY\",\n  \"params\": {\n    \"dateFrom\": \"{dateFrom}\",\n    \"dateTo\": \"{dateTo}\",\n    \"offset\": \"{offset}\",\n    \"pageSize\": \"{limit}\",\n    \"documentType\": 4,\n    \"search\": \"{search}\"\n  }\n}\n",
     "body_type": "json",
     "response_parser": "json",
     "output_root": null,
@@ -513,20 +388,10 @@
     "name": "החזרה",
     "connection_id": null,
     "method": "POST",
-    "path": "/sql/execute",
+    "path": "/sql",
     "headers": null,
     "query": null,
-    "body_template": {
-      "query": "SELECT\n  COUNT(1) OVER() AS TotalRows,\n  *\nFROM dbo.Stock\nWHERE\n  ValueDate >= TRY_CONVERT(date, @dateFrom)\n  AND ValueDate <= TRY_CONVERT(date, @dateTo)\n  AND DocumentID = @documentType\n  AND (\n    @search IS NULL\n    OR LTRIM(RTRIM(@search)) = ''\n    OR DocNumber LIKE CONCAT('%', @search, '%')\n    OR AccountKey LIKE CONCAT('%', @search, '%')\n    OR AccountName LIKE CONCAT('%', @search, '%')\n  )\nORDER BY ValueDate DESC\nOFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY",
-      "params": {
-        "dateFrom": "{dateFrom}",
-        "dateTo": "{dateTo}",
-        "offset": {offset},
-        "pageSize": {limit},
-        "documentType": 5,
-        "search": "{search}"
-      }
-    },
+    "body_template": "{\n  \"query\": \"SELECT\\n  COUNT(1) OVER() AS TotalRows,\\n  *\\nFROM dbo.Stock\\nWHERE\\n  ValueDate >= TRY_CONVERT(date, @dateFrom)\\n  AND ValueDate <= TRY_CONVERT(date, @dateTo)\\n  AND DocumentID = @documentType\\n  AND (\\n    @search IS NULL\\n    OR LTRIM(RTRIM(@search)) = ''\\n    OR DocNumber LIKE CONCAT('%', @search, '%')\\n    OR AccountKey LIKE CONCAT('%', @search, '%')\\n    OR AccountName LIKE CONCAT('%', @search, '%')\\n  )\\nORDER BY ValueDate DESC\\nOFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY\",\n  \"params\": {\n    \"dateFrom\": \"{dateFrom}\",\n    \"dateTo\": \"{dateTo}\",\n    \"offset\": \"{offset}\",\n    \"pageSize\": \"{limit}\",\n    \"documentType\": 5,\n    \"search\": \"{search}\"\n  }\n}\n",
     "body_type": "json",
     "response_parser": "json",
     "output_root": null,
@@ -545,20 +410,10 @@
     "name": "הזמנה",
     "connection_id": null,
     "method": "POST",
-    "path": "/sql/execute",
+    "path": "/sql",
     "headers": null,
     "query": null,
-    "body_template": {
-      "query": "SELECT\n  COUNT(1) OVER() AS TotalRows,\n  *\nFROM dbo.Stock\nWHERE\n  ValueDate >= TRY_CONVERT(date, @dateFrom)\n  AND ValueDate <= TRY_CONVERT(date, @dateTo)\n  AND DocumentID = @documentType\n  AND (\n    @search IS NULL\n    OR LTRIM(RTRIM(@search)) = ''\n    OR DocNumber LIKE CONCAT('%', @search, '%')\n    OR AccountKey LIKE CONCAT('%', @search, '%')\n    OR AccountName LIKE CONCAT('%', @search, '%')\n  )\nORDER BY ValueDate DESC\nOFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY",
-      "params": {
-        "dateFrom": "{dateFrom}",
-        "dateTo": "{dateTo}",
-        "offset": {offset},
-        "pageSize": {limit},
-        "documentType": 6,
-        "search": "{search}"
-      }
-    },
+    "body_template": "{\n  \"query\": \"SELECT\\n  COUNT(1) OVER() AS TotalRows,\\n  *\\nFROM dbo.Stock\\nWHERE\\n  ValueDate >= TRY_CONVERT(date, @dateFrom)\\n  AND ValueDate <= TRY_CONVERT(date, @dateTo)\\n  AND DocumentID = @documentType\\n  AND (\\n    @search IS NULL\\n    OR LTRIM(RTRIM(@search)) = ''\\n    OR DocNumber LIKE CONCAT('%', @search, '%')\\n    OR AccountKey LIKE CONCAT('%', @search, '%')\\n    OR AccountName LIKE CONCAT('%', @search, '%')\\n  )\\nORDER BY ValueDate DESC\\nOFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY\",\n  \"params\": {\n    \"dateFrom\": \"{dateFrom}\",\n    \"dateTo\": \"{dateTo}\",\n    \"offset\": \"{offset}\",\n    \"pageSize\": \"{limit}\",\n    \"documentType\": 6,\n    \"search\": \"{search}\"\n  }\n}\n",
     "body_type": "json",
     "response_parser": "json",
     "output_root": null,
@@ -577,20 +432,10 @@
     "name": "הצעת מחיר",
     "connection_id": null,
     "method": "POST",
-    "path": "/sql/execute",
+    "path": "/sql",
     "headers": null,
     "query": null,
-    "body_template": {
-      "query": "SELECT\n  COUNT(1) OVER() AS TotalRows,\n  *\nFROM dbo.Stock\nWHERE\n  ValueDate >= TRY_CONVERT(date, @dateFrom)\n  AND ValueDate <= TRY_CONVERT(date, @dateTo)\n  AND DocumentID = @documentType\n  AND (\n    @search IS NULL\n    OR LTRIM(RTRIM(@search)) = ''\n    OR DocNumber LIKE CONCAT('%', @search, '%')\n    OR AccountKey LIKE CONCAT('%', @search, '%')\n    OR AccountName LIKE CONCAT('%', @search, '%')\n  )\nORDER BY ValueDate DESC\nOFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY",
-      "params": {
-        "dateFrom": "{dateFrom}",
-        "dateTo": "{dateTo}",
-        "offset": {offset},
-        "pageSize": {limit},
-        "documentType": 7,
-        "search": "{search}"
-      }
-    },
+    "body_template": "{\n  \"query\": \"SELECT\\n  COUNT(1) OVER() AS TotalRows,\\n  *\\nFROM dbo.Stock\\nWHERE\\n  ValueDate >= TRY_CONVERT(date, @dateFrom)\\n  AND ValueDate <= TRY_CONVERT(date, @dateTo)\\n  AND DocumentID = @documentType\\n  AND (\\n    @search IS NULL\\n    OR LTRIM(RTRIM(@search)) = ''\\n    OR DocNumber LIKE CONCAT('%', @search, '%')\\n    OR AccountKey LIKE CONCAT('%', @search, '%')\\n    OR AccountName LIKE CONCAT('%', @search, '%')\\n  )\\nORDER BY ValueDate DESC\\nOFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY\",\n  \"params\": {\n    \"dateFrom\": \"{dateFrom}\",\n    \"dateTo\": \"{dateTo}\",\n    \"offset\": \"{offset}\",\n    \"pageSize\": \"{limit}\",\n    \"documentType\": 7,\n    \"search\": \"{search}\"\n  }\n}\n",
     "body_type": "json",
     "response_parser": "json",
     "output_root": null,
@@ -609,20 +454,10 @@
     "name": "הזמנת סוכן",
     "connection_id": null,
     "method": "POST",
-    "path": "/sql/execute",
+    "path": "/sql",
     "headers": null,
     "query": null,
-    "body_template": {
-      "query": "SELECT\n  COUNT(1) OVER() AS TotalRows,\n  *\nFROM dbo.Stock\nWHERE\n  ValueDate >= TRY_CONVERT(date, @dateFrom)\n  AND ValueDate <= TRY_CONVERT(date, @dateTo)\n  AND DocumentID = @documentType\n  AND (\n    @search IS NULL\n    OR LTRIM(RTRIM(@search)) = ''\n    OR DocNumber LIKE CONCAT('%', @search, '%')\n    OR AccountKey LIKE CONCAT('%', @search, '%')\n    OR AccountName LIKE CONCAT('%', @search, '%')\n  )\nORDER BY ValueDate DESC\nOFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY",
-      "params": {
-        "dateFrom": "{dateFrom}",
-        "dateTo": "{dateTo}",
-        "offset": {offset},
-        "pageSize": {limit},
-        "documentType": 11,
-        "search": "{search}"
-      }
-    },
+    "body_template": "{\n  \"query\": \"SELECT\\n  COUNT(1) OVER() AS TotalRows,\\n  *\\nFROM dbo.Stock\\nWHERE\\n  ValueDate >= TRY_CONVERT(date, @dateFrom)\\n  AND ValueDate <= TRY_CONVERT(date, @dateTo)\\n  AND DocumentID = @documentType\\n  AND (\\n    @search IS NULL\\n    OR LTRIM(RTRIM(@search)) = ''\\n    OR DocNumber LIKE CONCAT('%', @search, '%')\\n    OR AccountKey LIKE CONCAT('%', @search, '%')\\n    OR AccountName LIKE CONCAT('%', @search, '%')\\n  )\\nORDER BY ValueDate DESC\\nOFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY\",\n  \"params\": {\n    \"dateFrom\": \"{dateFrom}\",\n    \"dateTo\": \"{dateTo}\",\n    \"offset\": \"{offset}\",\n    \"pageSize\": \"{limit}\",\n    \"documentType\": 11,\n    \"search\": \"{search}\"\n  }\n}\n",
     "body_type": "json",
     "response_parser": "json",
     "output_root": null,
@@ -641,20 +476,10 @@
     "name": "קבלה",
     "connection_id": null,
     "method": "POST",
-    "path": "/sql/execute",
+    "path": "/sql",
     "headers": null,
     "query": null,
-    "body_template": {
-      "query": "SELECT\n  COUNT(1) OVER() AS TotalRows,\n  *\nFROM dbo.Stock\nWHERE\n  ValueDate >= TRY_CONVERT(date, @dateFrom)\n  AND ValueDate <= TRY_CONVERT(date, @dateTo)\n  AND DocumentID = @documentType\n  AND (\n    @search IS NULL\n    OR LTRIM(RTRIM(@search)) = ''\n    OR DocNumber LIKE CONCAT('%', @search, '%')\n    OR AccountKey LIKE CONCAT('%', @search, '%')\n    OR AccountName LIKE CONCAT('%', @search, '%')\n  )\nORDER BY ValueDate DESC\nOFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY",
-      "params": {
-        "dateFrom": "{dateFrom}",
-        "dateTo": "{dateTo}",
-        "offset": {offset},
-        "pageSize": {limit},
-        "documentType": 31,
-        "search": "{search}"
-      }
-    },
+    "body_template": "{\n  \"query\": \"SELECT\\n  COUNT(1) OVER() AS TotalRows,\\n  *\\nFROM dbo.Stock\\nWHERE\\n  ValueDate >= TRY_CONVERT(date, @dateFrom)\\n  AND ValueDate <= TRY_CONVERT(date, @dateTo)\\n  AND DocumentID = @documentType\\n  AND (\\n    @search IS NULL\\n    OR LTRIM(RTRIM(@search)) = ''\\n    OR DocNumber LIKE CONCAT('%', @search, '%')\\n    OR AccountKey LIKE CONCAT('%', @search, '%')\\n    OR AccountName LIKE CONCAT('%', @search, '%')\\n  )\\nORDER BY ValueDate DESC\\nOFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY\",\n  \"params\": {\n    \"dateFrom\": \"{dateFrom}\",\n    \"dateTo\": \"{dateTo}\",\n    \"offset\": \"{offset}\",\n    \"pageSize\": \"{limit}\",\n    \"documentType\": 31,\n    \"search\": \"{search}\"\n  }\n}\n",
     "body_type": "json",
     "response_parser": "json",
     "output_root": null,
@@ -673,20 +498,10 @@
     "name": "חשבונית מס ריכוז",
     "connection_id": null,
     "method": "POST",
-    "path": "/sql/execute",
+    "path": "/sql",
     "headers": null,
     "query": null,
-    "body_template": {
-      "query": "SELECT\n  COUNT(1) OVER() AS TotalRows,\n  *\nFROM dbo.Stock\nWHERE\n  ValueDate >= TRY_CONVERT(date, @dateFrom)\n  AND ValueDate <= TRY_CONVERT(date, @dateTo)\n  AND DocumentID = @documentType\n  AND (\n    @search IS NULL\n    OR LTRIM(RTRIM(@search)) = ''\n    OR DocNumber LIKE CONCAT('%', @search, '%')\n    OR AccountKey LIKE CONCAT('%', @search, '%')\n    OR AccountName LIKE CONCAT('%', @search, '%')\n  )\nORDER BY ValueDate DESC\nOFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY",
-      "params": {
-        "dateFrom": "{dateFrom}",
-        "dateTo": "{dateTo}",
-        "offset": {offset},
-        "pageSize": {limit},
-        "documentType": 37,
-        "search": "{search}"
-      }
-    },
+    "body_template": "{\n  \"query\": \"SELECT\\n  COUNT(1) OVER() AS TotalRows,\\n  *\\nFROM dbo.Stock\\nWHERE\\n  ValueDate >= TRY_CONVERT(date, @dateFrom)\\n  AND ValueDate <= TRY_CONVERT(date, @dateTo)\\n  AND DocumentID = @documentType\\n  AND (\\n    @search IS NULL\\n    OR LTRIM(RTRIM(@search)) = ''\\n    OR DocNumber LIKE CONCAT('%', @search, '%')\\n    OR AccountKey LIKE CONCAT('%', @search, '%')\\n    OR AccountName LIKE CONCAT('%', @search, '%')\\n  )\\nORDER BY ValueDate DESC\\nOFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY\",\n  \"params\": {\n    \"dateFrom\": \"{dateFrom}\",\n    \"dateTo\": \"{dateTo}\",\n    \"offset\": \"{offset}\",\n    \"pageSize\": \"{limit}\",\n    \"documentType\": 37,\n    \"search\": \"{search}\"\n  }\n}\n",
     "body_type": "json",
     "response_parser": "json",
     "output_root": null,
@@ -701,29 +516,15 @@
     "strict_variables": true
   },
 
-    // =========================
-  // AGENT (filtered by Agent = @userExtId)
-  // =========================
   {
     "key": "hasavh_users_documents_list_1_agent",
     "name": "חשבונית מס (Agent)",
     "connection_id": null,
     "method": "POST",
-    "path": "/sql/execute",
+    "path": "/sql",
     "headers": null,
     "query": null,
-    "body_template": {
-      "query": "SELECT\n  COUNT(1) OVER() AS TotalRows,\n  *\nFROM dbo.Stock\nWHERE\n  ValueDate >= TRY_CONVERT(date, @dateFrom)\n  AND ValueDate <= TRY_CONVERT(date, @dateTo)\n  AND DocumentID = @documentType\n  AND Agent = @userExtId\n  AND (\n    @search IS NULL\n    OR LTRIM(RTRIM(@search)) = ''\n    OR DocNumber LIKE CONCAT('%', @search, '%')\n    OR AccountKey LIKE CONCAT('%', @search, '%')\n    OR AccountName LIKE CONCAT('%', @search, '%')\n  )\nORDER BY ValueDate DESC\nOFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY",
-      "params": {
-        "dateFrom": "{dateFrom}",
-        "dateTo": "{dateTo}",
-        "offset": {offset},
-        "pageSize": {limit},
-        "documentType": 1,
-        "userExtId": {userExtId},
-        "search": "{search}"
-      }
-    },
+    "body_template": "{\n  \"query\": \"SELECT\\n  COUNT(1) OVER() AS TotalRows,\\n  *\\nFROM dbo.Stock\\nWHERE\\n  ValueDate >= TRY_CONVERT(date, @dateFrom)\\n  AND ValueDate <= TRY_CONVERT(date, @dateTo)\\n  AND DocumentID = @documentType\\n  AND Agent = @userExtId\\n  AND (\\n    @search IS NULL\\n    OR LTRIM(RTRIM(@search)) = ''\\n    OR DocNumber LIKE CONCAT('%', @search, '%')\\n    OR AccountKey LIKE CONCAT('%', @search, '%')\\n    OR AccountName LIKE CONCAT('%', @search, '%')\\n  )\\nORDER BY ValueDate DESC\\nOFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY\",\n  \"params\": {\n    \"dateFrom\": \"{dateFrom}\",\n    \"dateTo\": \"{dateTo}\",\n    \"offset\": \"{offset}\",\n    \"pageSize\": \"{limit}\",\n    \"documentType\": 1,\n    \"userExtId\": \"{userExtId}\",\n    \"search\": \"{search}\"\n  }\n}\n",
     "body_type": "json",
     "response_parser": "json",
     "output_root": null,
@@ -743,21 +544,10 @@
     "name": "חשבונית מס/קבלה (Agent)",
     "connection_id": null,
     "method": "POST",
-    "path": "/sql/execute",
+    "path": "/sql",
     "headers": null,
     "query": null,
-    "body_template": {
-      "query": "SELECT\n  COUNT(1) OVER() AS TotalRows,\n  *\nFROM dbo.Stock\nWHERE\n  ValueDate >= TRY_CONVERT(date, @dateFrom)\n  AND ValueDate <= TRY_CONVERT(date, @dateTo)\n  AND DocumentID = @documentType\n  AND Agent = @userExtId\n  AND (\n    @search IS NULL\n    OR LTRIM(RTRIM(@search)) = ''\n    OR DocNumber LIKE CONCAT('%', @search, '%')\n    OR AccountKey LIKE CONCAT('%', @search, '%')\n    OR AccountName LIKE CONCAT('%', @search, '%')\n  )\nORDER BY ValueDate DESC\nOFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY",
-      "params": {
-        "dateFrom": "{dateFrom}",
-        "dateTo": "{dateTo}",
-        "offset": {offset},
-        "pageSize": {limit},
-        "documentType": 2,
-        "userExtId": {userExtId},
-        "search": "{search}"
-      }
-    },
+    "body_template": "{\n  \"query\": \"SELECT\\n  COUNT(1) OVER() AS TotalRows,\\n  *\\nFROM dbo.Stock\\nWHERE\\n  ValueDate >= TRY_CONVERT(date, @dateFrom)\\n  AND ValueDate <= TRY_CONVERT(date, @dateTo)\\n  AND DocumentID = @documentType\\n  AND Agent = @userExtId\\n  AND (\\n    @search IS NULL\\n    OR LTRIM(RTRIM(@search)) = ''\\n    OR DocNumber LIKE CONCAT('%', @search, '%')\\n    OR AccountKey LIKE CONCAT('%', @search, '%')\\n    OR AccountName LIKE CONCAT('%', @search, '%')\\n  )\\nORDER BY ValueDate DESC\\nOFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY\",\n  \"params\": {\n    \"dateFrom\": \"{dateFrom}\",\n    \"dateTo\": \"{dateTo}\",\n    \"offset\": \"{offset}\",\n    \"pageSize\": \"{limit}\",\n    \"documentType\": 2,\n    \"userExtId\": \"{userExtId}\",\n    \"search\": \"{search}\"\n  }\n}\n",
     "body_type": "json",
     "response_parser": "json",
     "output_root": null,
@@ -777,21 +567,10 @@
     "name": "תעודת משלוח (Agent)",
     "connection_id": null,
     "method": "POST",
-    "path": "/sql/execute",
+    "path": "/sql",
     "headers": null,
     "query": null,
-    "body_template": {
-      "query": "SELECT\n  COUNT(1) OVER() AS TotalRows,\n  *\nFROM dbo.Stock\nWHERE\n  ValueDate >= TRY_CONVERT(date, @dateFrom)\n  AND ValueDate <= TRY_CONVERT(date, @dateTo)\n  AND DocumentID = @documentType\n  AND Agent = @userExtId\n  AND (\n    @search IS NULL\n    OR LTRIM(RTRIM(@search)) = ''\n    OR DocNumber LIKE CONCAT('%', @search, '%')\n    OR AccountKey LIKE CONCAT('%', @search, '%')\n    OR AccountName LIKE CONCAT('%', @search, '%')\n  )\nORDER BY ValueDate DESC\nOFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY",
-      "params": {
-        "dateFrom": "{dateFrom}",
-        "dateTo": "{dateTo}",
-        "offset": {offset},
-        "pageSize": {limit},
-        "documentType": 4,
-        "userExtId": {userExtId},
-        "search": "{search}"
-      }
-    },
+    "body_template": "{\n  \"query\": \"SELECT\\n  COUNT(1) OVER() AS TotalRows,\\n  *\\nFROM dbo.Stock\\nWHERE\\n  ValueDate >= TRY_CONVERT(date, @dateFrom)\\n  AND ValueDate <= TRY_CONVERT(date, @dateTo)\\n  AND DocumentID = @documentType\\n  AND Agent = @userExtId\\n  AND (\\n    @search IS NULL\\n    OR LTRIM(RTRIM(@search)) = ''\\n    OR DocNumber LIKE CONCAT('%', @search, '%')\\n    OR AccountKey LIKE CONCAT('%', @search, '%')\\n    OR AccountName LIKE CONCAT('%', @search, '%')\\n  )\\nORDER BY ValueDate DESC\\nOFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY\",\n  \"params\": {\n    \"dateFrom\": \"{dateFrom}\",\n    \"dateTo\": \"{dateTo}\",\n    \"offset\": \"{offset}\",\n    \"pageSize\": \"{limit}\",\n    \"documentType\": 4,\n    \"userExtId\": \"{userExtId}\",\n    \"search\": \"{search}\"\n  }\n}\n",
     "body_type": "json",
     "response_parser": "json",
     "output_root": null,
@@ -811,21 +590,10 @@
     "name": "החזרה (Agent)",
     "connection_id": null,
     "method": "POST",
-    "path": "/sql/execute",
+    "path": "/sql",
     "headers": null,
     "query": null,
-    "body_template": {
-      "query": "SELECT\n  COUNT(1) OVER() AS TotalRows,\n  *\nFROM dbo.Stock\nWHERE\n  ValueDate >= TRY_CONVERT(date, @dateFrom)\n  AND ValueDate <= TRY_CONVERT(date, @dateTo)\n  AND DocumentID = @documentType\n  AND Agent = @userExtId\n  AND (\n    @search IS NULL\n    OR LTRIM(RTRIM(@search)) = ''\n    OR DocNumber LIKE CONCAT('%', @search, '%')\n    OR AccountKey LIKE CONCAT('%', @search, '%')\n    OR AccountName LIKE CONCAT('%', @search, '%')\n  )\nORDER BY ValueDate DESC\nOFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY",
-      "params": {
-        "dateFrom": "{dateFrom}",
-        "dateTo": "{dateTo}",
-        "offset": {offset},
-        "pageSize": {limit},
-        "documentType": 5,
-        "userExtId": {userExtId},
-        "search": "{search}"
-      }
-    },
+    "body_template": "{\n  \"query\": \"SELECT\\n  COUNT(1) OVER() AS TotalRows,\\n  *\\nFROM dbo.Stock\\nWHERE\\n  ValueDate >= TRY_CONVERT(date, @dateFrom)\\n  AND ValueDate <= TRY_CONVERT(date, @dateTo)\\n  AND DocumentID = @documentType\\n  AND Agent = @userExtId\\n  AND (\\n    @search IS NULL\\n    OR LTRIM(RTRIM(@search)) = ''\\n    OR DocNumber LIKE CONCAT('%', @search, '%')\\n    OR AccountKey LIKE CONCAT('%', @search, '%')\\n    OR AccountName LIKE CONCAT('%', @search, '%')\\n  )\\nORDER BY ValueDate DESC\\nOFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY\",\n  \"params\": {\n    \"dateFrom\": \"{dateFrom}\",\n    \"dateTo\": \"{dateTo}\",\n    \"offset\": \"{offset}\",\n    \"pageSize\": \"{limit}\",\n    \"documentType\": 5,\n    \"userExtId\": \"{userExtId}\",\n    \"search\": \"{search}\"\n  }\n}\n",
     "body_type": "json",
     "response_parser": "json",
     "output_root": null,
@@ -845,21 +613,10 @@
     "name": "הזמנה (Agent)",
     "connection_id": null,
     "method": "POST",
-    "path": "/sql/execute",
+    "path": "/sql",
     "headers": null,
     "query": null,
-    "body_template": {
-      "query": "SELECT\n  COUNT(1) OVER() AS TotalRows,\n  *\nFROM dbo.Stock\nWHERE\n  ValueDate >= TRY_CONVERT(date, @dateFrom)\n  AND ValueDate <= TRY_CONVERT(date, @dateTo)\n  AND DocumentID = @documentType\n  AND Agent = @userExtId\n  AND (\n    @search IS NULL\n    OR LTRIM(RTRIM(@search)) = ''\n    OR DocNumber LIKE CONCAT('%', @search, '%')\n    OR AccountKey LIKE CONCAT('%', @search, '%')\n    OR AccountName LIKE CONCAT('%', @search, '%')\n  )\nORDER BY ValueDate DESC\nOFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY",
-      "params": {
-        "dateFrom": "{dateFrom}",
-        "dateTo": "{dateTo}",
-        "offset": {offset},
-        "pageSize": {limit},
-        "documentType": 6,
-        "userExtId": {userExtId},
-        "search": "{search}"
-      }
-    },
+    "body_template": "{\n  \"query\": \"SELECT\\n  COUNT(1) OVER() AS TotalRows,\\n  *\\nFROM dbo.Stock\\nWHERE\\n  ValueDate >= TRY_CONVERT(date, @dateFrom)\\n  AND ValueDate <= TRY_CONVERT(date, @dateTo)\\n  AND DocumentID = @documentType\\n  AND Agent = @userExtId\\n  AND (\\n    @search IS NULL\\n    OR LTRIM(RTRIM(@search)) = ''\\n    OR DocNumber LIKE CONCAT('%', @search, '%')\\n    OR AccountKey LIKE CONCAT('%', @search, '%')\\n    OR AccountName LIKE CONCAT('%', @search, '%')\\n  )\\nORDER BY ValueDate DESC\\nOFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY\",\n  \"params\": {\n    \"dateFrom\": \"{dateFrom}\",\n    \"dateTo\": \"{dateTo}\",\n    \"offset\": \"{offset}\",\n    \"pageSize\": \"{limit}\",\n    \"documentType\": 6,\n    \"userExtId\": \"{userExtId}\",\n    \"search\": \"{search}\"\n  }\n}\n",
     "body_type": "json",
     "response_parser": "json",
     "output_root": null,
@@ -879,21 +636,10 @@
     "name": "הצעת מחיר (Agent)",
     "connection_id": null,
     "method": "POST",
-    "path": "/sql/execute",
+    "path": "/sql",
     "headers": null,
     "query": null,
-    "body_template": {
-      "query": "SELECT\n  COUNT(1) OVER() AS TotalRows,\n  *\nFROM dbo.Stock\nWHERE\n  ValueDate >= TRY_CONVERT(date, @dateFrom)\n  AND ValueDate <= TRY_CONVERT(date, @dateTo)\n  AND DocumentID = @documentType\n  AND Agent = @userExtId\n  AND (\n    @search IS NULL\n    OR LTRIM(RTRIM(@search)) = ''\n    OR DocNumber LIKE CONCAT('%', @search, '%')\n    OR AccountKey LIKE CONCAT('%', @search, '%')\n    OR AccountName LIKE CONCAT('%', @search, '%')\n  )\nORDER BY ValueDate DESC\nOFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY",
-      "params": {
-        "dateFrom": "{dateFrom}",
-        "dateTo": "{dateTo}",
-        "offset": {offset},
-        "pageSize": {limit},
-        "documentType": 7,
-        "userExtId": {userExtId},
-        "search": "{search}"
-      }
-    },
+    "body_template": "{\n  \"query\": \"SELECT\\n  COUNT(1) OVER() AS TotalRows,\\n  *\\nFROM dbo.Stock\\nWHERE\\n  ValueDate >= TRY_CONVERT(date, @dateFrom)\\n  AND ValueDate <= TRY_CONVERT(date, @dateTo)\\n  AND DocumentID = @documentType\\n  AND Agent = @userExtId\\n  AND (\\n    @search IS NULL\\n    OR LTRIM(RTRIM(@search)) = ''\\n    OR DocNumber LIKE CONCAT('%', @search, '%')\\n    OR AccountKey LIKE CONCAT('%', @search, '%')\\n    OR AccountName LIKE CONCAT('%', @search, '%')\\n  )\\nORDER BY ValueDate DESC\\nOFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY\",\n  \"params\": {\n    \"dateFrom\": \"{dateFrom}\",\n    \"dateTo\": \"{dateTo}\",\n    \"offset\": \"{offset}\",\n    \"pageSize\": \"{limit}\",\n    \"documentType\": 7,\n    \"userExtId\": \"{userExtId}\",\n    \"search\": \"{search}\"\n  }\n}\n",
     "body_type": "json",
     "response_parser": "json",
     "output_root": null,
@@ -913,21 +659,10 @@
     "name": "הזמנת סוכן (Agent)",
     "connection_id": null,
     "method": "POST",
-    "path": "/sql/execute",
+    "path": "/sql",
     "headers": null,
     "query": null,
-    "body_template": {
-      "query": "SELECT\n  COUNT(1) OVER() AS TotalRows,\n  *\nFROM dbo.Stock\nWHERE\n  ValueDate >= TRY_CONVERT(date, @dateFrom)\n  AND ValueDate <= TRY_CONVERT(date, @dateTo)\n  AND DocumentID = @documentType\n  AND Agent = @userExtId\n  AND (\n    @search IS NULL\n    OR LTRIM(RTRIM(@search)) = ''\n    OR DocNumber LIKE CONCAT('%', @search, '%')\n    OR AccountKey LIKE CONCAT('%', @search, '%')\n    OR AccountName LIKE CONCAT('%', @search, '%')\n  )\nORDER BY ValueDate DESC\nOFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY",
-      "params": {
-        "dateFrom": "{dateFrom}",
-        "dateTo": "{dateTo}",
-        "offset": {offset},
-        "pageSize": {limit},
-        "documentType": 11,
-        "userExtId": {userExtId},
-        "search": "{search}"
-      }
-    },
+    "body_template": "{\n  \"query\": \"SELECT\\n  COUNT(1) OVER() AS TotalRows,\\n  *\\nFROM dbo.Stock\\nWHERE\\n  ValueDate >= TRY_CONVERT(date, @dateFrom)\\n  AND ValueDate <= TRY_CONVERT(date, @dateTo)\\n  AND DocumentID = @documentType\\n  AND Agent = @userExtId\\n  AND (\\n    @search IS NULL\\n    OR LTRIM(RTRIM(@search)) = ''\\n    OR DocNumber LIKE CONCAT('%', @search, '%')\\n    OR AccountKey LIKE CONCAT('%', @search, '%')\\n    OR AccountName LIKE CONCAT('%', @search, '%')\\n  )\\nORDER BY ValueDate DESC\\nOFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY\",\n  \"params\": {\n    \"dateFrom\": \"{dateFrom}\",\n    \"dateTo\": \"{dateTo}\",\n    \"offset\": \"{offset}\",\n    \"pageSize\": \"{limit}\",\n    \"documentType\": 11,\n    \"userExtId\": \"{userExtId}\",\n    \"search\": \"{search}\"\n  }\n}\n",
     "body_type": "json",
     "response_parser": "json",
     "output_root": null,
@@ -947,21 +682,10 @@
     "name": "קבלה (Agent)",
     "connection_id": null,
     "method": "POST",
-    "path": "/sql/execute",
+    "path": "/sql",
     "headers": null,
     "query": null,
-    "body_template": {
-      "query": "SELECT\n  COUNT(1) OVER() AS TotalRows,\n  *\nFROM dbo.Stock\nWHERE\n  ValueDate >= TRY_CONVERT(date, @dateFrom)\n  AND ValueDate <= TRY_CONVERT(date, @dateTo)\n  AND DocumentID = @documentType\n  AND Agent = @userExtId\n  AND (\n    @search IS NULL\n    OR LTRIM(RTRIM(@search)) = ''\n    OR DocNumber LIKE CONCAT('%', @search, '%')\n    OR AccountKey LIKE CONCAT('%', @search, '%')\n    OR AccountName LIKE CONCAT('%', @search, '%')\n  )\nORDER BY ValueDate DESC\nOFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY",
-      "params": {
-        "dateFrom": "{dateFrom}",
-        "dateTo": "{dateTo}",
-        "offset": {offset},
-        "pageSize": {limit},
-        "documentType": 31,
-        "userExtId": {userExtId},
-        "search": "{search}"
-      }
-    },
+    "body_template": "{\n  \"query\": \"SELECT\\n  COUNT(1) OVER() AS TotalRows,\\n  *\\nFROM dbo.Stock\\nWHERE\\n  ValueDate >= TRY_CONVERT(date, @dateFrom)\\n  AND ValueDate <= TRY_CONVERT(date, @dateTo)\\n  AND DocumentID = @documentType\\n  AND Agent = @userExtId\\n  AND (\\n    @search IS NULL\\n    OR LTRIM(RTRIM(@search)) = ''\\n    OR DocNumber LIKE CONCAT('%', @search, '%')\\n    OR AccountKey LIKE CONCAT('%', @search, '%')\\n    OR AccountName LIKE CONCAT('%', @search, '%')\\n  )\\nORDER BY ValueDate DESC\\nOFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY\",\n  \"params\": {\n    \"dateFrom\": \"{dateFrom}\",\n    \"dateTo\": \"{dateTo}\",\n    \"offset\": \"{offset}\",\n    \"pageSize\": \"{limit}\",\n    \"documentType\": 31,\n    \"userExtId\": \"{userExtId}\",\n    \"search\": \"{search}\"\n  }\n}\n",
     "body_type": "json",
     "response_parser": "json",
     "output_root": null,
@@ -981,21 +705,10 @@
     "name": "חשבונית מס ריכוז (Agent)",
     "connection_id": null,
     "method": "POST",
-    "path": "/sql/execute",
+    "path": "/sql",
     "headers": null,
     "query": null,
-    "body_template": {
-      "query": "SELECT\n  COUNT(1) OVER() AS TotalRows,\n  *\nFROM dbo.Stock\nWHERE\n  ValueDate >= TRY_CONVERT(date, @dateFrom)\n  AND ValueDate <= TRY_CONVERT(date, @dateTo)\n  AND DocumentID = @documentType\n  AND Agent = @userExtId\n  AND (\n    @search IS NULL\n    OR LTRIM(RTRIM(@search)) = ''\n    OR DocNumber LIKE CONCAT('%', @search, '%')\n    OR AccountKey LIKE CONCAT('%', @search, '%')\n    OR AccountName LIKE CONCAT('%', @search, '%')\n  )\nORDER BY ValueDate DESC\nOFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY",
-      "params": {
-        "dateFrom": "{dateFrom}",
-        "dateTo": "{dateTo}",
-        "offset": {offset},
-        "pageSize": {limit},
-        "documentType": 37,
-        "userExtId": {userExtId},
-        "search": "{search}"
-      }
-    },
+    "body_template": "{\n  \"query\": \"SELECT\\n  COUNT(1) OVER() AS TotalRows,\\n  *\\nFROM dbo.Stock\\nWHERE\\n  ValueDate >= TRY_CONVERT(date, @dateFrom)\\n  AND ValueDate <= TRY_CONVERT(date, @dateTo)\\n  AND DocumentID = @documentType\\n  AND Agent = @userExtId\\n  AND (\\n    @search IS NULL\\n    OR LTRIM(RTRIM(@search)) = ''\\n    OR DocNumber LIKE CONCAT('%', @search, '%')\\n    OR AccountKey LIKE CONCAT('%', @search, '%')\\n    OR AccountName LIKE CONCAT('%', @search, '%')\\n  )\\nORDER BY ValueDate DESC\\nOFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY\",\n  \"params\": {\n    \"dateFrom\": \"{dateFrom}\",\n    \"dateTo\": \"{dateTo}\",\n    \"offset\": \"{offset}\",\n    \"pageSize\": \"{limit}\",\n    \"documentType\": 37,\n    \"userExtId\": \"{userExtId}\",\n    \"search\": \"{search}\"\n  }\n}\n",
     "body_type": "json",
     "response_parser": "json",
     "output_root": null,
@@ -1009,38 +722,6 @@
       { "name": "search", "type": "string", "default": "", "required": false, "enumValues": null, "description": "search term (optional)" }
     ],
     "strict_variables": true
-  },
-  
-  {
-    "key": "hasavh_all_documents_list_1_agent",
-    "name": "חשבונית מס (All, Agent search disabled)",
-    "connection_id": null,
-    "method": "POST",
-    "path": "/sql/execute",
-    "headers": null,
-    "query": null,
-    "body_template": {
-      "query": "SELECT\n  COUNT(1) OVER() AS TotalRows,\n  *\nFROM dbo.Stock\nWHERE\n  ValueDate >= TRY_CONVERT(date, @dateFrom)\n  AND ValueDate <= TRY_CONVERT(date, @dateTo)\n  AND DocumentID = @documentType\n  AND (\n    @search IS NULL\n    OR LTRIM(RTRIM(@search)) = ''\n    OR DocNumber LIKE CONCAT('%', @search, '%')\n    OR AccountKey LIKE CONCAT('%', @search, '%')\n    OR AccountName LIKE CONCAT('%', @search, '%')\n  )\nORDER BY ValueDate DESC\nOFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY",
-      "params": {
-        "dateFrom": "{dateFrom}",
-        "dateTo": "{dateTo}",
-        "offset": {offset},
-        "pageSize": {limit},
-        "documentType": 1,
-        "search": "{search}"
-      }
-    },
-    "body_type": "json",
-    "response_parser": "json",
-    "output_root": null,
-    "is_active": true,
-    "variables": [
-      { "name": "dateFrom", "type": "string", "default": "2025-12-01", "required": true, "enumValues": null, "description": null },
-      { "name": "dateTo", "type": "string", "default": "2025-12-18", "required": true, "enumValues": null, "description": null },
-      { "name": "offset", "type": "number", "default": 0, "required": false, "enumValues": null, "description": null },
-      { "name": "limit", "type": "number", "default": 10, "required": true, "enumValues": null, "description": null },
-      { "name": "search", "type": "string", "default": "", "required": false, "enumValues": null, "description": "search term (optional)" }
-    ],
-    "strict_variables": true
   }
+ 
 ]

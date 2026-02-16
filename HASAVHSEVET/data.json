@@ -316,6 +316,444 @@
       ],
       "isAgentRequest": false,
       "isSuperAgentRequest": false
+    },
+    {
+      "id": null,
+      "key": "document_items_order",
+      "name": "document items order",
+      "mapperType": "documentLines",
+      "table": null,
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "document items order",
+      "linkedName": null,
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "document_items_order",
+          "name": "document items order",
+          "description": "document items order",
+          "templateKey": "hasav_sql_document_items",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "documents": {
+              "linesPath": "lines",
+              "headFields": [
+                {
+                  "type": "string",
+                  "label": "מספר מסמך",
+                  "sourceField": "DocNumber",
+                  "targetField": "documentNumber"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך",
+                  "sourceField": "ValueDate",
+                  "targetField": "date"
+                },
+                {
+                  "type": "string",
+                  "label": "לקוח",
+                  "sourceField": "AccountKey",
+                  "targetField": "userExtId"
+                },
+                {
+                  "type": "number",
+                  "label": "סה״כ לפני הנחה",
+                  "sourceField": "totalBeforeDiscount",
+                  "targetField": "totalBeforeDiscount"
+                },
+                {
+                  "type": "discount",
+                  "label": "הנחה",
+                  "sourceField": "DiscountPrc",
+                  "targetField": "totalPrecentDiscount"
+                },
+                {
+                  "type": "money",
+                  "label": "מע״מ",
+                  "sourceField": "totalTax",
+                  "targetField": "totalTax"
+                },
+                {
+                  "type": "money",
+                  "label": "סה״כ לאחר הנחה",
+                  "sourceField": "totalAfterDiscount",
+                  "targetField": "totalAfterDiscount"
+                },
+                {
+                  "type": "money",
+                  "label": "סה״כ כולל מע״מ",
+                  "sourceField": "totalPriceAfterTax",
+                  "targetField": "totalPriceAfterTax"
+                },
+                {
+                  "type": "string",
+                  "label": "מטבע",
+                  "sourceField": "Currency",
+                  "targetField": "currency"
+                },
+                {
+                  "type": "string",
+                  "label": "סטטוס",
+                  "sourceField": "Status",
+                  "targetField": "status"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך יעד",
+                  "sourceField": "DueDate",
+                  "targetField": "dueDate"
+                },
+                {
+                  "type": "string",
+                  "label": "הערות",
+                  "sourceField": "Remarks",
+                  "targetField": "comment"
+                }
+              ],
+              "lineColumns": [
+                {
+                  "label": "תמונה",
+                  "cellType": "image",
+                  "columnKey": "image",
+                  "sourceField": null
+                },
+                {
+                  "label": "מק״ט",
+                  "cellType": "sku",
+                  "columnKey": "ItemKey",
+                  "sourceField": "json(lines).ItemKey"
+                },
+                {
+                  "label": "תיאור פריט",
+                  "cellType": "text",
+                  "columnKey": "itemName",
+                  "sourceField": "json(lines).ItemName"
+                },
+                {
+                  "label": "כמות",
+                  "cellType": "quantity",
+                  "columnKey": "quantity",
+                  "sourceField": "json(lines).Quantity"
+                },
+                {
+                  "label": "מחיר",
+                  "cellType": "money",
+                  "columnKey": "Price",
+                  "sourceField": "json(lines).Price"
+                },
+                {
+                  "label": "הנחה",
+                  "cellType": "discount",
+                  "columnKey": "discount",
+                  "sourceField": "json(lines).DiscountPrc"
+                },
+                {
+                  "label": "עלות יחידה לאחר הנחה",
+                  "cellType": "money",
+                  "columnKey": "priceAfterDiscount",
+                  "sourceField": "json(lines).priceAfterDiscount"
+                },
+                {
+                  "label": "סה\"כ להזמנה ",
+                  "cellType": "money",
+                  "columnKey": "totalPrice",
+                  "sourceField": "json(lines).TFtal"
+                },
+                {
+                  "label": "הערה",
+                  "cellType": "text",
+                  "columnKey": "comment",
+                  "sourceField": "json(lines).Details"
+                }
+              ],
+              "lineAttributes": []
+            },
+            "execution": {
+              "mode": "single"
+            },
+            "itemsPath": "rows"
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": false,
+      "isSuperAgentRequest": false
+    },
+    {
+      "id": null,
+      "key": "document_orders_agent",
+      "name": "document orders agent",
+      "mapperType": "documentLines",
+      "table": null,
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "הזמנות",
+      "linkedName": "document_items_order",
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "document_orders_agent",
+          "name": "document orders agent",
+          "description": "הזמנות",
+          "templateKey": "hasavh_users_documents_list_6_agent",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "documents": {
+              "headFields": [
+                {
+                  "type": "string",
+                  "label": "מספר מסמך",
+                  "sourceField": "DocNumber",
+                  "targetField": "documentNumber"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך",
+                  "sourceField": "ValueDate",
+                  "targetField": "date"
+                },
+                {
+                  "type": "string",
+                  "label": "מספר לקוח",
+                  "sourceField": "AccountKey",
+                  "targetField": "userExtId"
+                },
+                {
+                  "type": "string",
+                  "label": "שם לקוח",
+                  "sourceField": "AccountName",
+                  "targetField": "text_1"
+                },
+                {
+                  "type": "money",
+                  "label": "מע״מ",
+                  "sourceField": "totalTax",
+                  "targetField": "totalTax"
+                },
+                {
+                  "type": "money",
+                  "label": "סה״כ",
+                  "sourceField": "totalAfterDiscount",
+                  "targetField": "totalAfterDiscount"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך יעד",
+                  "sourceField": "DueDate",
+                  "targetField": "dueDate"
+                },
+                {
+                  "type": "string",
+                  "label": "הערות",
+                  "sourceField": "Remarks",
+                  "targetField": "comment"
+                }
+              ],
+              "lineColumns": [],
+              "lineAttributes": []
+            },
+            "execution": {
+              "mode": "single"
+            },
+            "itemsPath": "rows"
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": true,
+      "isSuperAgentRequest": false
+    },
+    {
+      "id": null,
+      "key": "document_orders_all",
+      "name": "document orders all",
+      "mapperType": "documentLines",
+      "table": null,
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "כל ההזמנות",
+      "linkedName": "document_items_order",
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "document_orders_all",
+          "name": "document orders all",
+          "description": "כל ההזמנות",
+          "templateKey": "hasavh_all_documents_list_6",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "documents": {
+              "headFields": [
+                {
+                  "type": "string",
+                  "label": "מספר מסמך",
+                  "sourceField": "DocNumber",
+                  "targetField": "documentNumber"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך",
+                  "sourceField": "ValueDate",
+                  "targetField": "date"
+                },
+                {
+                  "type": "string",
+                  "label": "מספר לקוח",
+                  "sourceField": "AccountKey",
+                  "targetField": "userExtId"
+                },
+                {
+                  "type": "string",
+                  "label": "שם לקוח",
+                  "sourceField": "AccountName",
+                  "targetField": "text_1"
+                },
+                {
+                  "type": "money",
+                  "label": "מע״מ",
+                  "sourceField": "totalTax",
+                  "targetField": "totalTax"
+                },
+                {
+                  "type": "money",
+                  "label": "סה״כ",
+                  "sourceField": "totalAfterDiscount",
+                  "targetField": "totalAfterDiscount"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך יעד",
+                  "sourceField": "DueDate",
+                  "targetField": "dueDate"
+                },
+                {
+                  "type": "string",
+                  "label": "סוכן",
+                  "sourceField": "Agent",
+                  "targetField": "text_2"
+                },
+                {
+                  "type": "string",
+                  "label": "הערות",
+                  "sourceField": "Remarks",
+                  "targetField": "comment"
+                }
+              ],
+              "lineColumns": [],
+              "lineAttributes": []
+            },
+            "execution": {
+              "mode": "single"
+            },
+            "itemsPath": "rows"
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": false,
+      "isSuperAgentRequest": true
+    },
+    {
+      "id": null,
+      "key": "document_orders_user",
+      "name": "document user orders",
+      "mapperType": "documentLines",
+      "table": null,
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "הזמנות",
+      "linkedName": "document_items_order",
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "document_orders_user",
+          "name": "document user orders",
+          "description": "document user orders",
+          "templateKey": "hasavh_users_documents_list_6",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "documents": {
+              "headFields": [
+                {
+                  "type": "string",
+                  "label": "מספר מסמך",
+                  "sourceField": "DocNumber",
+                  "targetField": "documentNumber"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך",
+                  "sourceField": "ValueDate",
+                  "targetField": "date"
+                },
+                {
+                  "type": "money",
+                  "label": "מע״מ",
+                  "sourceField": "totalTax",
+                  "targetField": "totalTax"
+                },
+                {
+                  "type": "money",
+                  "label": "סה״כ",
+                  "sourceField": "totalAfterDiscount",
+                  "targetField": "totalAfterDiscount"
+                },
+                {
+                  "type": "date",
+                  "label": "תאריך יעד",
+                  "sourceField": "DueDate",
+                  "targetField": "dueDate"
+                },
+                {
+                  "type": "string",
+                  "label": "הערות",
+                  "sourceField": "Remarks",
+                  "targetField": "comment"
+                }
+              ],
+              "lineColumns": [],
+              "lineAttributes": []
+            },
+            "execution": {
+              "mode": "single"
+            },
+            "itemsPath": "rows"
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": false,
+      "isSuperAgentRequest": false
     }
   ]
 }

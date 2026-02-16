@@ -1,0 +1,321 @@
+{
+  "mode": "upsert",
+  "dryRun": false,
+  "dataTypes": [
+    {
+      "id": null,
+      "key": "cron_agents",
+      "name": "cron agents",
+      "mapperType": "simple",
+      "table": "Agent",
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "cron agents",
+      "linkedName": null,
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "cron_agents",
+          "name": "cron agents",
+          "description": "cron agents",
+          "templateKey": "hasav_sql_agents",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "simple": {
+              "mappings": {
+                "hp": {},
+                "city": {},
+                "name": {
+                  "sourceField": "agentName"
+                },
+                "role": {},
+                "type": {},
+                "agent": {},
+                "email": {},
+                "extId": {
+                  "sourceField": "agentCode"
+                },
+                "phone": {},
+                "PayDes": {},
+                "extra1": {},
+                "extra2": {},
+                "extra3": {},
+                "extra4": {},
+                "extra5": {},
+                "extra6": {},
+                "extra7": {},
+                "extra8": {},
+                "extra9": {},
+                "parent": {},
+                "search": {},
+                "address": {},
+                "company": {},
+                "extra10": {},
+                "isAgent": {},
+                "payCode": {},
+                "taxCode": {},
+                "discount": {},
+                "password": {},
+                "recovery": {},
+                "username": {},
+                "createdAt": {},
+                "isBlocked": {},
+                "maxCredit": {},
+                "maxObligo": {},
+                "updatedAt": {},
+                "isPublished": {},
+                "masterExtId": {},
+                "isRegistered": {},
+                "isVatEnabled": {},
+                "refreshToken": {},
+                "salesCurrency": {},
+                "erpConnectionId": {},
+                "isAllowSeePrices": {},
+                "minimumPriceUser": {},
+                "vereficationData": {},
+                "deliveryPriceUser": {},
+                "isAllowPriceOffer": {},
+                "isAllowSeeDocuments": {}
+              }
+            },
+            "execution": {
+              "mode": "single"
+            },
+            "itemsPath": "rows"
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": false,
+      "isSuperAgentRequest": false
+    },
+    {
+      "id": null,
+      "key": "cron_products",
+      "name": "cron products",
+      "mapperType": "simple",
+      "table": "Product",
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "cron products",
+      "linkedName": null,
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "cron_products",
+          "name": "cron products",
+          "description": "cron products",
+          "templateKey": "hasav_sql_products",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "simple": {
+              "mappings": {
+                "sku": {
+                  "sourceField": "ItemKey"
+                },
+                "type": {},
+                "group": {},
+                "isNew": {},
+                "orden": {},
+                "stock": {},
+                "title": {
+                  "sourceField": "ItemName"
+                },
+                "extra1": {},
+                "extra2": {},
+                "extra3": {},
+                "extra4": {},
+                "extra5": {},
+                "extra6": {},
+                "extra7": {},
+                "extra8": {},
+                "extra9": {},
+                "search": {
+                  "sourceField": "ItemKey + ItemName"
+                },
+                "barcode": {
+                  "sourceField": "BarCode"
+                },
+                "extra10": {},
+                "category": {},
+                "discount": {},
+                "basePrice": {},
+                "createdAt": {},
+                "isSpecial": {},
+                "isTaxable": {},
+                "updatedAt": {},
+                "finalPrice": {},
+                "taxPrecent": {},
+                "description": {},
+                "isPublished": {
+                  "type": "boolean",
+                  "trueValues": [
+                    "0"
+                  ],
+                  "falseValues": [],
+                  "sourceField": "Dumi"
+                },
+                "packageName": {},
+                "packageType": {},
+                "productType": {},
+                "minimumPrice": {},
+                "packQuantity": {},
+                "titleEnglish": {},
+                "multiCategory": {},
+                "purchasePrice": {},
+                "erpConnectionId": {},
+                "jumpingQuantity": {},
+                "defaultImagePath": {},
+                "remoteDefaultImagePath": {}
+              }
+            },
+            "execution": {
+              "mode": "single"
+            },
+            "itemsPath": "rows"
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": false,
+      "isSuperAgentRequest": false
+    },
+    {
+      "id": null,
+      "key": "cron_users",
+      "name": "cron users",
+      "mapperType": "simple",
+      "table": "User",
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "cron users",
+      "linkedName": null,
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "cron_users",
+          "name": "cron users",
+          "description": "cron users",
+          "templateKey": "hasav_sql_customers",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "simple": {
+              "mappings": {
+                "hp": {},
+                "city": {
+                  "sourceField": "City"
+                },
+                "name": {
+                  "sourceField": "FullName"
+                },
+                "role": {},
+                "type": {},
+                "agent": {
+                  "sourceField": "Agent"
+                },
+                "email": {
+                  "sourceField": "EMail"
+                },
+                "extId": {
+                  "sourceField": "AccountKey"
+                },
+                "phone": {
+                  "sourceField": "Phone"
+                },
+                "PayDes": {
+                  "sourceField": "Balance"
+                },
+                "extra1": {},
+                "extra2": {},
+                "extra3": {},
+                "extra4": {},
+                "extra5": {},
+                "extra6": {},
+                "extra7": {},
+                "extra8": {},
+                "extra9": {},
+                "parent": {},
+                "search": {},
+                "address": {
+                  "sourceField": "Address"
+                },
+                "company": {
+                  "sourceField": "Details"
+                },
+                "extra10": {},
+                "isAgent": {},
+                "payCode": {
+                  "sourceField": "BalanceCode"
+                },
+                "taxCode": {
+                  "sourceField": "CreditTermsCode"
+                },
+                "discount": {},
+                "password": {},
+                "recovery": {},
+                "username": {},
+                "createdAt": {},
+                "isBlocked": {},
+                "maxCredit": {
+                  "sourceField": "TFtalDiscount"
+                },
+                "maxObligo": {
+                  "sourceField": "Obligo"
+                },
+                "updatedAt": {},
+                "isPublished": {
+                  "type": "boolean",
+                  "trueValues": [
+                    "0"
+                  ],
+                  "falseValues": [],
+                  "sourceField": "Dumi"
+                },
+                "masterExtId": {},
+                "isRegistered": {},
+                "isVatEnabled": {},
+                "refreshToken": {},
+                "salesCurrency": {},
+                "erpConnectionId": {},
+                "isAllowSeePrices": {},
+                "minimumPriceUser": {},
+                "vereficationData": {},
+                "deliveryPriceUser": {},
+                "isAllowPriceOffer": {},
+                "isAllowSeeDocuments": {}
+              }
+            },
+            "execution": {
+              "mode": "single"
+            },
+            "itemsPath": "rows"
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": false,
+      "isSuperAgentRequest": false
+    }
+  ]
+}

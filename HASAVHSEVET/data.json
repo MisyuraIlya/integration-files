@@ -421,6 +421,58 @@
     },
     {
       "id": null,
+      "key": "cron_warehouses",
+      "name": "cron warehouses",
+      "mapperType": "simple",
+      "table": "Warehouse",
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": null,
+      "linkedName": null,
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "cron_warehouses",
+          "name": "cron warehouses",
+          "description": "cron warehouses",
+          "templateKey": "hasavh_warehouses",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "simple": {
+              "mappings": {
+                "code": {
+                  "sourceField": "WAREHOUSE"
+                },
+                "name": {
+                  "sourceField": "WAREHOUSE"
+                },
+                "isValid": {},
+                "createdAt": {},
+                "updatedAt": {},
+                "description": {},
+                "erpConnectionId": {}
+              }
+            },
+            "execution": {
+              "mode": "single"
+            },
+            "itemsPath": "rows"
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": false,
+      "isSuperAgentRequest": false
+    },
+    {
+      "id": null,
       "key": "document_agent_orders_agent",
       "name": "document agent_orders agent",
       "mapperType": "documentLines",

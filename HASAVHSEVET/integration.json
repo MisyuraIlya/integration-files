@@ -13,8 +13,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-12T10:25:16.133Z",
-    "updated_at": "2026-02-12T10:25:16.133Z",
+    "created_at": "2026-02-17T07:26:11.732Z",
+    "updated_at": "2026-02-17T07:26:11.732Z",
     "variables": [
       {
         "name": "offset",
@@ -49,8 +49,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-12T10:25:16.162Z",
-    "updated_at": "2026-02-12T10:25:16.162Z",
+    "created_at": "2026-02-17T07:26:11.758Z",
+    "updated_at": "2026-02-17T07:26:11.758Z",
     "variables": [
       {
         "name": "offset",
@@ -85,8 +85,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-12T10:25:16.182Z",
-    "updated_at": "2026-02-12T10:25:16.182Z",
+    "created_at": "2026-02-17T07:26:11.771Z",
+    "updated_at": "2026-02-17T07:26:11.771Z",
     "variables": [
       {
         "name": "offset",
@@ -121,8 +121,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-12T10:25:16.192Z",
-    "updated_at": "2026-02-12T10:25:31.309Z",
+    "created_at": "2026-02-17T07:26:11.785Z",
+    "updated_at": "2026-02-17T07:26:11.785Z",
     "variables": [
       {
         "name": "userExtId",
@@ -189,8 +189,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-12T10:25:16.207Z",
-    "updated_at": "2026-02-12T10:25:31.354Z",
+    "created_at": "2026-02-17T07:26:11.806Z",
+    "updated_at": "2026-02-17T07:26:11.806Z",
     "variables": [
       {
         "name": "userExtId",
@@ -257,8 +257,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-12T10:25:16.226Z",
-    "updated_at": "2026-02-12T10:25:31.325Z",
+    "created_at": "2026-02-17T07:26:11.831Z",
+    "updated_at": "2026-02-17T07:26:11.831Z",
     "variables": [
       {
         "name": "userExtId",
@@ -325,8 +325,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-12T10:25:16.236Z",
-    "updated_at": "2026-02-12T10:25:31.309Z",
+    "created_at": "2026-02-17T07:26:11.862Z",
+    "updated_at": "2026-02-17T07:26:11.862Z",
     "variables": [
       {
         "name": "userExtId",
@@ -393,8 +393,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-12T10:25:16.244Z",
-    "updated_at": "2026-02-12T10:25:31.359Z",
+    "created_at": "2026-02-17T07:26:11.887Z",
+    "updated_at": "2026-02-17T07:26:11.887Z",
     "variables": [
       {
         "name": "userExtId",
@@ -461,8 +461,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-12T10:25:16.255Z",
-    "updated_at": "2026-02-12T10:25:31.327Z",
+    "created_at": "2026-02-17T07:26:11.903Z",
+    "updated_at": "2026-02-17T07:26:11.903Z",
     "variables": [
       {
         "name": "userExtId",
@@ -529,8 +529,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-12T10:25:16.272Z",
-    "updated_at": "2026-02-12T10:25:31.365Z",
+    "created_at": "2026-02-17T07:26:11.911Z",
+    "updated_at": "2026-02-17T07:26:11.911Z",
     "variables": [
       {
         "name": "userExtId",
@@ -597,8 +597,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-12T10:25:16.291Z",
-    "updated_at": "2026-02-12T10:25:31.330Z",
+    "created_at": "2026-02-17T07:26:11.922Z",
+    "updated_at": "2026-02-17T07:26:11.922Z",
     "variables": [
       {
         "name": "userExtId",
@@ -665,8 +665,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-12T10:25:16.316Z",
-    "updated_at": "2026-02-12T10:25:31.364Z",
+    "created_at": "2026-02-17T07:26:11.937Z",
+    "updated_at": "2026-02-17T07:26:11.937Z",
     "variables": [
       {
         "name": "userExtId",
@@ -733,8 +733,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-12T10:25:16.337Z",
-    "updated_at": "2026-02-12T10:26:05.664Z",
+    "created_at": "2026-02-17T07:26:11.946Z",
+    "updated_at": "2026-02-17T07:26:11.946Z",
     "variables": [
       {
         "name": "dateFrom",
@@ -793,8 +793,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-12T10:25:16.355Z",
-    "updated_at": "2026-02-12T10:25:31.331Z",
+    "created_at": "2026-02-17T07:26:11.955Z",
+    "updated_at": "2026-02-17T07:26:11.955Z",
     "variables": [
       {
         "name": "dateFrom",
@@ -853,8 +853,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-12T10:25:16.368Z",
-    "updated_at": "2026-02-12T10:25:31.328Z",
+    "created_at": "2026-02-17T07:26:11.962Z",
+    "updated_at": "2026-02-17T07:26:11.962Z",
     "variables": [
       {
         "name": "dateFrom",
@@ -913,8 +913,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-12T10:25:16.377Z",
-    "updated_at": "2026-02-12T10:25:31.333Z",
+    "created_at": "2026-02-17T07:26:11.968Z",
+    "updated_at": "2026-02-17T07:26:11.968Z",
     "variables": [
       {
         "name": "dateFrom",
@@ -973,8 +973,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-12T10:25:16.384Z",
-    "updated_at": "2026-02-12T10:25:31.352Z",
+    "created_at": "2026-02-17T07:26:11.975Z",
+    "updated_at": "2026-02-17T07:26:11.975Z",
     "variables": [
       {
         "name": "dateFrom",
@@ -1033,8 +1033,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-12T10:25:16.390Z",
-    "updated_at": "2026-02-12T10:25:31.354Z",
+    "created_at": "2026-02-17T07:26:11.982Z",
+    "updated_at": "2026-02-17T07:26:11.982Z",
     "variables": [
       {
         "name": "dateFrom",
@@ -1093,8 +1093,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-12T10:25:16.396Z",
-    "updated_at": "2026-02-12T10:25:31.377Z",
+    "created_at": "2026-02-17T07:26:11.989Z",
+    "updated_at": "2026-02-17T07:26:11.989Z",
     "variables": [
       {
         "name": "dateFrom",
@@ -1153,8 +1153,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-12T10:25:16.403Z",
-    "updated_at": "2026-02-12T10:25:31.381Z",
+    "created_at": "2026-02-17T07:26:11.999Z",
+    "updated_at": "2026-02-17T07:26:11.999Z",
     "variables": [
       {
         "name": "dateFrom",
@@ -1213,8 +1213,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-12T10:25:16.413Z",
-    "updated_at": "2026-02-12T10:25:31.387Z",
+    "created_at": "2026-02-17T07:26:12.012Z",
+    "updated_at": "2026-02-17T07:26:12.012Z",
     "variables": [
       {
         "name": "dateFrom",
@@ -1273,8 +1273,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-12T10:25:16.425Z",
-    "updated_at": "2026-02-12T10:25:31.388Z",
+    "created_at": "2026-02-17T07:26:12.031Z",
+    "updated_at": "2026-02-17T07:26:12.031Z",
     "variables": [
       {
         "name": "userExtId",
@@ -1341,8 +1341,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-12T10:25:16.450Z",
-    "updated_at": "2026-02-12T10:25:31.400Z",
+    "created_at": "2026-02-17T07:26:12.049Z",
+    "updated_at": "2026-02-17T07:26:12.049Z",
     "variables": [
       {
         "name": "userExtId",
@@ -1409,8 +1409,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-12T10:25:16.478Z",
-    "updated_at": "2026-02-12T10:25:31.374Z",
+    "created_at": "2026-02-17T07:26:12.071Z",
+    "updated_at": "2026-02-17T07:26:12.071Z",
     "variables": [
       {
         "name": "userExtId",
@@ -1477,8 +1477,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-12T10:25:16.501Z",
-    "updated_at": "2026-02-12T10:25:31.397Z",
+    "created_at": "2026-02-17T07:26:12.094Z",
+    "updated_at": "2026-02-17T07:26:12.094Z",
     "variables": [
       {
         "name": "userExtId",
@@ -1545,8 +1545,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-12T10:25:16.517Z",
-    "updated_at": "2026-02-12T10:25:31.395Z",
+    "created_at": "2026-02-17T07:26:12.113Z",
+    "updated_at": "2026-02-17T07:26:12.113Z",
     "variables": [
       {
         "name": "userExtId",
@@ -1613,8 +1613,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-12T10:25:16.529Z",
-    "updated_at": "2026-02-12T10:25:31.403Z",
+    "created_at": "2026-02-17T07:26:12.125Z",
+    "updated_at": "2026-02-17T07:26:12.125Z",
     "variables": [
       {
         "name": "userExtId",
@@ -1681,8 +1681,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-12T10:25:16.541Z",
-    "updated_at": "2026-02-12T10:25:31.409Z",
+    "created_at": "2026-02-17T07:26:12.132Z",
+    "updated_at": "2026-02-17T07:26:12.132Z",
     "variables": [
       {
         "name": "userExtId",
@@ -1749,8 +1749,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-12T10:25:16.555Z",
-    "updated_at": "2026-02-12T10:25:31.409Z",
+    "created_at": "2026-02-17T07:26:12.138Z",
+    "updated_at": "2026-02-17T07:26:12.138Z",
     "variables": [
       {
         "name": "userExtId",
@@ -1817,8 +1817,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-12T10:25:16.570Z",
-    "updated_at": "2026-02-12T10:25:31.411Z",
+    "created_at": "2026-02-17T07:26:12.146Z",
+    "updated_at": "2026-02-17T07:26:12.146Z",
     "variables": [
       {
         "name": "userExtId",
@@ -1885,8 +1885,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-12T10:49:48.014Z",
-    "updated_at": "2026-02-12T10:52:52.596Z",
+    "created_at": "2026-02-17T07:26:12.153Z",
+    "updated_at": "2026-02-17T07:26:12.153Z",
     "variables": [
       {
         "name": "documentNumber",
@@ -1913,8 +1913,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-12T11:17:52.262Z",
-    "updated_at": "2026-02-12T11:17:52.262Z",
+    "created_at": "2026-02-17T07:26:12.158Z",
+    "updated_at": "2026-02-17T07:26:12.158Z",
     "variables": [
       {
         "name": "userExtId",
@@ -1949,8 +1949,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-12T11:26:50.728Z",
-    "updated_at": "2026-02-12T11:26:50.728Z",
+    "created_at": "2026-02-17T07:26:12.164Z",
+    "updated_at": "2026-02-17T07:26:12.164Z",
     "variables": [
       {
         "name": "userExtId",
@@ -1977,8 +1977,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-12T11:30:41.624Z",
-    "updated_at": "2026-02-12T11:30:41.624Z",
+    "created_at": "2026-02-17T07:26:12.170Z",
+    "updated_at": "2026-02-17T07:26:12.170Z",
     "variables": [
       {
         "name": "sku",
@@ -2013,8 +2013,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-12T11:31:56.453Z",
-    "updated_at": "2026-02-12T11:31:56.453Z",
+    "created_at": "2026-02-17T07:26:12.176Z",
+    "updated_at": "2026-02-17T07:26:12.176Z",
     "variables": [
       {
         "name": "sku",
@@ -2041,8 +2041,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-12T11:36:07.274Z",
-    "updated_at": "2026-02-12T11:36:38.644Z",
+    "created_at": "2026-02-17T07:26:12.183Z",
+    "updated_at": "2026-02-17T07:26:12.183Z",
     "variables": [
       {
         "name": "dateFrom",
@@ -2085,8 +2085,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-12T11:41:08.079Z",
-    "updated_at": "2026-02-12T11:41:08.079Z",
+    "created_at": "2026-02-17T07:26:12.189Z",
+    "updated_at": "2026-02-17T07:26:12.189Z",
     "variables": [
       {
         "name": "userExtId",
@@ -2129,8 +2129,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-12T11:49:13.460Z",
-    "updated_at": "2026-02-12T11:49:13.460Z",
+    "created_at": "2026-02-17T07:26:12.195Z",
+    "updated_at": "2026-02-17T07:26:12.195Z",
     "variables": [
       {
         "name": "userExtId",
@@ -2157,8 +2157,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-12T11:51:38.654Z",
-    "updated_at": "2026-02-12T11:51:38.654Z",
+    "created_at": "2026-02-17T07:26:12.201Z",
+    "updated_at": "2026-02-17T07:26:12.201Z",
     "variables": [
       {
         "name": "userExtId",
@@ -2185,8 +2185,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-12T11:53:15.280Z",
-    "updated_at": "2026-02-12T11:53:15.280Z",
+    "created_at": "2026-02-17T07:26:12.207Z",
+    "updated_at": "2026-02-17T07:26:12.207Z",
     "variables": [
       {
         "name": "userExtId",
@@ -2213,8 +2213,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-12T11:57:01.336Z",
-    "updated_at": "2026-02-12T12:12:49.301Z",
+    "created_at": "2026-02-17T07:26:12.212Z",
+    "updated_at": "2026-02-17T07:26:12.212Z",
     "variables": [
       {
         "name": "noteIdsCsv",
@@ -2241,8 +2241,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-12T11:58:26.883Z",
-    "updated_at": "2026-02-12T12:13:22.126Z",
+    "created_at": "2026-02-17T07:26:12.220Z",
+    "updated_at": "2026-02-17T07:26:12.220Z",
     "variables": [
       {
         "name": "NoteId",
@@ -2261,6 +2261,25 @@
         "description": null
       }
     ],
+    "strict_variables": true
+  },
+  {
+    "id": null,
+    "key": "hasavh_warehouses",
+    "name": "hasavh_warehouses",
+    "connection_id": 1,
+    "method": "POST",
+    "path": "/sql",
+    "headers": null,
+    "query": null,
+    "body_template": "{\n  \"query\": \"SELECT DISTINCT WAREHOUSE FROM dbo.vBalItemWarehouse ORDER BY WAREHOUSE\",\n  \"params\": {\n    \"offset\": 0,\n    \"pageSize\": 1000\n  }\n}",
+    "body_type": "json",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2026-02-17T09:03:26.551Z",
+    "updated_at": "2026-02-17T09:03:57.153Z",
+    "variables": [],
     "strict_variables": true
   }
 ]

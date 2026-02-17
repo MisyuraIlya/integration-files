@@ -32,175 +32,175 @@
                   "key": "key1",
                   "type": "number",
                   "label": "סכום חודש שעבר (2026)",
-                  "sourceField": "result.value1"
+                  "sourceField": "resultValue1"
                 },
                 {
                   "key": "key2",
                   "type": "number",
                   "label": "הפרש חודש שעבר מול שנה קודמת (₪)",
-                  "sourceField": "result.value2"
+                  "sourceField": "resultValue2"
                 },
                 {
                   "key": "key3",
                   "type": "number",
                   "label": "הפרש אחוזי חודש שעבר מול שנה קודמת (%)",
-                  "sourceField": "result.value3"
+                  "sourceField": "resultValue3"
                 },
                 {
                   "key": "key4",
                   "type": "number",
                   "label": "ממוצע 3 חודשים אחרונים",
-                  "sourceField": "result.value4"
+                  "sourceField": "resultValue4"
                 },
                 {
                   "key": "key5",
                   "type": "number",
                   "label": "סכום 12 חודשים אחרונים",
-                  "sourceField": "result.value5"
+                  "sourceField": "resultValue5"
                 },
                 {
                   "key": "key6",
                   "type": "number",
                   "label": "ממוצע חודשי 12 חודשים אחרונים",
-                  "sourceField": "result.value6"
+                  "sourceField": "resultValue6"
                 },
                 {
                   "key": "key7",
                   "type": "number",
                   "label": "מספר חודשים פעילים ב-12 חודשים אחרונים",
-                  "sourceField": "result.value7"
+                  "sourceField": "resultValue7"
                 },
                 {
                   "key": "key8",
                   "type": "number",
                   "label": "מספר מסמכים (הזמנות) ב-12 חודשים אחרונים",
-                  "sourceField": "result.value8"
+                  "sourceField": "resultValue8"
                 },
                 {
                   "key": "key9",
                   "type": "number",
                   "label": "ממוצע לסל קניה ב-12 חודשים אחרונים",
-                  "sourceField": "result.value9"
+                  "sourceField": "resultValue9"
                 },
                 {
                   "key": "key10",
                   "type": "number",
                   "label": "סטיית תקן חודשית 12 חודשים (פיזור מכירות)",
-                  "sourceField": "result.value10"
+                  "sourceField": "resultValue10"
                 },
                 {
                   "key": "key11",
                   "type": "number",
                   "label": "חודש שעבר / ממוצע 12 חודשים (%)",
-                  "sourceField": "result.value11"
+                  "sourceField": "resultValue11"
                 },
                 {
                   "key": "key12",
                   "type": "number",
                   "label": "סכום חודש נוכחי",
-                  "sourceField": "result.value12"
+                  "sourceField": "resultValue12"
                 },
                 {
                   "key": "key13",
                   "type": "number",
                   "label": "מספר מסמכים בחודש נוכחי",
-                  "sourceField": "result.value13"
+                  "sourceField": "resultValue13"
                 },
                 {
                   "key": "key14",
                   "type": "number",
                   "label": "סכום חודש קודם",
-                  "sourceField": "result.value14"
+                  "sourceField": "resultValue14"
                 },
                 {
                   "key": "key15",
                   "type": "number",
                   "label": "מספר מסמכים בחודש קודם",
-                  "sourceField": "result.value15"
+                  "sourceField": "resultValue15"
                 },
                 {
                   "key": "key16",
                   "type": "number",
                   "label": "שינוי חודש נוכחי מול חודש קודם (₪)",
-                  "sourceField": "result.value16"
+                  "sourceField": "resultValue16"
                 },
                 {
                   "key": "key17",
                   "type": "number",
                   "label": "שינוי חודש נוכחי מול חודש קודם (%)",
-                  "sourceField": "result.value17"
+                  "sourceField": "resultValue17"
                 },
                 {
                   "key": "key18",
                   "type": "number",
                   "label": "שינוי חודש נוכחי מול אותו חודש אשתקד (₪)",
-                  "sourceField": "result.value18"
+                  "sourceField": "resultValue18"
                 },
                 {
                   "key": "key19",
                   "type": "number",
                   "label": "שינוי חודש נוכחי מול אותו חודש אשתקד (%)",
-                  "sourceField": "result.value19"
+                  "sourceField": "resultValue19"
                 },
                 {
                   "key": "key20",
                   "type": "number",
                   "label": "סכום 24 חודשים אחרונים",
-                  "sourceField": "result.value20"
+                  "sourceField": "resultValue20"
                 },
                 {
                   "key": "key21",
                   "type": "number",
                   "label": "ממוצע חודשי 24 חודשים אחרונים",
-                  "sourceField": "result.value21"
+                  "sourceField": "resultValue21"
                 },
                 {
                   "key": "key22",
                   "type": "number",
                   "label": "מספר חודשים פעילים ב-24 חודשים אחרונים",
-                  "sourceField": "result.value22"
+                  "sourceField": "resultValue22"
                 },
                 {
                   "key": "key23",
                   "type": "number",
                   "label": "מספר מסמכים ב-24 חודשים אחרונים",
-                  "sourceField": "result.value23"
+                  "sourceField": "resultValue23"
                 },
                 {
                   "key": "key24",
                   "type": "number",
                   "label": "ממוצע לסל קניה ב-24 חודשים אחרונים",
-                  "sourceField": "result.value24"
+                  "sourceField": "resultValue24"
                 },
                 {
                   "key": "key25",
                   "type": "number",
                   "label": "סטיית תקן חודשית 24 חודשים (פיזור מכירות)",
-                  "sourceField": "result.value25"
+                  "sourceField": "resultValue25"
                 },
                 {
                   "key": "key26",
                   "type": "number",
                   "label": "הזמנה מינימלית ב-24 חודשים (לפני מעמ)",
-                  "sourceField": "result.value26"
+                  "sourceField": "resultValue26"
                 },
                 {
                   "key": "key27",
                   "type": "number",
                   "label": "הזמנה מקסימלית ב-24 חודשים (לפני מעמ)",
-                  "sourceField": "result.value27"
+                  "sourceField": "resultValue27"
                 },
                 {
                   "key": "key28",
                   "type": "number",
                   "label": "ימים מאז הזמנה אחרונה",
-                  "sourceField": "result.value28"
+                  "sourceField": "resultValue28"
                 },
                 {
                   "key": "key29",
                   "type": "number",
                   "label": "ממוצע ימים בין הזמנות",
-                  "sourceField": "result.value29"
+                  "sourceField": "resultValue29"
                 }
               ],
               "itemsPath": "rows"

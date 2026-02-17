@@ -8,13 +8,13 @@
     "path": "/sql",
     "headers": null,
     "query": null,
-    "body_template": "{\n  \"query\": \"WITH base AS (\\n  SELECT DISTINCT\\n    s.agent AS agentCode,\\n    a.SortCodeName AS agentName\\n  FROM dbo.Stock s\\n  INNER JOIN dbo.AccSortNames a\\n    ON s.agent = a.AccSortCode\\n  WHERE s.agent IS NOT NULL\\n)\\nSELECT\\n  COUNT(1) OVER() AS TotalRows,\\n  *\\nFROM base\\nORDER BY agentCode ASC\\nOFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY\",\n  \"params\": {\n    \"offset\": {offset},\n    \"pageSize\": {limit}\n  }\n}\n",
+    "body_template": "{\n  \"query\": \"SELECT\\n  COUNT(1) OVER() AS TotalAgents,\\n  Agent\\nFROM (\\n  SELECT DISTINCT Agent\\n  FROM dbo.Stock\\n  WHERE DocumentID = 11\\n    AND Agent IS NOT NULL\\n) A\\nORDER BY Agent\"\n}\n",
     "body_type": "json",
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
     "created_at": "2026-02-17T07:26:11.732Z",
-    "updated_at": "2026-02-17T07:26:11.732Z",
+    "updated_at": "2026-02-17T10:06:57.531Z",
     "variables": [
       {
         "name": "offset",

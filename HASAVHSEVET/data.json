@@ -133,14 +133,14 @@
                 "hp": {},
                 "city": {},
                 "name": {
-                  "sourceField": "agentName"
+                  "sourceField": "Agent"
                 },
                 "role": {},
                 "type": {},
                 "agent": {},
                 "email": {},
                 "extId": {
-                  "sourceField": "agentCode"
+                  "sourceField": "Agent"
                 },
                 "phone": {},
                 "PayDes": {},

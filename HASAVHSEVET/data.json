@@ -531,10 +531,16 @@
             "documents": {
               "headFields": [
                 {
+                  "type": "number",
+                  "label": "מזהה",
+                  "sourceField": "ID",
+                  "targetField": "documentNumber"
+                },
+                {
                   "type": "string",
                   "label": "מספר מסמך",
                   "sourceField": "DocNumber",
-                  "targetField": "documentNumber"
+                  "targetField": "text_3"
                 },
                 {
                   "type": "date",

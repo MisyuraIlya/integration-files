@@ -2036,18 +2036,18 @@
     "path": "/sql",
     "headers": null,
     "query": null,
-    "body_template": "{\n  \"query\": \"SELECT\\n  j.Referance, j.TransType, j.ValueDate, j.IssueDate, j.DocumentID, j.SuF,\\n  m.AccountKey, m.DebitCredit, m.FullMatch,\\n  A.Balance, A.FullName\\nFROM dbo.JurnalTrans AS j\\nJOIN dbo.JurnalTransMoves AS m\\n  ON j.TransId = m.TransID\\nJOIN dbo.Accounts AS A\\n  ON A.AccountKey = m.AccountKey\\nWHERE\\n  m.AccountKey = @userExtId\\n  AND A.Balance != 0\\n  AND j.Referance != ''\\n  AND j.ValueDate >= TRY_CONVERT(date, @dateFrom)\\n  AND j.ValueDate <= TRY_CONVERT(date, @dateTo)\\nORDER BY j.ValueDate ASC\",\n  \"params\": {\n    \"dateFrom\": \"{dateFrom}\",\n    \"dateTo\": \"{dateTo}\",\n    \"userExtId\": \"{userExtId}\"\n  }\n}",
+    "body_template": "{\n\"query\": \"SELECT\\n  j.StockID,\\n  balMatch.OPENSUF,\\n  balMatch.JTMDEBITCREDIT,\\n  j.ValueDate,\\n  j.DueDate,\\n  j.Referance\\nFROM dbo.VOPENJURNALMATCH AS balMatch\\nJOIN dbo.JurnalTrans AS j\\n  ON balMatch.JTID = j.TransID\\nWHERE\\n  balMatch.AACCOUNTKEY = @userExtId\\n  AND j.Referance != ''\\n  AND j.ValueDate >= TRY_CONVERT(date, @dateFrom)\\n  AND j.ValueDate <= TRY_CONVERT(date, @dateTo)\\nORDER BY j.ValueDate, j.TransID\",\n  \"params\": {\n    \"dateFrom\": \"{dateFrom}\",\n    \"dateTo\": \"{dateTo}\",\n    \"userExtId\": \"{userExtId}\"\n  }\n}",
     "body_type": "json",
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
     "created_at": "2026-02-17T07:26:12.183Z",
-    "updated_at": "2026-02-17T07:26:12.183Z",
+    "updated_at": "2026-02-17T11:22:29.787Z",
     "variables": [
       {
         "name": "dateFrom",
         "type": "string",
-        "default": null,
+        "default": "2025-01-01",
         "required": true,
         "enumValues": null,
         "description": null
@@ -2055,7 +2055,7 @@
       {
         "name": "dateTo",
         "type": "string",
-        "default": null,
+        "default": "2026-02-17",
         "required": true,
         "enumValues": null,
         "description": null
@@ -2063,7 +2063,7 @@
       {
         "name": "userExtId",
         "type": "string",
-        "default": null,
+        "default": 30048,
         "required": true,
         "enumValues": null,
         "description": null
@@ -2086,12 +2086,12 @@
     "output_root": null,
     "is_active": true,
     "created_at": "2026-02-17T07:26:12.189Z",
-    "updated_at": "2026-02-17T07:26:12.189Z",
+    "updated_at": "2026-02-17T10:19:00.619Z",
     "variables": [
       {
         "name": "userExtId",
         "type": "string",
-        "default": null,
+        "default": 30048,
         "required": true,
         "enumValues": null,
         "description": null
@@ -2099,7 +2099,7 @@
       {
         "name": "dateFrom",
         "type": "string",
-        "default": null,
+        "default": "2025-01-01",
         "required": true,
         "enumValues": null,
         "description": null
@@ -2107,7 +2107,7 @@
       {
         "name": "dateTo",
         "type": "string",
-        "default": null,
+        "default": "2026-02-17",
         "required": true,
         "enumValues": null,
         "description": null
@@ -2280,6 +2280,34 @@
     "created_at": "2026-02-17T09:03:26.551Z",
     "updated_at": "2026-02-17T09:03:57.153Z",
     "variables": [],
+    "strict_variables": true
+  },
+  {
+    "id": null,
+    "key": "hasav_user_profile",
+    "name": "hasavh user profile",
+    "connection_id": 1,
+    "method": "POST",
+    "path": "/sql",
+    "headers": null,
+    "query": null,
+    "body_template": "{\n  \"query\": \"SELECT\\n  Users = (\\n    SELECT TOP (1)\\n      a.*, \\n      CreditTerms = (\\n        SELECT TOP (1) ct.*\\n        FROM dbo.CreditTerms AS ct\\n        WHERE ct.CreditTermsCode = a.CreditTermsCode\\n        FOR JSON PATH, WITHOUT_ARRAY_WRAPPER\\n      )\\n    FROM dbo.Accounts AS a\\n    WHERE a.AccountKey = @userExtId\\n    FOR JSON PATH, WITHOUT_ARRAY_WRAPPER\\n  ),\\n\\n  Totals = (\\n    SELECT\\n      TotalOrderSum = COALESCE(t.TotalOrderSum, 0),\\n      MinDate = mm.MinDate,\\n      MaxDate = mm.MaxDate,\\n      OrdersQuantity = COALESCE(mm.OrdersQuantity, 0),\\n      MonthsQuantityByOrderDates = CASE\\n        WHEN mm.MinDate IS NULL OR mm.MaxDate IS NULL THEN 0\\n        ELSE DATEDIFF(MONTH,\\n              DATEFROMPARTS(YEAR(mm.MinDate), MONTH(mm.MinDate), 1),\\n              DATEFROMPARTS(YEAR(mm.MaxDate), MONTH(mm.MaxDate), 1)\\n            ) + 1\\n      END,\\n      MonthlyAverage = CASE\\n        WHEN mm.MinDate IS NULL OR mm.MaxDate IS NULL THEN 0\\n        ELSE COALESCE(t.TotalOrderSum, 0) * 1.0 / NULLIF(\\n          DATEDIFF(MONTH,\\n            DATEFROMPARTS(YEAR(mm.MinDate), MONTH(mm.MinDate), 1),\\n            DATEFROMPARTS(YEAR(mm.MaxDate), MONTH(mm.MaxDate), 1)\\n          ) + 1, 0)\\n      END,\\n      MonthlyObjective = 0,\\n      TotalOrderSumCurrentMonth = COALESCE(cm.TotalOrderSumCurrentMonth, 0),\\n      lastMonthIncome = COALESCE(lm.lastMonthIncome, 0),\\n      lastMonthPurchPriceSum = 0,\\n      warningBalance = COALESCE(ub.UserBalance, 0) + COALESCE(cq.Cheqs, 0)\\n    FROM (SELECT 1 AS x) base\\n    CROSS APPLY (\\n      SELECT\\n        TotalOrderSum =\\n          SUM(CASE WHEN DocumentID IN ('1','2','9','37') THEN TFtalVat ELSE 0 END)\\n        - SUM(CASE WHEN DocumentID = '3' THEN TFtalVat ELSE 0 END)\\n      FROM dbo.Stock\\n      WHERE AccountKey = @userExtId\\n        AND DocumentID IN ('1','2','9','37','3')\\n        AND Status = '1'\\n    ) t\\n    CROSS APPLY (\\n      SELECT\\n        MinDate = MIN(ValueDate),\\n        MaxDate = MAX(ValueDate),\\n        OrdersQuantity = COUNT(*)\\n      FROM dbo.Stock\\n      WHERE AccountKey = @userExtId\\n        AND DocumentID = '11'\\n        AND Status = '1'\\n    ) mm\\n    CROSS APPLY (\\n      SELECT\\n        TotalOrderSumCurrentMonth =\\n          SUM(CASE WHEN DocumentID IN ('1','2','9','37') THEN TFtalVat ELSE 0 END)\\n        - SUM(CASE WHEN DocumentID = '3' THEN TFtalVat ELSE 0 END)\\n      FROM dbo.Stock\\n      WHERE AccountKey = @userExtId\\n        AND DocumentID IN ('1','2','9','37','3')\\n        AND Status = '1'\\n        AND ValueDate BETWEEN d.startOfMonth AND n.now\\n    ) cm\\n    CROSS APPLY (\\n      SELECT\\n        lastMonthIncome =\\n          SUM(CASE WHEN DocumentID IN ('1','2','9','37') THEN TFtalVat ELSE 0 END)\\n        - SUM(CASE WHEN DocumentID = '3' THEN TFtalVat ELSE 0 END)\\n      FROM dbo.Stock\\n      WHERE AccountKey = @userExtId\\n        AND DocumentID IN ('1','2','9','37','3')\\n        AND Status = '1'\\n        AND ValueDate BETWEEN m.prevMonth AND m.thisMonth\\n    ) lm\\n    FOR JSON PATH, WITHOUT_ARRAY_WRAPPER\\n  ),\\n\\n  Cheqs = COALESCE(cq.Cheqs, 0),\\n\\n  CheqsList = (\\n    SELECT\\n      s1.DocumentID,\\n      s1.DocNumber,\\n      ch.CheqNumber,\\n      ch.SuF,\\n      ch.ValueDate,\\n      s1.ValueDate AS DocValueDate\\n    FROM dbo.Stock AS s1\\n    JOIN dbo.Cheqs AS ch\\n      ON s1.Id = ch.StockID\\n    WHERE s1.AccountKey = @userExtId\\n      AND s1.DocumentID IN ('1','9','37','31')\\n      AND ch.ValueDate > d.startOfToday\\n    ORDER BY ch.ValueDate, s1.DocNumber\\n    FOR JSON PATH\\n  ),\\n\\n  OpenDebtInvoices = (\\n    SELECT\\n      j.StockID,\\n      balMatch.OPENSUF,\\n      balMatch.JTMDEBITCREDIT,\\n      j.ValueDate,\\n      j.DueDate,\\n      j.Referance\\n    FROM dbo.VOPENJURNALMATCH AS balMatch\\n    JOIN dbo.JurnalTrans AS j\\n      ON balMatch.JTID = j.TransID\\n    WHERE balMatch.AACCOUNTKEY = @userExtId\\n    ORDER BY j.ValueDate, j.TransID\\n    FOR JSON PATH\\n  )\\n\\nFROM (SELECT GETDATE() AS now) n\\nCROSS APPLY (\\n  SELECT\\n    startOfToday = DATEADD(day, DATEDIFF(day, 0, n.now), 0),\\n    startOfMonth = DATEADD(month, DATEDIFF(month, 0, n.now), 0)\\n) d\\nCROSS APPLY (\\n  SELECT\\n    thisMonth = d.startOfMonth,\\n    prevMonth = DATEADD(month, -1, d.startOfMonth)\\n) m\\nCROSS APPLY (\\n  SELECT TOP (1) UserBalance = a.Balance\\n  FROM dbo.Accounts AS a\\n  WHERE a.AccountKey = @userExtId\\n) ub\\nCROSS APPLY (\\n  SELECT Cheqs = COALESCE(SUM(ch.SuF), 0)\\n  FROM dbo.Stock AS s1\\n  JOIN dbo.Cheqs AS ch\\n    ON s1.Id = ch.StockID\\n  WHERE s1.AccountKey = @userExtId\\n    AND s1.DocumentID IN ('1','9','37','31')\\n    AND ch.ValueDate > d.startOfToday\\n) cq\",\n  \"params\": {\n    \"userExtId\": \"{userExtId}\"\n  }\n}\n",
+    "body_type": "json",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2026-02-17T11:42:19.692Z",
+    "updated_at": "2026-02-17T12:15:07.444Z",
+    "variables": [
+      {
+        "name": "userExtId",
+        "type": "string",
+        "default": 30048,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      }
+    ],
     "strict_variables": true
   }
 ]

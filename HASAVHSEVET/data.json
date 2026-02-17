@@ -36,7 +36,7 @@
                 },
                 {
                   "key": "ValueDate",
-                  "type": "dateHandler",
+                  "type": "date",
                   "label": "תאריך",
                   "sourceField": "ValueDate"
                 },
@@ -90,6 +90,120 @@
               ],
               "lineColumns": [],
               "lineAttributes": []
+            },
+            "execution": {
+              "mode": "single"
+            },
+            "itemsPath": "rows"
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": false,
+      "isSuperAgentRequest": false
+    },
+    {
+      "id": null,
+      "key": "cartesset",
+      "name": "cartesset",
+      "mapperType": "dynamic",
+      "table": null,
+      "dynamicType": "CARTESSET",
+      "manualHandle": true,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "cartesset",
+      "linkedName": null,
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "hasav_cartesset",
+          "name": "cartesset",
+          "description": "cartesset",
+          "templateKey": "hasav_sql_cartesset_lines",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "dynamic": {
+              "columns": [
+                {
+                  "key": "TransID",
+                  "type": "string",
+                  "label": "כותרת",
+                  "sourceField": "TransID"
+                },
+                {
+                  "key": "ID",
+                  "type": "string",
+                  "label": "תנועה",
+                  "sourceField": "ID"
+                },
+                {
+                  "key": "BatchNo",
+                  "type": "string",
+                  "label": "מנה",
+                  "sourceField": "BatchNo"
+                },
+                {
+                  "key": "ס״ת",
+                  "type": "string",
+                  "label": "ס״ת",
+                  "sourceField": "TransType"
+                },
+                {
+                  "key": "TransCredID",
+                  "type": "string",
+                  "label": "ח-ן נגדי",
+                  "sourceField": "TransCredID"
+                },
+                {
+                  "key": "ValueDate",
+                  "type": "date",
+                  "label": "ת.אסמכתא",
+                  "sourceField": "ValueDate"
+                },
+                {
+                  "key": "DueDate",
+                  "type": "date",
+                  "label": "ת.ערך",
+                  "sourceField": "DueDate"
+                },
+                {
+                  "key": "Referance",
+                  "type": "string",
+                  "label": "אסמכתא",
+                  "sourceField": "Referance"
+                },
+                {
+                  "key": "Ref2",
+                  "type": "string",
+                  "label": "אסמכתא 2",
+                  "sourceField": "Ref2"
+                },
+                {
+                  "key": "Description",
+                  "type": "string",
+                  "label": "פרטים",
+                  "sourceField": "Description"
+                },
+                {
+                  "key": "suF",
+                  "type": "number",
+                  "label": "חובה/זכות",
+                  "sourceField": "suF"
+                },
+                {
+                  "key": "Balance",
+                  "type": "number",
+                  "label": "יתרה",
+                  "sourceField": "Balance"
+                }
+              ],
+              "itemsPath": "rows"
             },
             "execution": {
               "mode": "single"
@@ -457,6 +571,72 @@
                 "description": {},
                 "erpConnectionId": {}
               }
+            },
+            "execution": {
+              "mode": "single"
+            },
+            "itemsPath": "rows"
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": false,
+      "isSuperAgentRequest": false
+    },
+    {
+      "id": null,
+      "key": "debits",
+      "name": "debits",
+      "mapperType": "dynamic",
+      "table": null,
+      "dynamicType": "DEBITS",
+      "manualHandle": true,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "hasav debits",
+      "linkedName": null,
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "hasav_debits",
+          "name": "hasav debits",
+          "description": "hasav debits",
+          "templateKey": "hasav_sql_debits",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "dynamic": {
+              "columns": [
+                {
+                  "key": "Reference",
+                  "type": "string",
+                  "label": "אסמכתא",
+                  "sourceField": "Referance"
+                },
+                {
+                  "key": "ValueDate",
+                  "type": "date",
+                  "label": "תאריך אסמכתא",
+                  "sourceField": "ValueDate"
+                },
+                {
+                  "key": "DueDate",
+                  "type": "date",
+                  "label": "תאריך ערך",
+                  "sourceField": "DueDate"
+                },
+                {
+                  "key": "Total",
+                  "type": "number",
+                  "label": "סה״כ",
+                  "sourceField": "OPENSUF"
+                }
+              ],
+              "itemsPath": "rows"
             },
             "execution": {
               "mode": "single"
@@ -3199,6 +3379,120 @@
               ],
               "lineColumns": [],
               "lineAttributes": []
+            },
+            "execution": {
+              "mode": "single"
+            },
+            "itemsPath": "rows"
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": false,
+      "isSuperAgentRequest": false
+    },
+    {
+      "id": null,
+      "key": "user_profile",
+      "name": "user_profile",
+      "mapperType": "dynamic",
+      "table": null,
+      "dynamicType": "USER_PROFILE",
+      "manualHandle": true,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "user_profile",
+      "linkedName": null,
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "user_profile",
+          "name": "user profile",
+          "description": "user profile",
+          "templateKey": "hasav_user_profile",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "dynamic": {
+              "columns": [
+                {
+                  "key": "AccountKey",
+                  "type": "string",
+                  "label": "מספר לקוח",
+                  "sourceField": "json(Users).AccountKey"
+                },
+                {
+                  "key": "Address",
+                  "type": "string",
+                  "label": "כתובת",
+                  "sourceField": "json(Users).Address"
+                },
+                {
+                  "key": "City",
+                  "type": "string",
+                  "label": "עיר",
+                  "sourceField": "json(Users).City"
+                },
+                {
+                  "key": "obligolaybuy",
+                  "type": "money",
+                  "label": "אובליגו",
+                  "sourceField": "json(Users).obligolaybuy"
+                },
+                {
+                  "key": "Phone",
+                  "type": "string",
+                  "label": "טלפון",
+                  "sourceField": "json(Users).Phone"
+                },
+                {
+                  "key": "Balance",
+                  "type": "money",
+                  "label": "יתרת חוב",
+                  "sourceField": "json(Users).Balance"
+                },
+                {
+                  "key": "TotalOrderSum",
+                  "type": "money",
+                  "label": "סה\"כ הזמנות",
+                  "sourceField": "json(Totals).TotalOrderSum"
+                },
+                {
+                  "key": "OrdersQuantity",
+                  "type": "number",
+                  "label": "סך עסקאות",
+                  "sourceField": "json(Totals).OrdersQuantity"
+                },
+                {
+                  "key": "MonthlyAverage",
+                  "type": "money",
+                  "label": "סל ממוצע",
+                  "sourceField": "json(Totals).MonthlyAverage"
+                },
+                {
+                  "key": "TotalOrderSumCurrentMonth",
+                  "type": "money",
+                  "label": "מכירות חודשי",
+                  "sourceField": "json(Totals).TotalOrderSumCurrentMonth"
+                },
+                {
+                  "key": "MonthlyObjective",
+                  "type": "money",
+                  "label": "יעד חודשי",
+                  "sourceField": "json(Totals).MonthlyObjective"
+                },
+                {
+                  "key": "warningBalance",
+                  "type": "money",
+                  "label": "חוב בסיכון",
+                  "sourceField": "json(Totals).warningBalance"
+                }
+              ],
+              "itemsPath": "rows"
             },
             "execution": {
               "mode": "single"

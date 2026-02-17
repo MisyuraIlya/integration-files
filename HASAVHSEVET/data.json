@@ -4,6 +4,54 @@
   "dataTypes": [
     {
       "id": null,
+      "key": "KEEP_ALERT",
+      "name": "KEEP_ALERT",
+      "mapperType": "dynamic",
+      "table": null,
+      "dynamicType": "KEEP_ALERT",
+      "manualHandle": true,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": null,
+      "linkedName": null,
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "KEEP_ALERT",
+          "name": "KEEP_ALERT",
+          "description": "KEEP_ALERT",
+          "templateKey": "keep_alert",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "dynamic": {
+              "columns": [
+                {
+                  "key": "key1",
+                  "type": "number",
+                  "label": "סכום חודש שעבר (2026)",
+                  "sourceField": "result.value1"
+                }
+              ],
+              "itemsPath": "rows"
+            },
+            "execution": {
+              "mode": "single"
+            },
+            "itemsPath": "rows"
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": false,
+      "isSuperAgentRequest": false
+    },
+    {
+      "id": null,
       "key": "USER_PURCHASE_HISTORY_SKU",
       "name": "USER_PURCHASE_HISTORY_SKU",
       "mapperType": "dynamic",

@@ -4,6 +4,84 @@
   "dataTypes": [
     {
       "id": null,
+      "key": "COMPANY_PURCHASE_DELIVERY",
+      "name": "COMPANY_PURCHASE_DELIVERY",
+      "mapperType": "dynamic",
+      "table": null,
+      "dynamicType": "COMPANY_PURCHASE_DELIVERY",
+      "manualHandle": true,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "COMPANY_PURCHASE_DELIVERY",
+      "linkedName": null,
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "COMPANY_PURCHASE_DELIVERY",
+          "name": "COMPANY_PURCHASE_DELIVERY",
+          "description": "COMPANY_PURCHASE_DELIVERY",
+          "templateKey": "hasav_sql_purchase_delivery",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "dynamic": {
+              "columns": [
+                {
+                  "key": "DocNumber",
+                  "type": "string",
+                  "label": "מספר מסמך",
+                  "sourceField": "DocNumber"
+                },
+                {
+                  "key": "DueDate",
+                  "type": "date",
+                  "label": "תאריך",
+                  "sourceField": "DueDate"
+                },
+                {
+                  "key": "ItemKey",
+                  "type": "sku",
+                  "label": "מק\"ט",
+                  "sourceField": "ItemKey"
+                },
+                {
+                  "key": "Quantity",
+                  "type": "number",
+                  "label": "כמות",
+                  "sourceField": "Quantity"
+                },
+                {
+                  "key": "Status",
+                  "type": "string",
+                  "label": "סטטוס",
+                  "sourceField": "Status"
+                },
+                {
+                  "key": "Warehouse",
+                  "type": "string",
+                  "label": "מחסן",
+                  "sourceField": "Warehouse"
+                }
+              ],
+              "itemsPath": "rows"
+            },
+            "execution": {
+              "mode": "single"
+            },
+            "itemsPath": "rows"
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": false,
+      "isSuperAgentRequest": false
+    },
+    {
+      "id": null,
       "key": "KEEP_ALERT",
       "name": "KEEP_ALERT",
       "mapperType": "dynamic",

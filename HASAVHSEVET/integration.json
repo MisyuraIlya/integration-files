@@ -13,8 +13,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-17T07:26:11.732Z",
-    "updated_at": "2026-02-17T10:06:57.531Z",
+    "created_at": "2026-02-18T05:32:12.912Z",
+    "updated_at": "2026-02-18T05:32:12.912Z",
     "variables": [
       {
         "name": "offset",
@@ -49,8 +49,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-17T07:26:11.758Z",
-    "updated_at": "2026-02-17T07:26:11.758Z",
+    "created_at": "2026-02-18T05:32:12.920Z",
+    "updated_at": "2026-02-18T05:32:12.920Z",
     "variables": [
       {
         "name": "offset",
@@ -85,8 +85,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-17T07:26:11.771Z",
-    "updated_at": "2026-02-17T07:26:11.771Z",
+    "created_at": "2026-02-18T05:32:12.927Z",
+    "updated_at": "2026-02-18T05:32:12.927Z",
     "variables": [
       {
         "name": "offset",
@@ -121,8 +121,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-17T07:26:11.785Z",
-    "updated_at": "2026-02-17T07:26:11.785Z",
+    "created_at": "2026-02-18T05:32:12.941Z",
+    "updated_at": "2026-02-18T05:32:12.941Z",
     "variables": [
       {
         "name": "userExtId",
@@ -189,8 +189,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-17T07:26:11.806Z",
-    "updated_at": "2026-02-17T07:26:11.806Z",
+    "created_at": "2026-02-18T05:32:12.959Z",
+    "updated_at": "2026-02-18T05:32:12.959Z",
     "variables": [
       {
         "name": "userExtId",
@@ -257,8 +257,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-17T07:26:11.831Z",
-    "updated_at": "2026-02-17T07:26:11.831Z",
+    "created_at": "2026-02-18T05:32:12.980Z",
+    "updated_at": "2026-02-18T05:32:12.980Z",
     "variables": [
       {
         "name": "userExtId",
@@ -325,8 +325,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-17T07:26:11.862Z",
-    "updated_at": "2026-02-17T07:26:11.862Z",
+    "created_at": "2026-02-18T05:32:13.001Z",
+    "updated_at": "2026-02-18T05:32:13.001Z",
     "variables": [
       {
         "name": "userExtId",
@@ -393,8 +393,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-17T07:26:11.887Z",
-    "updated_at": "2026-02-17T07:26:11.887Z",
+    "created_at": "2026-02-18T05:32:13.031Z",
+    "updated_at": "2026-02-18T05:32:13.031Z",
     "variables": [
       {
         "name": "userExtId",
@@ -461,8 +461,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-17T07:26:11.903Z",
-    "updated_at": "2026-02-17T07:26:11.903Z",
+    "created_at": "2026-02-18T05:32:13.054Z",
+    "updated_at": "2026-02-18T05:32:13.054Z",
     "variables": [
       {
         "name": "userExtId",
@@ -529,8 +529,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-17T07:26:11.911Z",
-    "updated_at": "2026-02-17T07:26:11.911Z",
+    "created_at": "2026-02-18T05:32:13.077Z",
+    "updated_at": "2026-02-18T05:32:13.077Z",
     "variables": [
       {
         "name": "userExtId",
@@ -597,8 +597,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-17T07:26:11.922Z",
-    "updated_at": "2026-02-17T07:26:11.922Z",
+    "created_at": "2026-02-18T05:32:13.097Z",
+    "updated_at": "2026-02-18T05:32:13.097Z",
     "variables": [
       {
         "name": "userExtId",
@@ -665,8 +665,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-17T07:26:11.937Z",
-    "updated_at": "2026-02-17T07:26:11.937Z",
+    "created_at": "2026-02-18T05:32:13.119Z",
+    "updated_at": "2026-02-18T05:32:13.119Z",
     "variables": [
       {
         "name": "userExtId",
@@ -733,8 +733,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-17T07:26:11.946Z",
-    "updated_at": "2026-02-17T07:26:11.946Z",
+    "created_at": "2026-02-18T05:32:13.141Z",
+    "updated_at": "2026-02-18T05:32:13.141Z",
     "variables": [
       {
         "name": "dateFrom",
@@ -793,8 +793,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-17T07:26:11.955Z",
-    "updated_at": "2026-02-17T07:26:11.955Z",
+    "created_at": "2026-02-18T05:32:13.155Z",
+    "updated_at": "2026-02-18T05:32:13.155Z",
     "variables": [
       {
         "name": "dateFrom",
@@ -853,8 +853,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-17T07:26:11.962Z",
-    "updated_at": "2026-02-17T07:26:11.962Z",
+    "created_at": "2026-02-18T05:32:13.172Z",
+    "updated_at": "2026-02-18T05:32:13.172Z",
     "variables": [
       {
         "name": "dateFrom",
@@ -913,8 +913,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-17T07:26:11.968Z",
-    "updated_at": "2026-02-17T07:26:11.968Z",
+    "created_at": "2026-02-18T05:32:13.188Z",
+    "updated_at": "2026-02-18T05:32:13.188Z",
     "variables": [
       {
         "name": "dateFrom",
@@ -973,8 +973,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-17T07:26:11.975Z",
-    "updated_at": "2026-02-17T07:26:11.975Z",
+    "created_at": "2026-02-18T05:32:13.198Z",
+    "updated_at": "2026-02-18T05:32:13.198Z",
     "variables": [
       {
         "name": "dateFrom",
@@ -1033,8 +1033,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-17T07:26:11.982Z",
-    "updated_at": "2026-02-17T07:26:11.982Z",
+    "created_at": "2026-02-18T05:32:13.206Z",
+    "updated_at": "2026-02-18T05:32:13.206Z",
     "variables": [
       {
         "name": "dateFrom",
@@ -1093,8 +1093,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-17T07:26:11.989Z",
-    "updated_at": "2026-02-17T07:26:11.989Z",
+    "created_at": "2026-02-18T05:32:13.213Z",
+    "updated_at": "2026-02-18T05:32:13.213Z",
     "variables": [
       {
         "name": "dateFrom",
@@ -1153,8 +1153,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-17T07:26:11.999Z",
-    "updated_at": "2026-02-17T07:26:11.999Z",
+    "created_at": "2026-02-18T05:32:13.218Z",
+    "updated_at": "2026-02-18T05:32:13.218Z",
     "variables": [
       {
         "name": "dateFrom",
@@ -1213,8 +1213,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-17T07:26:12.012Z",
-    "updated_at": "2026-02-17T07:26:12.012Z",
+    "created_at": "2026-02-18T05:32:13.223Z",
+    "updated_at": "2026-02-18T05:32:13.223Z",
     "variables": [
       {
         "name": "dateFrom",
@@ -1273,8 +1273,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-17T07:26:12.031Z",
-    "updated_at": "2026-02-17T07:26:12.031Z",
+    "created_at": "2026-02-18T05:32:13.227Z",
+    "updated_at": "2026-02-18T05:32:13.227Z",
     "variables": [
       {
         "name": "userExtId",
@@ -1341,8 +1341,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-17T07:26:12.049Z",
-    "updated_at": "2026-02-17T07:26:12.049Z",
+    "created_at": "2026-02-18T05:32:13.232Z",
+    "updated_at": "2026-02-18T05:32:13.232Z",
     "variables": [
       {
         "name": "userExtId",
@@ -1409,8 +1409,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-17T07:26:12.071Z",
-    "updated_at": "2026-02-17T07:26:12.071Z",
+    "created_at": "2026-02-18T05:32:13.238Z",
+    "updated_at": "2026-02-18T05:32:13.238Z",
     "variables": [
       {
         "name": "userExtId",
@@ -1477,8 +1477,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-17T07:26:12.094Z",
-    "updated_at": "2026-02-17T07:26:12.094Z",
+    "created_at": "2026-02-18T05:32:13.245Z",
+    "updated_at": "2026-02-18T05:32:13.245Z",
     "variables": [
       {
         "name": "userExtId",
@@ -1545,8 +1545,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-17T07:26:12.113Z",
-    "updated_at": "2026-02-17T07:26:12.113Z",
+    "created_at": "2026-02-18T05:32:13.254Z",
+    "updated_at": "2026-02-18T05:32:13.254Z",
     "variables": [
       {
         "name": "userExtId",
@@ -1613,8 +1613,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-17T07:26:12.125Z",
-    "updated_at": "2026-02-17T07:26:12.125Z",
+    "created_at": "2026-02-18T05:32:13.264Z",
+    "updated_at": "2026-02-18T05:32:13.264Z",
     "variables": [
       {
         "name": "userExtId",
@@ -1681,8 +1681,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-17T07:26:12.132Z",
-    "updated_at": "2026-02-17T07:26:12.132Z",
+    "created_at": "2026-02-18T05:32:13.281Z",
+    "updated_at": "2026-02-18T05:32:13.281Z",
     "variables": [
       {
         "name": "userExtId",
@@ -1749,8 +1749,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-17T07:26:12.138Z",
-    "updated_at": "2026-02-17T07:26:12.138Z",
+    "created_at": "2026-02-18T05:32:13.306Z",
+    "updated_at": "2026-02-18T05:32:13.306Z",
     "variables": [
       {
         "name": "userExtId",
@@ -1817,8 +1817,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-17T07:26:12.146Z",
-    "updated_at": "2026-02-17T07:26:12.146Z",
+    "created_at": "2026-02-18T05:32:13.327Z",
+    "updated_at": "2026-02-18T05:32:13.327Z",
     "variables": [
       {
         "name": "userExtId",
@@ -1885,8 +1885,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-17T07:26:12.153Z",
-    "updated_at": "2026-02-17T07:26:12.153Z",
+    "created_at": "2026-02-18T05:32:13.345Z",
+    "updated_at": "2026-02-18T05:32:13.345Z",
     "variables": [
       {
         "name": "documentNumber",
@@ -1913,8 +1913,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-17T07:26:12.158Z",
-    "updated_at": "2026-02-17T07:26:12.158Z",
+    "created_at": "2026-02-18T05:32:13.364Z",
+    "updated_at": "2026-02-18T05:32:13.364Z",
     "variables": [
       {
         "name": "userExtId",
@@ -1949,8 +1949,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-17T07:26:12.164Z",
-    "updated_at": "2026-02-17T07:26:12.164Z",
+    "created_at": "2026-02-18T05:32:13.382Z",
+    "updated_at": "2026-02-18T05:32:13.382Z",
     "variables": [
       {
         "name": "userExtId",
@@ -1977,8 +1977,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-17T07:26:12.170Z",
-    "updated_at": "2026-02-17T07:26:12.170Z",
+    "created_at": "2026-02-18T05:32:13.398Z",
+    "updated_at": "2026-02-18T05:32:13.398Z",
     "variables": [
       {
         "name": "sku",
@@ -2008,13 +2008,13 @@
     "path": "/sql",
     "headers": null,
     "query": null,
-    "body_template": "{\n  \"query\": \"SELECT\\n  SM.ItemKey,\\n  S1.DocNumber,\\n  SUM(SM.Quantity) AS Quantity,\\n  S1.DueDate,\\n  SM.Warehouse,\\n  SM.Status\\nFROM dbo.Stock AS S1\\nLEFT JOIN dbo.Stock AS S2\\n  ON S1.DocNumber = S2.Reference AND S1.AccountKey = S2.AccountKey\\nJOIN dbo.StockMoves SM\\n  ON S1.ID = SM.StockID\\nWHERE\\n  SM.ItemKey = @sku\\n  AND S1.DocumentID IN (17,38)\\n  AND SM.SupplyQuantity != 0\\n  AND SM.Status != '2'\\nGROUP BY\\n  S1.DocNumber, S1.DueDate, SM.ItemKey, SM.Warehouse, SM.Status\\nORDER BY S1.DueDate DESC\",\n  \"params\": {\n    \"sku\": \"{sku}\"\n  }\n}",
+    "body_template": "{\n  \"query\": \"SELECT\\n  SM.ItemKey,\\n  S1.DocNumber,\\n  SUM(SM.Quantity) AS Quantity,\\n  S1.DueDate,\\n  SM.Warehouse,\\n  SM.Status\\nFROM dbo.Stock AS S1\\nLEFT JOIN dbo.Stock AS S2\\n  ON S1.DocNumber = S2.Reference AND S1.AccountKey = S2.AccountKey\\nJOIN dbo.StockMoves SM\\n  ON S1.ID = SM.StockID\\nWHERE\\n  SM.ItemKey = @sku\\n  AND S1.DocumentID IN (12,17,38)\\n  AND SM.SupplyQuantity != 0\\n  AND SM.Status != '2'\\nGROUP BY\\n  S1.DocNumber, S1.DueDate, SM.ItemKey, SM.Warehouse, SM.Status\\nORDER BY S1.DueDate DESC\",\n  \"params\": {\n    \"sku\": \"{sku}\"\n  }\n}",
     "body_type": "json",
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-17T07:26:12.176Z",
-    "updated_at": "2026-02-17T07:26:12.176Z",
+    "created_at": "2026-02-18T05:32:13.420Z",
+    "updated_at": "2026-02-18T05:49:46.330Z",
     "variables": [
       {
         "name": "sku",
@@ -2041,8 +2041,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-17T07:26:12.183Z",
-    "updated_at": "2026-02-17T11:22:29.787Z",
+    "created_at": "2026-02-18T05:32:13.438Z",
+    "updated_at": "2026-02-18T05:32:13.438Z",
     "variables": [
       {
         "name": "dateFrom",
@@ -2085,8 +2085,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-17T07:26:12.189Z",
-    "updated_at": "2026-02-17T10:19:00.619Z",
+    "created_at": "2026-02-18T05:32:13.452Z",
+    "updated_at": "2026-02-18T05:32:13.452Z",
     "variables": [
       {
         "name": "userExtId",
@@ -2129,8 +2129,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-17T07:26:12.195Z",
-    "updated_at": "2026-02-17T07:26:12.195Z",
+    "created_at": "2026-02-18T05:32:13.463Z",
+    "updated_at": "2026-02-18T05:32:13.463Z",
     "variables": [
       {
         "name": "userExtId",
@@ -2157,8 +2157,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-17T07:26:12.201Z",
-    "updated_at": "2026-02-17T07:26:12.201Z",
+    "created_at": "2026-02-18T05:32:13.470Z",
+    "updated_at": "2026-02-18T05:32:13.470Z",
     "variables": [
       {
         "name": "userExtId",
@@ -2185,8 +2185,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-17T07:26:12.207Z",
-    "updated_at": "2026-02-17T07:26:12.207Z",
+    "created_at": "2026-02-18T05:32:13.478Z",
+    "updated_at": "2026-02-18T05:32:13.478Z",
     "variables": [
       {
         "name": "userExtId",
@@ -2213,8 +2213,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-17T07:26:12.212Z",
-    "updated_at": "2026-02-17T07:26:12.212Z",
+    "created_at": "2026-02-18T05:32:13.490Z",
+    "updated_at": "2026-02-18T05:32:13.490Z",
     "variables": [
       {
         "name": "noteIdsCsv",
@@ -2241,8 +2241,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-17T07:26:12.220Z",
-    "updated_at": "2026-02-17T07:26:12.220Z",
+    "created_at": "2026-02-18T05:32:13.498Z",
+    "updated_at": "2026-02-18T05:32:13.498Z",
     "variables": [
       {
         "name": "NoteId",
@@ -2277,8 +2277,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-17T09:03:26.551Z",
-    "updated_at": "2026-02-17T09:03:57.153Z",
+    "created_at": "2026-02-18T05:32:13.505Z",
+    "updated_at": "2026-02-18T05:32:13.505Z",
     "variables": [],
     "strict_variables": true
   },
@@ -2296,8 +2296,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-17T11:42:19.692Z",
-    "updated_at": "2026-02-17T12:15:07.444Z",
+    "created_at": "2026-02-18T05:32:13.512Z",
+    "updated_at": "2026-02-18T05:32:13.512Z",
     "variables": [
       {
         "name": "userExtId",
@@ -2324,8 +2324,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-17T12:55:55.286Z",
-    "updated_at": "2026-02-17T13:26:08.106Z",
+    "created_at": "2026-02-18T05:32:13.524Z",
+    "updated_at": "2026-02-18T05:32:13.524Z",
     "variables": [
       {
         "name": "userExtId",

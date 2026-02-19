@@ -109,6 +109,62 @@
   },
   {
     "id": null,
+    "key": "hasav_sql_test_user",
+    "name": "TEST USER",
+    "connection_id": 1,
+    "method": "POST",
+    "path": "/sql",
+    "headers": null,
+    "query": null,
+    "body_template": "{\n  \"query\": \"SELECT TOP (1) * FROM dbo.Accounts WHERE AccountKey = @AccountKey\",\n  \"params\": {\n    \"AccountKey\": \"{AccountKey}\"\n  }\n}\n",
+    "body_type": "json",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2026-02-19T00:00:00.000Z",
+    "updated_at": "2026-02-19T00:00:00.000Z",
+    "variables": [
+      {
+        "name": "AccountKey",
+        "type": "string",
+        "default": null,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      }
+    ],
+    "strict_variables": true
+  },
+  {
+    "id": null,
+    "key": "hasav_sql_test_product",
+    "name": "TEST PRODUCT",
+    "connection_id": 1,
+    "method": "POST",
+    "path": "/sql",
+    "headers": null,
+    "query": null,
+    "body_template": "{\n  \"query\": \"SELECT TOP (1) * FROM dbo.Items WHERE ItemKey = @ItemKey\",\n  \"params\": {\n    \"ItemKey\": \"{ItemKey}\"\n  }\n}\n",
+    "body_type": "json",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2026-02-19T00:00:00.000Z",
+    "updated_at": "2026-02-19T00:00:00.000Z",
+    "variables": [
+      {
+        "name": "ItemKey",
+        "type": "string",
+        "default": null,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      }
+    ],
+    "strict_variables": true
+  },
+  {
+    "id": null,
     "key": "hasavh_users_documents_list_1",
     "name": "חשבונית מס",
     "connection_id": 1,

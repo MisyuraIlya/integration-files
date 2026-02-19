@@ -125,7 +125,7 @@
     "updated_at": "2026-02-19T00:00:00.000Z",
     "variables": [
       {
-        "name": "AccountKey",
+        "name": "userExtId",
         "type": "string",
         "default": null,
         "required": true,
@@ -153,7 +153,7 @@
     "updated_at": "2026-02-19T00:00:00.000Z",
     "variables": [
       {
-        "name": "ItemKey",
+        "name": "sku",
         "type": "string",
         "default": null,
         "required": true,

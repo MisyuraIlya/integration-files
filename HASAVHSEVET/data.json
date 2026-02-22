@@ -608,6 +608,65 @@
     },
     {
       "id": null,
+      "key": "cron_categories",
+      "name": "cron categories",
+      "mapperType": "hierarchy",
+      "table": "Category",
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": false,
+      "isActive": true,
+      "description": "cron categories",
+      "linkedName": null,
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "cron_categories",
+          "name": "cron categories",
+          "description": "cron categories",
+          "templateKey": null,
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "execution": {
+              "mode": "single"
+            },
+            "hierarchy": {
+              "levels": [
+                {
+                  "level": 1,
+                  "mappings": {
+                    "extId": {
+                      "type": "string",
+                      "sourceField": "Note"
+                    },
+                    "title": {
+                      "type": "string",
+                      "sourceField": "Note"
+                    },
+                    "parentExtId": {
+                      "type": "string",
+                      "sourceField": "Note"
+                    }
+                  },
+                  "itemsPath": "rows",
+                  "templateId": 216
+                }
+              ]
+            }
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": false,
+      "isSuperAgentRequest": false
+    },
+    {
+      "id": null,
       "key": "cron_products",
       "name": "cron products",
       "mapperType": "simple",
@@ -626,7 +685,7 @@
           "key": "cron_products",
           "name": "cron products",
           "description": "cron products",
-          "templateKey": "hasav_sql_products",
+          "templateKey": "fetch_products_by_node_id_X",
           "integrationTemplateId": null,
           "template": null,
           "config": {
@@ -659,7 +718,9 @@
                   "sourceField": "BarCode"
                 },
                 "extra10": {},
-                "category": {},
+                "category": {
+                  "sourceField": "Category"
+                },
                 "discount": {},
                 "basePrice": {},
                 "createdAt": {},

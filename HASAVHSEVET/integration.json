@@ -13,8 +13,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-18T05:32:12.912Z",
-    "updated_at": "2026-02-18T05:32:12.912Z",
+    "created_at": "2026-02-22T11:35:28.946Z",
+    "updated_at": "2026-02-22T11:35:28.946Z",
     "variables": [
       {
         "name": "offset",
@@ -49,8 +49,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-18T05:32:12.920Z",
-    "updated_at": "2026-02-18T05:32:12.920Z",
+    "created_at": "2026-02-22T11:35:28.959Z",
+    "updated_at": "2026-02-22T11:35:28.959Z",
     "variables": [
       {
         "name": "offset",
@@ -85,8 +85,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-18T05:32:12.927Z",
-    "updated_at": "2026-02-18T05:32:12.927Z",
+    "created_at": "2026-02-22T11:35:28.966Z",
+    "updated_at": "2026-02-22T11:35:28.966Z",
     "variables": [
       {
         "name": "offset",
@@ -121,8 +121,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-19T00:00:00.000Z",
-    "updated_at": "2026-02-19T00:00:00.000Z",
+    "created_at": "2026-02-22T11:35:28.974Z",
+    "updated_at": "2026-02-22T11:35:28.974Z",
     "variables": [
       {
         "name": "userExtId",
@@ -149,8 +149,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-19T00:00:00.000Z",
-    "updated_at": "2026-02-19T00:00:00.000Z",
+    "created_at": "2026-02-22T11:35:28.986Z",
+    "updated_at": "2026-02-22T11:35:28.986Z",
     "variables": [
       {
         "name": "sku",
@@ -177,8 +177,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-18T05:32:12.941Z",
-    "updated_at": "2026-02-18T05:32:12.941Z",
+    "created_at": "2026-02-22T11:35:29.000Z",
+    "updated_at": "2026-02-22T11:35:29.000Z",
     "variables": [
       {
         "name": "userExtId",
@@ -245,8 +245,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-18T05:32:12.959Z",
-    "updated_at": "2026-02-18T05:32:12.959Z",
+    "created_at": "2026-02-22T11:35:29.017Z",
+    "updated_at": "2026-02-22T11:35:29.017Z",
     "variables": [
       {
         "name": "userExtId",
@@ -313,8 +313,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-18T05:32:12.980Z",
-    "updated_at": "2026-02-18T05:32:12.980Z",
+    "created_at": "2026-02-22T11:35:29.026Z",
+    "updated_at": "2026-02-22T11:35:29.026Z",
     "variables": [
       {
         "name": "userExtId",
@@ -381,8 +381,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-18T05:32:13.001Z",
-    "updated_at": "2026-02-18T05:32:13.001Z",
+    "created_at": "2026-02-22T11:35:29.035Z",
+    "updated_at": "2026-02-22T11:35:29.035Z",
     "variables": [
       {
         "name": "userExtId",
@@ -449,8 +449,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-18T05:32:13.031Z",
-    "updated_at": "2026-02-18T05:32:13.031Z",
+    "created_at": "2026-02-22T11:35:29.050Z",
+    "updated_at": "2026-02-22T11:35:29.050Z",
     "variables": [
       {
         "name": "userExtId",
@@ -517,8 +517,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-18T05:32:13.054Z",
-    "updated_at": "2026-02-18T05:32:13.054Z",
+    "created_at": "2026-02-22T11:35:29.060Z",
+    "updated_at": "2026-02-22T11:35:29.060Z",
     "variables": [
       {
         "name": "userExtId",
@@ -585,8 +585,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-18T05:32:13.077Z",
-    "updated_at": "2026-02-18T05:32:13.077Z",
+    "created_at": "2026-02-22T11:35:29.067Z",
+    "updated_at": "2026-02-22T11:35:29.067Z",
     "variables": [
       {
         "name": "userExtId",
@@ -653,8 +653,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-18T05:32:13.097Z",
-    "updated_at": "2026-02-18T05:32:13.097Z",
+    "created_at": "2026-02-22T11:35:29.076Z",
+    "updated_at": "2026-02-22T11:35:29.076Z",
     "variables": [
       {
         "name": "userExtId",
@@ -721,8 +721,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-18T05:32:13.119Z",
-    "updated_at": "2026-02-18T05:32:13.119Z",
+    "created_at": "2026-02-22T11:35:29.087Z",
+    "updated_at": "2026-02-22T11:35:29.087Z",
     "variables": [
       {
         "name": "userExtId",
@@ -789,8 +789,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-18T05:32:13.141Z",
-    "updated_at": "2026-02-18T05:32:13.141Z",
+    "created_at": "2026-02-22T11:35:29.117Z",
+    "updated_at": "2026-02-22T11:35:29.117Z",
     "variables": [
       {
         "name": "dateFrom",
@@ -849,8 +849,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-18T05:32:13.155Z",
-    "updated_at": "2026-02-18T05:32:13.155Z",
+    "created_at": "2026-02-22T11:35:29.131Z",
+    "updated_at": "2026-02-22T11:35:29.131Z",
     "variables": [
       {
         "name": "dateFrom",
@@ -909,8 +909,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-18T05:32:13.172Z",
-    "updated_at": "2026-02-18T05:32:13.172Z",
+    "created_at": "2026-02-22T11:35:29.147Z",
+    "updated_at": "2026-02-22T11:35:29.147Z",
     "variables": [
       {
         "name": "dateFrom",
@@ -969,8 +969,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-18T05:32:13.188Z",
-    "updated_at": "2026-02-18T05:32:13.188Z",
+    "created_at": "2026-02-22T11:35:29.158Z",
+    "updated_at": "2026-02-22T11:35:29.158Z",
     "variables": [
       {
         "name": "dateFrom",
@@ -1029,8 +1029,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-18T05:32:13.198Z",
-    "updated_at": "2026-02-18T05:32:13.198Z",
+    "created_at": "2026-02-22T11:35:29.173Z",
+    "updated_at": "2026-02-22T11:35:29.173Z",
     "variables": [
       {
         "name": "dateFrom",
@@ -1089,8 +1089,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-18T05:32:13.206Z",
-    "updated_at": "2026-02-18T05:32:13.206Z",
+    "created_at": "2026-02-22T11:35:29.186Z",
+    "updated_at": "2026-02-22T11:35:29.186Z",
     "variables": [
       {
         "name": "dateFrom",
@@ -1149,8 +1149,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-18T05:32:13.213Z",
-    "updated_at": "2026-02-18T05:32:13.213Z",
+    "created_at": "2026-02-22T11:35:29.196Z",
+    "updated_at": "2026-02-22T11:35:29.196Z",
     "variables": [
       {
         "name": "dateFrom",
@@ -1209,8 +1209,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-18T05:32:13.218Z",
-    "updated_at": "2026-02-18T05:32:13.218Z",
+    "created_at": "2026-02-22T11:35:29.206Z",
+    "updated_at": "2026-02-22T11:35:29.206Z",
     "variables": [
       {
         "name": "dateFrom",
@@ -1269,8 +1269,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-18T05:32:13.223Z",
-    "updated_at": "2026-02-18T05:32:13.223Z",
+    "created_at": "2026-02-22T11:35:29.220Z",
+    "updated_at": "2026-02-22T11:35:29.220Z",
     "variables": [
       {
         "name": "dateFrom",
@@ -1329,8 +1329,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-18T05:32:13.227Z",
-    "updated_at": "2026-02-18T05:32:13.227Z",
+    "created_at": "2026-02-22T11:35:29.239Z",
+    "updated_at": "2026-02-22T11:35:29.239Z",
     "variables": [
       {
         "name": "userExtId",
@@ -1397,8 +1397,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-18T05:32:13.232Z",
-    "updated_at": "2026-02-18T05:32:13.232Z",
+    "created_at": "2026-02-22T11:35:29.257Z",
+    "updated_at": "2026-02-22T11:35:29.257Z",
     "variables": [
       {
         "name": "userExtId",
@@ -1465,8 +1465,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-18T05:32:13.238Z",
-    "updated_at": "2026-02-18T05:32:13.238Z",
+    "created_at": "2026-02-22T11:35:29.274Z",
+    "updated_at": "2026-02-22T11:35:29.274Z",
     "variables": [
       {
         "name": "userExtId",
@@ -1533,8 +1533,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-18T05:32:13.245Z",
-    "updated_at": "2026-02-18T05:32:13.245Z",
+    "created_at": "2026-02-22T11:35:29.288Z",
+    "updated_at": "2026-02-22T11:35:29.288Z",
     "variables": [
       {
         "name": "userExtId",
@@ -1601,8 +1601,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-18T05:32:13.254Z",
-    "updated_at": "2026-02-18T05:32:13.254Z",
+    "created_at": "2026-02-22T11:35:29.300Z",
+    "updated_at": "2026-02-22T11:35:29.300Z",
     "variables": [
       {
         "name": "userExtId",
@@ -1669,8 +1669,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-18T05:32:13.264Z",
-    "updated_at": "2026-02-18T05:32:13.264Z",
+    "created_at": "2026-02-22T11:35:29.311Z",
+    "updated_at": "2026-02-22T11:35:29.311Z",
     "variables": [
       {
         "name": "userExtId",
@@ -1737,8 +1737,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-18T05:32:13.281Z",
-    "updated_at": "2026-02-18T05:32:13.281Z",
+    "created_at": "2026-02-22T11:35:29.331Z",
+    "updated_at": "2026-02-22T11:35:29.331Z",
     "variables": [
       {
         "name": "userExtId",
@@ -1805,8 +1805,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-18T05:32:13.306Z",
-    "updated_at": "2026-02-18T05:32:13.306Z",
+    "created_at": "2026-02-22T11:35:29.349Z",
+    "updated_at": "2026-02-22T11:35:29.349Z",
     "variables": [
       {
         "name": "userExtId",
@@ -1873,8 +1873,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-18T05:32:13.327Z",
-    "updated_at": "2026-02-18T05:32:13.327Z",
+    "created_at": "2026-02-22T11:35:29.367Z",
+    "updated_at": "2026-02-22T11:35:29.367Z",
     "variables": [
       {
         "name": "userExtId",
@@ -1941,8 +1941,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-18T05:32:13.345Z",
-    "updated_at": "2026-02-18T05:32:13.345Z",
+    "created_at": "2026-02-22T11:35:29.379Z",
+    "updated_at": "2026-02-22T11:35:29.379Z",
     "variables": [
       {
         "name": "documentNumber",
@@ -1969,8 +1969,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-18T05:32:13.364Z",
-    "updated_at": "2026-02-18T05:32:13.364Z",
+    "created_at": "2026-02-22T11:35:29.388Z",
+    "updated_at": "2026-02-22T11:35:29.388Z",
     "variables": [
       {
         "name": "userExtId",
@@ -2005,8 +2005,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-18T05:32:13.382Z",
-    "updated_at": "2026-02-18T05:32:13.382Z",
+    "created_at": "2026-02-22T11:35:29.398Z",
+    "updated_at": "2026-02-22T11:35:29.398Z",
     "variables": [
       {
         "name": "userExtId",
@@ -2033,8 +2033,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-18T05:32:13.398Z",
-    "updated_at": "2026-02-18T05:32:13.398Z",
+    "created_at": "2026-02-22T11:35:29.416Z",
+    "updated_at": "2026-02-22T11:35:29.416Z",
     "variables": [
       {
         "name": "sku",
@@ -2069,8 +2069,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-18T05:32:13.420Z",
-    "updated_at": "2026-02-18T05:49:46.330Z",
+    "created_at": "2026-02-22T11:35:29.437Z",
+    "updated_at": "2026-02-22T11:35:29.437Z",
     "variables": [
       {
         "name": "sku",
@@ -2097,8 +2097,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-18T05:32:13.438Z",
-    "updated_at": "2026-02-18T05:32:13.438Z",
+    "created_at": "2026-02-22T11:35:29.460Z",
+    "updated_at": "2026-02-22T11:35:29.460Z",
     "variables": [
       {
         "name": "dateFrom",
@@ -2141,8 +2141,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-18T05:32:13.452Z",
-    "updated_at": "2026-02-18T05:32:13.452Z",
+    "created_at": "2026-02-22T11:35:29.476Z",
+    "updated_at": "2026-02-22T11:35:29.476Z",
     "variables": [
       {
         "name": "userExtId",
@@ -2185,8 +2185,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-18T05:32:13.463Z",
-    "updated_at": "2026-02-18T05:32:13.463Z",
+    "created_at": "2026-02-22T11:35:29.484Z",
+    "updated_at": "2026-02-22T11:35:29.484Z",
     "variables": [
       {
         "name": "userExtId",
@@ -2213,8 +2213,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-18T05:32:13.470Z",
-    "updated_at": "2026-02-18T05:32:13.470Z",
+    "created_at": "2026-02-22T11:35:29.498Z",
+    "updated_at": "2026-02-22T11:35:29.498Z",
     "variables": [
       {
         "name": "userExtId",
@@ -2241,8 +2241,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-18T05:32:13.478Z",
-    "updated_at": "2026-02-18T05:32:13.478Z",
+    "created_at": "2026-02-22T11:35:29.516Z",
+    "updated_at": "2026-02-22T11:35:29.516Z",
     "variables": [
       {
         "name": "userExtId",
@@ -2269,8 +2269,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-18T05:32:13.490Z",
-    "updated_at": "2026-02-18T05:32:13.490Z",
+    "created_at": "2026-02-22T11:35:29.531Z",
+    "updated_at": "2026-02-22T11:35:29.531Z",
     "variables": [
       {
         "name": "noteIdsCsv",
@@ -2297,8 +2297,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-18T05:32:13.498Z",
-    "updated_at": "2026-02-18T05:32:13.498Z",
+    "created_at": "2026-02-22T11:35:29.541Z",
+    "updated_at": "2026-02-22T11:35:29.541Z",
     "variables": [
       {
         "name": "NoteId",
@@ -2333,8 +2333,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-18T05:32:13.505Z",
-    "updated_at": "2026-02-18T05:32:13.505Z",
+    "created_at": "2026-02-22T11:35:29.547Z",
+    "updated_at": "2026-02-22T11:35:29.547Z",
     "variables": [],
     "strict_variables": true
   },
@@ -2352,8 +2352,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-18T05:32:13.512Z",
-    "updated_at": "2026-02-18T05:32:13.512Z",
+    "created_at": "2026-02-22T11:35:29.554Z",
+    "updated_at": "2026-02-22T11:35:29.554Z",
     "variables": [
       {
         "name": "userExtId",
@@ -2380,8 +2380,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-18T05:32:13.524Z",
-    "updated_at": "2026-02-18T05:32:13.524Z",
+    "created_at": "2026-02-22T11:35:29.560Z",
+    "updated_at": "2026-02-22T11:35:29.560Z",
     "variables": [
       {
         "name": "userExtId",
@@ -2392,6 +2392,108 @@
         "description": null
       }
     ],
+    "strict_variables": true
+  },
+  {
+    "id": null,
+    "key": "search_item_by_name",
+    "name": "search product by name",
+    "connection_id": 1,
+    "method": "POST",
+    "path": "/sql",
+    "headers": null,
+    "query": null,
+    "body_template": "{\n  \"query\": \"SELECT COUNT(1) OVER() AS TotalRows, *\\nFROM dbo.Items\\nWHERE ItemName LIKE '%' + @itemName + '%'\\nORDER BY ID ASC\\nOFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY\",\n  \"params\": {\n    \"itemName\": \"{name}\",\n    \"offset\": 0,\n    \"pageSize\": 100\n  }\n}",
+    "body_type": "json",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2026-02-22T11:36:57.619Z",
+    "updated_at": "2026-02-22T11:36:57.619Z",
+    "variables": [
+      {
+        "name": "name",
+        "type": "string",
+        "default": null,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      }
+    ],
+    "strict_variables": true
+  },
+  {
+    "id": null,
+    "key": "all_extra_note_names",
+    "name": "all extra note names",
+    "connection_id": 1,
+    "method": "POST",
+    "path": "/sql",
+    "headers": null,
+    "query": null,
+    "body_template": "{\n  \"query\": \"SELECT * FROM dbo.ExtraNoteNames\"\n}",
+    "body_type": "json",
+    "response_parser": "auto",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2026-02-22T11:37:47.525Z",
+    "updated_at": "2026-02-22T11:37:47.525Z",
+    "variables": [],
+    "strict_variables": true
+  },
+  {
+    "id": null,
+    "key": "fetch_products_by_node_id_X",
+    "name": "fetch products for cron",
+    "connection_id": 1,
+    "method": "POST",
+    "path": "/sql",
+    "headers": null,
+    "query": null,
+    "body_template": "{\n  \"query\": \"WITH Paged AS (\\n  SELECT COUNT(1) OVER() AS TotalRows,\\n         i.*\\n  FROM dbo.Items i\\n  ORDER BY i.ID ASC\\n  OFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY\\n)\\nSELECT p.TotalRows,\\n       p.*,\\n       cat.Category\\nFROM Paged p\\nOUTER APPLY (\\n  SELECT TOP (1) en.Note AS Category\\n  FROM dbo.ExtraNotes en\\n  WHERE en.NoteID = 7\\n    AND en.KeF = p.ItemKey\\n) cat\\nORDER BY p.ID ASC\",\n  \"params\": {\n    \"offset\": {offset},\n    \"pageSize\": {limit}\n  }\n}",
+    "body_type": "json",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2026-02-22T11:39:55.154Z",
+    "updated_at": "2026-02-22T11:39:55.154Z",
+    "variables": [
+      {
+        "name": "offset",
+        "type": "number",
+        "default": 0,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "limit",
+        "type": "number",
+        "default": 100,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      }
+    ],
+    "strict_variables": true
+  },
+  {
+    "id": null,
+    "key": "categories_by_note_id_x",
+    "name": "for cron categories by not id x",
+    "connection_id": 1,
+    "method": "POST",
+    "path": "/sql",
+    "headers": null,
+    "query": null,
+    "body_template": "{\n  \"query\": \"SELECT DISTINCT LTRIM(RTRIM([Note])) AS [Note]\\nFROM dbo.ExtraNotes\\nWHERE NoteID = 7\\n  AND [Note] IS NOT NULL\\n  AND LTRIM(RTRIM([Note])) <> ''\\nORDER BY LTRIM(RTRIM([Note]))\"\n}",
+    "body_type": "json",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2026-02-22T11:48:19.198Z",
+    "updated_at": "2026-02-22T11:48:19.198Z",
+    "variables": [],
     "strict_variables": true
   }
 ]

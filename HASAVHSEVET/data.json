@@ -626,7 +626,7 @@
           "key": "cron_categories",
           "name": "cron categories",
           "description": "cron categories",
-          "templateKey": null,
+          "templateKey": "categories_by_note_id_x",
           "integrationTemplateId": null,
           "template": null,
           "config": {

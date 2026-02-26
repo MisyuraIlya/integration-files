@@ -1,0 +1,1294 @@
+{
+	"info": {
+		"_postman_id": "adc24b21-c452-43e1-a51f-959161ebcc9b",
+		"name": "Cav Systems",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18367697"
+	},
+	"item": [
+		{
+			"name": "agents",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://54.170.84.79/api/mcall?_NS=SVK&_USERNAME=STS&_PASSWORD=20210101&_ROUTINE=APIEXP&_LABEL=EXPORT&_MR=6&_INC=DAN-AGENTS",
+					"protocol": "http",
+					"host": [
+						"54",
+						"170",
+						"84",
+						"79"
+					],
+					"path": [
+						"api",
+						"mcall"
+					],
+					"query": [
+						{
+							"key": "_NS",
+							"value": "SVK"
+						},
+						{
+							"key": "_USERNAME",
+							"value": "STS"
+						},
+						{
+							"key": "_PASSWORD",
+							"value": "20210101"
+						},
+						{
+							"key": "_ROUTINE",
+							"value": "APIEXP"
+						},
+						{
+							"key": "_LABEL",
+							"value": "EXPORT"
+						},
+						{
+							"key": "_MR",
+							"value": "6"
+						},
+						{
+							"key": "_INC",
+							"value": "DAN-AGENTS"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "INC=STS-CUST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://54.170.84.79/api/mcall?_NS=SVK&_USERNAME=STS&_PASSWORD=20210101&_ROUTINE=APIEXP&_LABEL=EXPORT&_MR=6&_INC=STS-CUST&_CUSTOMER=14151818",
+					"protocol": "http",
+					"host": [
+						"54",
+						"170",
+						"84",
+						"79"
+					],
+					"path": [
+						"api",
+						"mcall"
+					],
+					"query": [
+						{
+							"key": "_NS",
+							"value": "SVK"
+						},
+						{
+							"key": "_USERNAME",
+							"value": "STS"
+						},
+						{
+							"key": "_PASSWORD",
+							"value": "20210101"
+						},
+						{
+							"key": "_ROUTINE",
+							"value": "APIEXP"
+						},
+						{
+							"key": "_LABEL",
+							"value": "EXPORT"
+						},
+						{
+							"key": "_MR",
+							"value": "6"
+						},
+						{
+							"key": "_INC",
+							"value": "STS-CUST"
+						},
+						{
+							"key": "_CUSTOMER",
+							"value": "14151818"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "INC=STS-ITEM",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://54.170.84.79/api/mcall?_NS=SVK&_USERNAME=STS&_PASSWORD=20210101&_ROUTINE=APIEXP&_LABEL=EXPORT&_MR=6&_INC=STS-ITEM",
+					"protocol": "http",
+					"host": [
+						"54",
+						"170",
+						"84",
+						"79"
+					],
+					"path": [
+						"api",
+						"mcall"
+					],
+					"query": [
+						{
+							"key": "_NS",
+							"value": "SVK"
+						},
+						{
+							"key": "_USERNAME",
+							"value": "STS"
+						},
+						{
+							"key": "_PASSWORD",
+							"value": "20210101"
+						},
+						{
+							"key": "_ROUTINE",
+							"value": "APIEXP"
+						},
+						{
+							"key": "_LABEL",
+							"value": "EXPORT"
+						},
+						{
+							"key": "_MR",
+							"value": "6"
+						},
+						{
+							"key": "_INC",
+							"value": "STS-ITEM"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "INVENTORY",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"itemsInventory\":{\n        \"customer\" : \"*\",\n        \"items\":[\n            {\n                \"item\" : \"140232\"\n            }\n        ]\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://54.170.84.79/api/mcall?_NS=SVK&_USERNAME=STS&_PASSWORD=20210101&_ROUTINE=APIIMP&_LABEL=INVENTORY&_MR=6",
+					"protocol": "http",
+					"host": [
+						"54",
+						"170",
+						"84",
+						"79"
+					],
+					"path": [
+						"api",
+						"mcall"
+					],
+					"query": [
+						{
+							"key": "_NS",
+							"value": "SVK"
+						},
+						{
+							"key": "_USERNAME",
+							"value": "STS"
+						},
+						{
+							"key": "_PASSWORD",
+							"value": "20210101"
+						},
+						{
+							"key": "_ROUTINE",
+							"value": "APIIMP"
+						},
+						{
+							"key": "_LABEL",
+							"value": "INVENTORY"
+						},
+						{
+							"key": "_MR",
+							"value": "6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cust By Id",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://54.170.84.79/api/mcall?_NS=SVK&_USERNAME=STS&_PASSWORD=20210101&_ROUTINE=APIEXP&_LABEL=EXPORT&_MR=6&_INC=STS-CUST&_CUSTOMER=13100033",
+					"protocol": "http",
+					"host": [
+						"54",
+						"170",
+						"84",
+						"79"
+					],
+					"path": [
+						"api",
+						"mcall"
+					],
+					"query": [
+						{
+							"key": "_NS",
+							"value": "SVK"
+						},
+						{
+							"key": "_USERNAME",
+							"value": "STS"
+						},
+						{
+							"key": "_PASSWORD",
+							"value": "20210101"
+						},
+						{
+							"key": "_ROUTINE",
+							"value": "APIEXP"
+						},
+						{
+							"key": "_LABEL",
+							"value": "EXPORT"
+						},
+						{
+							"key": "_MR",
+							"value": "6"
+						},
+						{
+							"key": "_INC",
+							"value": "STS-CUST"
+						},
+						{
+							"key": "_CUSTOMER",
+							"value": "13100033"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ITEM_BY_SKU",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://54.170.84.79/api/mcall?_NS=SVK&_USERNAME=STS&_PASSWORD=20210101&_ROUTINE=APIEXP&_LABEL=EXPORT&_MR=6&_INC=STS-ITEM&_ITEM=336074",
+					"protocol": "http",
+					"host": [
+						"54",
+						"170",
+						"84",
+						"79"
+					],
+					"path": [
+						"api",
+						"mcall"
+					],
+					"query": [
+						{
+							"key": "_NS",
+							"value": "SVK"
+						},
+						{
+							"key": "_USERNAME",
+							"value": "STS"
+						},
+						{
+							"key": "_PASSWORD",
+							"value": "20210101"
+						},
+						{
+							"key": "_ROUTINE",
+							"value": "APIEXP"
+						},
+						{
+							"key": "_LABEL",
+							"value": "EXPORT"
+						},
+						{
+							"key": "_MR",
+							"value": "6"
+						},
+						{
+							"key": "_INC",
+							"value": "STS-ITEM"
+						},
+						{
+							"key": "_ITEM",
+							"value": "336074"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CUSTOMERPRICE",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"customerPrice\":{\n        \"customer\" : \"10010005\",\n        \"items\":[\n            {\n                \"item\" : \"140232\"\n            }\n        ]\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://54.170.84.79/api/mcall?_NS=SVK&_USERNAME=STS&_PASSWORD=20210101&_ROUTINE=APIIMP&_LABEL=CUSTOMERPRICE&_MR=6&_INC=CUSTOMERPRICE",
+					"protocol": "http",
+					"host": [
+						"54",
+						"170",
+						"84",
+						"79"
+					],
+					"path": [
+						"api",
+						"mcall"
+					],
+					"query": [
+						{
+							"key": "_NS",
+							"value": "SVK"
+						},
+						{
+							"key": "_USERNAME",
+							"value": "STS"
+						},
+						{
+							"key": "_PASSWORD",
+							"value": "20210101"
+						},
+						{
+							"key": "_ROUTINE",
+							"value": "APIIMP"
+						},
+						{
+							"key": "_LABEL",
+							"value": "CUSTOMERPRICE"
+						},
+						{
+							"key": "_MR",
+							"value": "6"
+						},
+						{
+							"key": "_INC",
+							"value": "CUSTOMERPRICE"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SALEITMCST-Item last purchase list",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://54.170.84.79/api/mcall?_NS=SVK&_USERNAME=STS&_PASSWORD=20210101&_ROUTINE=APIEXP&_LABEL=EXPORT&_MR=6&_INC=STS-SALEITMCST&_ITEM=766732&_CUSTOMER=13134027",
+					"protocol": "http",
+					"host": [
+						"54",
+						"170",
+						"84",
+						"79"
+					],
+					"path": [
+						"api",
+						"mcall"
+					],
+					"query": [
+						{
+							"key": "_NS",
+							"value": "SVK"
+						},
+						{
+							"key": "_USERNAME",
+							"value": "STS"
+						},
+						{
+							"key": "_PASSWORD",
+							"value": "20210101"
+						},
+						{
+							"key": "_ROUTINE",
+							"value": "APIEXP"
+						},
+						{
+							"key": "_LABEL",
+							"value": "EXPORT"
+						},
+						{
+							"key": "_MR",
+							"value": "6"
+						},
+						{
+							"key": "_INC",
+							"value": "STS-SALEITMCST"
+						},
+						{
+							"key": "_ITEM",
+							"value": "766732"
+						},
+						{
+							"key": "_CUSTOMER",
+							"value": "13134027"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "customer migvan",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://54.170.84.79/api/mcall?_NS=SVK&_USERNAME=STS&_PASSWORD=20210101&_ROUTINE=APIEXP&_LABEL=EXPORT&_MR=6&_INC=STS-MGVN&_CUSTOMER=15220014",
+					"protocol": "http",
+					"host": [
+						"54",
+						"170",
+						"84",
+						"79"
+					],
+					"path": [
+						"api",
+						"mcall"
+					],
+					"query": [
+						{
+							"key": "_NS",
+							"value": "SVK"
+						},
+						{
+							"key": "_USERNAME",
+							"value": "STS"
+						},
+						{
+							"key": "_PASSWORD",
+							"value": "20210101"
+						},
+						{
+							"key": "_ROUTINE",
+							"value": "APIEXP"
+						},
+						{
+							"key": "_LABEL",
+							"value": "EXPORT"
+						},
+						{
+							"key": "_MR",
+							"value": "6"
+						},
+						{
+							"key": "_INC",
+							"value": "STS-MGVN"
+						},
+						{
+							"key": "_CUSTOMER",
+							"value": "15220014"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Doc header",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://54.170.84.79/api/mcall?_NS=SVK&_USERNAME=STS&_PASSWORD=20210101&_ROUTINE=APIEXP&_LABEL=EXPORT&_INC=STS-CUSTDOC&_MR=6&_CUSTOMER=13019249_91:24108307_20240528&_FDT=91:24108307",
+					"protocol": "http",
+					"host": [
+						"54",
+						"170",
+						"84",
+						"79"
+					],
+					"path": [
+						"api",
+						"mcall"
+					],
+					"query": [
+						{
+							"key": "_NS",
+							"value": "SVK"
+						},
+						{
+							"key": "_USERNAME",
+							"value": "STS"
+						},
+						{
+							"key": "_PASSWORD",
+							"value": "20210101"
+						},
+						{
+							"key": "_ROUTINE",
+							"value": "APIEXP"
+						},
+						{
+							"key": "_LABEL",
+							"value": "EXPORT"
+						},
+						{
+							"key": "_INC",
+							"value": "STS-CUSTDOC"
+						},
+						{
+							"key": "_TDT",
+							"value": "20240620",
+							"disabled": true
+						},
+						{
+							"key": "_MR",
+							"value": "6"
+						},
+						{
+							"key": "_CUSTOMER",
+							"value": "13019249_91:24108307_20240528"
+						},
+						{
+							"key": "_FDT",
+							"value": "91:24108307"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Doc Lines",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://54.170.84.79/api/mcall?_NS=SVK&_USERNAME=STS&_PASSWORD=20210101&_ROUTINE=APIEXP&_LABEL=EXPORT&_MR=6&_INC=STS-CUSTDOCLINE&_STORE=3_91:24112278_20240627",
+					"protocol": "http",
+					"host": [
+						"54",
+						"170",
+						"84",
+						"79"
+					],
+					"path": [
+						"api",
+						"mcall"
+					],
+					"query": [
+						{
+							"key": "_NS",
+							"value": "SVK"
+						},
+						{
+							"key": "_USERNAME",
+							"value": "STS"
+						},
+						{
+							"key": "_PASSWORD",
+							"value": "20210101"
+						},
+						{
+							"key": "_ROUTINE",
+							"value": "APIEXP"
+						},
+						{
+							"key": "_LABEL",
+							"value": "EXPORT"
+						},
+						{
+							"key": "_MR",
+							"value": "6"
+						},
+						{
+							"key": "_INC",
+							"value": "STS-CUSTDOCLINE"
+						},
+						{
+							"key": "_STORE",
+							"value": "3_91:24112278_20240627"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Doc connection new service",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://54.170.84.79/api/mcall?_NS=SVK&_USERNAME=STS&_PASSWORD=20210101&_ROUTINE=APIEXP&_LABEL=EXPORT&_MR=6&_INC=STS-API72",
+					"protocol": "http",
+					"host": [
+						"54",
+						"170",
+						"84",
+						"79"
+					],
+					"path": [
+						"api",
+						"mcall"
+					],
+					"query": [
+						{
+							"key": "_NS",
+							"value": "SVK"
+						},
+						{
+							"key": "_USERNAME",
+							"value": "STS"
+						},
+						{
+							"key": "_PASSWORD",
+							"value": "20210101"
+						},
+						{
+							"key": "_ROUTINE",
+							"value": "APIEXP"
+						},
+						{
+							"key": "_LABEL",
+							"value": "EXPORT"
+						},
+						{
+							"key": "_MR",
+							"value": "6"
+						},
+						{
+							"key": "_INC",
+							"value": "STS-API72"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Karteset",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://54.170.84.79/api/mcall?_NS=SVK&_USERNAME=STS&_PASSWORD=20210101&_ROUTINE=APIEXP&_LABEL=EXPORT&_MR=6&_INC=STS-INDEX&_CUSTOMER=13211357",
+					"protocol": "http",
+					"host": [
+						"54",
+						"170",
+						"84",
+						"79"
+					],
+					"path": [
+						"api",
+						"mcall"
+					],
+					"query": [
+						{
+							"key": "_NS",
+							"value": "SVK"
+						},
+						{
+							"key": "_USERNAME",
+							"value": "STS"
+						},
+						{
+							"key": "_PASSWORD",
+							"value": "20210101"
+						},
+						{
+							"key": "_ROUTINE",
+							"value": "APIEXP"
+						},
+						{
+							"key": "_LABEL",
+							"value": "EXPORT"
+						},
+						{
+							"key": "_MR",
+							"value": "6"
+						},
+						{
+							"key": "_INC",
+							"value": "STS-INDEX"
+						},
+						{
+							"key": "_CUSTOMER",
+							"value": "13211357"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Karteset Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://54.170.84.79/api/mcall?_NS=SVK&_USERNAME=STS&_PASSWORD=20210101&_ROUTINE=APIEXP&_LABEL=EXPORT&_MR=6&_INC=STS-INDEX&_CUSTOMER=13211357",
+					"protocol": "http",
+					"host": [
+						"54",
+						"170",
+						"84",
+						"79"
+					],
+					"path": [
+						"api",
+						"mcall"
+					],
+					"query": [
+						{
+							"key": "_NS",
+							"value": "SVK"
+						},
+						{
+							"key": "_USERNAME",
+							"value": "STS"
+						},
+						{
+							"key": "_PASSWORD",
+							"value": "20210101"
+						},
+						{
+							"key": "_ROUTINE",
+							"value": "APIEXP"
+						},
+						{
+							"key": "_LABEL",
+							"value": "EXPORT"
+						},
+						{
+							"key": "_MR",
+							"value": "6"
+						},
+						{
+							"key": "_INC",
+							"value": "STS-INDEX"
+						},
+						{
+							"key": "_CUSTOMER",
+							"value": "13211357"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Finance Details",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://54.170.84.79/api/mcall?_NS=SVK&_USERNAME=STS&_PASSWORD=20210101&_ROUTINE=APIEXP&_LABEL=EXPORT&_MR=6&_INC=STS-CUSTFIN&_CUSTOMER=15112907",
+					"protocol": "http",
+					"host": [
+						"54",
+						"170",
+						"84",
+						"79"
+					],
+					"path": [
+						"api",
+						"mcall"
+					],
+					"query": [
+						{
+							"key": "_NS",
+							"value": "SVK"
+						},
+						{
+							"key": "_USERNAME",
+							"value": "STS"
+						},
+						{
+							"key": "_PASSWORD",
+							"value": "20210101"
+						},
+						{
+							"key": "_ROUTINE",
+							"value": "APIEXP"
+						},
+						{
+							"key": "_LABEL",
+							"value": "EXPORT"
+						},
+						{
+							"key": "_MR",
+							"value": "6"
+						},
+						{
+							"key": "_INC",
+							"value": "STS-CUSTFIN"
+						},
+						{
+							"key": "_CUSTOMER",
+							"value": "15112907"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Gvia",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://54.170.84.79/api/mcall?_NS=SVK&_USERNAME=STS&_PASSWORD=20210101&_ROUTINE=APIEXP&_LABEL=EXPORT&_MR=6&_INC=STS-GVIA&_CUSTOMER=10299993",
+					"protocol": "http",
+					"host": [
+						"54",
+						"170",
+						"84",
+						"79"
+					],
+					"path": [
+						"api",
+						"mcall"
+					],
+					"query": [
+						{
+							"key": "_NS",
+							"value": "SVK"
+						},
+						{
+							"key": "_USERNAME",
+							"value": "STS"
+						},
+						{
+							"key": "_PASSWORD",
+							"value": "20210101"
+						},
+						{
+							"key": "_ROUTINE",
+							"value": "APIEXP"
+						},
+						{
+							"key": "_LABEL",
+							"value": "EXPORT"
+						},
+						{
+							"key": "_MR",
+							"value": "6"
+						},
+						{
+							"key": "_INC",
+							"value": "STS-GVIA"
+						},
+						{
+							"key": "_CUSTOMER",
+							"value": "10299993"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Gvia Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://54.170.84.79/api/mcall?_NS=SVK&_USERNAME=STS&_PASSWORD=20210101&_ROUTINE=APIEXP&_LABEL=EXPORT&_MR=6&_INC=STS-GVIA&_CUSTOMER=14151818",
+					"protocol": "http",
+					"host": [
+						"54",
+						"170",
+						"84",
+						"79"
+					],
+					"path": [
+						"api",
+						"mcall"
+					],
+					"query": [
+						{
+							"key": "_NS",
+							"value": "SVK"
+						},
+						{
+							"key": "_USERNAME",
+							"value": "STS"
+						},
+						{
+							"key": "_PASSWORD",
+							"value": "20210101"
+						},
+						{
+							"key": "_ROUTINE",
+							"value": "APIEXP"
+						},
+						{
+							"key": "_LABEL",
+							"value": "EXPORT"
+						},
+						{
+							"key": "_MR",
+							"value": "6"
+						},
+						{
+							"key": "_INC",
+							"value": "STS-GVIA"
+						},
+						{
+							"key": "_CUSTOMER",
+							"value": "14151818"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cheqes",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://54.170.84.79/api/mcall?_NS=SVK&_USERNAME=STS&_PASSWORD=20210101&_ROUTINE=APIEXP&_LABEL=EXPORT&_MR=6&_INC=STS-CHECKS&_CUSTOMER=12150600",
+					"protocol": "http",
+					"host": [
+						"54",
+						"170",
+						"84",
+						"79"
+					],
+					"path": [
+						"api",
+						"mcall"
+					],
+					"query": [
+						{
+							"key": "_NS",
+							"value": "SVK"
+						},
+						{
+							"key": "_USERNAME",
+							"value": "STS"
+						},
+						{
+							"key": "_PASSWORD",
+							"value": "20210101"
+						},
+						{
+							"key": "_ROUTINE",
+							"value": "APIEXP"
+						},
+						{
+							"key": "_LABEL",
+							"value": "EXPORT"
+						},
+						{
+							"key": "_MR",
+							"value": "6"
+						},
+						{
+							"key": "_INC",
+							"value": "STS-CHECKS"
+						},
+						{
+							"key": "_CUSTOMER",
+							"value": "12150600"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Gviya per Agent",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://54.170.84.79/api/mcall?_NS=SVK&_USERNAME=STS&_PASSWORD=20210101&_ROUTINE=APIEXP&_LABEL=EXPORT&_MR=6&_INC=STS-AGENTGVIA&_STORE=1",
+					"protocol": "http",
+					"host": [
+						"54",
+						"170",
+						"84",
+						"79"
+					],
+					"path": [
+						"api",
+						"mcall"
+					],
+					"query": [
+						{
+							"key": "_NS",
+							"value": "SVK"
+						},
+						{
+							"key": "_USERNAME",
+							"value": "STS"
+						},
+						{
+							"key": "_PASSWORD",
+							"value": "20210101"
+						},
+						{
+							"key": "_ROUTINE",
+							"value": "APIEXP"
+						},
+						{
+							"key": "_LABEL",
+							"value": "EXPORT"
+						},
+						{
+							"key": "_MR",
+							"value": "6"
+						},
+						{
+							"key": "_INC",
+							"value": "STS-AGENTGVIA"
+						},
+						{
+							"key": "_STORE",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "regular products",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://54.170.84.79/api/mcall?_NS=SVK&_USERNAME=STS&_PASSWORD=20210101&_ROUTINE=APIEXP&_LABEL=EXPORT&_MR=6&_INC=STS-LASTPRICES",
+					"protocol": "http",
+					"host": [
+						"54",
+						"170",
+						"84",
+						"79"
+					],
+					"path": [
+						"api",
+						"mcall"
+					],
+					"query": [
+						{
+							"key": "_NS",
+							"value": "SVK"
+						},
+						{
+							"key": "_USERNAME",
+							"value": "STS"
+						},
+						{
+							"key": "_PASSWORD",
+							"value": "20210101"
+						},
+						{
+							"key": "_ROUTINE",
+							"value": "APIEXP"
+						},
+						{
+							"key": "_LABEL",
+							"value": "EXPORT"
+						},
+						{
+							"key": "_MR",
+							"value": "6"
+						},
+						{
+							"key": "_INC",
+							"value": "STS-LASTPRICES"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SEND ORDER",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"order\": {\n        \"customer\": \"15490113\",\n        \"date\": \"20240415\",\n        \"orderId\": \"2528\",\n        \"pickup\": 0,\n        \"credit\": false,\n        \"comment\": \"לא להכין. בדיקה\",\n        \"address\": \"אבא אחי מאיר, 27מרכז מסחרי שוסטר , ליד ארקפה\",\n        \"city\": \"תל אביב\",\n        \"zipCode\": \"\",\n        \"tel\": \"0544898089\",\n        \"mailBox\": \"\",\n        \"customerName\": \"גרפוס (1990) בעמ ( תא מרכז שוסטר ליד ארקפה)\",\n        \"email\": \"\",\n        \"items\": [\n            {\n                \"item\": \"766712\",\n                \"units\": 10,\n                \"cases\": 0\n            },\n            {\n                \"item\": \"766713\",\n                \"units\": 10,\n                \"cases\": 0\n            },\n            {\n                \"item\": \"766943\",\n                \"units\": 10,\n                \"cases\": 0\n            },\n            {\n                \"item\": \"694155\",\n                \"units\": 6,\n                \"cases\": 0\n            },\n            {\n                \"item\": \"111219\",\n                \"units\": 1,\n                \"cases\": 0\n            },\n            {\n                \"item\": \"630717\",\n                \"units\": 1,\n                \"cases\": 0\n            },\n            {\n                \"item\": \"694500\",\n                \"units\": 1,\n                \"cases\": 0\n            },\n            {\n                \"item\": \"694505\",\n                \"units\": 2,\n                \"cases\": 0\n            },\n            {\n                \"item\": \"694507\",\n                \"units\": 2,\n                \"cases\": 0\n            },\n            {\n                \"item\": \"694508\",\n                \"units\": 1,\n                \"cases\": 0\n            },\n            {\n                \"item\": \"694533\",\n                \"units\": 1,\n                \"cases\": 0\n            },\n            {\n                \"item\": \"694536\",\n                \"units\": 1,\n                \"cases\": 0\n            },\n            {\n                \"item\": \"688650\",\n                \"units\": 10,\n                \"cases\": 0\n            },\n            {\n                \"item\": \"883675\",\n                \"units\": 10,\n                \"cases\": 0\n            },\n            {\n                \"item\": \"822187\",\n                \"units\": 20,\n                \"cases\": 0\n            },\n            {\n                \"item\": \"136872\",\n                \"units\": 12,\n                \"cases\": 0\n            },\n            {\n                \"item\": \"136889\",\n                \"units\": 12,\n                \"cases\": 0\n            },\n            {\n                \"item\": \"822339\",\n                \"units\": 12,\n                \"cases\": 0\n            },\n            {\n                \"item\": \"822343\",\n                \"units\": 12,\n                \"cases\": 0\n            },\n            {\n                \"item\": \"822346\",\n                \"units\": 12,\n                \"cases\": 0\n            },\n            {\n                \"item\": \"689267\",\n                \"units\": 12,\n                \"cases\": 0\n            },\n            {\n                \"item\": \"686730\",\n                \"units\": 10,\n                \"cases\": 0\n            },\n            {\n                \"item\": \"686785\",\n                \"units\": 6,\n                \"cases\": 0\n            },\n            {\n                \"item\": \"357181\",\n                \"units\": 5,\n                \"cases\": 0\n            },\n            {\n                \"item\": \"357167\",\n                \"units\": 5,\n                \"cases\": 0\n            },\n            {\n                \"item\": \"353794\",\n                \"units\": 6,\n                \"cases\": 0\n            },\n            {\n                \"item\": \"353800\",\n                \"units\": 6,\n                \"cases\": 0\n            },\n            {\n                \"item\": \"353817\",\n                \"units\": 6,\n                \"cases\": 0\n            },\n            {\n                \"item\": \"353824\",\n                \"units\": 6,\n                \"cases\": 0\n            },\n            {\n                \"item\": \"353886\",\n                \"units\": 6,\n                \"cases\": 0\n            },\n            {\n                \"item\": \"353893\",\n                \"units\": 6,\n                \"cases\": 0\n            },\n            {\n                \"item\": \"353909\",\n                \"units\": 6,\n                \"cases\": 0\n            },\n            {\n                \"item\": \"353978\",\n                \"units\": 6,\n                \"cases\": 0\n            },\n            {\n                \"item\": \"353992\",\n                \"units\": 6,\n                \"cases\": 0\n            },\n            {\n                \"item\": \"354005\",\n                \"units\": 6,\n                \"cases\": 0\n            },\n            {\n                \"item\": \"354142\",\n                \"units\": 6,\n                \"cases\": 0\n            },\n            {\n                \"item\": \"354029\",\n                \"units\": 6,\n                \"cases\": 0\n            },\n            {\n                \"item\": \"354074\",\n                \"units\": 6,\n                \"cases\": 0\n            },\n            {\n                \"item\": \"353879\",\n                \"units\": 6,\n                \"cases\": 0\n            },\n            {\n                \"item\": \"353916\",\n                \"units\": 6,\n                \"cases\": 0\n            },\n            {\n                \"item\": \"353947\",\n                \"units\": 6,\n                \"cases\": 0\n            },\n            {\n                \"item\": \"354036\",\n                \"units\": 6,\n                \"cases\": 0\n            },\n            {\n                \"item\": \"354067\",\n                \"units\": 6,\n                \"cases\": 0\n            },\n            {\n                \"item\": \"354081\",\n                \"units\": 6,\n                \"cases\": 0\n            },\n            {\n                \"item\": \"354180\",\n                \"units\": 6,\n                \"cases\": 0\n            },\n            {\n                \"item\": \"136629\",\n                \"units\": 3,\n                \"cases\": 0\n            },\n            {\n                \"item\": \"136636\",\n                \"units\": 3,\n                \"cases\": 0\n            },\n            {\n                \"item\": \"136643\",\n                \"units\": 3,\n                \"cases\": 0\n            },\n            {\n                \"item\": \"136650\",\n                \"units\": 3,\n                \"cases\": 0\n            },\n            {\n                \"item\": \"357600\",\n                \"units\": 10,\n                \"cases\": 0\n            },\n            {\n                \"item\": \"357617\",\n                \"units\": 10,\n                \"cases\": 0\n            },\n            {\n                \"item\": \"357624\",\n                \"units\": 10,\n                \"cases\": 0\n            },\n            {\n                \"item\": \"357631\",\n                \"units\": 10,\n                \"cases\": 0\n            },\n            {\n                \"item\": \"357648\",\n                \"units\": 10,\n                \"cases\": 0\n            },\n            {\n                \"item\": \"357655\",\n                \"units\": 10,\n                \"cases\": 0\n            },\n            {\n                \"item\": \"357662\",\n                \"units\": 10,\n                \"cases\": 0\n            },\n            {\n                \"item\": \"357679\",\n                \"units\": 10,\n                \"cases\": 0\n            },\n            {\n                \"item\": \"357686\",\n                \"units\": 10,\n                \"cases\": 0\n            },\n            {\n                \"item\": \"138289\",\n                \"units\": 2,\n                \"cases\": 0\n            },\n            {\n                \"item\": \"138296\",\n                \"units\": 2,\n                \"cases\": 0\n            },\n            {\n                \"item\": \"138302\",\n                \"units\": 2,\n                \"cases\": 0\n            },\n            {\n                \"item\": \"356900\",\n                \"units\": 6,\n                \"cases\": 0\n            }\n        ]\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://54.170.84.79/api/mcall?_NS=SVK&_USERNAME=STS&_PASSWORD=20210101&_ROUTINE=APIIMP&_LABEL=ORDER&_MR=6",
+					"protocol": "http",
+					"host": [
+						"54",
+						"170",
+						"84",
+						"79"
+					],
+					"path": [
+						"api",
+						"mcall"
+					],
+					"query": [
+						{
+							"key": "_NS",
+							"value": "SVK"
+						},
+						{
+							"key": "_USERNAME",
+							"value": "STS"
+						},
+						{
+							"key": "_PASSWORD",
+							"value": "20210101"
+						},
+						{
+							"key": "_ROUTINE",
+							"value": "APIIMP"
+						},
+						{
+							"key": "_LABEL",
+							"value": "ORDER"
+						},
+						{
+							"key": "_MR",
+							"value": "6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "categories",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://54.170.84.79/api/mcall?_NS=SVK&_USERNAME=STS&_PASSWORD=20210101&_ROUTINE=APIEXP&_LABEL=EXPORT&_MR=6&_INC=STS-CATEGORY",
+					"protocol": "http",
+					"host": [
+						"54",
+						"170",
+						"84",
+						"79"
+					],
+					"path": [
+						"api",
+						"mcall"
+					],
+					"query": [
+						{
+							"key": "_NS",
+							"value": "SVK"
+						},
+						{
+							"key": "_USERNAME",
+							"value": "STS"
+						},
+						{
+							"key": "_PASSWORD",
+							"value": "20210101"
+						},
+						{
+							"key": "_ROUTINE",
+							"value": "APIEXP"
+						},
+						{
+							"key": "_LABEL",
+							"value": "EXPORT"
+						},
+						{
+							"key": "_MR",
+							"value": "6"
+						},
+						{
+							"key": "_INC",
+							"value": "STS-CATEGORY"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "categoryREL",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://54.170.84.79/api/mcall?_NS=SVK&_USERNAME=STS&_PASSWORD=20210101&_ROUTINE=APIEXP&_LABEL=EXPORT&_MR=6&_INC=STS-CATEGORYRELATION",
+					"protocol": "http",
+					"host": [
+						"54",
+						"170",
+						"84",
+						"79"
+					],
+					"path": [
+						"api",
+						"mcall"
+					],
+					"query": [
+						{
+							"key": "_NS",
+							"value": "SVK"
+						},
+						{
+							"key": "_USERNAME",
+							"value": "STS"
+						},
+						{
+							"key": "_PASSWORD",
+							"value": "20210101"
+						},
+						{
+							"key": "_ROUTINE",
+							"value": "APIEXP"
+						},
+						{
+							"key": "_LABEL",
+							"value": "EXPORT"
+						},
+						{
+							"key": "_MR",
+							"value": "6"
+						},
+						{
+							"key": "_INC",
+							"value": "STS-CATEGORYRELATION"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

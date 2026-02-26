@@ -1,0 +1,303 @@
+{
+  "mode": "upsert",
+  "dryRun": false,
+  "dataTypes": [
+    {
+      "id": null,
+      "key": "cav_agents",
+      "name": "cav agents",
+      "mapperType": "simple",
+      "table": "Agent",
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "cav agents",
+      "linkedName": null,
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "cav_agents",
+          "name": "cav agents",
+          "description": "cav agents",
+          "templateKey": "cav_agents",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "simple": {
+              "mappings": {
+                "hp": {},
+                "city": {},
+                "name": {
+                  "sourceField": "json(text).RO.name"
+                },
+                "role": {},
+                "type": {},
+                "agent": {},
+                "email": {},
+                "extId": {
+                  "sourceField": "json(text).RO.agentId"
+                },
+                "phone": {},
+                "PayDes": {},
+                "extra1": {},
+                "extra2": {},
+                "extra3": {},
+                "extra4": {},
+                "extra5": {},
+                "extra6": {},
+                "extra7": {},
+                "extra8": {},
+                "extra9": {},
+                "parent": {},
+                "search": {},
+                "address": {},
+                "company": {},
+                "extra10": {},
+                "isAgent": {},
+                "payCode": {},
+                "taxCode": {},
+                "discount": {},
+                "password": {},
+                "recovery": {},
+                "username": {},
+                "createdAt": {},
+                "isBlocked": {},
+                "maxCredit": {},
+                "maxObligo": {},
+                "updatedAt": {},
+                "isPublished": {},
+                "masterExtId": {},
+                "isRegistered": {},
+                "isVatEnabled": {},
+                "refreshToken": {},
+                "salesCurrency": {},
+                "erpConnectionId": {},
+                "isAllowSeePrices": {},
+                "minimumPriceUser": {},
+                "vereficationData": {},
+                "deliveryPriceUser": {},
+                "isAllowPriceOffer": {},
+                "isAllowSeeDocuments": {}
+              }
+            },
+            "execution": {
+              "mode": "single"
+            }
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": false,
+      "isSuperAgentRequest": false
+    },
+    {
+      "id": null,
+      "key": "cav_products",
+      "name": "cav_products",
+      "mapperType": "simple",
+      "table": "Product",
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "cav_products",
+      "linkedName": null,
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "cav_products",
+          "name": "cav_products",
+          "description": "cav_products",
+          "templateKey": "cav_products",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "simple": {
+              "mappings": {
+                "sku": {
+                  "sourceField": "json(text).ITEM.catalogNumber"
+                },
+                "type": {},
+                "group": {},
+                "isNew": {},
+                "orden": {},
+                "stock": {},
+                "title": {
+                  "sourceField": "json(text).ITEM.title"
+                },
+                "extra1": {},
+                "extra2": {},
+                "extra3": {},
+                "extra4": {},
+                "extra5": {},
+                "extra6": {},
+                "extra7": {},
+                "extra8": {},
+                "extra9": {},
+                "search": {
+                  "sourceField": "json(text).ITEM.title + json(text).ITEM.catalogNumber"
+                },
+                "barcode": {
+                  "sourceField": "json(text).ITEM.barcode"
+                },
+                "extra10": {},
+                "category": {},
+                "discount": {},
+                "basePrice": {},
+                "createdAt": {},
+                "isSpecial": {},
+                "isTaxable": {},
+                "updatedAt": {},
+                "finalPrice": {},
+                "taxPrecent": {},
+                "description": {},
+                "isPublished": {
+                  "type": "boolean",
+                  "trueValues": [],
+                  "falseValues": [],
+                  "sourceField": "json(text).ITEM.showInApp"
+                },
+                "packageName": {},
+                "packageType": {},
+                "productType": {},
+                "minimumPrice": {},
+                "packQuantity": {
+                  "sourceField": "json(text).ITEM.packQuantity"
+                },
+                "titleEnglish": {},
+                "multiCategory": {},
+                "purchasePrice": {},
+                "erpConnectionId": {},
+                "jumpingQuantity": {},
+                "defaultImagePath": {},
+                "remoteDefaultImagePath": {}
+              }
+            },
+            "execution": {
+              "mode": "single"
+            }
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": false,
+      "isSuperAgentRequest": false
+    },
+    {
+      "id": null,
+      "key": "cav_users",
+      "name": "cav users",
+      "mapperType": "simple",
+      "table": "User",
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "cav users",
+      "linkedName": null,
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "cav_users",
+          "name": "cav users",
+          "description": "cav users",
+          "templateKey": "cav_customers",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "simple": {
+              "mappings": {
+                "hp": {
+                  "sourceField": "json(text).CUST.passport"
+                },
+                "city": {
+                  "sourceField": "json(text).CUST.city"
+                },
+                "name": {
+                  "sourceField": "json(text).CUST.name"
+                },
+                "role": {},
+                "type": {},
+                "agent": {
+                  "sourceField": "json(text).CUST.801"
+                },
+                "email": {
+                  "sourceField": "json(text).CUST.mail"
+                },
+                "extId": {
+                  "sourceField": "json(text).CUST.id"
+                },
+                "phone": {
+                  "sourceField": "json(text).CUST.phone"
+                },
+                "PayDes": {},
+                "extra1": {},
+                "extra2": {},
+                "extra3": {},
+                "extra4": {},
+                "extra5": {},
+                "extra6": {},
+                "extra7": {},
+                "extra8": {},
+                "extra9": {},
+                "parent": {},
+                "search": {},
+                "address": {
+                  "sourceField": "json(text).CUST.address"
+                },
+                "company": {},
+                "extra10": {},
+                "isAgent": {},
+                "payCode": {},
+                "taxCode": {},
+                "discount": {},
+                "password": {},
+                "recovery": {},
+                "username": {},
+                "createdAt": {},
+                "isBlocked": {
+                  "sourceField": "json(text).CUST.blocked"
+                },
+                "maxCredit": {},
+                "maxObligo": {},
+                "updatedAt": {},
+                "isPublished": {},
+                "masterExtId": {},
+                "isRegistered": {},
+                "isVatEnabled": {},
+                "refreshToken": {},
+                "salesCurrency": {},
+                "erpConnectionId": {},
+                "isAllowSeePrices": {},
+                "minimumPriceUser": {},
+                "vereficationData": {},
+                "deliveryPriceUser": {},
+                "isAllowPriceOffer": {},
+                "isAllowSeeDocuments": {}
+              }
+            },
+            "execution": {
+              "mode": "single"
+            }
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": false,
+      "isSuperAgentRequest": false
+    }
+  ]
+}

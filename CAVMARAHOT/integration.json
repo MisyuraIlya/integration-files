@@ -142,7 +142,7 @@
     "path": "?",
     "headers": null,
     "query": {
-      "_MR": 101,
+      "_MR": "101",
       "_NS": "SVB",
       "_INC": "STS-CUST",
       "_LABEL": "EXPORT",
@@ -179,7 +179,7 @@
     "path": "?",
     "headers": null,
     "query": {
-      "_MR": 101,
+      "_MR": "101",
       "_NS": "SVB",
       "_INC": "STS-ITEM",
       "_ITEM": "{sku}",
@@ -216,7 +216,7 @@
     "path": "?",
     "headers": null,
     "query": {
-      "_MR": 101,
+      "_MR": "101",
       "_NS": "SVB",
       "_FDT": "{dateFrom}",
       "_INC": "STS-CUSTDOC",
@@ -271,7 +271,7 @@
     "path": "?",
     "headers": null,
     "query": {
-      "_MR": 101,
+      "_MR": "101",
       "_NS": "SVB",
       "_INC": "STS-CUSTDOCLINE",
       "_LABEL": "EXPORT",
@@ -297,6 +297,408 @@
         "description": null
       }
     ],
+    "strict_variables": true
+  },
+  {
+    "id": null,
+    "key": "cav_customer_price",
+    "name": "cav customer price",
+    "connection_id": 1,
+    "method": "GET",
+    "path": "?",
+    "headers": null,
+    "query": {
+      "_MR": "101",
+      "_NS": "SVB",
+      "_INC": "CUSTOMERPRICE",
+      "_LABEL": "CUSTOMERPRICE",
+      "_ROUTINE": "APIIMP",
+      "_PASSWORD": "20250901",
+      "_USERNAME": "STS"
+    },
+    "body_template": null,
+    "body_type": "none",
+    "response_parser": "text",
+    "output_root": null,
+    "is_active": true,
+    "created_at": null,
+    "updated_at": null,
+    "variables": [],
+    "strict_variables": true
+  },
+  {
+    "id": null,
+    "key": "cav_saleitmcst_item_last_purchase_list",
+    "name": "cav saleitmcst item last purchase list",
+    "connection_id": 1,
+    "method": "GET",
+    "path": "?",
+    "headers": null,
+    "query": {
+      "_MR": "101",
+      "_NS": "SVB",
+      "_INC": "STS-SALEITMCST",
+      "_ITEM": "{sku}",
+      "_LABEL": "EXPORT",
+      "_ROUTINE": "APIEXP",
+      "_CUSTOMER": "{userExtId}",
+      "_PASSWORD": "20250901",
+      "_USERNAME": "STS"
+    },
+    "body_template": null,
+    "body_type": "none",
+    "response_parser": "text",
+    "output_root": null,
+    "is_active": true,
+    "created_at": null,
+    "updated_at": null,
+    "variables": [
+      {
+        "name": "sku",
+        "type": "string",
+        "default": null,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "userExtId",
+        "type": "string",
+        "default": null,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      }
+    ],
+    "strict_variables": true
+  },
+  {
+    "id": null,
+    "key": "cav_customer_migvan",
+    "name": "cav customer migvan",
+    "connection_id": 1,
+    "method": "GET",
+    "path": "?",
+    "headers": null,
+    "query": {
+      "_MR": "101",
+      "_NS": "SVB",
+      "_INC": "STS-MGVN",
+      "_LABEL": "EXPORT",
+      "_ROUTINE": "APIEXP",
+      "_CUSTOMER": "{userExtId}",
+      "_PASSWORD": "20250901",
+      "_USERNAME": "STS"
+    },
+    "body_template": null,
+    "body_type": "none",
+    "response_parser": "text",
+    "output_root": null,
+    "is_active": true,
+    "created_at": null,
+    "updated_at": null,
+    "variables": [
+      {
+        "name": "userExtId",
+        "type": "string",
+        "default": null,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      }
+    ],
+    "strict_variables": true
+  },
+  {
+    "id": null,
+    "key": "cav_doc_connection_new_service",
+    "name": "cav doc connection new service",
+    "connection_id": 1,
+    "method": "GET",
+    "path": "?",
+    "headers": null,
+    "query": {
+      "_MR": "101",
+      "_NS": "SVB",
+      "_INC": "STS-API72",
+      "_LABEL": "EXPORT",
+      "_ROUTINE": "APIEXP",
+      "_PASSWORD": "20250901",
+      "_USERNAME": "STS"
+    },
+    "body_template": null,
+    "body_type": "none",
+    "response_parser": "text",
+    "output_root": null,
+    "is_active": true,
+    "created_at": null,
+    "updated_at": null,
+    "variables": [],
+    "strict_variables": true
+  },
+  {
+    "id": null,
+    "key": "cav_karteset",
+    "name": "cav karteset",
+    "connection_id": 1,
+    "method": "GET",
+    "path": "?",
+    "headers": null,
+    "query": {
+      "_MR": "101",
+      "_NS": "SVB",
+      "_INC": "STS-INDEX",
+      "_LABEL": "EXPORT",
+      "_ROUTINE": "APIEXP",
+      "_CUSTOMER": "{userExtId}",
+      "_PASSWORD": "20250901",
+      "_USERNAME": "STS"
+    },
+    "body_template": null,
+    "body_type": "none",
+    "response_parser": "text",
+    "output_root": null,
+    "is_active": true,
+    "created_at": null,
+    "updated_at": null,
+    "variables": [
+      {
+        "name": "userExtId",
+        "type": "string",
+        "default": null,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      }
+    ],
+    "strict_variables": true
+  },
+  {
+    "id": null,
+    "key": "cav_user_finance_details",
+    "name": "cav user finance details",
+    "connection_id": 1,
+    "method": "GET",
+    "path": "?",
+    "headers": null,
+    "query": {
+      "_MR": "101",
+      "_NS": "SVB",
+      "_INC": "STS-CUSTFIN",
+      "_LABEL": "EXPORT",
+      "_ROUTINE": "APIEXP",
+      "_CUSTOMER": "{userExtId}",
+      "_PASSWORD": "20250901",
+      "_USERNAME": "STS"
+    },
+    "body_template": null,
+    "body_type": "none",
+    "response_parser": "text",
+    "output_root": null,
+    "is_active": true,
+    "created_at": null,
+    "updated_at": null,
+    "variables": [
+      {
+        "name": "userExtId",
+        "type": "string",
+        "default": null,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      }
+    ],
+    "strict_variables": true
+  },
+  {
+    "id": null,
+    "key": "cav_gvia",
+    "name": "cav gvia",
+    "connection_id": 1,
+    "method": "GET",
+    "path": "?",
+    "headers": null,
+    "query": {
+      "_MR": "101",
+      "_NS": "SVB",
+      "_INC": "STS-GVIA",
+      "_LABEL": "EXPORT",
+      "_ROUTINE": "APIEXP",
+      "_CUSTOMER": "{userExtId}",
+      "_PASSWORD": "20250901",
+      "_USERNAME": "STS"
+    },
+    "body_template": null,
+    "body_type": "none",
+    "response_parser": "text",
+    "output_root": null,
+    "is_active": true,
+    "created_at": null,
+    "updated_at": null,
+    "variables": [
+      {
+        "name": "userExtId",
+        "type": "string",
+        "default": null,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      }
+    ],
+    "strict_variables": true
+  },
+  {
+    "id": null,
+    "key": "cav_cheqes",
+    "name": "cav cheqes",
+    "connection_id": 1,
+    "method": "GET",
+    "path": "?",
+    "headers": null,
+    "query": {
+      "_MR": "101",
+      "_NS": "SVB",
+      "_INC": "STS-CHECKS",
+      "_LABEL": "EXPORT",
+      "_ROUTINE": "APIEXP",
+      "_CUSTOMER": "{userExtId}",
+      "_PASSWORD": "20250901",
+      "_USERNAME": "STS"
+    },
+    "body_template": null,
+    "body_type": "none",
+    "response_parser": "text",
+    "output_root": null,
+    "is_active": true,
+    "created_at": null,
+    "updated_at": null,
+    "variables": [
+      {
+        "name": "userExtId",
+        "type": "string",
+        "default": null,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      }
+    ],
+    "strict_variables": true
+  },
+  {
+    "id": null,
+    "key": "cav_gviya_per_agent",
+    "name": "cav gviya per agent",
+    "connection_id": 1,
+    "method": "GET",
+    "path": "?",
+    "headers": null,
+    "query": {
+      "_MR": "101",
+      "_NS": "SVB",
+      "_INC": "STS-AGENTGVIA",
+      "_LABEL": "EXPORT",
+      "_ROUTINE": "APIEXP",
+      "_STORE": "{store}",
+      "_PASSWORD": "20250901",
+      "_USERNAME": "STS"
+    },
+    "body_template": null,
+    "body_type": "none",
+    "response_parser": "text",
+    "output_root": null,
+    "is_active": true,
+    "created_at": null,
+    "updated_at": null,
+    "variables": [
+      {
+        "name": "store",
+        "type": "string",
+        "default": null,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      }
+    ],
+    "strict_variables": true
+  },
+  {
+    "id": null,
+    "key": "cav_regular_products",
+    "name": "cav regular products",
+    "connection_id": 1,
+    "method": "GET",
+    "path": "?",
+    "headers": null,
+    "query": {
+      "_MR": "101",
+      "_NS": "SVB",
+      "_INC": "STS-LASTPRICES",
+      "_LABEL": "EXPORT",
+      "_ROUTINE": "APIEXP",
+      "_PASSWORD": "20250901",
+      "_USERNAME": "STS"
+    },
+    "body_template": null,
+    "body_type": "none",
+    "response_parser": "text",
+    "output_root": null,
+    "is_active": true,
+    "created_at": null,
+    "updated_at": null,
+    "variables": [],
+    "strict_variables": true
+  },
+  {
+    "id": null,
+    "key": "cav_send_order",
+    "name": "cav send order",
+    "connection_id": 1,
+    "method": "GET",
+    "path": "?",
+    "headers": null,
+    "query": {
+      "_MR": "101",
+      "_NS": "SVB",
+      "_LABEL": "ORDER",
+      "_ROUTINE": "APIIMP",
+      "_PASSWORD": "20250901",
+      "_USERNAME": "STS"
+    },
+    "body_template": null,
+    "body_type": "none",
+    "response_parser": "text",
+    "output_root": null,
+    "is_active": true,
+    "created_at": null,
+    "updated_at": null,
+    "variables": [],
+    "strict_variables": true
+  },
+  {
+    "id": null,
+    "key": "cav_category_relation",
+    "name": "cav category relation",
+    "connection_id": 1,
+    "method": "GET",
+    "path": "?",
+    "headers": null,
+    "query": {
+      "_MR": "101",
+      "_NS": "SVB",
+      "_INC": "STS-CATEGORYRELATION",
+      "_LABEL": "EXPORT",
+      "_ROUTINE": "APIEXP",
+      "_PASSWORD": "20250901",
+      "_USERNAME": "STS"
+    },
+    "body_template": null,
+    "body_type": "none",
+    "response_parser": "text",
+    "output_root": null,
+    "is_active": true,
+    "created_at": null,
+    "updated_at": null,
+    "variables": [],
     "strict_variables": true
   }
 ]

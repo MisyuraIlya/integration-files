@@ -1,0 +1,302 @@
+[
+  {
+    "id": null,
+    "key": "cav_products",
+    "name": "cav products",
+    "connection_id": 1,
+    "method": "GET",
+    "path": "?",
+    "headers": null,
+    "query": {
+      "_MR": "101",
+      "_NS": "SVB",
+      "_INC": "STS-ITEM",
+      "_LABEL": "EXPORT",
+      "_ROUTINE": "APIEXP",
+      "_PASSWORD": "20250901",
+      "_USERNAME": "STS"
+    },
+    "body_template": null,
+    "body_type": "none",
+    "response_parser": "text",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2026-02-26T06:52:19.074Z",
+    "updated_at": "2026-02-26T06:55:46.760Z",
+    "variables": [],
+    "strict_variables": true
+  },
+  {
+    "id": null,
+    "key": "cav_agents",
+    "name": "cav agents",
+    "connection_id": 1,
+    "method": "GET",
+    "path": "?",
+    "headers": null,
+    "query": {
+      "_MR": "101",
+      "_NS": "SVB",
+      "_INC": "DAN-AGENTS",
+      "_LABEL": "EXPORT",
+      "_ROUTINE": "APIEXP",
+      "_PASSWORD": "20250901",
+      "_USERNAME": "STS"
+    },
+    "body_template": null,
+    "body_type": "none",
+    "response_parser": "text",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2026-02-26T07:00:18.327Z",
+    "updated_at": "2026-02-26T07:00:18.327Z",
+    "variables": [],
+    "strict_variables": true
+  },
+  {
+    "id": null,
+    "key": "cav_customers",
+    "name": "cav customers",
+    "connection_id": 1,
+    "method": "GET",
+    "path": "?",
+    "headers": null,
+    "query": {
+      "_MR": "101",
+      "_NS": "SVB",
+      "_INC": "STS-CUST",
+      "_LABEL": "EXPORT",
+      "_ROUTINE": "APIEXP",
+      "_PASSWORD": "20250901",
+      "_USERNAME": "STS"
+    },
+    "body_template": null,
+    "body_type": "none",
+    "response_parser": "text",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2026-02-26T07:03:24.684Z",
+    "updated_at": "2026-02-26T07:03:24.684Z",
+    "variables": [],
+    "strict_variables": true
+  },
+  {
+    "id": null,
+    "key": "cav_categories",
+    "name": "cav categories",
+    "connection_id": 1,
+    "method": "GET",
+    "path": "?",
+    "headers": null,
+    "query": {
+      "_MR": "101",
+      "_NS": "SVB",
+      "_INC": "STS-CATEGORY",
+      "_LABEL": "EXPORT",
+      "_ROUTINE": "APIEXP",
+      "_PASSWORD": "20250901",
+      "_USERNAME": "STS"
+    },
+    "body_template": null,
+    "body_type": "none",
+    "response_parser": "text",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2026-02-26T07:06:29.819Z",
+    "updated_at": "2026-02-26T07:06:29.819Z",
+    "variables": [],
+    "strict_variables": true
+  },
+  {
+    "id": null,
+    "key": "cav_inventory",
+    "name": "cav inventory",
+    "connection_id": 1,
+    "method": "GET",
+    "path": "?",
+    "headers": null,
+    "query": {
+      "_MR": "101",
+      "_NS": "SVB",
+      "_LABEL": "INVENTORY",
+      "_ROUTINE": "APIIMP",
+      "_PASSWORD": "20250901",
+      "_USERNAME": "STS"
+    },
+    "body_template": null,
+    "body_type": "none",
+    "response_parser": "text",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2026-02-26T07:08:13.030Z",
+    "updated_at": "2026-02-26T07:08:35.964Z",
+    "variables": [],
+    "strict_variables": true
+  },
+  {
+    "id": null,
+    "key": "cav_user_test",
+    "name": "cav user test",
+    "connection_id": 1,
+    "method": "GET",
+    "path": "?",
+    "headers": null,
+    "query": {
+      "_MR": 101,
+      "_NS": "SVB",
+      "_INC": "STS-CUST",
+      "_LABEL": "EXPORT",
+      "_ROUTINE": "APIEXP",
+      "_CUSTOMER": "{userExtId}",
+      "_PASSWORD": "20250901",
+      "_USERNAME": "STS"
+    },
+    "body_template": null,
+    "body_type": "none",
+    "response_parser": "text",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2026-02-26T07:39:36.056Z",
+    "updated_at": "2026-02-26T07:39:36.056Z",
+    "variables": [
+      {
+        "name": "userExtId",
+        "type": "string",
+        "default": null,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      }
+    ],
+    "strict_variables": true
+  },
+  {
+    "id": null,
+    "key": "cav_product_test",
+    "name": "cav product test",
+    "connection_id": 1,
+    "method": "GET",
+    "path": "?",
+    "headers": null,
+    "query": {
+      "_MR": 101,
+      "_NS": "SVB",
+      "_INC": "STS-ITEM",
+      "_ITEM": "{sku}",
+      "_LABEL": "EXPORT",
+      "_ROUTINE": "APIEXP",
+      "_PASSWORD": "20250901",
+      "_USERNAME": "STS"
+    },
+    "body_template": null,
+    "body_type": "none",
+    "response_parser": "text",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2026-02-26T07:48:37.833Z",
+    "updated_at": "2026-02-26T07:51:27.130Z",
+    "variables": [
+      {
+        "name": "sku",
+        "type": "string",
+        "default": null,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      }
+    ],
+    "strict_variables": true
+  },
+  {
+    "id": null,
+    "key": "cav_doc_headers",
+    "name": "cav doc headers",
+    "connection_id": 1,
+    "method": "GET",
+    "path": "?",
+    "headers": null,
+    "query": {
+      "_MR": 101,
+      "_NS": "SVB",
+      "_FDT": "{dateFrom}",
+      "_INC": "STS-CUSTDOC",
+      "_TDT": "{dateTo}",
+      "_LABEL": "EXPORT",
+      "_ROUTINE": "APIEXP",
+      "_CUSTOMER": "{userExtId}",
+      "_PASSWORD": "20250901",
+      "_USERNAME": "STS"
+    },
+    "body_template": null,
+    "body_type": "none",
+    "response_parser": "text",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2026-02-26T07:59:31.078Z",
+    "updated_at": "2026-02-26T08:15:49.634Z",
+    "variables": [
+      {
+        "name": "dateFrom",
+        "type": "string",
+        "default": null,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "dateTo",
+        "type": "string",
+        "default": null,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      },
+      {
+        "name": "userExtId",
+        "type": "string",
+        "default": null,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      }
+    ],
+    "strict_variables": true
+  },
+  {
+    "id": null,
+    "key": "can_doc_lines",
+    "name": "cav doc lines",
+    "connection_id": 1,
+    "method": "GET",
+    "path": "?",
+    "headers": null,
+    "query": {
+      "_MR": 101,
+      "_NS": "SVB",
+      "_INC": "STS-CUSTDOCLINE",
+      "_LABEL": "EXPORT",
+      "_STORE": "{documentNumber}",
+      "_ROUTINE": "APIEXP",
+      "_PASSWORD": "20250901",
+      "_USERNAME": "STS"
+    },
+    "body_template": null,
+    "body_type": "none",
+    "response_parser": "text",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2026-02-26T08:19:25.704Z",
+    "updated_at": "2026-02-26T08:19:39.306Z",
+    "variables": [
+      {
+        "name": "documentNumber",
+        "type": "string",
+        "default": null,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      }
+    ],
+    "strict_variables": true
+  }
+]

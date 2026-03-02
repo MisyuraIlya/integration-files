@@ -4387,6 +4387,99 @@
       ],
       "isAgentRequest": false,
       "isSuperAgentRequest": false
+    },
+    {
+      "id": null,
+      "key": "user_debit_cron",
+      "name": "user_debit_cron",
+      "mapperType": "simple",
+      "table": "User",
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "user_debit_cron",
+      "linkedName": null,
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "user_debit_cron",
+          "name": "user_debit_cron",
+          "description": "user_debit_cron",
+          "templateKey": "user_debit_fro_cron",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "simple": {
+              "mappings": {
+                "hp": {},
+                "city": {},
+                "name": {},
+                "role": {},
+                "type": {},
+                "agent": {},
+                "email": {},
+                "extId": {
+                  "sourceField": "ACCNAME"
+                },
+                "phone": {},
+                "PayDes": {},
+                "extra1": {},
+                "extra2": {},
+                "extra3": {},
+                "extra4": {},
+                "extra5": {},
+                "extra6": {},
+                "extra7": {},
+                "extra8": {},
+                "extra9": {},
+                "parent": {},
+                "search": {},
+                "address": {},
+                "company": {},
+                "extra10": {},
+                "isAgent": {},
+                "payCode": {},
+                "taxCode": {},
+                "discount": {},
+                "password": {},
+                "recovery": {},
+                "username": {},
+                "createdAt": {},
+                "isBlocked": {},
+                "maxCredit": {
+                  "sourceField": "BALANCE1"
+                },
+                "maxObligo": {},
+                "updatedAt": {},
+                "isPublished": {},
+                "masterExtId": {},
+                "isRegistered": {},
+                "isVatEnabled": {},
+                "refreshToken": {},
+                "salesCurrency": {},
+                "erpConnectionId": {},
+                "isAllowSeePrices": {},
+                "minimumPriceUser": {},
+                "vereficationData": {},
+                "deliveryPriceUser": {},
+                "isAllowPriceOffer": {},
+                "isAllowSeeDocuments": {}
+              }
+            },
+            "execution": {
+              "mode": "single"
+            }
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": false,
+      "isSuperAgentRequest": false
     }
   ]
 }

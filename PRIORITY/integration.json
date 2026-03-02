@@ -2458,5 +2458,26 @@
       }
     ],
     "strict_variables": true
+  },
+  {
+    "id": null,
+    "key": "user_debit_fro_cron",
+    "name": "debit for cron",
+    "connection_id": null,
+    "method": "GET",
+    "path": "ACCOUNTS_RECEIVABLE",
+    "headers": null,
+    "query": {
+      "$select": "ACCNAME,BALANCE1"
+    },
+    "body_template": null,
+    "body_type": "none",
+    "response_parser": "auto",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2026-03-02T08:01:14.839Z",
+    "updated_at": "2026-03-02T08:01:14.839Z",
+    "variables": [],
+    "strict_variables": true
   }
 ]

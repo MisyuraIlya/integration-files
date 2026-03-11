@@ -306,7 +306,7 @@
       {
         "name": "limit",
         "type": "number",
-        "default": 100,
+        "default": 1,
         "required": true,
         "enumValues": null,
         "description": null

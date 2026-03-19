@@ -2129,6 +2129,62 @@
   },
   {
     "id": null,
+    "key": "hasav_sql_open_debt_invoices",
+    "name": "hasav_sql_open_debt_invoices",
+    "connection_id": 1,
+    "method": "POST",
+    "path": "/sql",
+    "headers": null,
+    "query": null,
+    "body_template": "{\n  \"query\": \"SELECT\\n  j.StockID,\\n  balMatch.OPENSUF,\\n  balMatch.JTMDEBITCREDIT,\\n  j.ValueDate,\\n  j.DueDate,\\n  j.Referance\\nFROM dbo.VOPENJURNALMATCH AS balMatch\\nJOIN dbo.JurnalTrans AS j\\n  ON balMatch.JTID = j.TransID\\nWHERE balMatch.AACCOUNTKEY = @userExtId\\nORDER BY j.ValueDate, j.TransID\",\n  \"params\": {\n    \"userExtId\": \"{userExtId}\"\n  }\n}",
+    "body_type": "json",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2026-03-19T00:00:00.000Z",
+    "updated_at": "2026-03-19T00:00:00.000Z",
+    "variables": [
+      {
+        "name": "userExtId",
+        "type": "string",
+        "default": 30048,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      }
+    ],
+    "strict_variables": true
+  },
+  {
+    "id": null,
+    "key": "hasav_sql_cheqs_list",
+    "name": "hasav_sql_cheqs_list",
+    "connection_id": 1,
+    "method": "POST",
+    "path": "/sql",
+    "headers": null,
+    "query": null,
+    "body_template": "{\n  \"query\": \"SELECT\\n  s1.DocumentID,\\n  s1.DocNumber,\\n  ch.CheqNumber,\\n  ch.SuF,\\n  ch.ValueDate,\\n  s1.ValueDate AS DocValueDate\\nFROM dbo.Stock AS s1\\nJOIN dbo.Cheqs AS ch\\n  ON s1.Id = ch.StockID\\nWHERE s1.AccountKey = @userExtId\\n  AND s1.DocumentID IN ('1','9','37','31')\\n  AND ch.ValueDate > DATEADD(day, DATEDIFF(day, 0, GETDATE()), 0)\\nORDER BY ch.ValueDate, s1.DocNumber\",\n  \"params\": {\n    \"userExtId\": \"{userExtId}\"\n  }\n}",
+    "body_type": "json",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2026-03-19T00:00:00.000Z",
+    "updated_at": "2026-03-19T00:00:00.000Z",
+    "variables": [
+      {
+        "name": "userExtId",
+        "type": "string",
+        "default": 30048,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      }
+    ],
+    "strict_variables": true
+  },
+  {
+    "id": null,
     "key": "hasav_sql_cartesset_lines",
     "name": "hasav_sql_cartesset_lines",
     "connection_id": 1,

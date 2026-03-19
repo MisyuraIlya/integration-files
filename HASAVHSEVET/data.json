@@ -4,407 +4,11 @@
   "dataTypes": [
     {
       "id": null,
-      "key": "COMPANY_PURCHASE_DELIVERY",
-      "name": "COMPANY_PURCHASE_DELIVERY",
-      "mapperType": "dynamic",
-      "table": null,
-      "dynamicType": "COMPANY_PURCHASE_DELIVERY",
-      "manualHandle": true,
-      "isCanChange": true,
-      "isShow": true,
-      "isActive": true,
-      "description": "COMPANY_PURCHASE_DELIVERY",
-      "linkedName": null,
-      "linkedPdf": null,
-      "dataSources": [
-        {
-          "id": null,
-          "key": "COMPANY_PURCHASE_DELIVERY",
-          "name": "COMPANY_PURCHASE_DELIVERY",
-          "description": "COMPANY_PURCHASE_DELIVERY",
-          "templateKey": "hasav_sql_purchase_delivery",
-          "integrationTemplateId": null,
-          "template": null,
-          "config": {
-            "dynamic": {
-              "columns": [
-                {
-                  "key": "DocNumber",
-                  "type": "string",
-                  "label": "מספר מסמך",
-                  "sourceField": "DocNumber"
-                },
-                {
-                  "key": "DueDate",
-                  "type": "date",
-                  "label": "תאריך",
-                  "sourceField": "DueDate"
-                },
-                {
-                  "key": "ItemKey",
-                  "type": "sku",
-                  "label": "מק\"ט",
-                  "sourceField": "ItemKey"
-                },
-                {
-                  "key": "Quantity",
-                  "type": "number",
-                  "label": "כמות",
-                  "sourceField": "Quantity"
-                },
-                {
-                  "key": "Status",
-                  "type": "string",
-                  "label": "סטטוס",
-                  "sourceField": "Status"
-                },
-                {
-                  "key": "Warehouse",
-                  "type": "string",
-                  "label": "מחסן",
-                  "sourceField": "Warehouse"
-                }
-              ],
-              "itemsPath": "rows"
-            },
-            "execution": {
-              "mode": "single"
-            },
-            "itemsPath": "rows"
-          },
-          "isCanChange": true,
-          "createdAt": null,
-          "updatedAt": null
-        }
-      ],
-      "isAgentRequest": false,
-      "isSuperAgentRequest": false
-    },
-    {
-      "id": null,
-      "key": "KEEP_ALERT",
-      "name": "KEEP_ALERT",
-      "mapperType": "dynamic",
-      "table": null,
-      "dynamicType": "KEEP_ALERT",
-      "manualHandle": true,
-      "isCanChange": true,
-      "isShow": true,
-      "isActive": true,
-      "description": null,
-      "linkedName": null,
-      "linkedPdf": null,
-      "dataSources": [
-        {
-          "id": null,
-          "key": "KEEP_ALERT",
-          "name": "KEEP_ALERT",
-          "description": "KEEP_ALERT",
-          "templateKey": "keep_alert",
-          "integrationTemplateId": null,
-          "template": null,
-          "config": {
-            "dynamic": {
-              "columns": [
-                {
-                  "key": "key1",
-                  "type": "number",
-                  "label": "סכום חודש שעבר (2026)",
-                  "sourceField": "resultValue1"
-                },
-                {
-                  "key": "key2",
-                  "type": "number",
-                  "label": "הפרש חודש שעבר מול שנה קודמת (₪)",
-                  "sourceField": "resultValue2"
-                },
-                {
-                  "key": "key3",
-                  "type": "number",
-                  "label": "הפרש אחוזי חודש שעבר מול שנה קודמת (%)",
-                  "sourceField": "resultValue3"
-                },
-                {
-                  "key": "key4",
-                  "type": "number",
-                  "label": "ממוצע 3 חודשים אחרונים",
-                  "sourceField": "resultValue4"
-                },
-                {
-                  "key": "key5",
-                  "type": "number",
-                  "label": "סכום 12 חודשים אחרונים",
-                  "sourceField": "resultValue5"
-                },
-                {
-                  "key": "key6",
-                  "type": "number",
-                  "label": "ממוצע חודשי 12 חודשים אחרונים",
-                  "sourceField": "resultValue6"
-                },
-                {
-                  "key": "key7",
-                  "type": "number",
-                  "label": "מספר חודשים פעילים ב-12 חודשים אחרונים",
-                  "sourceField": "resultValue7"
-                },
-                {
-                  "key": "key8",
-                  "type": "number",
-                  "label": "מספר מסמכים (הזמנות) ב-12 חודשים אחרונים",
-                  "sourceField": "resultValue8"
-                },
-                {
-                  "key": "key9",
-                  "type": "number",
-                  "label": "ממוצע לסל קניה ב-12 חודשים אחרונים",
-                  "sourceField": "resultValue9"
-                },
-                {
-                  "key": "key10",
-                  "type": "number",
-                  "label": "סטיית תקן חודשית 12 חודשים (פיזור מכירות)",
-                  "sourceField": "resultValue10"
-                },
-                {
-                  "key": "key11",
-                  "type": "number",
-                  "label": "חודש שעבר / ממוצע 12 חודשים (%)",
-                  "sourceField": "resultValue11"
-                },
-                {
-                  "key": "key12",
-                  "type": "number",
-                  "label": "סכום חודש נוכחי",
-                  "sourceField": "resultValue12"
-                },
-                {
-                  "key": "key13",
-                  "type": "number",
-                  "label": "מספר מסמכים בחודש נוכחי",
-                  "sourceField": "resultValue13"
-                },
-                {
-                  "key": "key14",
-                  "type": "number",
-                  "label": "סכום חודש קודם",
-                  "sourceField": "resultValue14"
-                },
-                {
-                  "key": "key15",
-                  "type": "number",
-                  "label": "מספר מסמכים בחודש קודם",
-                  "sourceField": "resultValue15"
-                },
-                {
-                  "key": "key16",
-                  "type": "number",
-                  "label": "שינוי חודש נוכחי מול חודש קודם (₪)",
-                  "sourceField": "resultValue16"
-                },
-                {
-                  "key": "key17",
-                  "type": "number",
-                  "label": "שינוי חודש נוכחי מול חודש קודם (%)",
-                  "sourceField": "resultValue17"
-                },
-                {
-                  "key": "key18",
-                  "type": "number",
-                  "label": "שינוי חודש נוכחי מול אותו חודש אשתקד (₪)",
-                  "sourceField": "resultValue18"
-                },
-                {
-                  "key": "key19",
-                  "type": "number",
-                  "label": "שינוי חודש נוכחי מול אותו חודש אשתקד (%)",
-                  "sourceField": "resultValue19"
-                },
-                {
-                  "key": "key20",
-                  "type": "number",
-                  "label": "סכום 24 חודשים אחרונים",
-                  "sourceField": "resultValue20"
-                },
-                {
-                  "key": "key21",
-                  "type": "number",
-                  "label": "ממוצע חודשי 24 חודשים אחרונים",
-                  "sourceField": "resultValue21"
-                },
-                {
-                  "key": "key22",
-                  "type": "number",
-                  "label": "מספר חודשים פעילים ב-24 חודשים אחרונים",
-                  "sourceField": "resultValue22"
-                },
-                {
-                  "key": "key23",
-                  "type": "number",
-                  "label": "מספר מסמכים ב-24 חודשים אחרונים",
-                  "sourceField": "resultValue23"
-                },
-                {
-                  "key": "key24",
-                  "type": "number",
-                  "label": "ממוצע לסל קניה ב-24 חודשים אחרונים",
-                  "sourceField": "resultValue24"
-                },
-                {
-                  "key": "key25",
-                  "type": "number",
-                  "label": "סטיית תקן חודשית 24 חודשים (פיזור מכירות)",
-                  "sourceField": "resultValue25"
-                },
-                {
-                  "key": "key26",
-                  "type": "number",
-                  "label": "הזמנה מינימלית ב-24 חודשים (לפני מעמ)",
-                  "sourceField": "resultValue26"
-                },
-                {
-                  "key": "key27",
-                  "type": "number",
-                  "label": "הזמנה מקסימלית ב-24 חודשים (לפני מעמ)",
-                  "sourceField": "resultValue27"
-                },
-                {
-                  "key": "key28",
-                  "type": "number",
-                  "label": "ימים מאז הזמנה אחרונה",
-                  "sourceField": "resultValue28"
-                },
-                {
-                  "key": "key29",
-                  "type": "number",
-                  "label": "ממוצע ימים בין הזמנות",
-                  "sourceField": "resultValue29"
-                }
-              ],
-              "itemsPath": "rows"
-            },
-            "execution": {
-              "mode": "single"
-            },
-            "itemsPath": "rows"
-          },
-          "isCanChange": true,
-          "createdAt": null,
-          "updatedAt": null
-        }
-      ],
-      "isAgentRequest": false,
-      "isSuperAgentRequest": false
-    },
-    {
-      "id": null,
-      "key": "USER_PURCHASE_HISTORY_SKU",
-      "name": "USER_PURCHASE_HISTORY_SKU",
-      "mapperType": "dynamic",
-      "table": null,
-      "dynamicType": "USER_PURCHASE_HISTORY_SKU",
-      "manualHandle": true,
-      "isCanChange": true,
-      "isShow": true,
-      "isActive": true,
-      "description": "USER_PURCHASE_HISTORY_SKU",
-      "linkedName": null,
-      "linkedPdf": null,
-      "dataSources": [
-        {
-          "id": null,
-          "key": "USER_PURCHASE_HISTORY_SKU",
-          "name": "USER_PURCHASE_HISTORY_SKU",
-          "description": "USER_PURCHASE_HISTORY_SKU",
-          "templateKey": "hasav_sql_purchase_history",
-          "integrationTemplateId": null,
-          "template": null,
-          "config": {
-            "dynamic": {
-              "columns": [
-                {
-                  "key": "DocNumber",
-                  "type": "documentNumber",
-                  "label": "DocNumber",
-                  "sourceField": "DocNumber"
-                },
-                {
-                  "key": "ValueDate",
-                  "type": "date",
-                  "label": "תאריך",
-                  "sourceField": "ValueDate"
-                },
-                {
-                  "key": "Price",
-                  "type": "money",
-                  "label": "מחיר",
-                  "sourceField": "Price"
-                },
-                {
-                  "key": "Quantity",
-                  "type": "string",
-                  "label": "כמות",
-                  "sourceField": "Quantity"
-                },
-                {
-                  "key": "TFtal",
-                  "type": "money",
-                  "label": "סה\"כ",
-                  "sourceField": "TFtal"
-                }
-              ],
-              "itemsPath": "rows"
-            },
-            "documents": {
-              "headFields": [
-                {
-                  "type": "number",
-                  "label": "מזהה",
-                  "sourceField": "ID",
-                  "targetField": "documentNumber"
-                },
-                {
-                  "type": "string",
-                  "label": "מספר מסמך",
-                  "sourceField": "DocNumber",
-                  "targetField": "text_3"
-                },
-                {
-                  "type": "date",
-                  "label": "date",
-                  "sourceField": "ValueDate",
-                  "targetField": "date"
-                },
-                {
-                  "type": null,
-                  "label": null,
-                  "sourceField": null,
-                  "targetField": "createdAt"
-                }
-              ],
-              "lineColumns": [],
-              "lineAttributes": []
-            },
-            "execution": {
-              "mode": "single"
-            },
-            "itemsPath": "rows"
-          },
-          "isCanChange": true,
-          "createdAt": null,
-          "updatedAt": null
-        }
-      ],
-      "isAgentRequest": false,
-      "isSuperAgentRequest": false
-    },
-    {
-      "id": null,
       "key": "cartesset",
       "name": "cartesset",
       "mapperType": "dynamic",
       "table": null,
-      "dynamicType": "CARTESSET",
+      "dynamicType": null,
       "manualHandle": true,
       "isCanChange": true,
       "isShow": true,
@@ -495,6 +99,149 @@
                   "type": "number",
                   "label": "יתרה",
                   "sourceField": "Balance"
+                }
+              ],
+              "itemsPath": "rows"
+            },
+            "execution": {
+              "mode": "single"
+            },
+            "itemsPath": "rows"
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": false,
+      "isSuperAgentRequest": false
+    },
+    {
+      "id": null,
+      "key": "cheqs_list",
+      "name": "cheqs_list",
+      "mapperType": "dynamic",
+      "table": null,
+      "dynamicType": "CHEQS_LIST",
+      "manualHandle": true,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "cheqs_list",
+      "linkedName": null,
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "cheqs_list",
+          "name": "cheqs_list",
+          "description": "cheqs_list",
+          "templateKey": "hasav_cheqs_list",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "dynamic": {
+              "columns": [
+                {
+                  "key": "valueDate",
+                  "type": "date",
+                  "label": "תאריך חיוב",
+                  "sourceField": "ValueDate"
+                },
+                {
+                  "key": "DocNumber",
+                  "type": "number",
+                  "label": "אסמכתא",
+                  "sourceField": "DocNumber"
+                },
+                {
+                  "key": "CheqNumber",
+                  "type": "number",
+                  "label": "שיק",
+                  "sourceField": "CheqNumber"
+                },
+                {
+                  "key": "SuF",
+                  "type": "money",
+                  "label": "סה״כ",
+                  "sourceField": "SuF"
+                }
+              ]
+            },
+            "execution": {
+              "mode": "single"
+            },
+            "itemsPath": "rows"
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": false,
+      "isSuperAgentRequest": false
+    },
+    {
+      "id": null,
+      "key": "COMPANY_PURCHASE_DELIVERY",
+      "name": "COMPANY_PURCHASE_DELIVERY",
+      "mapperType": "dynamic",
+      "table": null,
+      "dynamicType": null,
+      "manualHandle": true,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "COMPANY_PURCHASE_DELIVERY",
+      "linkedName": null,
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "COMPANY_PURCHASE_DELIVERY",
+          "name": "COMPANY_PURCHASE_DELIVERY",
+          "description": "COMPANY_PURCHASE_DELIVERY",
+          "templateKey": "hasav_sql_purchase_delivery",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "dynamic": {
+              "columns": [
+                {
+                  "key": "DocNumber",
+                  "type": "string",
+                  "label": "מספר מסמך",
+                  "sourceField": "DocNumber"
+                },
+                {
+                  "key": "DueDate",
+                  "type": "date",
+                  "label": "תאריך",
+                  "sourceField": "DueDate"
+                },
+                {
+                  "key": "ItemKey",
+                  "type": "sku",
+                  "label": "מק\"ט",
+                  "sourceField": "ItemKey"
+                },
+                {
+                  "key": "Quantity",
+                  "type": "number",
+                  "label": "כמות",
+                  "sourceField": "Quantity"
+                },
+                {
+                  "key": "Status",
+                  "type": "string",
+                  "label": "סטטוס",
+                  "sourceField": "Status"
+                },
+                {
+                  "key": "Warehouse",
+                  "type": "string",
+                  "label": "מחסן",
+                  "sourceField": "Warehouse"
                 }
               ],
               "itemsPath": "rows"
@@ -652,10 +399,11 @@
                     }
                   },
                   "itemsPath": "rows",
-                  "templateId": 216
+                  "templateId": 51
                 }
               ]
-            }
+            },
+            "itemsPath": "rows"
           },
           "isCanChange": true,
           "createdAt": null,
@@ -946,7 +694,7 @@
       "name": "debits",
       "mapperType": "dynamic",
       "table": null,
-      "dynamicType": "DEBITS",
+      "dynamicType": null,
       "manualHandle": true,
       "isCanChange": true,
       "isShow": true,
@@ -3750,11 +3498,336 @@
     },
     {
       "id": null,
+      "key": "KEEP_ALERT",
+      "name": "KEEP_ALERT",
+      "mapperType": "dynamic",
+      "table": null,
+      "dynamicType": null,
+      "manualHandle": true,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": null,
+      "linkedName": null,
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "KEEP_ALERT",
+          "name": "KEEP_ALERT",
+          "description": "KEEP_ALERT",
+          "templateKey": "keep_alert",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "dynamic": {
+              "columns": [
+                {
+                  "key": "key1",
+                  "type": "number",
+                  "label": "סכום חודש שעבר (2026)",
+                  "sourceField": "resultValue1"
+                },
+                {
+                  "key": "key2",
+                  "type": "number",
+                  "label": "הפרש חודש שעבר מול שנה קודמת (₪)",
+                  "sourceField": "resultValue2"
+                },
+                {
+                  "key": "key3",
+                  "type": "number",
+                  "label": "הפרש אחוזי חודש שעבר מול שנה קודמת (%)",
+                  "sourceField": "resultValue3"
+                },
+                {
+                  "key": "key4",
+                  "type": "number",
+                  "label": "ממוצע 3 חודשים אחרונים",
+                  "sourceField": "resultValue4"
+                },
+                {
+                  "key": "key5",
+                  "type": "number",
+                  "label": "סכום 12 חודשים אחרונים",
+                  "sourceField": "resultValue5"
+                },
+                {
+                  "key": "key6",
+                  "type": "number",
+                  "label": "ממוצע חודשי 12 חודשים אחרונים",
+                  "sourceField": "resultValue6"
+                },
+                {
+                  "key": "key7",
+                  "type": "number",
+                  "label": "מספר חודשים פעילים ב-12 חודשים אחרונים",
+                  "sourceField": "resultValue7"
+                },
+                {
+                  "key": "key8",
+                  "type": "number",
+                  "label": "מספר מסמכים (הזמנות) ב-12 חודשים אחרונים",
+                  "sourceField": "resultValue8"
+                },
+                {
+                  "key": "key9",
+                  "type": "number",
+                  "label": "ממוצע לסל קניה ב-12 חודשים אחרונים",
+                  "sourceField": "resultValue9"
+                },
+                {
+                  "key": "key10",
+                  "type": "number",
+                  "label": "סטיית תקן חודשית 12 חודשים (פיזור מכירות)",
+                  "sourceField": "resultValue10"
+                },
+                {
+                  "key": "key11",
+                  "type": "number",
+                  "label": "חודש שעבר / ממוצע 12 חודשים (%)",
+                  "sourceField": "resultValue11"
+                },
+                {
+                  "key": "key12",
+                  "type": "number",
+                  "label": "סכום חודש נוכחי",
+                  "sourceField": "resultValue12"
+                },
+                {
+                  "key": "key13",
+                  "type": "number",
+                  "label": "מספר מסמכים בחודש נוכחי",
+                  "sourceField": "resultValue13"
+                },
+                {
+                  "key": "key14",
+                  "type": "number",
+                  "label": "סכום חודש קודם",
+                  "sourceField": "resultValue14"
+                },
+                {
+                  "key": "key15",
+                  "type": "number",
+                  "label": "מספר מסמכים בחודש קודם",
+                  "sourceField": "resultValue15"
+                },
+                {
+                  "key": "key16",
+                  "type": "number",
+                  "label": "שינוי חודש נוכחי מול חודש קודם (₪)",
+                  "sourceField": "resultValue16"
+                },
+                {
+                  "key": "key17",
+                  "type": "number",
+                  "label": "שינוי חודש נוכחי מול חודש קודם (%)",
+                  "sourceField": "resultValue17"
+                },
+                {
+                  "key": "key18",
+                  "type": "number",
+                  "label": "שינוי חודש נוכחי מול אותו חודש אשתקד (₪)",
+                  "sourceField": "resultValue18"
+                },
+                {
+                  "key": "key19",
+                  "type": "number",
+                  "label": "שינוי חודש נוכחי מול אותו חודש אשתקד (%)",
+                  "sourceField": "resultValue19"
+                },
+                {
+                  "key": "key20",
+                  "type": "number",
+                  "label": "סכום 24 חודשים אחרונים",
+                  "sourceField": "resultValue20"
+                },
+                {
+                  "key": "key21",
+                  "type": "number",
+                  "label": "ממוצע חודשי 24 חודשים אחרונים",
+                  "sourceField": "resultValue21"
+                },
+                {
+                  "key": "key22",
+                  "type": "number",
+                  "label": "מספר חודשים פעילים ב-24 חודשים אחרונים",
+                  "sourceField": "resultValue22"
+                },
+                {
+                  "key": "key23",
+                  "type": "number",
+                  "label": "מספר מסמכים ב-24 חודשים אחרונים",
+                  "sourceField": "resultValue23"
+                },
+                {
+                  "key": "key24",
+                  "type": "number",
+                  "label": "ממוצע לסל קניה ב-24 חודשים אחרונים",
+                  "sourceField": "resultValue24"
+                },
+                {
+                  "key": "key25",
+                  "type": "number",
+                  "label": "סטיית תקן חודשית 24 חודשים (פיזור מכירות)",
+                  "sourceField": "resultValue25"
+                },
+                {
+                  "key": "key26",
+                  "type": "number",
+                  "label": "הזמנה מינימלית ב-24 חודשים (לפני מעמ)",
+                  "sourceField": "resultValue26"
+                },
+                {
+                  "key": "key27",
+                  "type": "number",
+                  "label": "הזמנה מקסימלית ב-24 חודשים (לפני מעמ)",
+                  "sourceField": "resultValue27"
+                },
+                {
+                  "key": "key28",
+                  "type": "number",
+                  "label": "ימים מאז הזמנה אחרונה",
+                  "sourceField": "resultValue28"
+                },
+                {
+                  "key": "key29",
+                  "type": "number",
+                  "label": "ממוצע ימים בין הזמנות",
+                  "sourceField": "resultValue29"
+                }
+              ],
+              "itemsPath": "rows"
+            },
+            "execution": {
+              "mode": "single"
+            },
+            "itemsPath": "rows"
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": false,
+      "isSuperAgentRequest": false
+    },
+    {
+      "id": null,
+      "key": "open_debit_invoices",
+      "name": "open_debit_invoices",
+      "mapperType": "dynamic",
+      "table": null,
+      "dynamicType": "OPEN_DEBIT_INVOICES",
+      "manualHandle": true,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "open_debit_invoices",
+      "linkedName": null,
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "open_debit_invoices",
+          "name": "open_debit_invoices",
+          "description": "open_debit_invoices",
+          "templateKey": "hasav_open_debt_invoices",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "dynamic": {
+              "columns": [
+                {
+                  "key": "reference",
+                  "type": "number",
+                  "label": "אסמכתא",
+                  "sourceField": "Referance"
+                },
+                {
+                  "key": "valueDate",
+                  "type": "date",
+                  "label": "תאריך אסמכתא",
+                  "sourceField": "ValueDate"
+                },
+                {
+                  "key": "dueDate",
+                  "type": "date",
+                  "label": "תאריך ערך",
+                  "sourceField": "DueDate"
+                },
+                {
+                  "key": "total",
+                  "type": "money",
+                  "label": "סה״כ",
+                  "sourceField": "OPENSUF"
+                }
+              ]
+            },
+            "execution": {
+              "mode": "single"
+            },
+            "itemsPath": "rows"
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": false,
+      "isSuperAgentRequest": false
+    },
+    {
+      "id": null,
+      "key": "products_im_buy",
+      "name": "products_im_buy",
+      "mapperType": "simple",
+      "table": null,
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "products_im_buy",
+      "linkedName": null,
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "products_im_buy",
+          "name": "products_im_buy",
+          "description": null,
+          "templateKey": "hasav_sql_products_im_buy",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "simple": {
+              "mappings": {
+                "sku": {
+                  "sourceField": "ItemKey"
+                }
+              }
+            },
+            "execution": {
+              "mode": "single"
+            },
+            "itemsPath": "rows"
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": false,
+      "isSuperAgentRequest": false
+    },
+    {
+      "id": null,
       "key": "user_profile",
       "name": "user_profile",
       "mapperType": "dynamic",
       "table": null,
-      "dynamicType": "USER_PROFILE",
+      "dynamicType": null,
       "manualHandle": true,
       "isCanChange": true,
       "isShow": true,
@@ -3845,9 +3918,117 @@
                   "type": "money",
                   "label": "חוב בסיכון",
                   "sourceField": "json(Totals).warningBalance"
+                },
+                {
+                  "key": "terms",
+                  "type": "string",
+                  "label": "תנאי תשלום",
+                  "sourceField": "json(Users).CreditTermsDetails"
                 }
               ],
               "itemsPath": "rows"
+            },
+            "execution": {
+              "mode": "single"
+            },
+            "itemsPath": "rows"
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": false,
+      "isSuperAgentRequest": false
+    },
+    {
+      "id": null,
+      "key": "USER_PURCHASE_HISTORY_SKU",
+      "name": "USER_PURCHASE_HISTORY_SKU",
+      "mapperType": "dynamic",
+      "table": null,
+      "dynamicType": null,
+      "manualHandle": true,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "USER_PURCHASE_HISTORY_SKU",
+      "linkedName": null,
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "USER_PURCHASE_HISTORY_SKU",
+          "name": "USER_PURCHASE_HISTORY_SKU",
+          "description": "USER_PURCHASE_HISTORY_SKU",
+          "templateKey": "hasav_sql_purchase_history",
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "dynamic": {
+              "columns": [
+                {
+                  "key": "DocNumber",
+                  "type": "documentNumber",
+                  "label": "DocNumber",
+                  "sourceField": "DocNumber"
+                },
+                {
+                  "key": "ValueDate",
+                  "type": "date",
+                  "label": "תאריך",
+                  "sourceField": "ValueDate"
+                },
+                {
+                  "key": "Price",
+                  "type": "money",
+                  "label": "מחיר",
+                  "sourceField": "Price"
+                },
+                {
+                  "key": "Quantity",
+                  "type": "string",
+                  "label": "כמות",
+                  "sourceField": "Quantity"
+                },
+                {
+                  "key": "TFtal",
+                  "type": "money",
+                  "label": "סה\"כ",
+                  "sourceField": "TFtal"
+                }
+              ],
+              "itemsPath": "rows"
+            },
+            "documents": {
+              "headFields": [
+                {
+                  "type": "number",
+                  "label": "מזהה",
+                  "sourceField": "ID",
+                  "targetField": "documentNumber"
+                },
+                {
+                  "type": "string",
+                  "label": "מספר מסמך",
+                  "sourceField": "DocNumber",
+                  "targetField": "text_3"
+                },
+                {
+                  "type": "date",
+                  "label": "date",
+                  "sourceField": "ValueDate",
+                  "targetField": "date"
+                },
+                {
+                  "type": null,
+                  "label": null,
+                  "sourceField": null,
+                  "targetField": "createdAt"
+                }
+              ],
+              "lineColumns": [],
+              "lineAttributes": []
             },
             "execution": {
               "mode": "single"

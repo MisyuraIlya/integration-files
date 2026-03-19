@@ -13,8 +13,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-22T11:35:28.946Z",
-    "updated_at": "2026-02-22T11:35:28.946Z",
+    "created_at": "2026-02-25T13:48:17.482Z",
+    "updated_at": "2026-02-25T13:48:17.482Z",
     "variables": [
       {
         "name": "offset",
@@ -49,8 +49,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-22T11:35:28.959Z",
-    "updated_at": "2026-02-22T11:35:28.959Z",
+    "created_at": "2026-02-25T13:48:17.569Z",
+    "updated_at": "2026-02-25T13:48:17.569Z",
     "variables": [
       {
         "name": "offset",
@@ -85,8 +85,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-22T11:35:28.966Z",
-    "updated_at": "2026-02-22T11:35:28.966Z",
+    "created_at": "2026-02-25T13:48:17.659Z",
+    "updated_at": "2026-02-25T13:48:17.659Z",
     "variables": [
       {
         "name": "offset",
@@ -121,8 +121,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-22T11:35:28.974Z",
-    "updated_at": "2026-02-22T11:35:28.974Z",
+    "created_at": "2026-02-25T13:48:17.746Z",
+    "updated_at": "2026-02-25T13:48:17.746Z",
     "variables": [
       {
         "name": "userExtId",
@@ -149,8 +149,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-22T11:35:28.986Z",
-    "updated_at": "2026-02-22T11:35:28.986Z",
+    "created_at": "2026-02-25T13:48:17.833Z",
+    "updated_at": "2026-02-25T13:48:17.833Z",
     "variables": [
       {
         "name": "sku",
@@ -177,8 +177,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-22T11:35:29.000Z",
-    "updated_at": "2026-02-22T11:35:29.000Z",
+    "created_at": "2026-02-25T13:48:17.924Z",
+    "updated_at": "2026-02-25T13:48:17.924Z",
     "variables": [
       {
         "name": "userExtId",
@@ -245,8 +245,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-22T11:35:29.017Z",
-    "updated_at": "2026-02-22T11:35:29.017Z",
+    "created_at": "2026-02-25T13:48:18.013Z",
+    "updated_at": "2026-02-25T13:48:18.013Z",
     "variables": [
       {
         "name": "userExtId",
@@ -313,8 +313,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-22T11:35:29.026Z",
-    "updated_at": "2026-02-22T11:35:29.026Z",
+    "created_at": "2026-02-25T13:48:18.103Z",
+    "updated_at": "2026-02-25T13:48:18.103Z",
     "variables": [
       {
         "name": "userExtId",
@@ -381,8 +381,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-22T11:35:29.035Z",
-    "updated_at": "2026-02-22T11:35:29.035Z",
+    "created_at": "2026-02-25T13:48:18.190Z",
+    "updated_at": "2026-02-25T13:48:18.190Z",
     "variables": [
       {
         "name": "userExtId",
@@ -449,8 +449,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-22T11:35:29.050Z",
-    "updated_at": "2026-02-22T11:35:29.050Z",
+    "created_at": "2026-02-25T13:48:18.281Z",
+    "updated_at": "2026-02-25T13:48:18.281Z",
     "variables": [
       {
         "name": "userExtId",
@@ -517,8 +517,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-22T11:35:29.060Z",
-    "updated_at": "2026-02-22T11:35:29.060Z",
+    "created_at": "2026-02-25T13:48:18.370Z",
+    "updated_at": "2026-02-25T13:48:18.370Z",
     "variables": [
       {
         "name": "userExtId",
@@ -585,8 +585,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-22T11:35:29.067Z",
-    "updated_at": "2026-02-22T11:35:29.067Z",
+    "created_at": "2026-02-25T13:48:18.455Z",
+    "updated_at": "2026-02-25T13:48:18.455Z",
     "variables": [
       {
         "name": "userExtId",
@@ -653,8 +653,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-22T11:35:29.076Z",
-    "updated_at": "2026-02-22T11:35:29.076Z",
+    "created_at": "2026-02-25T13:48:18.543Z",
+    "updated_at": "2026-02-25T13:48:18.543Z",
     "variables": [
       {
         "name": "userExtId",
@@ -721,8 +721,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-22T11:35:29.087Z",
-    "updated_at": "2026-02-22T11:35:29.087Z",
+    "created_at": "2026-02-25T13:48:18.630Z",
+    "updated_at": "2026-02-25T13:48:18.630Z",
     "variables": [
       {
         "name": "userExtId",
@@ -789,8 +789,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-22T11:35:29.117Z",
-    "updated_at": "2026-02-22T11:35:29.117Z",
+    "created_at": "2026-02-25T13:48:18.717Z",
+    "updated_at": "2026-02-25T13:48:18.717Z",
     "variables": [
       {
         "name": "dateFrom",
@@ -849,8 +849,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-22T11:35:29.131Z",
-    "updated_at": "2026-02-22T11:35:29.131Z",
+    "created_at": "2026-02-25T13:48:18.801Z",
+    "updated_at": "2026-02-25T13:48:18.801Z",
     "variables": [
       {
         "name": "dateFrom",
@@ -909,8 +909,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-22T11:35:29.147Z",
-    "updated_at": "2026-02-22T11:35:29.147Z",
+    "created_at": "2026-02-25T13:48:18.890Z",
+    "updated_at": "2026-02-25T13:48:18.890Z",
     "variables": [
       {
         "name": "dateFrom",
@@ -969,8 +969,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-22T11:35:29.158Z",
-    "updated_at": "2026-02-22T11:35:29.158Z",
+    "created_at": "2026-02-25T13:48:18.974Z",
+    "updated_at": "2026-02-25T13:48:18.974Z",
     "variables": [
       {
         "name": "dateFrom",
@@ -1029,8 +1029,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-22T11:35:29.173Z",
-    "updated_at": "2026-02-22T11:35:29.173Z",
+    "created_at": "2026-02-25T13:48:19.058Z",
+    "updated_at": "2026-02-25T13:48:19.058Z",
     "variables": [
       {
         "name": "dateFrom",
@@ -1089,8 +1089,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-22T11:35:29.186Z",
-    "updated_at": "2026-02-22T11:35:29.186Z",
+    "created_at": "2026-02-25T13:48:19.145Z",
+    "updated_at": "2026-02-25T13:48:19.145Z",
     "variables": [
       {
         "name": "dateFrom",
@@ -1149,8 +1149,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-22T11:35:29.196Z",
-    "updated_at": "2026-02-22T11:35:29.196Z",
+    "created_at": "2026-02-25T13:48:19.229Z",
+    "updated_at": "2026-02-25T13:48:19.229Z",
     "variables": [
       {
         "name": "dateFrom",
@@ -1209,8 +1209,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-22T11:35:29.206Z",
-    "updated_at": "2026-02-22T11:35:29.206Z",
+    "created_at": "2026-02-25T13:48:19.314Z",
+    "updated_at": "2026-02-25T13:48:19.314Z",
     "variables": [
       {
         "name": "dateFrom",
@@ -1269,8 +1269,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-22T11:35:29.220Z",
-    "updated_at": "2026-02-22T11:35:29.220Z",
+    "created_at": "2026-02-25T13:48:19.405Z",
+    "updated_at": "2026-02-25T13:48:19.405Z",
     "variables": [
       {
         "name": "dateFrom",
@@ -1329,8 +1329,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-22T11:35:29.239Z",
-    "updated_at": "2026-02-22T11:35:29.239Z",
+    "created_at": "2026-02-25T13:48:19.487Z",
+    "updated_at": "2026-02-25T13:48:19.487Z",
     "variables": [
       {
         "name": "userExtId",
@@ -1397,8 +1397,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-22T11:35:29.257Z",
-    "updated_at": "2026-02-22T11:35:29.257Z",
+    "created_at": "2026-02-25T13:48:19.568Z",
+    "updated_at": "2026-02-25T13:48:19.568Z",
     "variables": [
       {
         "name": "userExtId",
@@ -1465,8 +1465,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-22T11:35:29.274Z",
-    "updated_at": "2026-02-22T11:35:29.274Z",
+    "created_at": "2026-02-25T13:48:19.654Z",
+    "updated_at": "2026-02-25T13:48:19.654Z",
     "variables": [
       {
         "name": "userExtId",
@@ -1533,8 +1533,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-22T11:35:29.288Z",
-    "updated_at": "2026-02-22T11:35:29.288Z",
+    "created_at": "2026-02-25T13:48:19.736Z",
+    "updated_at": "2026-02-25T13:48:19.736Z",
     "variables": [
       {
         "name": "userExtId",
@@ -1601,8 +1601,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-22T11:35:29.300Z",
-    "updated_at": "2026-02-22T11:35:29.300Z",
+    "created_at": "2026-02-25T13:48:19.816Z",
+    "updated_at": "2026-02-25T13:48:19.816Z",
     "variables": [
       {
         "name": "userExtId",
@@ -1669,8 +1669,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-22T11:35:29.311Z",
-    "updated_at": "2026-02-22T11:35:29.311Z",
+    "created_at": "2026-02-25T13:48:19.899Z",
+    "updated_at": "2026-02-25T13:48:19.899Z",
     "variables": [
       {
         "name": "userExtId",
@@ -1737,8 +1737,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-22T11:35:29.331Z",
-    "updated_at": "2026-02-22T11:35:29.331Z",
+    "created_at": "2026-02-25T13:48:19.980Z",
+    "updated_at": "2026-02-25T13:48:19.980Z",
     "variables": [
       {
         "name": "userExtId",
@@ -1805,8 +1805,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-22T11:35:29.349Z",
-    "updated_at": "2026-02-22T11:35:29.349Z",
+    "created_at": "2026-02-25T13:48:20.064Z",
+    "updated_at": "2026-02-25T13:48:20.064Z",
     "variables": [
       {
         "name": "userExtId",
@@ -1873,8 +1873,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-22T11:35:29.367Z",
-    "updated_at": "2026-02-22T11:35:29.367Z",
+    "created_at": "2026-02-25T13:48:20.146Z",
+    "updated_at": "2026-02-25T13:48:20.146Z",
     "variables": [
       {
         "name": "userExtId",
@@ -1941,8 +1941,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-22T11:35:29.379Z",
-    "updated_at": "2026-02-22T11:35:29.379Z",
+    "created_at": "2026-02-25T13:48:20.230Z",
+    "updated_at": "2026-02-25T13:48:20.230Z",
     "variables": [
       {
         "name": "documentNumber",
@@ -1969,8 +1969,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-22T11:35:29.388Z",
-    "updated_at": "2026-02-22T11:35:29.388Z",
+    "created_at": "2026-02-25T13:48:20.314Z",
+    "updated_at": "2026-02-25T13:48:20.314Z",
     "variables": [
       {
         "name": "userExtId",
@@ -2005,8 +2005,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-22T11:35:29.398Z",
-    "updated_at": "2026-02-22T11:35:29.398Z",
+    "created_at": "2026-02-25T13:48:20.403Z",
+    "updated_at": "2026-02-25T13:48:20.403Z",
     "variables": [
       {
         "name": "userExtId",
@@ -2033,8 +2033,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-22T11:35:29.416Z",
-    "updated_at": "2026-02-22T11:35:29.416Z",
+    "created_at": "2026-02-25T13:48:20.488Z",
+    "updated_at": "2026-02-25T13:48:20.488Z",
     "variables": [
       {
         "name": "sku",
@@ -2069,8 +2069,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-22T11:35:29.437Z",
-    "updated_at": "2026-02-22T11:35:29.437Z",
+    "created_at": "2026-02-25T13:48:20.572Z",
+    "updated_at": "2026-02-25T13:48:20.572Z",
     "variables": [
       {
         "name": "sku",
@@ -2097,8 +2097,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-22T11:35:29.460Z",
-    "updated_at": "2026-02-22T11:35:29.460Z",
+    "created_at": "2026-02-25T13:48:20.660Z",
+    "updated_at": "2026-02-25T13:48:20.660Z",
     "variables": [
       {
         "name": "dateFrom",
@@ -2129,62 +2129,6 @@
   },
   {
     "id": null,
-    "key": "hasav_sql_open_debt_invoices",
-    "name": "hasav_sql_open_debt_invoices",
-    "connection_id": 1,
-    "method": "POST",
-    "path": "/sql",
-    "headers": null,
-    "query": null,
-    "body_template": "{\n  \"query\": \"SELECT\\n  j.StockID,\\n  balMatch.OPENSUF,\\n  balMatch.JTMDEBITCREDIT,\\n  j.ValueDate,\\n  j.DueDate,\\n  j.Referance\\nFROM dbo.VOPENJURNALMATCH AS balMatch\\nJOIN dbo.JurnalTrans AS j\\n  ON balMatch.JTID = j.TransID\\nWHERE balMatch.AACCOUNTKEY = @userExtId\\nORDER BY j.ValueDate, j.TransID\",\n  \"params\": {\n    \"userExtId\": \"{userExtId}\"\n  }\n}",
-    "body_type": "json",
-    "response_parser": "json",
-    "output_root": null,
-    "is_active": true,
-    "created_at": "2026-03-19T00:00:00.000Z",
-    "updated_at": "2026-03-19T00:00:00.000Z",
-    "variables": [
-      {
-        "name": "userExtId",
-        "type": "string",
-        "default": 30048,
-        "required": true,
-        "enumValues": null,
-        "description": null
-      }
-    ],
-    "strict_variables": true
-  },
-  {
-    "id": null,
-    "key": "hasav_sql_cheqs_list",
-    "name": "hasav_sql_cheqs_list",
-    "connection_id": 1,
-    "method": "POST",
-    "path": "/sql",
-    "headers": null,
-    "query": null,
-    "body_template": "{\n  \"query\": \"SELECT\\n  s1.DocumentID,\\n  s1.DocNumber,\\n  ch.CheqNumber,\\n  ch.SuF,\\n  ch.ValueDate,\\n  s1.ValueDate AS DocValueDate\\nFROM dbo.Stock AS s1\\nJOIN dbo.Cheqs AS ch\\n  ON s1.Id = ch.StockID\\nWHERE s1.AccountKey = @userExtId\\n  AND s1.DocumentID IN ('1','9','37','31')\\n  AND ch.ValueDate > DATEADD(day, DATEDIFF(day, 0, GETDATE()), 0)\\nORDER BY ch.ValueDate, s1.DocNumber\",\n  \"params\": {\n    \"userExtId\": \"{userExtId}\"\n  }\n}",
-    "body_type": "json",
-    "response_parser": "json",
-    "output_root": null,
-    "is_active": true,
-    "created_at": "2026-03-19T00:00:00.000Z",
-    "updated_at": "2026-03-19T00:00:00.000Z",
-    "variables": [
-      {
-        "name": "userExtId",
-        "type": "string",
-        "default": 30048,
-        "required": true,
-        "enumValues": null,
-        "description": null
-      }
-    ],
-    "strict_variables": true
-  },
-  {
-    "id": null,
     "key": "hasav_sql_cartesset_lines",
     "name": "hasav_sql_cartesset_lines",
     "connection_id": 1,
@@ -2197,8 +2141,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-22T11:35:29.476Z",
-    "updated_at": "2026-02-22T11:35:29.476Z",
+    "created_at": "2026-02-25T13:48:20.746Z",
+    "updated_at": "2026-02-25T13:48:20.746Z",
     "variables": [
       {
         "name": "userExtId",
@@ -2241,8 +2185,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-22T11:35:29.484Z",
-    "updated_at": "2026-02-22T11:35:29.484Z",
+    "created_at": "2026-02-25T13:48:20.831Z",
+    "updated_at": "2026-02-25T13:48:20.831Z",
     "variables": [
       {
         "name": "userExtId",
@@ -2269,8 +2213,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-22T11:35:29.498Z",
-    "updated_at": "2026-02-22T11:35:29.498Z",
+    "created_at": "2026-02-25T13:48:20.913Z",
+    "updated_at": "2026-02-25T13:48:20.913Z",
     "variables": [
       {
         "name": "userExtId",
@@ -2297,8 +2241,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-22T11:35:29.516Z",
-    "updated_at": "2026-02-22T11:35:29.516Z",
+    "created_at": "2026-02-25T13:48:20.994Z",
+    "updated_at": "2026-02-25T13:48:20.994Z",
     "variables": [
       {
         "name": "userExtId",
@@ -2325,8 +2269,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-22T11:35:29.531Z",
-    "updated_at": "2026-02-22T11:35:29.531Z",
+    "created_at": "2026-02-25T13:48:21.078Z",
+    "updated_at": "2026-02-25T13:48:21.078Z",
     "variables": [
       {
         "name": "noteIdsCsv",
@@ -2353,8 +2297,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-22T11:35:29.541Z",
-    "updated_at": "2026-02-22T11:35:29.541Z",
+    "created_at": "2026-02-25T13:48:21.172Z",
+    "updated_at": "2026-02-25T13:48:21.172Z",
     "variables": [
       {
         "name": "NoteId",
@@ -2389,8 +2333,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-22T11:35:29.547Z",
-    "updated_at": "2026-02-22T11:35:29.547Z",
+    "created_at": "2026-02-25T13:48:21.270Z",
+    "updated_at": "2026-02-25T13:48:21.270Z",
     "variables": [],
     "strict_variables": true
   },
@@ -2403,13 +2347,13 @@
     "path": "/sql",
     "headers": null,
     "query": null,
-    "body_template": "{\n  \"query\": \"SELECT\\n  Users = (\\n    SELECT TOP (1)\\n      a.*, \\n      CreditTerms = (\\n        SELECT TOP (1) ct.*\\n        FROM dbo.CreditTerms AS ct\\n        WHERE ct.CreditTermsCode = a.CreditTermsCode\\n        FOR JSON PATH, WITHOUT_ARRAY_WRAPPER\\n      )\\n    FROM dbo.Accounts AS a\\n    WHERE a.AccountKey = @userExtId\\n    FOR JSON PATH, WITHOUT_ARRAY_WRAPPER\\n  ),\\n\\n  Totals = (\\n    SELECT\\n      TotalOrderSum = COALESCE(t.TotalOrderSum, 0),\\n      MinDate = mm.MinDate,\\n      MaxDate = mm.MaxDate,\\n      OrdersQuantity = COALESCE(mm.OrdersQuantity, 0),\\n      MonthsQuantityByOrderDates = CASE\\n        WHEN mm.MinDate IS NULL OR mm.MaxDate IS NULL THEN 0\\n        ELSE DATEDIFF(MONTH,\\n              DATEFROMPARTS(YEAR(mm.MinDate), MONTH(mm.MinDate), 1),\\n              DATEFROMPARTS(YEAR(mm.MaxDate), MONTH(mm.MaxDate), 1)\\n            ) + 1\\n      END,\\n      MonthlyAverage = CASE\\n        WHEN mm.MinDate IS NULL OR mm.MaxDate IS NULL THEN 0\\n        ELSE COALESCE(t.TotalOrderSum, 0) * 1.0 / NULLIF(\\n          DATEDIFF(MONTH,\\n            DATEFROMPARTS(YEAR(mm.MinDate), MONTH(mm.MinDate), 1),\\n            DATEFROMPARTS(YEAR(mm.MaxDate), MONTH(mm.MaxDate), 1)\\n          ) + 1, 0)\\n      END,\\n      MonthlyObjective = 0,\\n      TotalOrderSumCurrentMonth = COALESCE(cm.TotalOrderSumCurrentMonth, 0),\\n      lastMonthIncome = COALESCE(lm.lastMonthIncome, 0),\\n      lastMonthPurchPriceSum = 0,\\n      warningBalance = COALESCE(ub.UserBalance, 0) + COALESCE(cq.Cheqs, 0)\\n    FROM (SELECT 1 AS x) base\\n    CROSS APPLY (\\n      SELECT\\n        TotalOrderSum =\\n          SUM(CASE WHEN DocumentID IN ('1','2','9','37') THEN TFtalVat ELSE 0 END)\\n        - SUM(CASE WHEN DocumentID = '3' THEN TFtalVat ELSE 0 END)\\n      FROM dbo.Stock\\n      WHERE AccountKey = @userExtId\\n        AND DocumentID IN ('1','2','9','37','3')\\n        AND Status = '1'\\n    ) t\\n    CROSS APPLY (\\n      SELECT\\n        MinDate = MIN(ValueDate),\\n        MaxDate = MAX(ValueDate),\\n        OrdersQuantity = COUNT(*)\\n      FROM dbo.Stock\\n      WHERE AccountKey = @userExtId\\n        AND DocumentID = '11'\\n        AND Status = '1'\\n    ) mm\\n    CROSS APPLY (\\n      SELECT\\n        TotalOrderSumCurrentMonth =\\n          SUM(CASE WHEN DocumentID IN ('1','2','9','37') THEN TFtalVat ELSE 0 END)\\n        - SUM(CASE WHEN DocumentID = '3' THEN TFtalVat ELSE 0 END)\\n      FROM dbo.Stock\\n      WHERE AccountKey = @userExtId\\n        AND DocumentID IN ('1','2','9','37','3')\\n        AND Status = '1'\\n        AND ValueDate BETWEEN d.startOfMonth AND n.now\\n    ) cm\\n    CROSS APPLY (\\n      SELECT\\n        lastMonthIncome =\\n          SUM(CASE WHEN DocumentID IN ('1','2','9','37') THEN TFtalVat ELSE 0 END)\\n        - SUM(CASE WHEN DocumentID = '3' THEN TFtalVat ELSE 0 END)\\n      FROM dbo.Stock\\n      WHERE AccountKey = @userExtId\\n        AND DocumentID IN ('1','2','9','37','3')\\n        AND Status = '1'\\n        AND ValueDate BETWEEN m.prevMonth AND m.thisMonth\\n    ) lm\\n    FOR JSON PATH, WITHOUT_ARRAY_WRAPPER\\n  ),\\n\\n  Cheqs = COALESCE(cq.Cheqs, 0),\\n\\n  CheqsList = (\\n    SELECT\\n      s1.DocumentID,\\n      s1.DocNumber,\\n      ch.CheqNumber,\\n      ch.SuF,\\n      ch.ValueDate,\\n      s1.ValueDate AS DocValueDate\\n    FROM dbo.Stock AS s1\\n    JOIN dbo.Cheqs AS ch\\n      ON s1.Id = ch.StockID\\n    WHERE s1.AccountKey = @userExtId\\n      AND s1.DocumentID IN ('1','9','37','31')\\n      AND ch.ValueDate > d.startOfToday\\n    ORDER BY ch.ValueDate, s1.DocNumber\\n    FOR JSON PATH\\n  ),\\n\\n  OpenDebtInvoices = (\\n    SELECT\\n      j.StockID,\\n      balMatch.OPENSUF,\\n      balMatch.JTMDEBITCREDIT,\\n      j.ValueDate,\\n      j.DueDate,\\n      j.Referance\\n    FROM dbo.VOPENJURNALMATCH AS balMatch\\n    JOIN dbo.JurnalTrans AS j\\n      ON balMatch.JTID = j.TransID\\n    WHERE balMatch.AACCOUNTKEY = @userExtId\\n    ORDER BY j.ValueDate, j.TransID\\n    FOR JSON PATH\\n  )\\n\\nFROM (SELECT GETDATE() AS now) n\\nCROSS APPLY (\\n  SELECT\\n    startOfToday = DATEADD(day, DATEDIFF(day, 0, n.now), 0),\\n    startOfMonth = DATEADD(month, DATEDIFF(month, 0, n.now), 0)\\n) d\\nCROSS APPLY (\\n  SELECT\\n    thisMonth = d.startOfMonth,\\n    prevMonth = DATEADD(month, -1, d.startOfMonth)\\n) m\\nCROSS APPLY (\\n  SELECT TOP (1) UserBalance = a.Balance\\n  FROM dbo.Accounts AS a\\n  WHERE a.AccountKey = @userExtId\\n) ub\\nCROSS APPLY (\\n  SELECT Cheqs = COALESCE(SUM(ch.SuF), 0)\\n  FROM dbo.Stock AS s1\\n  JOIN dbo.Cheqs AS ch\\n    ON s1.Id = ch.StockID\\n  WHERE s1.AccountKey = @userExtId\\n    AND s1.DocumentID IN ('1','9','37','31')\\n    AND ch.ValueDate > d.startOfToday\\n) cq\",\n  \"params\": {\n    \"userExtId\": \"{userExtId}\"\n  }\n}\n",
+    "body_template": "{\n  \"query\": \"SELECT\\n  Users = (\\n    SELECT TOP (1)\\n      a.*,\\n      ct.SplitJurnalMoves,\\n      ct.Details AS CreditTermsDetails,\\n      ct.CurrenF,\\n      ct.Month,\\n      ct.Days,\\n      ct.SharePrc,\\n      ct.TemF\\n    FROM dbo.Accounts AS a\\n    LEFT JOIN dbo.CreditTerms AS ct\\n      ON ct.CreditTermsCode = a.CreditTermsCode\\n    WHERE a.AccountKey = @userExtId\\n    FOR JSON PATH, WITHOUT_ARRAY_WRAPPER, INCLUDE_NULL_VALUES\\n  ),\\n\\n  Totals = (\\n    SELECT\\n      TotalOrderSum = COALESCE(t.TotalOrderSum, 0),\\n      MinDate = mm.MinDate,\\n      MaxDate = mm.MaxDate,\\n      OrdersQuantity = COALESCE(mm.OrdersQuantity, 0),\\n      MonthsQuantityByOrderDates = CASE\\n        WHEN mm.MinDate IS NULL OR mm.MaxDate IS NULL THEN 0\\n        ELSE DATEDIFF(\\n          MONTH,\\n          DATEFROMPARTS(YEAR(mm.MinDate), MONTH(mm.MinDate), 1),\\n          DATEFROMPARTS(YEAR(mm.MaxDate), MONTH(mm.MaxDate), 1)\\n        ) + 1\\n      END,\\n      MonthlyAverage = CASE\\n        WHEN mm.MinDate IS NULL OR mm.MaxDate IS NULL THEN 0\\n        ELSE COALESCE(t.TotalOrderSum, 0) * 1.0 / NULLIF(\\n          DATEDIFF(\\n            MONTH,\\n            DATEFROMPARTS(YEAR(mm.MinDate), MONTH(mm.MinDate), 1),\\n            DATEFROMPARTS(YEAR(mm.MaxDate), MONTH(mm.MaxDate), 1)\\n          ) + 1,\\n          0\\n        )\\n      END,\\n      MonthlyObjective = 0,\\n      TotalOrderSumCurrentMonth = COALESCE(cm.TotalOrderSumCurrentMonth, 0),\\n      lastMonthIncome = COALESCE(lm.lastMonthIncome, 0),\\n      lastMonthPurchPriceSum = 0,\\n      warningBalance = COALESCE(ub.UserBalance, 0) + COALESCE(cq.Cheqs, 0)\\n    FROM (SELECT 1 AS x) base\\n    CROSS APPLY (\\n      SELECT\\n        TotalOrderSum =\\n          SUM(CASE WHEN DocumentID IN ('1','2','9','37') THEN TFtalVat ELSE 0 END)\\n        - SUM(CASE WHEN DocumentID = '3' THEN TFtalVat ELSE 0 END)\\n      FROM dbo.Stock\\n      WHERE AccountKey = @userExtId\\n        AND DocumentID IN ('1','2','9','37','3')\\n        AND Status = '1'\\n    ) t\\n    CROSS APPLY (\\n      SELECT\\n        MinDate = MIN(ValueDate),\\n        MaxDate = MAX(ValueDate),\\n        OrdersQuantity = COUNT(*)\\n      FROM dbo.Stock\\n      WHERE AccountKey = @userExtId\\n        AND DocumentID = '11'\\n        AND Status = '1'\\n    ) mm\\n    CROSS APPLY (\\n      SELECT\\n        TotalOrderSumCurrentMonth =\\n          SUM(CASE WHEN DocumentID IN ('1','2','9','37') THEN TFtalVat ELSE 0 END)\\n        - SUM(CASE WHEN DocumentID = '3' THEN TFtalVat ELSE 0 END)\\n      FROM dbo.Stock\\n      WHERE AccountKey = @userExtId\\n        AND DocumentID IN ('1','2','9','37','3')\\n        AND Status = '1'\\n        AND ValueDate BETWEEN d.startOfMonth AND n.now\\n    ) cm\\n    CROSS APPLY (\\n      SELECT\\n        lastMonthIncome =\\n          SUM(CASE WHEN DocumentID IN ('1','2','9','37') THEN TFtalVat ELSE 0 END)\\n        - SUM(CASE WHEN DocumentID = '3' THEN TFtalVat ELSE 0 END)\\n      FROM dbo.Stock\\n      WHERE AccountKey = @userExtId\\n        AND DocumentID IN ('1','2','9','37','3')\\n        AND Status = '1'\\n        AND ValueDate BETWEEN m.prevMonth AND m.thisMonth\\n    ) lm\\n    FOR JSON PATH, WITHOUT_ARRAY_WRAPPER, INCLUDE_NULL_VALUES\\n  ),\\n\\n  Cheqs = COALESCE(cq.Cheqs, 0),\\n\\n  CheqsList = (\\n    SELECT\\n      s1.DocumentID,\\n      s1.DocNumber,\\n      ch.CheqNumber,\\n      ch.SuF,\\n      ch.ValueDate,\\n      s1.ValueDate AS DocValueDate\\n    FROM dbo.Stock AS s1\\n    JOIN dbo.Cheqs AS ch\\n      ON s1.Id = ch.StockID\\n    WHERE s1.AccountKey = @userExtId\\n      AND s1.DocumentID IN ('1','9','37','31')\\n      AND ch.ValueDate > d.startOfToday\\n    ORDER BY ch.ValueDate, s1.DocNumber\\n    FOR JSON PATH, INCLUDE_NULL_VALUES\\n  ),\\n\\n  OpenDebtInvoices = (\\n    SELECT\\n      j.StockID,\\n      balMatch.OPENSUF,\\n      balMatch.JTMDEBITCREDIT,\\n      j.ValueDate,\\n      j.DueDate,\\n      j.Referance\\n    FROM dbo.VOPENJURNALMATCH AS balMatch\\n    JOIN dbo.JurnalTrans AS j\\n      ON balMatch.JTID = j.TransID\\n    WHERE balMatch.AACCOUNTKEY = @userExtId\\n    ORDER BY j.ValueDate, j.TransID\\n    FOR JSON PATH, INCLUDE_NULL_VALUES\\n  )\\nFROM (SELECT GETDATE() AS now) n\\nCROSS APPLY (\\n  SELECT\\n    startOfToday = DATEADD(DAY, DATEDIFF(DAY, 0, n.now), 0),\\n    startOfMonth = DATEADD(MONTH, DATEDIFF(MONTH, 0, n.now), 0)\\n) d\\nCROSS APPLY (\\n  SELECT\\n    thisMonth = d.startOfMonth,\\n    prevMonth = DATEADD(MONTH, -1, d.startOfMonth)\\n) m\\nCROSS APPLY (\\n  SELECT TOP (1) UserBalance = a.Balance\\n  FROM dbo.Accounts AS a\\n  WHERE a.AccountKey = @userExtId\\n) ub\\nCROSS APPLY (\\n  SELECT Cheqs = COALESCE(SUM(ch.SuF), 0)\\n  FROM dbo.Stock AS s1\\n  JOIN dbo.Cheqs AS ch\\n    ON s1.Id = ch.StockID\\n  WHERE s1.AccountKey = @userExtId\\n    AND s1.DocumentID IN ('1','9','37','31')\\n    AND ch.ValueDate > d.startOfToday\\n) cq\",\n  \"params\": {\n    \"userExtId\": \"{userExtId}\"\n  }\n}\n",
     "body_type": "json",
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-22T11:35:29.554Z",
-    "updated_at": "2026-02-22T11:35:29.554Z",
+    "created_at": "2026-02-25T13:48:21.357Z",
+    "updated_at": "2026-03-18T10:23:40.815Z",
     "variables": [
       {
         "name": "userExtId",
@@ -2436,8 +2380,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-22T11:35:29.560Z",
-    "updated_at": "2026-02-22T11:35:29.560Z",
+    "created_at": "2026-02-25T13:48:21.453Z",
+    "updated_at": "2026-02-25T13:48:21.453Z",
     "variables": [
       {
         "name": "userExtId",
@@ -2464,8 +2408,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-22T11:36:57.619Z",
-    "updated_at": "2026-02-22T11:36:57.619Z",
+    "created_at": "2026-02-25T13:48:21.549Z",
+    "updated_at": "2026-02-25T13:48:21.549Z",
     "variables": [
       {
         "name": "name",
@@ -2492,8 +2436,8 @@
     "response_parser": "auto",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-22T11:37:47.525Z",
-    "updated_at": "2026-02-22T11:37:47.525Z",
+    "created_at": "2026-02-25T13:48:21.632Z",
+    "updated_at": "2026-02-25T13:48:21.632Z",
     "variables": [],
     "strict_variables": true
   },
@@ -2511,8 +2455,8 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-22T11:39:55.154Z",
-    "updated_at": "2026-02-22T11:39:55.154Z",
+    "created_at": "2026-02-25T13:48:21.716Z",
+    "updated_at": "2026-02-25T13:48:21.716Z",
     "variables": [
       {
         "name": "offset",
@@ -2547,9 +2491,65 @@
     "response_parser": "json",
     "output_root": null,
     "is_active": true,
-    "created_at": "2026-02-22T11:48:19.198Z",
-    "updated_at": "2026-02-22T11:48:19.198Z",
+    "created_at": "2026-02-25T13:48:21.799Z",
+    "updated_at": "2026-02-25T13:48:21.799Z",
     "variables": [],
+    "strict_variables": true
+  },
+  {
+    "id": null,
+    "key": "hasav_open_debt_invoices",
+    "name": "hasav_open_debt_invoices",
+    "connection_id": 1,
+    "method": "POST",
+    "path": "/sql",
+    "headers": null,
+    "query": null,
+    "body_template": "{\n  \"query\": \"SELECT j.StockID, balMatch.OPENSUF, balMatch.JTMDEBITCREDIT, j.ValueDate, j.DueDate, j.Referance FROM dbo.VOPENJURNALMATCH AS balMatch JOIN dbo.JurnalTrans AS j ON balMatch.JTID = j.TransID WHERE balMatch.AACCOUNTKEY = @userExtId ORDER BY j.ValueDate, j.TransID\",\n  \"params\": {\n    \"userExtId\": \"{userExtId}\"\n  }\n}",
+    "body_type": "json",
+    "response_parser": "json",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2026-03-19T10:41:53.036Z",
+    "updated_at": "2026-03-19T10:41:53.036Z",
+    "variables": [
+      {
+        "name": "userExtId",
+        "type": "string",
+        "default": 30048,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      }
+    ],
+    "strict_variables": true
+  },
+  {
+    "id": null,
+    "key": "hasav_cheqs_list",
+    "name": "hasav_cheqs_list",
+    "connection_id": 1,
+    "method": "POST",
+    "path": "/sql",
+    "headers": null,
+    "query": null,
+    "body_template": "{\n  \"query\": \"SELECT s1.DocumentID, s1.DocNumber, ch.CheqNumber, ch.SuF, ch.ValueDate, s1.ValueDate AS DocValueDate FROM dbo.Stock AS s1 JOIN dbo.Cheqs AS ch ON s1.Id = ch.StockID WHERE s1.AccountKey = @userExtId AND s1.DocumentID IN ('1','9','37','31') AND ch.ValueDate > DATEADD(day, DATEDIFF(day, 0, GETDATE()), 0) ORDER BY ch.ValueDate, s1.DocNumber\",\n  \"params\": {\n    \"userExtId\": \"{userExtId}\"\n  }\n}",
+    "body_type": "json",
+    "response_parser": "auto",
+    "output_root": null,
+    "is_active": true,
+    "created_at": "2026-03-19T10:46:55.160Z",
+    "updated_at": "2026-03-19T11:41:01.166Z",
+    "variables": [
+      {
+        "name": "userExtId",
+        "type": "string",
+        "default": 32494,
+        "required": true,
+        "enumValues": null,
+        "description": null
+      }
+    ],
     "strict_variables": true
   }
 ]

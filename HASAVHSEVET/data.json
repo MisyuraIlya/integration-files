@@ -118,6 +118,65 @@
     },
     {
       "id": null,
+      "key": "categories_from_sort_groups",
+      "name": "categories_from_sort_groups",
+      "mapperType": "hierarchy",
+      "table": "Category",
+      "dynamicType": null,
+      "manualHandle": null,
+      "isCanChange": true,
+      "isShow": true,
+      "isActive": true,
+      "description": "categories_from_sort_groups",
+      "linkedName": null,
+      "linkedPdf": null,
+      "dataSources": [
+        {
+          "id": null,
+          "key": "categories_from_sort_groups",
+          "name": "categories_from_sort_groups",
+          "description": "categories_from_sort_groups",
+          "templateKey": null,
+          "integrationTemplateId": null,
+          "template": null,
+          "config": {
+            "execution": {
+              "mode": "single"
+            },
+            "hierarchy": {
+              "levels": [
+                {
+                  "level": 1,
+                  "mappings": {
+                    "extId": {
+                      "type": "number",
+                      "sourceField": "ItemSortCode"
+                    },
+                    "title": {
+                      "type": "string",
+                      "sourceField": "SortCodeName"
+                    },
+                    "parentExtId": {
+                      "type": "string"
+                    }
+                  },
+                  "itemsPath": "rows",
+                  "templateId": 105
+                }
+              ]
+            },
+            "itemsPath": "rows"
+          },
+          "isCanChange": true,
+          "createdAt": null,
+          "updatedAt": null
+        }
+      ],
+      "isAgentRequest": false,
+      "isSuperAgentRequest": false
+    },
+    {
+      "id": null,
       "key": "cheqs_list",
       "name": "cheqs_list",
       "mapperType": "dynamic",
